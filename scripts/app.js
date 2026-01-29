@@ -10,6 +10,15 @@ const statusEl = document.getElementById("statusText"); // still used as a statu
 const searchEl = document.getElementById("search");
 const sortEl = document.getElementById("sort");
 const listEl = document.getElementById("cardList");
+const detailPanelEl = document.getElementById("detailPanel");
+const detailCloseEl = document.getElementById("detailClose");
+const detailHeaderEl = document.getElementById("detailHeader");
+const detailTitleEl = document.getElementById("detailTitle");
+const detailThumbIngameEl = document.getElementById("detailThumbIngame");
+const detailThumbIrlEl = document.getElementById("detailThumbIrl");
+const detailTextEl = document.getElementById("detailText");
+const detailLinksEl = document.getElementById("detailLinks");
+
 const PLACEHOLDER_THUMB = "assets/thumbs/placeholder.png";
 
 let activeType = null;
@@ -172,7 +181,7 @@ function renderList() {
 	`;
 
     // click later will open right panel; for now log
-    li.addEventListener("click", () => console.log("Clicked item:", it.id));
+	li.addEventListener("click", () => renderDetail(it));
 
     listEl.appendChild(li);
   }
@@ -183,9 +192,57 @@ function resolveAccent(item) {
   return key ? `var(--color-${key})` : null;
 }
 
+function openDetail() {
+  detailPanelEl.classList.remove("hidden");
+}
+
+function closeDetail() {
+  detailPanelEl.classList.add("hidden");
+}
+
+function setImgWithFallback(imgEl, src) {
+  const clean = (src && String(src).trim()) ? src : PLACEHOLDER_THUMB;
+  imgEl.src = clean;
+  imgEl.onerror = () => { imgEl.src = PLACEHOLDER_THUMB; };
+}
+
+function renderDetail(item) {
+  if (!item) return;
+
+  // Accent header background (optional but nice)
+  const accent = resolveAccent(item);
+  detailHeaderEl.style.background = accent ? accent : "";
+  detailHeaderEl.style.color = accent ? "#fff" : "";
+
+  detailTitleEl.textContent = item.name ?? "";
+
+  setImgWithFallback(detailThumbIngameEl, item?.thumbs?.ingame);
+  setImgWithFallback(detailThumbIrlEl, item?.thumbs?.irl); // you chose `irl`
+
+  // Text (simple for now; preserves newlines)
+  const text = item?.detail?.text ?? "";
+  detailTextEl.textContent = text;
+
+  // Links
+  const links = Array.isArray(item?.detail?.links) ? item.detail.links : [];
+  detailLinksEl.innerHTML = "";
+  for (const l of links) {
+    if (!l?.url) continue;
+    const a = document.createElement("a");
+    a.href = l.url;
+    a.target = "_blank";
+    a.rel = "noopener";
+    a.textContent = l.label || l.url;
+    detailLinksEl.appendChild(a);
+  }
+
+  openDetail();
+}
+
 // --- main applyType ---
 
 async function applyType(typeId) {
+  closeDetail();
   activeType = typeId;
   renderTabs();
 
@@ -220,6 +277,8 @@ function init() {
     activeSortId = e.target.value;
     renderList();
   });
+
+  detailCloseEl.addEventListener("click", closeDetail);
 
   const urlType = getTypeFromUrl();
   const defaultType = TYPES[0].id;

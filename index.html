@@ -43,20 +43,20 @@
       <aside id="detailPanel" class="hidden" aria-label="Details panel">
         <button id="detailClose" type="button" aria-label="Close details">✕</button>
 
-        <div class="detailHeader">
-          <div class="detailTitle">Select an item</div>
-        </div>
+		<div class="detailHeader" id="detailHeader">
+		  <div class="detailTitle" id="detailTitle">Select an item</div>
+		</div>
 
-        <div class="detailBody">
-          <div class="thumbRow">
-            <div class="thumbBox">In-game thumb</div>
-            <div class="thumbBox">Real-world thumb</div>
-          </div>
+		<div class="detailBody">
+		  <div class="thumbRow">
+			<img id="detailThumbIngame" class="detailImg" alt="In-game thumbnail">
+			<img id="detailThumbIrl" class="detailImg" alt="Real-world thumbnail">
+		  </div>
 
-          <div class="detailText">
-            Description + links will go here.
-          </div>
-        </div>
+		  <div class="detailText" id="detailText"></div>
+		  <div class="detailLinks" id="detailLinks"></div>
+		</div>
+
       </aside>
     </section>
 
