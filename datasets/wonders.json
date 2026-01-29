@@ -16,12 +16,12 @@
       "coords": [32, 44],
 
       "theme": {
-		"colorKey": "wonders-industrial"
+		"colorKey": "wonders-ancient"
       },
 
       "thumbs": {
         "ingame": "assets/thumbs/wonders/etemenanki_ingame.png",
-        "irl": "assets/thumbs/wonders/etemenanki_irl.jpg"
+        "irl": "assets/thumbs/wonders/etemenanki_irl.png"
       },
 
       "attrs": {
@@ -48,7 +48,7 @@
 
       "thumbs": {
         "ingame": "assets/thumbs/wonders/pyramids_ingame.png",
-        "irl": "assets/thumbs/wonders/pyramids_irl.jpg"
+        "irl": "assets/thumbs/wonders/pyramids_irl.png"
       },
 
       "attrs": {
