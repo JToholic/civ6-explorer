@@ -1,8 +1,80 @@
 <!doctype html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Civ6 Explorer</title>
+
+  <link rel="stylesheet" href="styles/theme.css" />
+  <link rel="stylesheet" href="styles/layout.css" />
+  <link rel="stylesheet" href="styles/panels.css" />
+</head>
+
 <body>
-<h1>Civ6 Explorer</h1>
-<p>It works.</p>
+  <!-- Top tabs (never covered by right overlay) -->
+  <header id="topbar">
+    <nav id="tabs" aria-label="Types">
+      <!-- tabs injected by JS later -->
+      <button class="tab is-active" type="button">Wonders</button>
+      <button class="tab" type="button">Leaders</button>
+      <button class="tab" type="button">City-States</button>
+    </nav>
+  </header>
+
+  <!-- Bordered main area: left + map + bottom tray all touch -->
+  <div id="mainGrid">
+    <aside id="leftPanel">
+      <div class="leftTop">
+        <input id="search" type="search" placeholder="Search name…" />
+        <div class="row">
+          <label class="label" for="sort">Sort</label>
+          <select id="sort">
+            <option>Alphabetical</option>
+          </select>
+        </div>
+      </div>
+      <ul id="cardList" aria-label="Items list">
+        <!-- cards injected by JS later -->
+      </ul>
+    </aside>
+
+    <section id="mapArea" aria-label="World map area">
+      <div id="map">
+        <!-- map injected by JS later -->
+        <div class="mapPlaceholder">Map will go here.</div>
+      </div>
+
+      <!-- Right overlay detail panel (covers map only) -->
+      <aside id="detailPanel" class="hidden" aria-label="Details panel">
+        <button id="detailClose" type="button" aria-label="Close details">✕</button>
+
+        <div class="detailHeader">
+          <div class="detailTitle">Select an item</div>
+        </div>
+
+        <div class="detailBody">
+          <div class="thumbRow">
+            <div class="thumbBox">In-game thumb</div>
+            <div class="thumbBox">Real-world thumb</div>
+          </div>
+
+          <div class="detailText">
+            Description + links will go here.
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Bottom pin tray (pins with no coords) -->
+    <section id="bottomTray" aria-label="Pins without coordinates">
+      <div class="trayTitle">Pins without coordinates</div>
+      <div id="trayPins" class="trayPins">
+        <!-- tray pins injected by JS later -->
+      </div>
+    </section>
+  </div>
+
+  <script src="scripts/app.js"></script>
 </body>
 </html>
 

@@ -1,0 +1,84 @@
+/* Tabs */
+#tabs{ display:flex; gap:8px; }
+.tab{
+  border:1px solid var(--border);
+  background:var(--bg);
+  padding:8px 10px;
+  border-radius:10px;
+  cursor:pointer;
+}
+.tab.is-active{ box-shadow: inset 0 0 0 2px rgba(0,0,0,.08); }
+
+/* Left panel */
+.leftTop{ padding:10px; border-bottom:1px solid var(--border); }
+#search{ width:100%; padding:9px 10px; border:1px solid var(--border); border-radius:10px; }
+.row{ margin-top:8px; display:flex; gap:8px; align-items:center; }
+.label{ font-size:12px; color:var(--muted); }
+#sort{ flex:1; padding:8px; border:1px solid var(--border); border-radius:10px; }
+
+#cardList{ list-style:none; padding:8px; margin:0; overflow:auto; }
+#cardList li{
+  padding:10px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  background:var(--bg);
+  margin-bottom:8px;
+}
+
+/* Map placeholder */
+#map{ position:absolute; inset:0; }
+.mapPlaceholder{
+  position:absolute; inset:0;
+  display:flex; align-items:center; justify-content:center;
+  color:var(--muted);
+}
+
+/* Bottom tray */
+#bottomTray{ padding:10px; }
+.trayTitle{ font-size:12px; color:var(--muted); margin-bottom:8px; }
+.trayPins{ display:flex; gap:8px; flex-wrap:wrap; }
+.trayPins > div{
+  width:42px; height:42px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  background:var(--bg);
+}
+
+/* Right overlay detail panel (covers map area only) */
+#detailPanel{
+  position:absolute;
+  top:10px; right:10px; bottom:10px;
+  width:min(380px, calc(100% - 20px));
+  border:1px solid var(--border);
+  border-radius:16px;
+  background:var(--bg);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+
+#detailPanel.hidden{ display:none; }
+
+#detailClose{
+  position:absolute;
+  top:10px; right:10px;
+  border:1px solid var(--border);
+  background:var(--bg);
+  border-radius:10px;
+  width:34px; height:34px;
+  cursor:pointer;
+}
+
+.detailHeader{ padding:14px 14px 10px; border-bottom:1px solid var(--border); }
+.detailTitle{ font-weight:600; }
+
+.detailBody{ padding:14px; display:flex; flex-direction:column; gap:12px; }
+.thumbRow{ display:grid; grid-template-columns: 1fr 1fr; gap:10px; }
+.thumbBox{
+  height:120px;
+  border:1px dashed var(--border);
+  border-radius:14px;
+  display:flex; align-items:center; justify-content:center;
+  color:var(--muted);
+}
+.detailText{ color:var(--muted); line-height:1.3; }
+

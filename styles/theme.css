@@ -1,0 +1,11 @@
+:root{
+  --border:#d9d9d9;
+  --bg:#ffffff;
+  --muted:#666;
+  --panel:#fafafa;
+  --shadow: 0 10px 30px rgba(0,0,0,.12);
+}
+
+*{ box-sizing:border-box; }
+html,body{ height:100%; margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; background:var(--bg); }
+
