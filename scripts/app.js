@@ -150,8 +150,8 @@ function renderList() {
   for (const it of itemsSorted) {
     const li = document.createElement("li");
 
-    // accent background (light touch for now)
-	const accent = it?.theme?.accent;
+    // accent background 
+	const accent = resolveAccent(it);
 	if (accent) {
 	  li.style.borderLeft = `10px solid ${accent}`;
 	}
@@ -176,6 +176,11 @@ function renderList() {
 
     listEl.appendChild(li);
   }
+}
+
+function resolveAccent(item) {
+  const key = item?.theme?.colorKey;
+  return key ? `var(--color-${key})` : null;
 }
 
 // --- main applyType ---

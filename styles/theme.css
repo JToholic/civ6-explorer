@@ -4,6 +4,16 @@
   --muted:#666;
   --panel:#fafafa;
   --shadow: 0 10px 30px rgba(0,0,0,.12);
+
+  /* Wonders – by era */
+  --color-wonders-ancient:       #C9A227; /* gold / sandstone */
+  --color-wonders-classical:     #8A9A5B; /* olive / stone */
+  --color-wonders-medieval:      #8B5E3C; /* wood / bronze */
+  --color-wonders-renaissance:   #6B8FB4; /* steel blue */
+  --color-wonders-industrial:    #5A5A5A; /* iron gray */
+  --color-wonders-modern:        #2F6F95; /* modern blue */
+  --color-wonders-atomic:        #7B4EA3; /* violet / nuclear */
+  --color-wonders-information:   #2BA6A6; /* teal / digital */
 }
 
 *{ box-sizing:border-box; }
