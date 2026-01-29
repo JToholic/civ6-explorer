@@ -118,3 +118,21 @@
   margin-top: 6px;
 }
 
+.detailAttrs {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 12px;
+  row-gap: 6px;
+  font-size: 13px;
+}
+
+.detailAttrKey {
+  color: var(--muted);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.detailAttrVal {
+  font-weight: 500;
+}
+

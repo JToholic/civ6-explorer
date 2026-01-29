@@ -5,6 +5,18 @@ const TYPES = [
   { id: "city_states", label: "City-States" }
 ];
 
+const ATTR_DISPLAY = {
+  wonders: [
+    { key: "era", label: "Era" }
+  ],
+  leaders: [
+    { key: "birthYear", label: "Birth year" }
+  ],
+  city_states: [
+    { key: "capital", label: "Capital" }
+  ]
+};
+
 const tabsEl = document.getElementById("tabs");
 const statusEl = document.getElementById("statusText"); // still used as a status line for now
 const searchEl = document.getElementById("search");
@@ -18,6 +30,7 @@ const detailThumbIngameEl = document.getElementById("detailThumbIngame");
 const detailThumbIrlEl = document.getElementById("detailThumbIrl");
 const detailTextEl = document.getElementById("detailText");
 const detailLinksEl = document.getElementById("detailLinks");
+const detailAttrsEl = document.getElementById("detailAttrs");
 
 const PLACEHOLDER_THUMB = "assets/thumbs/placeholder.png";
 
@@ -206,6 +219,29 @@ function setImgWithFallback(imgEl, src) {
   imgEl.onerror = () => { imgEl.src = PLACEHOLDER_THUMB; };
 }
 
+function renderAttrs(item) {
+  detailAttrsEl.innerHTML = "";
+
+  const cfg = ATTR_DISPLAY[activeType];
+  if (!cfg || !item?.attrs) return;
+
+  for (const { key, label } of cfg) {
+    const val = item.attrs[key];
+    if (val === undefined || val === null || val === "") continue;
+
+    const k = document.createElement("div");
+    k.className = "detailAttrKey";
+    k.textContent = label;
+
+    const v = document.createElement("div");
+    v.className = "detailAttrVal";
+    v.textContent = String(val);
+
+    detailAttrsEl.appendChild(k);
+    detailAttrsEl.appendChild(v);
+  }
+}
+
 function renderDetail(item) {
   if (!item) return;
 
@@ -222,6 +258,8 @@ function renderDetail(item) {
   // Text (simple for now; preserves newlines)
   const text = item?.detail?.text ?? "";
   detailTextEl.textContent = text;
+
+  renderAttrs(item);
 
   // Links
   const links = Array.isArray(item?.detail?.links) ? item.detail.links : [];
