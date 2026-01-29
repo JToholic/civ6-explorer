@@ -1,5 +1,3 @@
-// URL-driven tab switching (no dataset loading yet)
-
 const TYPES = [
   { id: "wonders", label: "Wonders" },
   { id: "natural_wonders", label: "Natural Wonders" },
@@ -8,6 +6,10 @@ const TYPES = [
 ];
 
 const tabsEl = document.getElementById("tabs");
+const statusEl = document.getElementById("statusText");
+
+let activeType = null;
+let activeData = null;
 
 function getTypeFromUrl() {
   const p = new URLSearchParams(window.location.search);
@@ -20,9 +22,8 @@ function setTypeInUrl(typeId) {
   history.pushState({ type: typeId }, "", url);
 }
 
-function renderTabs(activeType) {
+function renderTabs() {
   tabsEl.innerHTML = "";
-
   for (const t of TYPES) {
     const btn = document.createElement("button");
     btn.type = "button";
@@ -39,22 +40,46 @@ function renderTabs(activeType) {
   }
 }
 
-function applyType(typeId) {
-  renderTabs(typeId);
+function isValidType(typeId) {
+  return TYPES.some(t => t.id === typeId);
+}
 
-  // Placeholder hook points for next steps:
-  // - load dataset based on typeId
-  // - render left list
-  // - render map pins + bottom tray pins
-  console.log("Active type:", typeId);
+async function loadDataset(typeId) {
+  const path = `datasets/${typeId}.json`;
+  const res = await fetch(path, { cache: "no-store" });
+  if (!res.ok) throw new Error(`Failed to load ${path} (${res.status})`);
+  const data = await res.json();
+  return data;
+}
+
+function updateStatusFromData() {
+  const title = activeData?.meta?.title ?? activeType;
+  const n = Array.isArray(activeData?.items) ? activeData.items.length : 0;
+  statusEl.textContent = `${title}: loaded ${n} item(s)`;
+}
+
+async function applyType(typeId) {
+  activeType = typeId;
+  renderTabs();
+
+  statusEl.textContent = "Loading…";
+  activeData = null;
+
+  try {
+    activeData = await loadDataset(typeId);
+    updateStatusFromData();
+    console.log("Loaded dataset:", typeId, activeData);
+  } catch (err) {
+    statusEl.textContent = `Error: ${err.message}`;
+    console.error(err);
+  }
 }
 
 function init() {
   const urlType = getTypeFromUrl();
   const defaultType = TYPES[0].id;
-  const initialType = TYPES.some(t => t.id === urlType) ? urlType : defaultType;
+  const initialType = isValidType(urlType) ? urlType : defaultType;
 
-  // Ensure URL always has a valid type (nice for sharing)
   if (urlType !== initialType) {
     const url = new URL(window.location.href);
     url.searchParams.set("type", initialType);
@@ -63,11 +88,9 @@ function init() {
 
   applyType(initialType);
 
-  // Back/forward navigation
   window.addEventListener("popstate", () => {
     const t = getTypeFromUrl();
-    const safeType = TYPES.some(x => x.id === t) ? t : TYPES[0].id;
-    applyType(safeType);
+    applyType(isValidType(t) ? t : TYPES[0].id);
   });
 }
 
