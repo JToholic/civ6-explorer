@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "type": "wonders",
+    "title": "Wonders",
+    "defaultSort": "era"
+  },
+  "sortOptions": [
+    { "id": "alpha", "label": "A → Z", "field": "name", "order": "asc" },
+    { "id": "era", "label": "Era", "field": "attrs.era", "order": "asc" }
+  ],
+  "items": [
+    {
+      "id": "pyramids",
+      "name": "Pyramids",
+
+      "coords": [29, 31],
+
+      "theme": {
+        "accent": "#C9A227"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/pyramids_ingame.png",
+        "irl": "assets/thumbs/wonders/pyramids_irl.jpg"
+      },
+
+      "attrs": {
+        "era": "Ancient"
+      },
+
+      "detail": {
+        "text": "Optional description. Can be empty.",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Pyramids_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Egyptian_pyramids" }
+        ]
+      }
+    },
+    {
+      "id": "etemenanki",
+      "name": "Etemenanki",
+
+      "coords": [32, 44],
+
+      "theme": {
+        "accent": "#C9A227"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/etemenanki_ingame.png",
+        "irl": "assets/thumbs/wonders/etemenanki_irl.jpg"
+      },
+
+      "attrs": {
+        "era": "Ancient"
+      },
+
+      "detail": {
+        "text": "Optional description. Can be empty.",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Etemenanki_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Etemenanki" }
+        ]
+      }
+    }
+  ]
+}
+
