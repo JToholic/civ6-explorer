@@ -75,9 +75,11 @@ function applySort(items) {
   const sortOptions = activeData?.sortOptions || [];
   const chosen = sortOptions.find(s => s.id === activeSortId);
 
-  if (!chosen) {
-    // fallback: alpha by name
-    return [...items].sort((a, b) => String(a.name).localeCompare(String(b.name)));
+  // Fallback: pure alphabetical
+  if (!chosen || chosen.id === "alpha") {
+    return [...items].sort((a, b) =>
+      String(a.name).localeCompare(String(b.name))
+    );
   }
 
   const order = chosen.order === "desc" ? -1 : 1;
@@ -86,16 +88,23 @@ function applySort(items) {
     const av = getByPath(a, chosen.field);
     const bv = getByPath(b, chosen.field);
 
-    // undefined goes last
-    if (av === undefined && bv === undefined) return 0;
+    // Undefined always last
+    if (av === undefined && bv === undefined) {
+      return String(a.name).localeCompare(String(b.name));
+    }
     if (av === undefined) return 1;
     if (bv === undefined) return -1;
 
-    // numeric vs string compare
+    let primary;
     if (typeof av === "number" && typeof bv === "number") {
-      return order * (av - bv);
+      primary = order * (av - bv);
+    } else {
+      primary = order * String(av).localeCompare(String(bv));
     }
-    return order * String(av).localeCompare(String(bv));
+
+    // Tie-breaker: alphabetical by name
+    if (primary !== 0) return primary;
+    return String(a.name).localeCompare(String(b.name));
   });
 }
 
