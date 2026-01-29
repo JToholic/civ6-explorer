@@ -25,6 +25,27 @@
   margin-bottom:8px;
 }
 
+.card {
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.cardThumb {
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #fff;
+  object-fit: cover;
+  display: block;
+}
+
+.cardTitle { font-weight: 600; }
+.cardSub { color: var(--muted); font-size: 12px; }
+
+
 /* Map placeholder */
 #map{ position:absolute; inset:0; }
 .mapPlaceholder{

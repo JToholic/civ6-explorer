@@ -10,6 +10,7 @@ const statusEl = document.getElementById("statusText"); // still used as a statu
 const searchEl = document.getElementById("search");
 const sortEl = document.getElementById("sort");
 const listEl = document.getElementById("cardList");
+const PLACEHOLDER_THUMB = "assets/thumbs/placeholder.png";
 
 let activeType = null;
 let activeData = null;
@@ -150,16 +151,25 @@ function renderList() {
     const li = document.createElement("li");
 
     // accent background (light touch for now)
-    const accent = it?.theme?.accent;
-    if (accent) {
-      li.style.borderLeft = `10px solid ${accent}`;
-    }
+	const accent = it?.theme?.accent;
+	if (accent) {
+	  li.style.borderLeft = `10px solid ${accent}`;
+	}
 
-    // simple card content for now (thumbs later)
-    li.innerHTML = `
-      <div style="font-weight:600">${it.name}</div>
-      <div class="small">${it.attrs?.era ?? ""}</div>
-    `;
+	// thumb: prefer in-game, fallback to placeholder
+	const thumbSrc = (it?.thumbs?.ingame && it.thumbs.ingame.trim())
+	  ? it.thumbs.ingame
+	  : PLACEHOLDER_THUMB;
+
+	li.innerHTML = `
+	  <div class="card">
+		<img class="cardThumb" src="${thumbSrc}" alt="${it.name}" onerror="this.src='${PLACEHOLDER_THUMB}'">
+		<div>
+		  <div class="cardTitle">${it.name}</div>
+		  <div class="cardSub">${it.attrs?.era ?? ""}</div>
+		</div>
+	  </div>
+	`;
 
     // click later will open right panel; for now log
     li.addEventListener("click", () => console.log("Clicked item:", it.id));
