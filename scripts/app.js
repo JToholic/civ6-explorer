@@ -17,6 +17,13 @@ const ATTR_DISPLAY = {
   ]
 };
 
+const SEARCH_FIELDS = {
+  wonders: ["name", "attrs.era"],
+  natural_wonders: ["name"],
+  city_states: ["name"],
+  leaders: ["name", "attrs.birthYear"],
+};
+
 const tabsEl = document.getElementById("tabs");
 const statusEl = document.getElementById("statusText"); // still used as a status line for now
 const searchEl = document.getElementById("search");

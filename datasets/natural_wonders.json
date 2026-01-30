@@ -1,1 +1,47 @@
-{ "meta": { "type": "natural_wonders", "title": "Natural Wonders", "defaultSort": "alpha" }, "sortOptions": [], "items": [] }
+{
+  "meta": {
+    "type": "natural_wonders",
+    "title": "Natural Wonders",
+    "defaultSort": "alpha"
+  },
+  "sortOptions": [
+    { "id": "alpha", "label": "A → Z", "field": "name", "order": "asc" }
+  ],
+  "items": [
+    {
+      "id": "bermuda_triangle",
+      "name": "Bermuda Triangle",
+      "coords": [25.0, -71.0],
+      "thumbs": {
+        "ingame": "assets/thumbs/natural_wonders/bermuda_triangle_ingame.png",
+        "irl": "assets/thumbs/natural_wonders/bermuda_triangle_irl.png"
+      },
+      "attrs": {},
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Bermuda_Triangle_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Bermuda_Triangle" }
+        ]
+      }
+    },
+    {
+      "id": "chocolate_hills",
+      "name": "Chocolate Hills",
+      "coords": [9.8297, 124.1396],
+      "thumbs": {
+        "ingame": "assets/thumbs/natural_wonders/chocolate_hills_ingame.png",
+        "irl": "assets/thumbs/natural_wonders/chocolate_hills_irl.png"
+      },
+      "attrs": {},
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Chocolate_Hills_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Chocolate_Hills" }
+        ]
+      }
+    }
+  ]
+}
+
