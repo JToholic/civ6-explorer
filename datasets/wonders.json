@@ -1157,7 +1157,10 @@
       }
     },
 
-	{"id": "placeholder"}
+	{
+		"id": "placeholder",
+		"name": "placeholder"
+	}
   ]
 }
 
