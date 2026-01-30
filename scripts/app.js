@@ -46,6 +46,7 @@ let activeType = null;
 let activeData = null;
 let searchQuery = "";
 let activeSortId = null;
+let selectedItemId = null;
 
 function getTypeFromUrl() {
   return new URLSearchParams(window.location.search).get("type");
@@ -189,6 +190,7 @@ function renderList() {
   listEl.innerHTML = "";
   for (const it of itemsSorted) {
     const li = document.createElement("li");
+    if (it.id === selectedItemId) li.classList.add("is-selected");
 
     // accent background 
 	const accent = resolveAccent(it);
@@ -212,7 +214,11 @@ function renderList() {
 	`;
 
     // click later will open right panel; for now log
-	li.addEventListener("click", () => renderDetail(it));
+	li.addEventListener("click", () => {
+	  selectedItemId = it.id;
+	  renderList();       // re-render list to update highlight
+	  renderDetail(it);   // open right panel (already works)
+	});
 
     listEl.appendChild(li);
   }
@@ -301,6 +307,7 @@ async function applyType(typeId) {
   closeDetail();
   activeType = typeId;
   renderTabs();
+  selectedItemId = null;
 
   // reset search UI per type (keeps things predictable)
   searchQuery = "";
