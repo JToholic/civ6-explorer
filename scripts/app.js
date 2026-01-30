@@ -1,3 +1,6 @@
+// scripts/app.js
+
+// ---- Types / UI config ----
 const TYPES = [
   { id: "wonders", label: "Wonders" },
   { id: "natural_wonders", label: "Natural Wonders" },
@@ -5,10 +8,9 @@ const TYPES = [
   { id: "city_states", label: "City-States" }
 ];
 
+// What to show in the right panel attribute grid (by type)
 const ATTR_DISPLAY = {
-  wonders: [
-    { key: "era", label: "Era" }
-  ],
+  wonders: [{ key: "era", label: "Era" }],
   natural_wonders: [
     { key: "nTiles", label: "# of Tiles" },
     { key: "passability", label: "Passability" },
@@ -18,30 +20,34 @@ const ATTR_DISPLAY = {
     { key: "civilization", label: "Civilization" },
     { key: "birthYear", label: "Birth Year" }
   ],
-  city_states: [
-    { key: "type", label: "Type" }
-  ]
+  city_states: [{ key: "type", label: "Type" }]
 };
 
+// Subtitle shown under the name in the left list cards
 const CARD_SUBTITLE = {
-  wonders:        { field: "attrs.era", label: "Era" },
-  natural_wonders:{ field: "attrs.terrain", label: "Terrain" },
-  leaders:        { field: "attrs.civilization", label: "Civilization" },
-  city_states:    { field: "attrs.type", label: "Type" }
+  wonders: { field: "attrs.era" },
+  natural_wonders: { field: "attrs.terrain" },
+  leaders: { field: "attrs.civilization" },
+  city_states: { field: "attrs.type" }
 };
 
+// Search fields (by type)
 const SEARCH_FIELDS = {
   wonders: ["name", "attrs.era"],
   natural_wonders: ["name", "attrs.passability", "attrs.terrain"],
-  city_states: ["name", "attrs.type"],
-  leaders: ["name", "attrs.civilization"]
+  leaders: ["name", "attrs.civilization"],
+  city_states: ["name", "attrs.type"]
 };
 
+const PLACEHOLDER_THUMB = "assets/thumbs/placeholder.png";
+
+// ---- DOM ----
 const tabsEl = document.getElementById("tabs");
-const statusEl = document.getElementById("statusText"); // still used as a status line for now
+const statusEl = document.getElementById("statusText");
 const searchEl = document.getElementById("search");
 const sortEl = document.getElementById("sort");
 const listEl = document.getElementById("cardList");
+
 const detailPanelEl = document.getElementById("detailPanel");
 const detailCloseEl = document.getElementById("detailClose");
 const detailHeaderEl = document.getElementById("detailHeader");
@@ -52,18 +58,20 @@ const detailTextEl = document.getElementById("detailText");
 const detailLinksEl = document.getElementById("detailLinks");
 const detailAttrsEl = document.getElementById("detailAttrs");
 
-const PLACEHOLDER_THUMB = "assets/thumbs/placeholder.png";
-
+// ---- App state ----
 let activeType = null;
 let activeData = null;
 let searchQuery = "";
 let activeSortId = null;
 let selectedItemId = null;
+
+// ---- Leaflet state ----
 let map = null;
 let markerLayer = null;
+// id -> array of 3 markers (lng-360, lng, lng+360)
 const markersById = new Map();
-const baseCoordsById = new Map();
 
+// ---- URL / Tabs ----
 function getTypeFromUrl() {
   return new URLSearchParams(window.location.search).get("type");
 }
@@ -75,7 +83,7 @@ function setTypeInUrl(typeId) {
 }
 
 function isValidType(typeId) {
-  return TYPES.some(t => t.id === typeId);
+  return TYPES.some((t) => t.id === typeId);
 }
 
 function renderTabs() {
@@ -94,6 +102,7 @@ function renderTabs() {
   }
 }
 
+// ---- Data loading ----
 async function loadDataset(typeId) {
   const path = `datasets/${typeId}.json`;
   const res = await fetch(path, { cache: "no-store" });
@@ -101,12 +110,12 @@ async function loadDataset(typeId) {
   return await res.json();
 }
 
-// --- list rendering helpers ---
-
+// ---- Helpers ----
 function getByPath(obj, path) {
-  // supports "name" and "attrs.era"
   if (!path) return undefined;
-  return path.split(".").reduce((acc, key) => (acc && acc[key] !== undefined ? acc[key] : undefined), obj);
+  return path
+    .split(".")
+    .reduce((acc, key) => (acc && acc[key] !== undefined ? acc[key] : undefined), obj);
 }
 
 function normalizeString(s) {
@@ -118,8 +127,7 @@ function applySearch(items) {
   if (!q) return items;
 
   const fields = SEARCH_FIELDS[activeType] || ["name"];
-
-  return items.filter(it => {
+  return items.filter((it) => {
     for (const field of fields) {
       const v = getByPath(it, field);
       if (v === undefined || v === null) continue;
@@ -131,13 +139,11 @@ function applySearch(items) {
 
 function applySort(items) {
   const sortOptions = activeData?.sortOptions || [];
-  const chosen = sortOptions.find(s => s.id === activeSortId);
+  const chosen = sortOptions.find((s) => s.id === activeSortId);
 
-  // Fallback: pure alphabetical
+  // Fallback: pure alpha
   if (!chosen || chosen.id === "alpha") {
-    return [...items].sort((a, b) =>
-      String(a.name).localeCompare(String(b.name))
-    );
+    return [...items].sort((a, b) => String(a.name).localeCompare(String(b.name)));
   }
 
   const order = chosen.order === "desc" ? -1 : 1;
@@ -146,7 +152,7 @@ function applySort(items) {
     const av = getByPath(a, chosen.field);
     const bv = getByPath(b, chosen.field);
 
-    // Undefined always last
+    // undefined last
     if (av === undefined && bv === undefined) {
       return String(a.name).localeCompare(String(b.name));
     }
@@ -160,10 +166,100 @@ function applySort(items) {
       primary = order * String(av).localeCompare(String(bv));
     }
 
-    // Tie-breaker: alphabetical by name
     if (primary !== 0) return primary;
-    return String(a.name).localeCompare(String(b.name));
+    return String(a.name).localeCompare(String(b.name)); // tie-break alpha
   });
+}
+
+function resolveAccent(item) {
+  const key = item?.theme?.colorKey;
+  return key ? `var(--color-${key})` : null;
+}
+
+function setImgWithFallback(imgEl, src) {
+  const clean = src && String(src).trim() ? src : PLACEHOLDER_THUMB;
+  imgEl.src = clean;
+  imgEl.onerror = () => {
+    imgEl.src = PLACEHOLDER_THUMB;
+  };
+}
+
+// ---- Right panel ----
+function isDetailOpen() {
+  return !detailPanelEl.classList.contains("hidden");
+}
+
+function openDetail() {
+  detailPanelEl.classList.remove("hidden");
+}
+
+function closeDetail() {
+  detailPanelEl.classList.add("hidden");
+  selectedItemId = null;
+  if (activeData) {
+	renderList();
+	renderMapPins();
+  }
+}
+
+function renderAttrs(item) {
+  detailAttrsEl.innerHTML = "";
+  const cfg = ATTR_DISPLAY[activeType];
+  if (!cfg || !item?.attrs) return;
+
+  for (const { key, label } of cfg) {
+    const val = item.attrs[key];
+    if (val === undefined || val === null || val === "") continue;
+
+    const k = document.createElement("div");
+    k.className = "detailAttrKey";
+    k.textContent = label;
+
+    const v = document.createElement("div");
+    v.className = "detailAttrVal";
+    v.textContent = String(val);
+
+    detailAttrsEl.appendChild(k);
+    detailAttrsEl.appendChild(v);
+  }
+}
+
+function renderDetail(item) {
+  if (!item) return;
+
+  const accent = resolveAccent(item);
+  detailHeaderEl.style.background = accent ? accent : "";
+  detailHeaderEl.style.color = accent ? "#fff" : "";
+
+  detailTitleEl.textContent = item.name ?? "";
+
+  setImgWithFallback(detailThumbIngameEl, item?.thumbs?.ingame);
+  setImgWithFallback(detailThumbIrlEl, item?.thumbs?.irl);
+
+  detailTextEl.textContent = item?.detail?.text ?? "";
+  renderAttrs(item);
+
+  const links = Array.isArray(item?.detail?.links) ? item.detail.links : [];
+  detailLinksEl.innerHTML = "";
+  for (const l of links) {
+    if (!l?.url) continue;
+    const a = document.createElement("a");
+    a.href = l.url;
+    a.target = "_blank";
+    a.rel = "noopener";
+    a.textContent = l.label || l.url;
+    detailLinksEl.appendChild(a);
+  }
+
+  openDetail();
+}
+
+// ---- List rendering ----
+function getVisibleItems() {
+  const itemsRaw = Array.isArray(activeData?.items) ? activeData.items : [];
+  const itemsFiltered = applySearch(itemsRaw);
+  const itemsSorted = applySort(itemsFiltered);
+  return { itemsRaw, itemsFiltered, itemsSorted };
 }
 
 function renderSortDropdown() {
@@ -189,9 +285,33 @@ function renderSortDropdown() {
   }
 
   const defaultSort = activeData?.meta?.defaultSort;
-  const initial = (opts.some(x => x.id === defaultSort) ? defaultSort : opts[0].id);
+  const initial = opts.some((x) => x.id === defaultSort) ? defaultSort : opts[0].id;
   activeSortId = initial;
   sortEl.value = initial;
+}
+
+function openBestTooltipForId(id) {
+  const ms = markersById.get(id);
+  if (!ms || !ms.length || !map) return;
+
+  const centerLng = map.getCenter().lng;
+  let best = ms[0];
+  let bestD = Infinity;
+
+  for (const m of ms) {
+    const d = Math.abs(m.getLatLng().lng - centerLng);
+    if (d < bestD) {
+      bestD = d;
+      best = m;
+    }
+  }
+  best.openTooltip();
+}
+
+function closeAllTooltipsForId(id) {
+  const ms = markersById.get(id);
+  if (!ms) return;
+  for (const m of ms) m.closeTooltip();
 }
 
 function renderList() {
@@ -205,242 +325,130 @@ function renderList() {
     const li = document.createElement("li");
     if (it.id === selectedItemId) li.classList.add("is-selected");
 
-    // accent background 
-	const accent = resolveAccent(it);
-	if (accent) {
-	  li.style.borderLeft = `10px solid ${accent}`;
-	}
+    const accent = resolveAccent(it);
+    if (accent) li.style.borderLeft = `10px solid ${accent}`;
 
-	// thumb: prefer in-game, fallback to placeholder
-	const thumbSrc = (it?.thumbs?.ingame && it.thumbs.ingame.trim())
-	  ? it.thumbs.ingame
-	  : PLACEHOLDER_THUMB;
+    const thumbSrc =
+      it?.thumbs?.ingame && String(it.thumbs.ingame).trim()
+        ? it.thumbs.ingame
+        : PLACEHOLDER_THUMB;
 
     const subCfg = CARD_SUBTITLE[activeType] || {};
-	const subVal = subCfg.field ? (getByPath(it, subCfg.field) ?? "") : "";
-	
-	li.innerHTML = `
-	  <div class="card">
-		<img class="cardThumb" src="${thumbSrc}" alt="${it.name}" onerror="this.src='${PLACEHOLDER_THUMB}'">
-		<div>
-		  <div class="cardTitle">${it.name}</div>
-		  <div class="cardSub">${subVal}</div>
-		</div>
-	  </div>
-	`;
+    const subVal = subCfg.field ? getByPath(it, subCfg.field) ?? "" : "";
 
-	li.addEventListener("mouseenter", () => {
-	  const m = markersById.get(it.id);
-	  if (m) m.openTooltip();
-	});
-	li.addEventListener("mouseleave", () => {
-	  const m = markersById.get(it.id);
-	  if (m) m.closeTooltip();
-	});
+    li.innerHTML = `
+      <div class="card">
+        <img class="cardThumb" src="${thumbSrc}" alt="${it.name}"
+             onerror="this.src='${PLACEHOLDER_THUMB}'">
+        <div>
+          <div class="cardTitle">${it.name}</div>
+          <div class="cardSub">${subVal}</div>
+        </div>
+      </div>
+    `;
 
-    // click later will open right panel; for now log
-	li.addEventListener("click", () => {
-	  const same = (selectedItemId === it.id);
+    li.addEventListener("mouseenter", () => openBestTooltipForId(it.id));
+    li.addEventListener("mouseleave", () => closeAllTooltipsForId(it.id));
 
-	  if (same && isDetailOpen()) {
-		closeDetail();
-		return;
-	  }
-
-	  selectedItemId = it.id;
-	  renderList();
-	  renderDetail(it);
-	});
+    li.addEventListener("click", () => {
+      const same = selectedItemId === it.id;
+      if (same && isDetailOpen()) {
+        closeDetail();
+        return;
+      }
+      selectedItemId = it.id;
+      renderList();
+	  renderMapPins();
+      renderDetail(it);
+    });
 
     listEl.appendChild(li);
   }
 }
 
-function resolveAccent(item) {
-  const key = item?.theme?.colorKey;
-  return key ? `var(--color-${key})` : null;
-}
-
-function isDetailOpen() {
-  return !detailPanelEl.classList.contains("hidden");
-}
-
-function openDetail() {
-  detailPanelEl.classList.remove("hidden");
-}
-
-function closeDetail() {
-  detailPanelEl.classList.add("hidden");
-}
-
-function setImgWithFallback(imgEl, src) {
-  const clean = (src && String(src).trim()) ? src : PLACEHOLDER_THUMB;
-  imgEl.src = clean;
-  imgEl.onerror = () => { imgEl.src = PLACEHOLDER_THUMB; };
-}
-
-function renderAttrs(item) {
-  detailAttrsEl.innerHTML = "";
-
-  const cfg = ATTR_DISPLAY[activeType];
-  if (!cfg || !item?.attrs) return;
-
-  for (const { key, label } of cfg) {
-    const val = item.attrs[key];
-    if (val === undefined || val === null || val === "") continue;
-
-    const k = document.createElement("div");
-    k.className = "detailAttrKey";
-    k.textContent = label;
-
-    const v = document.createElement("div");
-    v.className = "detailAttrVal";
-    v.textContent = String(val);
-
-    detailAttrsEl.appendChild(k);
-    detailAttrsEl.appendChild(v);
-  }
-}
-
-function renderDetail(item) {
-  if (!item) return;
-
-  // Accent header background (optional but nice)
-  const accent = resolveAccent(item);
-  detailHeaderEl.style.background = accent ? accent : "";
-  detailHeaderEl.style.color = accent ? "#fff" : "";
-
-  detailTitleEl.textContent = item.name ?? "";
-
-  setImgWithFallback(detailThumbIngameEl, item?.thumbs?.ingame);
-  setImgWithFallback(detailThumbIrlEl, item?.thumbs?.irl); // you chose `irl`
-
-  // Text (simple for now; preserves newlines)
-  const text = item?.detail?.text ?? "";
-  detailTextEl.textContent = text;
-
-  renderAttrs(item);
-
-  // Links
-  const links = Array.isArray(item?.detail?.links) ? item.detail.links : [];
-  detailLinksEl.innerHTML = "";
-  for (const l of links) {
-    if (!l?.url) continue;
-    const a = document.createElement("a");
-    a.href = l.url;
-    a.target = "_blank";
-    a.rel = "noopener";
-    a.textContent = l.label || l.url;
-    detailLinksEl.appendChild(a);
-  }
-
-  openDetail();
-}
-
+// ---- Leaflet map + stable wrapped pins ----
 function initMapOnce() {
   if (map) return;
 
-  map = L.map("map", {
-    worldCopyJump: true
-  }).setView([20, 0], 2);
-
-  map.on("moveend", () => {
-    // re-render so markers jump to the nearest wrapped copy
-    renderMapPins();
-  });
+  map = L.map("map", { worldCopyJump: true, minZoom: 2 }).setView([20, 0], 2);
 
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19,
-    attribution: "&copy; OpenStreetMap"
+    attribution: "© OpenStreetMap"
   }).addTo(map);
 
   markerLayer = L.layerGroup().addTo(map);
 }
 
-function getVisibleItems() {
-  const itemsRaw = Array.isArray(activeData?.items) ? activeData.items : [];
-  const itemsFiltered = applySearch(itemsRaw);
-  const itemsSorted = applySort(itemsFiltered);
-  return { itemsRaw, itemsFiltered, itemsSorted };
-}
-
 function resolvePinColor(item) {
-  // reuse your semantic colorKey system; fallback if missing
   return resolveAccent(item) || "#444";
 }
 
 function renderMapPins() {
   initMapOnce();
 
-  // Clear old pins
   markerLayer.clearLayers();
   markersById.clear();
 
   const { itemsFiltered } = getVisibleItems();
 
-  const centerLng = map.getCenter().lng;
-
-  // Only items with coords get pins
   for (const it of itemsFiltered) {
     if (!Array.isArray(it.coords) || it.coords.length !== 2) continue;
-    const [lat, lng] = it.coords;
-	const lng2 = lngNearestToCenter(lng, centerLng);
-    baseCoordsById.set(it.id, { lat, lng });
-    const color = resolvePinColor(it);
-	const icon = L.divIcon({
-	  className: "",
-	  html: `<div class="pinDot" style="background:${color}"></div>`,
-	  iconSize: [14, 14],
-	  iconAnchor: [7, 7]
-	});
-    const m = L.marker([lat, lng2], { icon }).addTo(markerLayer);
 
-    // Hover label (name above pin)
-    m.bindTooltip(it.name, {
-      direction: "top",
-      offset: [0, -10],
-      opacity: 1,
-      className: "pinLabel",
-      permanent: false
+    const [lat, lng] = it.coords;
+    if (typeof lat !== "number" || typeof lng !== "number") continue;
+
+    const color = resolvePinColor(it);
+
+	const selectedClass = (it.id === selectedItemId) ? " is-selected" : "";
+    const icon = L.divIcon({
+      className: "",
+	  html: `<div class="pinDot${selectedClass}" style="background:${color}"></div>`,
+      iconSize: [14, 14],
+      iconAnchor: [7, 7]
     });
 
-    m.on("mouseover", () => m.openTooltip());
-    m.on("mouseout", () => m.closeTooltip());
+    const ms = [];
+    for (const shift of [-360, 0, 360]) {
+      const m = L.marker([lat, lng + shift], { icon }).addTo(markerLayer);
 
-    // Click pin -> select + open detail
-	m.on("click", () => {
-	  const same = (selectedItemId === it.id);
+      m.bindTooltip(it.name, {
+        direction: "top",
+        offset: [0, -10],
+        opacity: 1,
+        className: "pinLabel"
+      });
 
-	  if (same && isDetailOpen()) {
-		closeDetail();
-		return;
-	  }
+      m.on("mouseover", () => m.openTooltip());
+      m.on("mouseout", () => m.closeTooltip());
 
-	  selectedItemId = it.id;
-	  renderList();
-	  renderDetail(it);
-	});
+      m.on("click", () => {
+        const same = selectedItemId === it.id;
+        if (same && isDetailOpen()) {
+          closeDetail();
+          return;
+        }
+        selectedItemId = it.id;
+        renderList();
+        renderDetail(it);
+      });
 
-    markersById.set(it.id, m);
+      ms.push(m);
+    }
+
+    markersById.set(it.id, ms);
   }
 }
 
-function lngNearestToCenter(lng, centerLng) {
-  let x = lng;
-  while (x - centerLng > 180) x -= 360;
-  while (centerLng - x > 180) x += 360;
-  return x;
-}
-
-// --- main applyType ---
-
+// ---- Main flow ----
 async function applyType(typeId) {
   closeDetail();
+
   activeType = typeId;
   renderTabs();
+
   selectedItemId = null;
 
-  // reset search UI per type (keeps things predictable)
   searchQuery = "";
   searchEl.value = "";
 
@@ -452,8 +460,7 @@ async function applyType(typeId) {
     activeData = await loadDataset(typeId);
     renderSortDropdown();
     renderList();
-	renderMapPins();
-    console.log("Loaded dataset:", typeId, activeData);
+    renderMapPins();
   } catch (err) {
     statusEl.textContent = `Error: ${err.message}`;
     console.error(err);
@@ -461,18 +468,16 @@ async function applyType(typeId) {
 }
 
 function init() {
-  // search input
   searchEl.addEventListener("input", (e) => {
     searchQuery = e.target.value;
     renderList();
-	renderMapPins();
+    renderMapPins();
   });
 
-  // sort selection
   sortEl.addEventListener("change", (e) => {
     activeSortId = e.target.value;
     renderList();
-	renderMapPins();
+    renderMapPins();
   });
 
   detailCloseEl.addEventListener("click", closeDetail);

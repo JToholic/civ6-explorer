@@ -151,6 +151,14 @@
   box-shadow: 0 2px 8px rgba(0,0,0,.25);
 }
 
+.pinDot.is-selected{
+  transform: scale(1.25);
+  box-shadow:
+    0 0 0 3px rgba(255,255,255,.95),
+    0 0 0 7px rgba(0,0,0,.20),
+    0 6px 16px rgba(0,0,0,.25);
+}
+
 .leaflet-tooltip.pinLabel{
   background: rgba(255,255,255,.95);
   border: 1px solid var(--border);
