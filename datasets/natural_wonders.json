@@ -5,7 +5,10 @@
     "defaultSort": "alpha"
   },
   "sortOptions": [
-    { "id": "alpha", "label": "A → Z", "field": "name", "order": "asc" }
+    { "id": "alpha", "label": "A → Z", "field": "name", "order": "asc" },
+    { "id": "nTiles", "label": "# of Tiles", "field": "attrs.nTiles", "order": "asc" },
+    { "id": "passability", "label": "Passability", "field": "attrs.passability", "order": "asc" },
+    { "id": "terrain", "label": "Terrain", "field": "attrs.terrain", "order": "asc" }
   ],
   "items": [
     {
@@ -16,7 +19,11 @@
         "ingame": "assets/thumbs/natural_wonders/bermuda_triangle_ingame.png",
         "irl": "assets/thumbs/natural_wonders/bermuda_triangle_irl.png"
       },
-      "attrs": {},
+      "attrs": {
+		"nTiles": 3,
+		"passability": "Passable",
+		"terrain": "Ocean"
+	  },
       "detail": {
         "text": "",
         "links": [
@@ -33,7 +40,11 @@
         "ingame": "assets/thumbs/natural_wonders/chocolate_hills_ingame.png",
         "irl": "assets/thumbs/natural_wonders/chocolate_hills_irl.png"
       },
-      "attrs": {},
+      "attrs": {
+		"nTiles": 4,
+		"passability": "Passable",
+		"terrain": "Grassland/Plains"
+	  },
       "detail": {
         "text": "",
         "links": [

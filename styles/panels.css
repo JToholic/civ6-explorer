@@ -74,6 +74,7 @@
 #detailPanel{
   position:absolute;
   top:10px; right:10px; bottom:10px;
+  z-index: 1000;
   width:min(520px, calc(100% - 20px));
   border:1px solid var(--border);
   border-radius:16px;
@@ -139,5 +140,23 @@
 
 .detailAttrVal {
   font-weight: 500;
+}
+
+/* Leaflet pin */
+.pinDot{
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+
+.leaflet-tooltip.pinLabel{
+  background: rgba(255,255,255,.95);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 4px 8px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.10);
+  color: #111;
 }
 

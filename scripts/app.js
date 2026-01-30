@@ -9,9 +9,14 @@ const ATTR_DISPLAY = {
   wonders: [
     { key: "era", label: "Era" }
   ],
+  natural_wonders: [
+    { key: "nTiles", label: "# of Tiles" },
+    { key: "passability", label: "Passability" },
+    { key: "terrain", label: "Terrain" }
+  ],
   leaders: [
     { key: "civilization", label: "Civilization" },
-    { key: "birthYear", label: "Birth year" }
+    { key: "birthYear", label: "Birth Year" }
   ],
   city_states: [
     { key: "type", label: "Type" }
@@ -19,17 +24,17 @@ const ATTR_DISPLAY = {
 };
 
 const CARD_SUBTITLE = {
-  wonders:        { field: "attrs.era",       label: "Era" },
-  natural_wonders:{ field: "",               label: "" },
+  wonders:        { field: "attrs.era", label: "Era" },
+  natural_wonders:{ field: "attrs.terrain", label: "Terrain" },
   leaders:        { field: "attrs.civilization", label: "Civilization" },
-  city_states:    { field: "attrs.type",      label: "Type" }
+  city_states:    { field: "attrs.type", label: "Type" }
 };
 
 const SEARCH_FIELDS = {
   wonders: ["name", "attrs.era"],
-  natural_wonders: ["name"],
+  natural_wonders: ["name", "attrs.passability", "attrs.terrain"],
   city_states: ["name", "attrs.type"],
-  leaders: ["name", "attrs.birthYear", "attrs.civilization"],
+  leaders: ["name", "attrs.civilization"]
 };
 
 const tabsEl = document.getElementById("tabs");
@@ -54,6 +59,10 @@ let activeData = null;
 let searchQuery = "";
 let activeSortId = null;
 let selectedItemId = null;
+let map = null;
+let markerLayer = null;
+const markersById = new Map();
+const baseCoordsById = new Map();
 
 function getTypeFromUrl() {
   return new URLSearchParams(window.location.search).get("type");
@@ -187,10 +196,7 @@ function renderSortDropdown() {
 
 function renderList() {
   const title = activeData?.meta?.title ?? activeType;
-  const itemsRaw = Array.isArray(activeData?.items) ? activeData.items : [];
-
-  const itemsFiltered = applySearch(itemsRaw);
-  const itemsSorted = applySort(itemsFiltered);
+  const { itemsRaw, itemsSorted } = getVisibleItems();
 
   statusEl.textContent = `${title}: showing ${itemsSorted.length}/${itemsRaw.length}`;
 
@@ -223,11 +229,27 @@ function renderList() {
 	  </div>
 	`;
 
+	li.addEventListener("mouseenter", () => {
+	  const m = markersById.get(it.id);
+	  if (m) m.openTooltip();
+	});
+	li.addEventListener("mouseleave", () => {
+	  const m = markersById.get(it.id);
+	  if (m) m.closeTooltip();
+	});
+
     // click later will open right panel; for now log
 	li.addEventListener("click", () => {
+	  const same = (selectedItemId === it.id);
+
+	  if (same && isDetailOpen()) {
+		closeDetail();
+		return;
+	  }
+
 	  selectedItemId = it.id;
-	  renderList();       // re-render list to update highlight
-	  renderDetail(it);   // open right panel (already works)
+	  renderList();
+	  renderDetail(it);
 	});
 
     listEl.appendChild(li);
@@ -237,6 +259,10 @@ function renderList() {
 function resolveAccent(item) {
   const key = item?.theme?.colorKey;
   return key ? `var(--color-${key})` : null;
+}
+
+function isDetailOpen() {
+  return !detailPanelEl.classList.contains("hidden");
 }
 
 function openDetail() {
@@ -311,6 +337,101 @@ function renderDetail(item) {
   openDetail();
 }
 
+function initMapOnce() {
+  if (map) return;
+
+  map = L.map("map", {
+    worldCopyJump: true
+  }).setView([20, 0], 2);
+
+  map.on("moveend", () => {
+    // re-render so markers jump to the nearest wrapped copy
+    renderMapPins();
+  });
+
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19,
+    attribution: "&copy; OpenStreetMap"
+  }).addTo(map);
+
+  markerLayer = L.layerGroup().addTo(map);
+}
+
+function getVisibleItems() {
+  const itemsRaw = Array.isArray(activeData?.items) ? activeData.items : [];
+  const itemsFiltered = applySearch(itemsRaw);
+  const itemsSorted = applySort(itemsFiltered);
+  return { itemsRaw, itemsFiltered, itemsSorted };
+}
+
+function resolvePinColor(item) {
+  // reuse your semantic colorKey system; fallback if missing
+  return resolveAccent(item) || "#444";
+}
+
+function renderMapPins() {
+  initMapOnce();
+
+  // Clear old pins
+  markerLayer.clearLayers();
+  markersById.clear();
+
+  const { itemsFiltered } = getVisibleItems();
+
+  const centerLng = map.getCenter().lng;
+
+  // Only items with coords get pins
+  for (const it of itemsFiltered) {
+    if (!Array.isArray(it.coords) || it.coords.length !== 2) continue;
+    const [lat, lng] = it.coords;
+	const lng2 = lngNearestToCenter(lng, centerLng);
+    baseCoordsById.set(it.id, { lat, lng });
+    const color = resolvePinColor(it);
+	const icon = L.divIcon({
+	  className: "",
+	  html: `<div class="pinDot" style="background:${color}"></div>`,
+	  iconSize: [14, 14],
+	  iconAnchor: [7, 7]
+	});
+    const m = L.marker([lat, lng2], { icon }).addTo(markerLayer);
+
+    // Hover label (name above pin)
+    m.bindTooltip(it.name, {
+      direction: "top",
+      offset: [0, -10],
+      opacity: 1,
+      className: "pinLabel",
+      permanent: false
+    });
+
+    m.on("mouseover", () => m.openTooltip());
+    m.on("mouseout", () => m.closeTooltip());
+
+    // Click pin -> select + open detail
+	m.on("click", () => {
+	  const same = (selectedItemId === it.id);
+
+	  if (same && isDetailOpen()) {
+		closeDetail();
+		return;
+	  }
+
+	  selectedItemId = it.id;
+	  renderList();
+	  renderDetail(it);
+	});
+
+    markersById.set(it.id, m);
+  }
+}
+
+function lngNearestToCenter(lng, centerLng) {
+  let x = lng;
+  while (x - centerLng > 180) x -= 360;
+  while (centerLng - x > 180) x += 360;
+  return x;
+}
+
 // --- main applyType ---
 
 async function applyType(typeId) {
@@ -331,6 +452,7 @@ async function applyType(typeId) {
     activeData = await loadDataset(typeId);
     renderSortDropdown();
     renderList();
+	renderMapPins();
     console.log("Loaded dataset:", typeId, activeData);
   } catch (err) {
     statusEl.textContent = `Error: ${err.message}`;
@@ -343,12 +465,14 @@ function init() {
   searchEl.addEventListener("input", (e) => {
     searchQuery = e.target.value;
     renderList();
+	renderMapPins();
   });
 
   // sort selection
   sortEl.addEventListener("change", (e) => {
     activeSortId = e.target.value;
     renderList();
+	renderMapPins();
   });
 
   detailCloseEl.addEventListener("click", closeDetail);
