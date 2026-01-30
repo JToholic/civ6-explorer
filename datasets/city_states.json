@@ -1,1 +1,54 @@
-{ "meta": { "type": "city_states", "title": "City-States", "defaultSort": "alpha" }, "sortOptions": [], "items": [] }
+{
+  "meta": {
+    "type": "city_states",
+    "title": "City-States",
+    "defaultSort": "type"
+  },
+  "sortOptions": [
+    { "id": "alpha", "label": "A → Z", "field": "name", "order": "asc" },
+    { "id": "type", "label": "Type", "field": "attrs.type", "order": "asc" }
+  ],
+  "items": [
+    {
+      "id": "geneva",
+      "name": "Geneva",
+      "coords": [46.2044, 6.1432],
+      "theme": { "colorKey": "city_states-scientific" },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/geneva_ingame.png",
+        "irl": "assets/thumbs/city_states/geneva_irl.png"
+      },
+      "attrs": {
+        "type": "Scientific"
+      },
+      "detail": {
+        "text": "Scientific city-state focused on research and diplomacy.",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Geneva_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Geneva" }
+        ]
+      }
+    },
+    {
+      "id": "jakarta",
+      "name": "Jakarta",
+      "coords": [-6.2088, 106.8456],
+      "theme": { "colorKey": "city_states-trade" },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/geneva_ingame.png",
+        "irl": "assets/thumbs/city_states/geneva_irl.png"
+      },
+      "attrs": {
+        "type": "Trade"
+      },
+      "detail": {
+        "text": "Maritime city-state providing bonuses to coastal cities.",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Jakarta_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Jakarta" }
+        ]
+      }
+    }
+  ]
+}
+

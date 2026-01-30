@@ -14,15 +14,15 @@ const ATTR_DISPLAY = {
     { key: "birthYear", label: "Birth year" }
   ],
   city_states: [
-    { key: "capital", label: "Capital" }
+    { key: "type", label: "Type" }
   ]
 };
 
 const SEARCH_FIELDS = {
   wonders: ["name", "attrs.era"],
   natural_wonders: ["name"],
-  city_states: ["name"],
-  leaders: ["name", "attrs.birthYear"],
+  city_states: ["name", "attrs.type"],
+  leaders: ["name", "attrs.birthYear", "attrs.civilization"],
 };
 
 const tabsEl = document.getElementById("tabs");
@@ -99,7 +99,17 @@ function normalizeString(s) {
 function applySearch(items) {
   const q = normalizeString(searchQuery).trim();
   if (!q) return items;
-  return items.filter(it => normalizeString(it.name).includes(q));
+
+  const fields = SEARCH_FIELDS[activeType] || ["name"];
+
+  return items.filter(it => {
+    for (const field of fields) {
+      const v = getByPath(it, field);
+      if (v === undefined || v === null) continue;
+      if (normalizeString(v).includes(q)) return true;
+    }
+    return false;
+  });
 }
 
 function applySort(items) {

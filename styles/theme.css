@@ -17,6 +17,13 @@
 
   /* Leaders – by civilization */
   --color-leaders-american: #2F6F95;      /* muted patriotic blue */
+
+  /* City-States – by type */
+	--color-city_states-scientific: #4C7EDB;  /* blue */
+	--color-city_states-trade:   #2BA6A6;  /* teal */
+	--color-city_states-militaristic:#B24A3C; /* red (future) */
+	--color-city_states-cultural:   #8E6BBE;  /* purple (future) */
+	--color-city_states-industrial: #6F6F6F;  /* gray (future) */
 }
 
 *{ box-sizing:border-box; }

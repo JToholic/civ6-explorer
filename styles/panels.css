@@ -94,10 +94,10 @@
 
 .detailBody{ padding:18px; display:flex; flex-direction:column; gap:12px; }
 .thumbRow{
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* side-by-side */
+  gap: 16px;
+  justify-items: center;          /* centers fixed-width thumbs */
 }
 
 .detailText{ color:var(--muted); font-size: 14px; line-height:1.4; }
