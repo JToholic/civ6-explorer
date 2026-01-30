@@ -29,7 +29,7 @@
         "era": "Ancient",
 		"location": "Babylon (now Iraq)",
 		"year_num": -1400,
-		"year": "1400~800 BCE"
+		"year": "1400~800 BC"
       },
 
       "detail": {
@@ -40,6 +40,7 @@
         ]
       }
     },
+
     {
       "id": "great_bath",
       "name": "Great Bath",
@@ -59,7 +60,7 @@
         "era": "Ancient",
 		"location": "Indus Civilization (now Pakistan)",
 		"year_num": -3000,
-		"year": "3000~2000 BCE"
+		"year": "3000~2000 BC"
       },
 
       "detail": {
@@ -70,6 +71,7 @@
         ]
       }
     },
+
     {
       "id": "hanging_gardens",
       "name": "Hanging Gardens",
@@ -89,7 +91,7 @@
         "era": "Ancient",
 		"location": "Babylon (now Iraq)",
 		"year_num": -605,
-		"year": "605~562 BCE"
+		"year": "605~562 BC"
       },
 
       "detail": {
@@ -100,6 +102,7 @@
         ]
       }
     },
+
     {
       "id": "oracle",
       "name": "Oracle",
@@ -119,7 +122,7 @@
         "era": "Ancient",
 		"location": "Greece",
 		"year_num": -800,
-		"year": "800~700 BCE"
+		"year": "800~700 BC"
       },
 
       "detail": {
@@ -130,6 +133,7 @@
         ]
       }
     },
+
     {
       "id": "pyramids",
       "name": "Pyramids",
@@ -149,7 +153,7 @@
         "era": "Ancient",
 		"location": "Egypt",
 		"year_num": -2630,
-		"year": "2630~2610 BCE"
+		"year": "2630~2610 BC"
       },
 
       "detail": {
@@ -160,6 +164,7 @@
         ]
       }
     },
+
     {
       "id": "stonehenge",
       "name": "Stonehenge",
@@ -179,7 +184,7 @@
         "era": "Ancient",
 		"location": "now England",
 		"year_num": -3100,
-		"year": "3100~1600 BCE"
+		"year": "3100~1600 BC"
       },
 
       "detail": {
@@ -190,6 +195,7 @@
         ]
       }
     },
+
     {
       "id": "temple_of_artemis",
       "name": "Temple of Artemis",
@@ -209,7 +215,7 @@
         "era": "Ancient",
 		"location": "Ephesus (now Turkey)",
 		"year_num": -550,
-		"year": "550 BCE"
+		"year": "550 BC"
       },
 
       "detail": {
@@ -220,6 +226,379 @@
         ]
       }
     },
+
+    {
+      "id": "apadana",
+      "name": "Apadana",
+
+      "coords": [29.935, 52.89],
+
+      "theme": {
+		"colorKey": "wonders-classical"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/apadana_ingame.png",
+        "irl": "assets/thumbs/wonders/apadana_irl.png"
+      },
+
+      "attrs": {
+        "era": "Classical",
+		"location": "Iran",
+		"year_num": -500,
+		"year": "500 BC"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Apadana_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Apadana" }
+        ]
+      }
+    },
+
+    {
+      "id": "colosseum",
+      "name": "Colosseum",
+
+      "coords": [41.8903, 12.4922],
+
+      "theme": {
+		"colorKey": "wonders-classical"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/colosseum_ingame.png",
+        "irl": "assets/thumbs/wonders/colosseum_irl.png"
+      },
+
+      "attrs": {
+        "era": "Classical",
+		"location": "Italy",
+		"year_num": 72,
+		"year": "72 AD"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Colosseum_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Colosseum" }
+        ]
+      }
+    },
+
+    {
+      "id": "colossus",
+      "name": "Colossus",
+
+      "coords": [36.451111, 28.227778],
+
+      "theme": {
+		"colorKey": "wonders-classical"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/colossus_ingame.png",
+        "irl": "assets/thumbs/wonders/colossus_irl.png"
+      },
+
+      "attrs": {
+        "era": "Classical",
+		"location": "Greece",
+		"year_num": -280,
+		"year": "280 BC"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Colossus_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Colossus_of_Rhodes" }
+        ]
+      }
+    },
+
+    {
+      "id": "great_library",
+      "name": "Great Library",
+
+      "coords": [31.46, 30.43],
+
+      "theme": {
+		"colorKey": "wonders-classical"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/great_library_ingame.png",
+        "irl": "assets/thumbs/wonders/great_library_irl.png"
+      },
+
+      "attrs": {
+        "era": "Classical",
+		"location": "Egypt",
+		"year_num": -285,
+		"year": "285~246 BC"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Great_Library_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Library_of_Alexandria" }
+        ]
+      }
+    },
+
+    {
+      "id": "great_lighthouse",
+      "name": "Great Lighthouse",
+
+      "coords": [31.2148, 29.886],
+
+      "theme": {
+		"colorKey": "wonders-classical"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/great_lighthouse_ingame.png",
+        "irl": "assets/thumbs/wonders/great_lighthouse_irl.png"
+      },
+
+      "attrs": {
+        "era": "Classical",
+		"location": "Egypt",
+		"year_num": -284,
+		"year": "284~246 BC"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Great_Lighthouse_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Lighthouse_of_Alexandria" }
+        ]
+      }
+    },
+    
+	{
+      "id": "jebel_barkal",
+      "name": "Jebel Barkal",
+
+      "coords": [18.536667, 31.828333],
+
+      "theme": {
+		"colorKey": "wonders-classical"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/jebel_barkal_ingame.png",
+        "irl": "assets/thumbs/wonders/jebel_barkal_irl.png"
+      },
+
+      "attrs": {
+        "era": "Classical",
+		"location": "Kerma (now Sudan)",
+		"year_num": -1450,
+		"year": "1450 BC"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Jebel_Barkal_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Jebel_Barkal" }
+        ]
+      }
+    },
+
+	{
+      "id": "machu_picchu",
+      "name": "Machu Picchu",
+
+      "coords": [-13.163333, -72.545556],
+
+      "theme": {
+		"colorKey": "wonders-classical"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/machu_picchu_ingame.png",
+        "irl": "assets/thumbs/wonders/machu_picchu_irl.png"
+      },
+
+      "attrs": {
+        "era": "Classical",
+		"location": "Inca (now Peru)",
+		"year_num": 1450,
+		"year": "1450 AD"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Machu_Picchu_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Machu_Picchu" }
+        ]
+      }
+    },
+
+	{
+      "id": "mahabodhi_temple",
+      "name": "Mahabodhi Temple",
+
+      "coords": [24.696, 84.9913],
+
+      "theme": {
+		"colorKey": "wonders-classical"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/mahabodhi_temple_ingame.png",
+        "irl": "assets/thumbs/wonders/mahabodhi_temple_irl.png"
+      },
+
+      "attrs": {
+        "era": "Classical",
+		"location": "India",
+		"year_num": -600,
+		"year": "600 BC"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Mahabodhi_Temple_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Madabodhi_Temple" }
+        ]
+      }
+    },
+
+	{
+      "id": "mausoleum_at_halicarnassus",
+      "name": "Mausoleum at Halicarnassus",
+
+      "coords": [37.0379, 27.4241],
+
+      "theme": {
+		"colorKey": "wonders-classical"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/mausoleum_at_halicarnassus_ingame.png",
+        "irl": "assets/thumbs/wonders/mausoleum_at_halicarnassus_irl.png"
+      },
+
+      "attrs": {
+        "era": "Classical",
+		"location": "Halicarnassus (now Turkey)",
+		"year_num": -353,
+		"year": "353~351 BC"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Mausoleum_at_Halicarnassus_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Mausoleum_at_Halicarnassus" }
+        ]
+      }
+    },
+
+	{
+      "id": "petra",
+      "name": "Petra",
+
+      "coords": [30.328611, 35.441944],
+
+      "theme": {
+		"colorKey": "wonders-classical"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/petra_ingame.png",
+        "irl": "assets/thumbs/wonders/petra_irl.png"
+      },
+
+      "attrs": {
+        "era": "Classical",
+		"location": "Nabataea (now Jordan)",
+		"year_num": -500,
+		"year": "500 BC"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Petra_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Petra" }
+        ]
+      }
+    },
+
+	{
+      "id": "statue_of_zeus",
+      "name": "Statue of Zeus",
+
+      "coords": [37.637861, 21.63],
+
+      "theme": {
+		"colorKey": "wonders-classical"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/statue_of_zeus_ingame.png",
+        "irl": "assets/thumbs/wonders/statue_of_zeus_irl.png"
+      },
+
+      "attrs": {
+        "era": "Classical",
+		"location": "Greece",
+		"year_num": -435,
+		"year": "435 BC"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Statue_of_Zeus_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Statue_of_Zeus_at_Olympia" }
+        ]
+      }
+    },
+
+	{
+      "id": "terracotta_army",
+      "name": "Terracotta Army",
+
+      "coords": [34.385, 109.273056],
+
+      "theme": {
+		"colorKey": "wonders-classical"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/terracotta_army_ingame.png",
+        "irl": "assets/thumbs/wonders/terracotta_army_irl.png"
+      },
+
+      "attrs": {
+        "era": "Classical",
+		"location": "China",
+		"year_num": -210,
+		"year": "210 BC"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Terracotta_Army_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Terracotta_Army" }
+        ]
+      }
+    },
+
 	{"id": "placeholder"}
   ]
 }

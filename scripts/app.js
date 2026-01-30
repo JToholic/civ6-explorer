@@ -11,7 +11,7 @@ const TYPES = [
 // What to show in the right panel attribute grid (by type)
 const ATTR_DISPLAY = {
   wonders: [
-	  { key: "location", label: "Location" }
+	  { key: "location", label: "Location" },
 	  { key: "era", label: "Era" },
 	  { key: "year", label: "Year" }
   ],
@@ -438,6 +438,7 @@ function renderMapPins() {
         }
         selectedItemId = it.id;
         renderList();
+        renderMapPins();
         renderDetail(it);
       });
 
