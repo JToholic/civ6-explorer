@@ -6,14 +6,15 @@
   },
   "sortOptions": [
     { "id": "alpha", "label": "A → Z", "field": "name", "order": "asc" },
-    { "id": "era", "label": "Era", "field": "attrs.era", "order": "asc" }
+    { "id": "era", "label": "Era", "field": "attrs.era", "order": "asc" },
+    { "id": "year_num", "label": "Year", "field": "attrs.year_num", "order": "asc" }
   ],
   "items": [
     {
       "id": "etemenanki",
       "name": "Etemenanki",
 
-      "coords": [32, 44],
+      "coords": [32.536389, 44.420833],
 
       "theme": {
 		"colorKey": "wonders-ancient"
@@ -25,11 +26,14 @@
       },
 
       "attrs": {
-        "era": "Ancient"
+        "era": "Ancient",
+		"location": "Babylon (now Iraq)",
+		"year_num": -1400,
+		"year": "1400~800 BCE"
       },
 
       "detail": {
-        "text": "Optional description. Can be empty.",
+        "text": "",
         "links": [
           { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Etemenanki_(Civ6)" },
           { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Etemenanki" }
@@ -37,10 +41,100 @@
       }
     },
     {
+      "id": "great_bath",
+      "name": "Great Bath",
+
+      "coords": [27.325358, 68.132872],
+
+      "theme": {
+		"colorKey": "wonders-ancient"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/great_bath_ingame.png",
+        "irl": "assets/thumbs/wonders/great_bath_irl.png"
+      },
+
+      "attrs": {
+        "era": "Ancient",
+		"location": "Indus Civilization (now Pakistan)",
+		"year_num": -3000,
+		"year": "3000~2000 BCE"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Great_Bath_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Great_Bath" }
+        ]
+      }
+    },
+    {
+      "id": "hanging_gardens",
+      "name": "Hanging Gardens",
+
+      "coords": [32.5355, 44.4275],
+
+      "theme": {
+		"colorKey": "wonders-ancient"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/hanging_gardens_ingame.png",
+        "irl": "assets/thumbs/wonders/hanging_gardens_irl.png"
+      },
+
+      "attrs": {
+        "era": "Ancient",
+		"location": "Babylon (now Iraq)",
+		"year_num": -605,
+		"year": "605~562 BCE"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Hanging_Gardens_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Hanging_Gardens_of_Babylon" }
+        ]
+      }
+    },
+    {
+      "id": "oracle",
+      "name": "Oracle",
+
+      "coords": [38.482222, 22.501111],
+
+      "theme": {
+		"colorKey": "wonders-ancient"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/oracle_ingame.png",
+        "irl": "assets/thumbs/wonders/oracle_irl.png"
+      },
+
+      "attrs": {
+        "era": "Ancient",
+		"location": "Greece",
+		"year_num": -800,
+		"year": "800~700 BCE"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Oracle_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Pythia" }
+        ]
+      }
+    },
+    {
       "id": "pyramids",
       "name": "Pyramids",
 
-      "coords": [29, 31],
+      "coords": [29.9725, 31.128333],
 
       "theme": {
 		"colorKey": "wonders-ancient"
@@ -52,17 +146,81 @@
       },
 
       "attrs": {
-        "era": "Ancient"
+        "era": "Ancient",
+		"location": "Egypt",
+		"year_num": -2630,
+		"year": "2630~2610 BCE"
       },
 
       "detail": {
-        "text": "Optional description. Can be empty.",
+        "text": "",
         "links": [
           { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Pyramids_(Civ6)" },
           { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Egyptian_pyramids" }
         ]
       }
-    }
+    },
+    {
+      "id": "stonehenge",
+      "name": "Stonehenge",
+
+      "coords": [51.178889, -1.826111],
+
+      "theme": {
+		"colorKey": "wonders-ancient"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/stonehenge_ingame.png",
+        "irl": "assets/thumbs/wonders/stonehenge_irl.png"
+      },
+
+      "attrs": {
+        "era": "Ancient",
+		"location": "now England",
+		"year_num": -3100,
+		"year": "3100~1600 BCE"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Stonehenge_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Stonehenge" }
+        ]
+      }
+    },
+    {
+      "id": "temple_of_artemis",
+      "name": "Temple of Artemis",
+
+      "coords": [37.949722, 27.363889],
+
+      "theme": {
+		"colorKey": "wonders-ancient"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/temple_of_artemis_ingame.png",
+        "irl": "assets/thumbs/wonders/temple_of_artemis_irl.png"
+      },
+
+      "attrs": {
+        "era": "Ancient",
+		"location": "Ephesus (now Turkey)",
+		"year_num": -550,
+		"year": "550 BCE"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Temple_of_Artemis_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Temple_of_Artemis" }
+        ]
+      }
+    },
+	{"id": "placeholder"}
   ]
 }
 

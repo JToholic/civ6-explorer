@@ -10,7 +10,11 @@ const TYPES = [
 
 // What to show in the right panel attribute grid (by type)
 const ATTR_DISPLAY = {
-  wonders: [{ key: "era", label: "Era" }],
+  wonders: [
+	  { key: "location", label: "Location" }
+	  { key: "era", label: "Era" },
+	  { key: "year", label: "Year" }
+  ],
   natural_wonders: [
     { key: "nTiles", label: "# of Tiles" },
     { key: "passability", label: "Passability" },
@@ -25,7 +29,7 @@ const ATTR_DISPLAY = {
 
 // Subtitle shown under the name in the left list cards
 const CARD_SUBTITLE = {
-  wonders: { field: "attrs.era" },
+  wonders: { field: "attrs.location" },
   natural_wonders: { field: "attrs.terrain" },
   leaders: { field: "attrs.civilization" },
   city_states: { field: "attrs.type" }
