@@ -102,7 +102,7 @@
 
 .detailText{ color:var(--muted); font-size: 14px; line-height:1.4; }
 .detailImg{
-  width: 220px;
+  width: 240px;
   aspect-ratio: 1 / 1;
   height: auto;
   border-radius: 14px;

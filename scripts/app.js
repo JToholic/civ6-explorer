@@ -10,6 +10,7 @@ const ATTR_DISPLAY = {
     { key: "era", label: "Era" }
   ],
   leaders: [
+    { key: "civilization", label: "Civilization" }
     { key: "birthYear", label: "Birth year" }
   ],
   city_states: [

@@ -1,1 +1,57 @@
-{ "meta": { "type": "leaders", "title": "Leaders", "defaultSort": "alpha" }, "sortOptions": [], "items": [] }
+{
+  "meta": {
+    "type": "leaders",
+    "title": "Leaders",
+    "defaultSort": "civilization"
+  },
+  "sortOptions": [
+    { "id": "alpha", "label": "A → Z", "field": "name", "order": "asc" },
+    { "id": "birth", "label": "Birth year", "field": "attrs.birthYear", "order": "asc" },
+    { "id": "civilization", "label": "Civilization", "field": "attrs.civilization", "order": "asc" }
+  ],
+  "items": [
+    {
+      "id": "abraham_lincoln",
+      "name": "Abraham Lincoln",
+      "coords": null,
+      "theme": { "colorKey": "leaders-american" },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/abraham_lincoln_ingame.png",
+        "irl": "assets/thumbs/leaders/abraham_lincoln_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1809,
+        "civilization": "American"
+      },
+      "detail": {
+        "text": "16th president of the United States, leading the nation through the Civil War.",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Abraham_Lincoln_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Abraham_Lincoln" }
+        ]
+      }
+    },
+    {
+      "id": "teddy_roosevelt",
+      "name": "Teddy Roosevelt",
+      "coords": null,
+      "theme": { "colorKey": "leaders-american" },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/teddy_roosevelt_ingame.png",
+        "irl": "assets/thumbs/leaders/teddy_roosevelt_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1858,
+        "civilization": "American"
+      },
+      "detail": {
+        "text": "26th president of the United States, known for progressivism and conservation.",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Teddy_Roosevelt_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Theodore_Roosevelt" }
+        ]
+      }
+    }
+  ]
+}
+

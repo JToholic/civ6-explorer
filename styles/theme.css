@@ -14,6 +14,9 @@
   --color-wonders-modern:        #2F6F95; /* modern blue */
   --color-wonders-atomic:        #7B4EA3; /* violet / nuclear */
   --color-wonders-information:   #2BA6A6; /* teal / digital */
+
+  /* Leaders – by civilization */
+  --color-leaders-american: #2F6F95;      /* muted patriotic blue */
 }
 
 *{ box-sizing:border-box; }
