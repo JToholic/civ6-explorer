@@ -470,7 +470,7 @@
         "text": "",
         "links": [
           { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Mahabodhi_Temple_(Civ6)" },
-          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Madabodhi_Temple" }
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Mahabodhi_Temple" }
         ]
       }
     },
@@ -936,6 +936,223 @@
         "links": [
           { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Casa_de_Contrataci%C3%B3n_(Civ6)" },
           { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Casa_de_Contrataci%C3%B3n" }
+        ]
+      }
+    },
+
+	{
+      "id": "forbidden_city",
+      "name": "Forbidden City",
+
+      "coords": [39.915833, 116.390833],
+
+      "theme": {
+		"colorKey": "wonders-renaissance"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/forbidden_city_ingame.png",
+        "irl": "assets/thumbs/wonders/forbidden_city_irl.png"
+      },
+
+      "attrs": {
+        "era": "Renaissance",
+		"location": "China",
+		"year_num": 1406,
+		"year": "1406 AD"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Forbidden_City_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Forbidden_City" }
+        ]
+      }
+    },
+
+	{
+      "id": "great_zimbabwe",
+      "name": "Great Zimbabwe",
+
+      "coords": [-20.266667, 30.933333],
+
+      "theme": {
+		"colorKey": "wonders-renaissance"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/great_zimbabwe_ingame.png",
+        "irl": "assets/thumbs/wonders/great_zimbabwe_irl.png"
+      },
+
+      "attrs": {
+        "era": "Renaissance",
+		"location": "Zimbabwe",
+		"year_num": 1000,
+		"year": "1000 AD"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Great_Zimbabwe_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Great_Zimbabwe" }
+        ]
+      }
+    },
+
+	{
+      "id": "potala_palace",
+      "name": "Potala Palace",
+
+      "coords": [29.657778, 91.116944],
+
+      "theme": {
+		"colorKey": "wonders-renaissance"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/potala_palace_ingame.png",
+        "irl": "assets/thumbs/wonders/potala_palace_irl.png"
+      },
+
+      "attrs": {
+        "era": "Renaissance",
+		"location": "China",
+		"year_num": 1645,
+		"year": "1645 AD"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Potala_Palace_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Potala_Palace" }
+        ]
+      }
+    },
+
+	{
+      "id": "st._basil's_cathedral",
+      "name": "St. Basil's Cathedral",
+
+      "coords": [55.7525, 37.623056],
+
+      "theme": {
+		"colorKey": "wonders-renaissance"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/st._basil's_cathedral_ingame.png",
+        "irl": "assets/thumbs/wonders/st._basil's_cathedral_irl.png"
+      },
+
+      "attrs": {
+        "era": "Renaissance",
+		"location": "Russia",
+		"year_num": 1555,
+		"year": "1555 AD"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/St._Basil%27s_Cathedral_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Saint_Basil%27s_Cathedral" }
+        ]
+      }
+    },
+
+	{
+      "id": "taj_mahal",
+      "name": "Taj Mahal",
+
+      "coords": [27.175, 78.0419],
+
+      "theme": {
+		"colorKey": "wonders-renaissance"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/taj_mahal_ingame.png",
+        "irl": "assets/thumbs/wonders/taj_mahal_irl.png"
+      },
+
+      "attrs": {
+        "era": "Renaissance",
+		"location": "Mughal (India)",
+		"year_num": 1631,
+		"year": "1631 AD"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Taj_Mahal_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Taj_Mahal" }
+        ]
+      }
+    },
+
+	{
+      "id": "torre_de_belém",
+      "name": "Torre de Belém",
+
+      "coords": [38.691667, -9.216111],
+
+      "theme": {
+		"colorKey": "wonders-renaissance"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/torre_de_belém_ingame.png",
+        "irl": "assets/thumbs/wonders/torre_de_belém_irl.png"
+      },
+
+      "attrs": {
+        "era": "Renaissance",
+		"location": "Portugal",
+		"year_num": 1514,
+		"year": "1514 AD"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Torre_de_Bel%C3%A9m_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Bel%C3%A9m_Tower" }
+        ]
+      }
+    },
+
+	{
+      "id": "venetian_arsenal",
+      "name": "Venetian Arsenal",
+
+      "coords": [45.435278, 12.353056],
+
+      "theme": {
+		"colorKey": "wonders-renaissance"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/venetian_arsenal_ingame.png",
+        "irl": "assets/thumbs/wonders/venetian_arsenal_irl.png"
+      },
+
+      "attrs": {
+        "era": "Renaissance",
+		"location": "Republic of Venice (now Italy)",
+		"year_num": 1104,
+		"year": "1104 AD"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Venetian_Arsenal_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Venetian_Arsenal" }
         ]
       }
     },
