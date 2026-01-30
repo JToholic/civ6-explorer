@@ -52,6 +52,27 @@
           { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Chocolate_Hills" }
         ]
       }
+    },
+    {
+      "id": "fountain_of_youth",
+      "name": "Fountain of Youth",
+      "coords": null,
+      "thumbs": {
+        "ingame": "assets/thumbs/natural_wonders/fountain_of_youth_ingame.png",
+        "irl": "assets/thumbs/natural_wonders/fountain_of_youth_irl.png"
+      },
+      "attrs": {
+		"nTiles": 1,
+		"passability": "Passable",
+		"terrain": "Grassland/Plains/Desert"
+	  },
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Fountain_of_Youth_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Fountain_of_Youth" }
+        ]
+      }
     }
   ]
 }

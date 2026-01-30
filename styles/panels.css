@@ -69,6 +69,25 @@
   border-radius:12px;
   background:var(--bg);
 }
+.trayPin{
+  border: 0;
+  border-radius: 10px;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.trayPin img{
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+.trayPin.is-selected{
+  outline: 3px solid rgba(0,0,0,.35);
+}
 
 /* Right overlay detail panel (covers map area only) */
 #detailPanel{

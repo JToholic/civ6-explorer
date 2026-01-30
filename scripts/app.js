@@ -57,6 +57,7 @@ const detailThumbIrlEl = document.getElementById("detailThumbIrl");
 const detailTextEl = document.getElementById("detailText");
 const detailLinksEl = document.getElementById("detailLinks");
 const detailAttrsEl = document.getElementById("detailAttrs");
+const trayPinsEl = document.querySelector("#bottomTray .trayPins");
 
 // ---- App state ----
 let activeType = null;
@@ -199,6 +200,7 @@ function closeDetail() {
   if (activeData) {
 	renderList();
 	renderMapPins();
+	renderBottomTray();
   }
 }
 
@@ -323,6 +325,7 @@ function renderList() {
   listEl.innerHTML = "";
   for (const it of itemsSorted) {
     const li = document.createElement("li");
+	li.dataset.id = it.id;
     if (it.id === selectedItemId) li.classList.add("is-selected");
 
     const accent = resolveAccent(it);
@@ -359,6 +362,7 @@ function renderList() {
       selectedItemId = it.id;
       renderList();
 	  renderMapPins();
+	  renderBottomTray();
       renderDetail(it);
     });
 
@@ -440,6 +444,55 @@ function renderMapPins() {
   }
 }
 
+// ---- Bottom tray ----
+function renderBottomTray() {
+  if (!trayPinsEl) return;
+  trayPinsEl.innerHTML = "";
+
+  if (!activeData) return;
+
+  const { itemsSorted } = getVisibleItems();
+  const noCoordItems = itemsSorted.filter(
+    it => !Array.isArray(it.coords) || it.coords.length !== 2
+  );
+
+  for (const it of noCoordItems) {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "trayPin";
+    btn.title = it.name;
+
+    if (it.id === selectedItemId) btn.classList.add("is-selected");
+
+    const accent = resolveAccent(it);
+    if (accent) btn.style.background = accent;
+
+    const img = document.createElement("img");
+    img.alt = it.name;
+    img.src = (it?.thumbs?.ingame && String(it.thumbs.ingame).trim()) ? it.thumbs.ingame : PLACEHOLDER_THUMB;
+    img.onerror = () => { img.src = PLACEHOLDER_THUMB; };
+
+    btn.appendChild(img);
+
+    btn.addEventListener("click", () => {
+      const same = (selectedItemId === it.id);
+
+      if (same && isDetailOpen()) {
+        closeDetail(); // your closeDetail clears selection + re-renders
+        return;
+      }
+
+      selectedItemId = it.id;
+      renderList();
+      renderMapPins();
+      renderBottomTray();
+      renderDetail(it);
+    });
+
+    trayPinsEl.appendChild(btn);
+  }
+}
+
 // ---- Main flow ----
 async function applyType(typeId) {
   closeDetail();
@@ -461,6 +514,7 @@ async function applyType(typeId) {
     renderSortDropdown();
     renderList();
     renderMapPins();
+	renderBottomTray();
   } catch (err) {
     statusEl.textContent = `Error: ${err.message}`;
     console.error(err);
@@ -472,12 +526,14 @@ function init() {
     searchQuery = e.target.value;
     renderList();
     renderMapPins();
+	renderBottomTray();
   });
 
   sortEl.addEventListener("change", (e) => {
     activeSortId = e.target.value;
     renderList();
     renderMapPins();
+	renderBottomTray();
   });
 
   detailCloseEl.addEventListener("click", closeDetail);
