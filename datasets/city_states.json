@@ -22,7 +22,7 @@
         "type": "Scientific"
       },
       "detail": {
-        "text": "Scientific city-state focused on research and diplomacy.",
+        "text": "",
         "links": [
           { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Geneva_(Civ6)" },
           { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Geneva" }
@@ -42,7 +42,7 @@
         "type": "Trade"
       },
       "detail": {
-        "text": "Maritime city-state providing bonuses to coastal cities.",
+        "text": "",
         "links": [
           { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Jakarta_(Civ6)" },
           { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Jakarta" }
