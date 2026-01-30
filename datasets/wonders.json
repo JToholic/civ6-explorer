@@ -599,6 +599,347 @@
       }
     },
 
+	{
+      "id": "alhambra",
+      "name": "Alhambra",
+
+      "coords": [37.1775, -3.59],
+
+      "theme": {
+		"colorKey": "wonders-medieval"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/alhanbra_ingame.png",
+        "irl": "assets/thumbs/wonders/alhambra_irl.png"
+      },
+
+      "attrs": {
+        "era": "Medieval",
+		"location": "Emirate of Granada (now Spain)",
+		"year_num": 1238,
+		"year": "1238 AD"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Alhambra_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Alhambra" }
+        ]
+      }
+    },
+
+	{
+      "id": "angkor_wat",
+      "name": "Angkor Wat",
+
+      "coords": [13.4125, 103.866667],
+
+      "theme": {
+		"colorKey": "wonders-medieval"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/angkor_wat_ingame.png",
+        "irl": "assets/thumbs/wonders/angkor_wat_irl.png"
+      },
+
+      "attrs": {
+        "era": "Medieval",
+		"location": "Khmer (now Cambodia)",
+		"year_num": 1113,
+		"year": "1113 AD"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Angkor_Wat_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Angkor_Wat" }
+        ]
+      }
+    },
+
+	{
+      "id": "chichen_itza",
+      "name": "Chichen Itza",
+
+      "coords": [20.683056, -88.568611],
+
+      "theme": {
+		"colorKey": "wonders-medieval"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/chichen_itza_ingame.png",
+        "irl": "assets/thumbs/wonders/chichen_itza_irl.png"
+      },
+
+      "attrs": {
+        "era": "Medieval",
+		"location": "Maya (now Mexico)",
+		"year_num": 600,
+		"year": "600 AD"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Chichen_Itza_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Chichen_Itza" }
+        ]
+      }
+    },
+
+	{
+      "id": "hagia_sophia",
+      "name": "Hagia Sophia",
+
+      "coords": [41.008333, 28.98],
+
+      "theme": {
+		"colorKey": "wonders-medieval"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/hagia_sophia_ingame.png",
+        "irl": "assets/thumbs/wonders/hagia_sophia_irl.png"
+      },
+
+      "attrs": {
+        "era": "Medieval",
+		"location": "Byzantine (now Turkey)",
+		"year_num": 360,
+		"year": "360 AD"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Hagia_Sophia_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Hagia_Sophia" }
+        ]
+      }
+    },
+
+	{
+      "id": "huey_teocalli",
+      "name": "Huey Teocalli",
+
+      "coords": [19.4333, -99.13278],
+
+      "theme": {
+		"colorKey": "wonders-medieval"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/huey_teocalli_ingame.png",
+        "irl": "assets/thumbs/wonders/huey_teocalli_irl.png"
+      },
+
+      "attrs": {
+        "era": "Medieval",
+		"location": "Aztec (now Mexico)",
+		"year_num": 1325,
+		"year": "1325 AD"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Huey_Teocalli_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Templo_Mayor" }
+        ]
+      }
+    },
+
+	{
+      "id": "kilwa_kisiwani",
+      "name": "Kilwa Kisiwani",
+
+      "coords": [-8.96, 39.5128],
+
+      "theme": {
+		"colorKey": "wonders-medieval"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/kilwa_kisiwani_ingame.png",
+        "irl": "assets/thumbs/wonders/kilwa_kisiwani_irl.png"
+      },
+
+      "attrs": {
+        "era": "Medieval",
+		"location": "Tanzania",
+		"year_num": 800,
+		"year": "800 AD"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Kilwa_Kisiwani_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Kilwa_Kisiwani" }
+        ]
+      }
+    },
+
+	{
+      "id": "kotoku-in",
+      "name": "Kōtoku-in",
+
+      "coords": [35.31684, 139.53573],
+
+      "theme": {
+		"colorKey": "wonders-medieval"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/kotoku-in_ingame.png",
+        "irl": "assets/thumbs/wonders/kotoku-in_irl.png"
+      },
+
+      "attrs": {
+        "era": "Medieval",
+		"location": "Japan",
+		"year_num": 1252,
+		"year": "1252 AD"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Kotoku-in_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Kōtoku-in" }
+        ]
+      }
+    },
+
+	{
+      "id": "meenakshi_temple",
+      "name": "Meenakshi Temple",
+
+      "coords": [9.9197, 78.1194],
+
+      "theme": {
+		"colorKey": "wonders-medieval"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/meenakshi_temple_ingame.png",
+        "irl": "assets/thumbs/wonders/meenakshi_temple_irl.png"
+      },
+
+      "attrs": {
+        "era": "Medieval",
+		"location": "India",
+		"year_num": 500,
+		"year": "500 AD"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Meenakshi_Temple_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Meenakshi_Temple" }
+        ]
+      }
+    },
+
+	{
+      "id": "mont_st._michel",
+      "name": "Mont St. Michel",
+
+      "coords": [48.636, -1.511],
+
+      "theme": {
+		"colorKey": "wonders-medieval"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/mont_st._michel_ingame.png",
+        "irl": "assets/thumbs/wonders/mont_st._michel_irl.png"
+      },
+
+      "attrs": {
+        "era": "Medieval",
+		"location": "France",
+		"year_num": 708,
+		"year": "708 AD"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Mont_St._Michel_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Mont-Saint-Michel" }
+        ]
+      }
+    },
+
+	{
+      "id": "university_of_sankore",
+      "name": "University of Sankore",
+
+      "coords": [16.775888, -3.005635],
+
+      "theme": {
+		"colorKey": "wonders-medieval"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/university_of_sankore_ingame.png",
+        "irl": "assets/thumbs/wonders/university_of_sankore_irl.png"
+      },
+
+      "attrs": {
+        "era": "Medieval",
+		"location": "Mali",
+		"year_num": 1300,
+		"year": "1300 AD"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/University_of_Sankore_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Sankor%C3%A9_Madrasah" }
+        ]
+      }
+    },
+
+	{
+      "id": "casa_de_contratación",
+      "name": "Casa de Contratación",
+
+      "coords": [37.38347119678323, -5.992335201269024],
+
+      "theme": {
+		"colorKey": "wonders-renaissance"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/casa_de_contratación_ingame.png",
+        "irl": "assets/thumbs/wonders/casa_de_contratación_irl.png"
+      },
+
+      "attrs": {
+        "era": "Renaissance",
+		"location": "Crown of Castile (now Spain)",
+		"year_num": 1503,
+		"year": "1503 AD"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Casa_de_Contrataci%C3%B3n_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Casa_de_Contrataci%C3%B3n" }
+        ]
+      }
+    },
+
 	{"id": "placeholder"}
   ]
 }
