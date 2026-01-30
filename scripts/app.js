@@ -18,6 +18,13 @@ const ATTR_DISPLAY = {
   ]
 };
 
+const CARD_SUBTITLE = {
+  wonders:        { field: "attrs.era",       label: "Era" },
+  natural_wonders:{ field: "",               label: "" },
+  leaders:        { field: "attrs.civilization", label: "Civilization" },
+  city_states:    { field: "attrs.type",      label: "Type" }
+};
+
 const SEARCH_FIELDS = {
   wonders: ["name", "attrs.era"],
   natural_wonders: ["name"],
@@ -203,12 +210,15 @@ function renderList() {
 	  ? it.thumbs.ingame
 	  : PLACEHOLDER_THUMB;
 
+    const subCfg = CARD_SUBTITLE[activeType] || {};
+	const subVal = subCfg.field ? (getByPath(it, subCfg.field) ?? "") : "";
+	
 	li.innerHTML = `
 	  <div class="card">
 		<img class="cardThumb" src="${thumbSrc}" alt="${it.name}" onerror="this.src='${PLACEHOLDER_THUMB}'">
 		<div>
 		  <div class="cardTitle">${it.name}</div>
-		  <div class="cardSub">${it.attrs?.era ?? ""}</div>
+		  <div class="cardSub">${subVal}</div>
 		</div>
 	  </div>
 	`;
