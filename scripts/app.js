@@ -44,14 +44,14 @@ const SEARCH_FIELDS = {
 };
 
 const ERA_ORDER = {
-  "Ancient": 1,
-  "Classical": 2,
-  "Medieval": 3,
-  "Renaissance": 4,
-  "Industrial": 5,
-  "Modern": 6,
-  "Atomic": 7,
-  "Information": 8
+  "ancient": 1,
+  "classical": 2,
+  "medieval": 3,
+  "renaissance": 4,
+  "industrial": 5,
+  "modern": 6,
+  "atomic": 7,
+  "information": 8
 };
 
 const PLACEHOLDER_THUMB = "assets/thumbs/placeholder.png";
@@ -168,7 +168,7 @@ function applySort(items) {
     const av = getByPath(a, chosen.field);
     const bv = getByPath(b, chosen.field);
 
-	if (chosen.id === "attrs.era") {
+	if (chosen.id === "era") {
 	  const ao = ERA_ORDER[normalizeString(av).trim()] ?? 999;
 	  const bo = ERA_ORDER[normalizeString(bv).trim()] ?? 999;
 	  if (ao !== bo) return order * (ao - bo);
