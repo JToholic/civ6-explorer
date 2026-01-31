@@ -1158,6 +1158,68 @@
     },
 
 	{
+      "id": "big_ben",
+      "name": "Big Ben",
+
+      "coords": [51.5007, -0.1245],
+
+      "theme": {
+		"colorKey": "wonders-industrial"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/big_ben_ingame.png",
+        "irl": "assets/thumbs/wonders/big_ben_irl.png"
+      },
+
+      "attrs": {
+        "era": "Industrial",
+		"location": "England",
+		"year_num": 1859,
+		"year": "1859 AD"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Big_Ben_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Big_Ben" }
+        ]
+      }
+    },
+
+	{
+      "id": "bolshoi_theatre",
+      "name": "Bolshoi Theatre",
+
+      "coords": [55.760278, 37.618611],
+
+      "theme": {
+		"colorKey": "wonders-industrial"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/bolshoi_theatre_ingame.png",
+        "irl": "assets/thumbs/wonders/bolshoi_theatre_irl.png"
+      },
+
+      "attrs": {
+        "era": "Industrial",
+		"location": "Russia",
+		"year_num": 1821,
+		"year": "1821 AD"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Bolshoi_Theatre_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Bolshoi_Theatre" }
+        ]
+      }
+    },
+
+	{
 		"id": "placeholder",
 		"name": "placeholder"
 	}

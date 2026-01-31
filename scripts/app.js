@@ -43,6 +43,17 @@ const SEARCH_FIELDS = {
   city_states: ["name", "attrs.type"]
 };
 
+const ERA_ORDER = {
+  "Ancient": 1,
+  "Classical": 2,
+  "Medieval": 3,
+  "Renaissance": 4,
+  "Industrial": 5,
+  "Modern": 6,
+  "Atomic": 7,
+  "Information": 8
+};
+
 const PLACEHOLDER_THUMB = "assets/thumbs/placeholder.png";
 
 // ---- DOM ----
@@ -156,6 +167,13 @@ function applySort(items) {
   return [...items].sort((a, b) => {
     const av = getByPath(a, chosen.field);
     const bv = getByPath(b, chosen.field);
+
+	if (chosen.id === "attrs.era") {
+	  const ao = ERA_ORDER[normalizeString(av).trim()] ?? 999;
+	  const bo = ERA_ORDER[normalizeString(bv).trim()] ?? 999;
+	  if (ao !== bo) return order * (ao - bo);
+	  return String(a.name).localeCompare(String(b.name));
+	}
 
     // undefined last
     if (av === undefined && bv === undefined) {
