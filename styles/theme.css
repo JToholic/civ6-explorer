@@ -6,14 +6,14 @@
   --shadow: 0 10px 30px rgba(0,0,0,.12);
 
   /* Wonders – by era */
-  --color-wonders-ancient:       #C9A227; /* gold / sandstone */
-  --color-wonders-classical:     #8A9A5B; /* olive / stone */
-  --color-wonders-medieval:      #8B5E3C; /* wood / bronze */
-  --color-wonders-renaissance:   #6B8FB4; /* steel blue */
-  --color-wonders-industrial:    #5A5A5A; /* iron gray */
-  --color-wonders-modern:        #2F6F95; /* modern blue */
-  --color-wonders-atomic:        #7B4EA3; /* violet / nuclear */
-  --color-wonders-information:   #2BA6A6; /* teal / digital */
+  --color-wonders-ancient:     #C9A227; /* gold */
+  --color-wonders-classical:   #B5651D; /* bronze */
+  --color-wonders-medieval:    #7A4E2D; /* brown */
+  --color-wonders-renaissance: #6B4FA3; /* purple */
+  --color-wonders-industrial:  #6F6F6F; /* gray */
+  --color-wonders-modern:      #2F6F95; /* blue (single blue) */
+  --color-wonders-atomic:      #2BA6A6; /* teal */
+  --color-wonders-information: #2E7D32; /* green */
 
   /* Leaders – by civilization */
   --color-leaders-american: #2F6F95;      /* muted patriotic blue */

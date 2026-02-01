@@ -16,9 +16,8 @@ const ATTR_DISPLAY = {
 	  { key: "year", label: "Year" }
   ],
   natural_wonders: [
-    { key: "nTiles", label: "# of Tiles" },
-    { key: "passability", label: "Passability" },
-    { key: "terrain", label: "Terrain" }
+    { key: "terrain", label: "Terrain" },
+    { key: "location", label: "Location" }
   ],
   leaders: [
     { key: "civilization", label: "Civilization" },
@@ -30,15 +29,15 @@ const ATTR_DISPLAY = {
 // Subtitle shown under the name in the left list cards
 const CARD_SUBTITLE = {
   wonders: { field: "attrs.location" },
-  natural_wonders: { field: "attrs.terrain" },
+  natural_wonders: { field: "attrs.location" },
   leaders: { field: "attrs.civilization" },
   city_states: { field: "attrs.type" }
 };
 
 // Search fields (by type)
 const SEARCH_FIELDS = {
-  wonders: ["name", "attrs.era"],
-  natural_wonders: ["name", "attrs.passability", "attrs.terrain"],
+  wonders: ["name", "attrs.era", "attrs.location"],
+  natural_wonders: ["name", "attrs.terrain", "attrs.location"],
   leaders: ["name", "attrs.civilization"],
   city_states: ["name", "attrs.type"]
 };

@@ -771,7 +771,7 @@
 
       "attrs": {
         "era": "Medieval",
-		"location": "Tanzania",
+		"location": "Kilwa Sultanate (now Tanzania)",
 		"year_num": 800,
 		"year": "800 AD"
       },
@@ -1220,9 +1220,438 @@
     },
 
 	{
-		"id": "placeholder",
-		"name": "placeholder"
-	}
+      "id": "hermitage",
+      "name": "Hermitage",
+
+      "coords": [59.9406, 30.3136],
+
+      "theme": {
+		"colorKey": "wonders-industrial"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/hermitage_ingame.png",
+        "irl": "assets/thumbs/wonders/hermitage_irl.png"
+      },
+
+      "attrs": {
+        "era": "Industrial",
+		"location": "Russia",
+		"year_num": 1764,
+		"year": "1764 AD"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Hermitage_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Hermitage_Museum" }
+        ]
+      }
+    },
+
+	{
+      "id": "országház",
+      "name": "Országház",
+
+      "coords": [47.506944, 19.045556],
+
+      "theme": {
+		"colorKey": "wonders-industrial"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/országház_ingame.png",
+        "irl": "assets/thumbs/wonders/országház_irl.png"
+      },
+
+      "attrs": {
+        "era": "Industrial",
+		"location": "Hungary",
+		"year_num": 1902,
+		"year": "1902 AD"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Országház_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Hungarian_Parliament_Building" }
+        ]
+      }
+    },
+
+	{
+      "id": "oxford_university",
+      "name": "Oxford University",
+
+      "coords": [51.755, -1.255],
+
+      "theme": {
+		"colorKey": "wonders-industrial"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/oxford_university_ingame.png",
+        "irl": "assets/thumbs/wonders/oxford_university_irl.png"
+      },
+
+      "attrs": {
+        "era": "Industrial",
+		"location": "England",
+		"year_num": 1096,
+		"year": "1096 AD"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Oxford_University_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/University_of_Oxford" }
+        ]
+      }
+    },
+
+	{
+      "id": "panama_canal",
+      "name": "Panama Canal",
+
+      "coords": [9.12, -79.75],
+
+      "theme": {
+		"colorKey": "wonders-industrial"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/panama_canal_ingame.png",
+        "irl": "assets/thumbs/wonders/panama_canal_irl.png"
+      },
+
+      "attrs": {
+        "era": "Industrial",
+		"location": "Panama",
+		"year_num": 1914,
+		"year": "1914 AD"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Panama_Canal_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Panama_Canal" }
+        ]
+      }
+    },
+
+	{
+      "id": "ruhr_valley",
+      "name": "Ruhr Valley",
+
+      "coords": [51.5, 7.5],
+
+      "theme": {
+		"colorKey": "wonders-industrial"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/ruhr_valley_ingame.png",
+        "irl": "assets/thumbs/wonders/ruhr_valley_irl.png"
+      },
+
+      "attrs": {
+        "era": "Industrial",
+		"location": "Germany",
+		"year_num": 1923,
+		"year": "1923 AD (name coined)"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Ruhr_Valley_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Ruhr" }
+        ]
+      }
+    },
+
+	{
+      "id": "statue_of_liberty",
+      "name": "Statue of Liberty",
+
+      "coords": [40.689167, -74.044444],
+
+      "theme": {
+		"colorKey": "wonders-industrial"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/statue_of_liberty_ingame.png",
+        "irl": "assets/thumbs/wonders/statue_of_liberty_irl.png"
+      },
+
+      "attrs": {
+        "era": "Industrial",
+		"location": "United States of America",
+		"year_num": 1886,
+		"year": "1886 AD"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Statue_of_Liberty_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Statue_of_Liberty" }
+        ]
+      }
+    },
+
+	{
+      "id": "broadway",
+      "name": "Broadway",
+
+      "coords": [40.75951865082933, -73.98518013163142],
+
+      "theme": {
+		"colorKey": "wonders-modern"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/broadway_ingame.png",
+        "irl": "assets/thumbs/wonders/broadway_irl.png"
+      },
+
+      "attrs": {
+        "era": "Modern",
+		"location": "United States of America",
+		"year_num": 1776,
+		"year": "1776 AD (name coined)"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Broadway_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Broadway_(Manhattan)" }
+        ]
+      }
+    },
+
+	{
+      "id": "cristo_redentor",
+      "name": "Cristo Redentor",
+
+      "coords": [-22.951944, -43.210556],
+
+      "theme": {
+		"colorKey": "wonders-modern"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/cristo_redentor_ingame.png",
+        "irl": "assets/thumbs/wonders/cristo_redentor_irl.png"
+      },
+
+      "attrs": {
+        "era": "Modern",
+		"location": "Brazil",
+		"year_num": 1931,
+		"year": "1931 AD"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Cristo_Redentor_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Christ_the_Redeemer_(statue)" }
+        ]
+      }
+    },
+
+	{
+      "id": "eiffel_tower",
+      "name": "Eiffel Tower",
+
+      "coords": [48.858222, 2.2945],
+
+      "theme": {
+		"colorKey": "wonders-modern"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/eiffel_tower_ingame.png",
+        "irl": "assets/thumbs/wonders/eiffel_tower_irl.png"
+      },
+
+      "attrs": {
+        "era": "Modern",
+		"location": "France",
+		"year_num": 1889,
+		"year": "1889 AD"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Eiffel_Tower_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Eiffel_Tower" }
+        ]
+      }
+    },
+
+	{
+      "id": "golden_gate_bridge",
+      "name": "Golden Gate Bridge",
+
+      "coords": [37.819722, -122.478611],
+
+      "theme": {
+		"colorKey": "wonders-modern"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/golden_gate_bridge_ingame.png",
+        "irl": "assets/thumbs/wonders/golden_gate_bridge_irl.png"
+      },
+
+      "attrs": {
+        "era": "Modern",
+		"location": "United States of America",
+		"year_num": 1937,
+		"year": "1937 AD"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Golden_Gate_Bridge_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Golden_Gate_Bridge" }
+        ]
+      }
+    },
+
+	{
+      "id": "amundsen-scott_research_station",
+      "name": "Amundsen-Scott Research Station",
+
+      "coords": [-90, 0],
+
+      "theme": {
+		"colorKey": "wonders-atomic"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/amundsen-scott_research_station_ingame.png",
+        "irl": "assets/thumbs/wonders/amundsen-scott_research_station_irl.png"
+      },
+
+      "attrs": {
+        "era": "Atomic",
+		"location": "South pole",
+		"year_num": 1956,
+		"year": "1956 AD"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Amundsen-Scott_Research_Station_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Amundsen%E2%80%93Scott_South_Pole_Station" }
+        ]
+      }
+    },
+
+	{
+      "id": "biosphère",
+      "name": "Biosphère",
+
+      "coords": [45.514092, -73.531494],
+
+      "theme": {
+		"colorKey": "wonders-atomic"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/biosphère_ingame.png",
+        "irl": "assets/thumbs/wonders/biosphère_irl.png"
+      },
+
+      "attrs": {
+        "era": "Atomic",
+		"location": "Canada",
+		"year_num": 1965,
+		"year": "1965 AD"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Biosphère_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Montreal_Biosphere" }
+        ]
+      }
+    },
+
+	{
+      "id": "estádio_do_maracanã",
+      "name": "Estádio do Maracanã",
+
+      "coords": [-22.912167, -43.230164],
+
+      "theme": {
+		"colorKey": "wonders-atomic"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/estádio_do_maracanã_ingame.png",
+        "irl": "assets/thumbs/wonders/estádio_do_maracanã_irl.png"
+      },
+
+      "attrs": {
+        "era": "Atomic",
+		"location": "Brazil",
+		"year_num": 1950,
+		"year": "1950 AD"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Estádio_do_Maracanã_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Maracanã_Stadium" }
+        ]
+      }
+    },
+
+	{
+      "id": "sydney_opera_house",
+      "name": "Sydney Opera House",
+
+      "coords": [-33.85681, 151.21514],
+
+      "theme": {
+		"colorKey": "wonders-atomic"
+      },
+
+      "thumbs": {
+        "ingame": "assets/thumbs/wonders/sydney_opera_house_ingame.png",
+        "irl": "assets/thumbs/wonders/sydney_opera_house_irl.png"
+      },
+
+      "attrs": {
+        "era": "Atomic",
+		"location": "Australia",
+		"year_num": 1973,
+		"year": "1973 AD"
+      },
+
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Sydney_Opera_House_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Sydney_Opera_House" }
+        ]
+      }
+    }
   ]
 }
 

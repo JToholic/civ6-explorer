@@ -5,10 +5,7 @@
     "defaultSort": "alpha"
   },
   "sortOptions": [
-    { "id": "alpha", "label": "A → Z", "field": "name", "order": "asc" },
-    { "id": "nTiles", "label": "# of Tiles", "field": "attrs.nTiles", "order": "asc" },
-    { "id": "passability", "label": "Passability", "field": "attrs.passability", "order": "asc" },
-    { "id": "terrain", "label": "Terrain", "field": "attrs.terrain", "order": "asc" }
+    { "id": "alpha", "label": "A → Z", "field": "name", "order": "asc" }
   ],
   "items": [
     {
@@ -20,9 +17,8 @@
         "irl": "assets/thumbs/natural_wonders/bermuda_triangle_irl.png"
       },
       "attrs": {
-		"nTiles": 3,
-		"passability": "Passable",
-		"terrain": "Ocean"
+		"terrain": "Ocean",
+		"location": "Atlantic Ocean"
 	  },
       "detail": {
         "text": "",
@@ -32,6 +28,7 @@
         ]
       }
     },
+
     {
       "id": "chocolate_hills",
       "name": "Chocolate Hills",
@@ -41,9 +38,8 @@
         "irl": "assets/thumbs/natural_wonders/chocolate_hills_irl.png"
       },
       "attrs": {
-		"nTiles": 4,
-		"passability": "Passable",
-		"terrain": "Grassland/Plains"
+		"terrain": "Grassland/Plains",
+		"location": "Philipphine"
 	  },
       "detail": {
         "text": "",
@@ -53,6 +49,7 @@
         ]
       }
     },
+
     {
       "id": "fountain_of_youth",
       "name": "Fountain of Youth",
@@ -62,9 +59,29 @@
         "irl": "assets/thumbs/natural_wonders/fountain_of_youth_irl.png"
       },
       "attrs": {
-		"nTiles": 1,
-		"passability": "Passable",
-		"terrain": "Grassland/Plains/Desert"
+		"terrain": "Grassland/Plains/Desert",
+		"location": "???"
+	  },
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Fountain_of_Youth_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Fountain_of_Youth" }
+        ]
+      }
+    }, 
+
+    {
+      "id": "zhangye_danxia",
+      "name": "Zhangye Danxia",
+      "coords": [38.91555, 100.1332],
+      "thumbs": {
+        "ingame": "assets/thumbs/natural_wonders/zhangye_danxia_ingame.png",
+        "irl": "assets/thumbs/natural_wonders/zhangye_danxia_irl.png"
+      },
+      "attrs": {
+		"terrain": "Desert/Grassland/Plains/Tundra/Snow",
+		"location": "China"
 	  },
       "detail": {
         "text": "",
