@@ -385,6 +385,7 @@ function renderList() {
 	  renderMapPins();
 	  renderBottomTray();
       renderDetail(it);
+	  centerSelectedOnMap(it);
     });
 
     listEl.appendChild(li);
@@ -396,6 +397,10 @@ function initMapOnce() {
   if (map) return;
 
   map = L.map("map", { worldCopyJump: true, minZoom: 2 }).setView([20, 0], 2);
+
+  const MAX_BOUNDS = L.latLngBounds([[-85, -9999], [85, 9999]]);
+  map.setMaxBounds(MAX_BOUNDS);
+  map.on("drag", () => map.panInsideBounds(MAX_BOUNDS, { animate: false }));
 
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19,
@@ -457,6 +462,7 @@ function renderMapPins() {
         renderList();
         renderMapPins();
         renderDetail(it);
+		centerSelectedOnMap(it);
       });
 
       ms.push(m);
@@ -464,6 +470,12 @@ function renderMapPins() {
 
     markersById.set(it.id, ms);
   }
+}
+
+function centerSelectedOnMap(item) {
+  if (!map || !item || !Array.isArray(item.coords) || item.coords.length !== 2) return;
+  const [lat, lng] = item.coords;
+  map.panTo([lat, lng+90], { animate: true });
 }
 
 // ---- Bottom tray ----
