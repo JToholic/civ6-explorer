@@ -6,7 +6,7 @@
     "scope": "All regular Civilization VI leaders, including DLC and Leader Pass; scenario-only leaders excluded.",
     "personas": "One entry per historical person per civilization; alternate personas are combined.",
     "coordinatePolicy": "Pins use the civilization/state's historical capital or principal seat during the leader's rule. If there was no fixed capital, a clearly labeled representative seat/base is used only when defensible; otherwise coords are null.",
-    "capitalNamingPolicy": "Historical names are preserved, followed by the modern name/country when useful (for example, Constantinople, now Istanbul, Turkey). Capital changes during a reign are noted in the capital string.",
+    "capitalNamingPolicy": "Capital strings use the historical city name. If the modern city name differs, it is shown as '(now <modern city>[, <modern country>])'. The modern country is omitted when it is effectively the same country represented by attrs.civilization. Leaders without a defensible fixed capital are labeled explicitly.",
     "birthYearPolicy": "Negative numbers denote BCE (not astronomical year numbering). Approximate representative years are for sorting only; birthYearLabel preserves uncertainty. Unknown years are null.",
     "colorPolicy": "One shared color per civilization, based on the default jersey of its original leader (Pericles for Greece). Use the primary color, or its secondary when the primary is white. Colors can repeat across civilizations because the game palette is limited.",
     "thumbnailPolicy": "Paths follow the existing leader thumbnail naming. Image-source recommendations are provided separately in leader_image_sources.csv.",
@@ -56,7 +56,7 @@
         "birthYear": 1809,
         "civilization": "American",
         "birthYearLabel": "1809",
-        "capital": "Washington, D.C., United States",
+        "capital": "Washington, D.C.",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -91,7 +91,7 @@
         "birthYear": 1858,
         "civilization": "American",
         "birthYearLabel": "1858",
-        "capital": "Washington, D.C., United States",
+        "capital": "Washington, D.C.",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -161,7 +161,7 @@
         "birthYear": 1885,
         "civilization": "Australian",
         "birthYearLabel": "1885",
-        "capital": "Canberra, Australia",
+        "capital": "Canberra",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -196,7 +196,7 @@
         "birthYear": 1398,
         "civilization": "Aztec",
         "birthYearLabel": "c. 1398",
-        "capital": "Tenochtitlan, now Mexico City, Mexico",
+        "capital": "Tenochtitlan (now Mexico City, Mexico)",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -231,7 +231,7 @@
         "birthYear": -1810,
         "civilization": "Babylonian",
         "birthYearLabel": "c. 1810 BCE",
-        "capital": "Babylon, near Hillah, Iraq",
+        "capital": "Babylon (near Hillah, Iraq)",
         "capitalStatus": "capital",
         "pinPrecision": "archaeological site"
       },
@@ -266,7 +266,7 @@
         "birthYear": 1825,
         "civilization": "Brazilian",
         "birthYearLabel": "1825",
-        "capital": "Rio de Janeiro, Brazil",
+        "capital": "Rio de Janeiro",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -301,7 +301,7 @@
         "birthYear": 958,
         "civilization": "Byzantine",
         "birthYearLabel": "958",
-        "capital": "Constantinople, now Istanbul, Turkey",
+        "capital": "Constantinople (now Istanbul, Turkey)",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -336,7 +336,7 @@
         "birthYear": 495,
         "civilization": "Byzantine",
         "birthYearLabel": "c. 495",
-        "capital": "Constantinople, now Istanbul, Turkey",
+        "capital": "Constantinople (now Istanbul, Turkey)",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -371,7 +371,7 @@
         "birthYear": 1841,
         "civilization": "Canadian",
         "birthYearLabel": "1841",
-        "capital": "Ottawa, Ontario, Canada",
+        "capital": "Ottawa",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -399,14 +399,14 @@
         "colorKey": "leaders-chinese"
       },
       "thumbs": {
-        "ingame": "assets/thumbs/leaders/kublai_khan_ingame.png",
+        "ingame": "assets/thumbs/leaders/kublai_khan_chinese_ingame.png",
         "irl": "assets/thumbs/leaders/kublai_khan_irl.png"
       },
       "attrs": {
         "birthYear": 1215,
         "civilization": "Chinese",
         "birthYearLabel": "1215",
-        "capital": "Dadu (Khanbaliq), now Beijing, China (primary capital from 1272; Shangdu was earlier and remained the summer capital)",
+        "capital": "Dadu/Khanbaliq (now Beijing)",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -441,7 +441,7 @@
         "birthYear": -259,
         "civilization": "Chinese",
         "birthYearLabel": "259 BCE",
-        "capital": "Xianyang, Shaanxi, China",
+        "capital": "Xianyang",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -476,7 +476,7 @@
         "birthYear": 624,
         "civilization": "Chinese",
         "birthYearLabel": "624",
-        "capital": "Luoyang (Shendu), now Luoyang, Henan, China",
+        "capital": "Shendu (now Luoyang)",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -511,7 +511,7 @@
         "birthYear": 1360,
         "civilization": "Chinese",
         "birthYearLabel": "1360",
-        "capital": "Beijing, China (capital from 1421; Nanjing before 1421)",
+        "capital": "Beijing",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -546,7 +546,7 @@
         "birthYear": 1842,
         "civilization": "Cree",
         "birthYearLabel": "c. 1842",
-        "capital": "No fixed capital; Poundmaker's band was based on the Poundmaker Reserve near Cut Knife, Saskatchewan, Canada",
+        "capital": "No fixed capital; Poundmaker Reserve near Cut Knife, Canada",
         "capitalStatus": "principal community, not a formal capital",
         "pinPrecision": "region"
       },
@@ -581,7 +581,7 @@
         "birthYear": 1880,
         "civilization": "Dutch",
         "birthYearLabel": "1880",
-        "capital": "Amsterdam, Netherlands (constitutional capital; government seated in The Hague)",
+        "capital": "Amsterdam",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -616,7 +616,7 @@
         "birthYear": -69,
         "civilization": "Egyptian",
         "birthYearLabel": "69 BCE (possibly late 70 BCE)",
-        "capital": "Alexandria, Egypt",
+        "capital": "Alexandria",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -651,7 +651,7 @@
         "birthYear": -1303,
         "civilization": "Egyptian",
         "birthYearLabel": "c. 1303 BCE",
-        "capital": "Pi-Ramesses, near Qantir, Egypt",
+        "capital": "Pi-Ramesses (near Qantir)",
         "capitalStatus": "capital",
         "pinPrecision": "archaeological site"
       },
@@ -679,14 +679,14 @@
         "colorKey": "leaders-english"
       },
       "thumbs": {
-        "ingame": "assets/thumbs/leaders/eleanor_of_aquitaine_ingame.png",
+        "ingame": "assets/thumbs/leaders/eleanor_of_aquitaine_english_ingame.png",
         "irl": "assets/thumbs/leaders/eleanor_of_aquitaine_irl.png"
       },
       "attrs": {
         "birthYear": 1124,
         "civilization": "English",
         "birthYearLabel": "c. 1124",
-        "capital": "Westminster, now part of London, England, United Kingdom",
+        "capital": "Westminster (now part of London, United Kingdom)",
         "capitalStatus": "principal administrative/royal center; court was itinerant",
         "pinPrecision": "city"
       },
@@ -721,7 +721,7 @@
         "birthYear": 1533,
         "civilization": "English",
         "birthYearLabel": "1533",
-        "capital": "London, England, United Kingdom",
+        "capital": "London, United Kingdom",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -756,7 +756,7 @@
         "birthYear": 1819,
         "civilization": "English",
         "birthYearLabel": "1819",
-        "capital": "London, England, United Kingdom",
+        "capital": "London, United Kingdom",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -791,7 +791,7 @@
         "birthYear": 1844,
         "civilization": "Ethiopian",
         "birthYearLabel": "1844",
-        "capital": "Addis Ababa, Ethiopia",
+        "capital": "Addis Ababa",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -826,7 +826,7 @@
         "birthYear": 1519,
         "civilization": "French",
         "birthYearLabel": "1519",
-        "capital": "Paris, France",
+        "capital": "Paris",
         "capitalStatus": "capital / principal royal center",
         "pinPrecision": "city"
       },
@@ -854,14 +854,14 @@
         "colorKey": "leaders-french"
       },
       "thumbs": {
-        "ingame": "assets/thumbs/leaders/eleanor_of_aquitaine_ingame.png",
+        "ingame": "assets/thumbs/leaders/eleanor_of_aquitaine_french_ingame.png",
         "irl": "assets/thumbs/leaders/eleanor_of_aquitaine_irl.png"
       },
       "attrs": {
         "birthYear": 1124,
         "civilization": "French",
         "birthYearLabel": "c. 1124",
-        "capital": "Paris, France",
+        "capital": "Paris",
         "capitalStatus": "principal royal center",
         "pinPrecision": "city"
       },
@@ -893,7 +893,7 @@
         "birthYear": null,
         "civilization": "Gallic",
         "birthYearLabel": "Unknown",
-        "capital": "Atuatuca, exact location unknown in present-day Belgium",
+        "capital": "Atuatuca (location uncertain, Belgium)",
         "capitalStatus": "stronghold; no securely located capital",
         "pinPrecision": "none"
       },
@@ -928,7 +928,7 @@
         "birthYear": 1160,
         "civilization": "Georgian",
         "birthYearLabel": "c. 1160 or 1166",
-        "capital": "Tbilisi, Georgia",
+        "capital": "Tbilisi",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -963,7 +963,7 @@
         "birthYear": 1122,
         "civilization": "German",
         "birthYearLabel": "1122",
-        "capital": "No fixed capital; Aachen, now Aachen, Germany, was a major imperial and coronation center",
+        "capital": "No fixed capital; Aachen was a major imperial center",
         "capitalStatus": "representative imperial center; court was itinerant",
         "pinPrecision": "city"
       },
@@ -998,7 +998,7 @@
         "birthYear": 1845,
         "civilization": "German",
         "birthYearLabel": "1845",
-        "capital": "Munich, Bavaria, Germany",
+        "capital": "Munich",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -1033,7 +1033,7 @@
         "birthYear": 1783,
         "civilization": "Gran Colombian",
         "birthYearLabel": "1783",
-        "capital": "Bogotá, now Bogotá, Colombia",
+        "capital": "Bogotá, Colombia",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -1068,7 +1068,7 @@
         "birthYear": -513,
         "civilization": "Greek",
         "birthYearLabel": "c. 518–508 BCE",
-        "capital": "Sparta, now Sparta, Greece",
+        "capital": "Sparta",
         "capitalStatus": "city-state capital; Gorgo was queen consort, not sole ruler",
         "pinPrecision": "city"
       },
@@ -1103,7 +1103,7 @@
         "birthYear": -495,
         "civilization": "Greek",
         "birthYearLabel": "c. 495 BCE",
-        "capital": "Athens, Greece",
+        "capital": "Athens",
         "capitalStatus": "city-state capital",
         "pinPrecision": "city"
       },
@@ -1138,7 +1138,7 @@
         "birthYear": 1443,
         "civilization": "Hungarian",
         "birthYearLabel": "1443",
-        "capital": "Buda, now part of Budapest, Hungary",
+        "capital": "Buda (now part of Budapest)",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -1208,7 +1208,7 @@
         "birthYear": -340,
         "civilization": "Indian",
         "birthYearLabel": "c. 340 BCE",
-        "capital": "Pataliputra, now Patna, Bihar, India",
+        "capital": "Pataliputra (now Patna)",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -1243,7 +1243,7 @@
         "birthYear": 1869,
         "civilization": "Indian",
         "birthYearLabel": "1869",
-        "capital": "New Delhi, India (national capital; Gandhi never held state office)",
+        "capital": "New Delhi",
         "capitalStatus": "representative national capital; not a ruler's seat",
         "pinPrecision": "city"
       },
@@ -1278,7 +1278,7 @@
         "birthYear": null,
         "civilization": "Indonesian",
         "birthYearLabel": "Before 1309",
-        "capital": "Majapahit capital at Trowulan, near Mojokerto, East Java, Indonesia",
+        "capital": "Trowulan",
         "capitalStatus": "capital",
         "pinPrecision": "archaeological area"
       },
@@ -1313,7 +1313,7 @@
         "birthYear": 1251,
         "civilization": "Japanese",
         "birthYearLabel": "1251",
-        "capital": "Kamakura, Kanagawa, Japan",
+        "capital": "Kamakura",
         "capitalStatus": "seat of the Kamakura shogunate; imperial capital remained Kyoto",
         "pinPrecision": "city"
       },
@@ -1348,7 +1348,7 @@
         "birthYear": 1543,
         "civilization": "Japanese",
         "birthYearLabel": "1543",
-        "capital": "Edo, now Tokyo, Japan",
+        "capital": "Edo (now Tokyo)",
         "capitalStatus": "seat of the Tokugawa shogunate; imperial capital remained Kyoto",
         "pinPrecision": "city"
       },
@@ -1383,7 +1383,7 @@
         "birthYear": 1122,
         "civilization": "Khmer",
         "birthYearLabel": "c. 1122–1125",
-        "capital": "Angkor Thom, near Siem Reap, Cambodia",
+        "capital": "Angkor Thom, Cambodia",
         "capitalStatus": "capital",
         "pinPrecision": "archaeological site"
       },
@@ -1453,7 +1453,7 @@
         "birthYear": 1583,
         "civilization": "Kongolese",
         "birthYearLabel": "c. 1583",
-        "capital": "Kabasa, now associated with Caculo Cabaça, Cuanza Norte, Angola",
+        "capital": "Kabasa (near Caculo Cabaça, Angola)",
         "capitalStatus": "capital of Ndongo at her accession",
         "pinPrecision": "historical locality"
       },
@@ -1488,7 +1488,7 @@
         "birthYear": 1397,
         "civilization": "Korean",
         "birthYearLabel": "1397",
-        "capital": "Hanseong (Hanyang), now Seoul, South Korea",
+        "capital": "Hanseong/Hanyang (now Seoul, South Korea)",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -1523,7 +1523,7 @@
         "birthYear": null,
         "civilization": "Korean",
         "birthYearLabel": "Unknown",
-        "capital": "Seorabeol, now Gyeongju, South Korea",
+        "capital": "Seorabeol (now Gyeongju, South Korea)",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -1558,7 +1558,7 @@
         "birthYear": -356,
         "civilization": "Macedonian",
         "birthYearLabel": "356 BCE",
-        "capital": "Pella, now Pella, Central Macedonia, Greece",
+        "capital": "Pella, Greece",
         "capitalStatus": "capital of Macedon",
         "pinPrecision": "archaeological site"
       },
@@ -1593,7 +1593,7 @@
         "birthYear": 1280,
         "civilization": "Malian",
         "birthYearLabel": "c. 1280",
-        "capital": "Niani, traditionally identified near present-day Niani, Guinea",
+        "capital": "Niani, Guinea",
         "capitalStatus": "traditional capital; location/role debated",
         "pinPrecision": "locality"
       },
@@ -1628,7 +1628,7 @@
         "birthYear": 1217,
         "civilization": "Malian",
         "birthYearLabel": "c. 1217 (chronology disputed)",
-        "capital": "Niani, traditionally identified near present-day Niani, Guinea",
+        "capital": "Niani, Guinea",
         "capitalStatus": "traditional capital; location/role debated",
         "pinPrecision": "locality"
       },
@@ -1660,7 +1660,7 @@
         "birthYear": 1534,
         "civilization": "Mapuche",
         "birthYearLabel": "c. 1533–1534",
-        "capital": "No fixed capital; Mapuche political organization was decentralized across south-central Chile",
+        "capital": "No fixed capital; Mapuche territory in south-central Chile",
         "capitalStatus": "no fixed capital",
         "pinPrecision": "none"
       },
@@ -1695,7 +1695,7 @@
         "birthYear": null,
         "civilization": "Mayan",
         "birthYearLabel": "Unknown",
-        "capital": "Naranjo, now the Naranjo archaeological site, Petén, Guatemala",
+        "capital": "Naranjo (now Naranjo archaeological site, Guatemala)",
         "capitalStatus": "capital / royal seat",
         "pinPrecision": "archaeological site"
       },
@@ -1730,7 +1730,7 @@
         "birthYear": 1162,
         "civilization": "Mongolian",
         "birthYearLabel": "c. 1162",
-        "capital": "Avarga (Ikh Aurug), now an archaeological site in Khentii Province, Mongolia",
+        "capital": "Avarga/Ikh Aurug",
         "capitalStatus": "first nomadic capital / principal imperial base during Genghis Khan's reign",
         "pinPrecision": "archaeological site"
       },
@@ -1758,14 +1758,14 @@
         "colorKey": "leaders-mongolian"
       },
       "thumbs": {
-        "ingame": "assets/thumbs/leaders/kublai_khan_ingame.png",
+        "ingame": "assets/thumbs/leaders/kublai_khan_mongolian_ingame.png",
         "irl": "assets/thumbs/leaders/kublai_khan_irl.png"
       },
       "attrs": {
         "birthYear": 1215,
         "civilization": "Mongolian",
         "birthYearLabel": "1215",
-        "capital": "Dadu (Khanbaliq), now Beijing, China (primary capital from 1272; Shangdu was earlier and remained the summer capital)",
+        "capital": "Dadu/Khanbaliq (now Beijing, China)",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -1797,7 +1797,7 @@
         "birthYear": null,
         "civilization": "Māori",
         "birthYearLabel": "Unknown",
-        "capital": "No historical capital; Kupe is a legendary navigator and rangatira rather than ruler of a centralized Māori state",
+        "capital": "No historical capital",
         "capitalStatus": "no fixed capital",
         "pinPrecision": "none"
       },
@@ -1832,7 +1832,7 @@
         "birthYear": 1015,
         "civilization": "Norwegian",
         "birthYearLabel": "c. 1015",
-        "capital": "Nidaros, now Trondheim, Norway",
+        "capital": "Nidaros (now Trondheim)",
         "capitalStatus": "royal capital / principal seat",
         "pinPrecision": "city"
       },
@@ -1867,7 +1867,7 @@
         "birthYear": null,
         "civilization": "Nubian",
         "birthYearLabel": "Unknown",
-        "capital": "Meroë, near Begrawiya, Sudan",
+        "capital": "Meroë (near Begrawiya, Sudan)",
         "capitalStatus": "capital",
         "pinPrecision": "archaeological site"
       },
@@ -1902,7 +1902,7 @@
         "birthYear": 1494,
         "civilization": "Ottoman",
         "birthYearLabel": "1494",
-        "capital": "Constantinople, now Istanbul, Turkey",
+        "capital": "Constantinople (now Istanbul, Turkey)",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -1937,7 +1937,7 @@
         "birthYear": -600,
         "civilization": "Persian",
         "birthYearLabel": "c. 600 BCE",
-        "capital": "Pasargadae, near present-day Murghab, Fars, Iran",
+        "capital": "Pasargadae (near Murghab, Iran)",
         "capitalStatus": "capital",
         "pinPrecision": "archaeological site"
       },
@@ -2007,7 +2007,7 @@
         "birthYear": null,
         "civilization": "Phoenician",
         "birthYearLabel": "Unknown (traditionally 9th century BCE)",
-        "capital": "Carthage, now in the Tunis metropolitan area, Tunisia",
+        "capital": "Carthage, Tunisia",
         "capitalStatus": "capital",
         "pinPrecision": "archaeological site"
       },
@@ -2042,7 +2042,7 @@
         "birthYear": 1374,
         "civilization": "Polish",
         "birthYearLabel": "1373–1374",
-        "capital": "Kraków, Poland",
+        "capital": "Kraków",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -2077,7 +2077,7 @@
         "birthYear": 1502,
         "civilization": "Portuguese",
         "birthYearLabel": "1502",
-        "capital": "Lisbon, Portugal",
+        "capital": "Lisbon",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -2182,7 +2182,7 @@
         "birthYear": 1672,
         "civilization": "Russian",
         "birthYearLabel": "1672",
-        "capital": "Saint Petersburg, Russia (capital from 1712; Moscow before 1712)",
+        "capital": "Saint Petersburg",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -2217,7 +2217,7 @@
         "birthYear": 1274,
         "civilization": "Scottish",
         "birthYearLabel": "1274",
-        "capital": "Scone, now Old Scone near Perth, Scotland, United Kingdom",
+        "capital": "Scone (now Old Scone near Perth, United Kingdom)",
         "capitalStatus": "representative royal/ceremonial center; court was itinerant",
         "pinPrecision": "locality"
       },
@@ -2249,7 +2249,7 @@
         "birthYear": null,
         "civilization": "Scythian",
         "birthYearLabel": "Unknown",
-        "capital": "No fixed capital; the Massagetae were a nomadic confederation east of the Caspian Sea",
+        "capital": "No fixed capital; Massagetae territory east of the Caspian Sea",
         "capitalStatus": "no fixed capital",
         "pinPrecision": "none"
       },
@@ -2284,7 +2284,7 @@
         "birthYear": 1527,
         "civilization": "Spanish",
         "birthYearLabel": "1527",
-        "capital": "Madrid, Spain (royal court fixed there from 1561)",
+        "capital": "Madrid",
         "capitalStatus": "capital / permanent royal court",
         "pinPrecision": "city"
       },
@@ -2319,7 +2319,7 @@
         "birthYear": null,
         "civilization": "Sumerian",
         "birthYearLabel": "Unknown",
-        "capital": "Uruk, now Warka archaeological site, Iraq",
+        "capital": "Uruk (now Warka, Iraq)",
         "capitalStatus": "city-state capital",
         "pinPrecision": "archaeological site"
       },
@@ -2354,7 +2354,7 @@
         "birthYear": 1626,
         "civilization": "Swedish",
         "birthYearLabel": "1626",
-        "capital": "Stockholm, Sweden",
+        "capital": "Stockholm",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -2389,7 +2389,7 @@
         "birthYear": null,
         "civilization": "Vietnamese",
         "birthYearLabel": "Unknown (traditionally 226)",
-        "capital": "No state capital; her 248 uprising was based at Núi Nưa, now in Thanh Hóa Province, Vietnam",
+        "capital": "No state capital; Núi Nưa",
         "capitalStatus": "rebel base, not a formal capital",
         "pinPrecision": "region"
       },
@@ -2424,7 +2424,7 @@
         "birthYear": 1787,
         "civilization": "Zulu",
         "birthYearLabel": "c. 1787",
-        "capital": "KwaDukuza, now KwaDukuza, KwaZulu-Natal, South Africa (royal capital from 1825)",
+        "capital": "KwaDukuza, South Africa",
         "capitalStatus": "royal capital",
         "pinPrecision": "city"
       },
