@@ -58,7 +58,7 @@
       },
       "attrs": {
         "terrain": "Grassland (Hills)/Plains (Hills)",
-        "location": "United Kingdom"
+        "location": "England"
       },
       "detail": {
         "text": "",
@@ -218,7 +218,7 @@
       },
       "attrs": {
         "terrain": "Coast/Grassland/Plains",
-        "location": "United Kingdom (Northern Ireland)"
+        "location": "Northern Ireland"
       },
       "detail": {
         "text": "",
@@ -305,26 +305,6 @@
         "links": [
           { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Ik-Kil_(Civ6)" },
           { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Ik_Kil" }
-        ]
-      }
-    },
-    {
-      "id": "kakadu",
-      "name": "Kakadu",
-      "coords": [-13.083, 132.6],
-      "thumbs": {
-        "ingame": "assets/thumbs/natural_wonders/kakadu_ingame.png",
-        "irl": "assets/thumbs/natural_wonders/kakadu_irl.png"
-      },
-      "attrs": {
-        "terrain": "Plains",
-        "location": "Australia"
-      },
-      "detail": {
-        "text": "Scenario only: Outback Tycoon.",
-        "links": [
-          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Kakadu_(Civ6)" },
-          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Kakadu_National_Park" }
         ]
       }
     },
@@ -549,26 +529,6 @@
       }
     },
     {
-      "id": "pinnacles",
-      "name": "Pinnacles",
-      "coords": [-30.60583, 115.1575],
-      "thumbs": {
-        "ingame": "assets/thumbs/natural_wonders/pinnacles_ingame.png",
-        "irl": "assets/thumbs/natural_wonders/pinnacles_irl.png"
-      },
-      "attrs": {
-        "terrain": "Grassland",
-        "location": "Australia"
-      },
-      "detail": {
-        "text": "Scenario only: Outback Tycoon.",
-        "links": [
-          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Pinnacles_(Civ6)" },
-          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/The_Pinnacles_(Western_Australia)" }
-        ]
-      }
-    },
-    {
       "id": "piopiotahi",
       "name": "Piopiotahi",
       "coords": [-44.64806, 167.90556],
@@ -685,26 +645,6 @@
         "links": [
           { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Uluru_(Civ6)" },
           { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Uluru" }
-        ]
-      }
-    },
-    {
-      "id": "vinland",
-      "name": "Vinland",
-      "coords": [51.59639, -55.53333],
-      "thumbs": {
-        "ingame": "assets/thumbs/natural_wonders/vinland_ingame.png",
-        "irl": "assets/thumbs/natural_wonders/vinland_irl.png"
-      },
-      "attrs": {
-        "terrain": "Ocean",
-        "location": "Canada (representative site)"
-      },
-      "detail": {
-        "text": "Scenario only: Vikings, Traders, and Raiders! Pin marks L'Anse aux Meadows, a confirmed Norse settlement, as a representative location; Vinland's full extent is uncertain.",
-        "links": [
-          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Vinland_(Civ6)" },
-          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Vinland" }
         ]
       }
     },
