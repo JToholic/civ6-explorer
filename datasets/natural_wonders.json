@@ -17,9 +17,9 @@
         "irl": "assets/thumbs/natural_wonders/bermuda_triangle_irl.png"
       },
       "attrs": {
-		"terrain": "Ocean",
-		"location": "Atlantic Ocean"
-	  },
+        "terrain": "Ocean",
+        "location": "Atlantic Ocean"
+      },
       "detail": {
         "text": "",
         "links": [
@@ -28,7 +28,6 @@
         ]
       }
     },
-
     {
       "id": "chocolate_hills",
       "name": "Chocolate Hills",
@@ -38,9 +37,9 @@
         "irl": "assets/thumbs/natural_wonders/chocolate_hills_irl.png"
       },
       "attrs": {
-		"terrain": "Grassland/Plains",
-		"location": "Philipphine"
-	  },
+        "terrain": "Grassland/Plains",
+        "location": "Philippines"
+      },
       "detail": {
         "text": "",
         "links": [
@@ -49,7 +48,126 @@
         ]
       }
     },
-
+    {
+      "id": "cliffs_of_dover",
+      "name": "Cliffs of Dover",
+      "coords": [51.10778, 1.27861],
+      "thumbs": {
+        "ingame": "assets/thumbs/natural_wonders/cliffs_of_dover_ingame.png",
+        "irl": "assets/thumbs/natural_wonders/cliffs_of_dover_irl.png"
+      },
+      "attrs": {
+        "terrain": "Grassland (Hills)/Plains (Hills)",
+        "location": "United Kingdom"
+      },
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Cliffs_of_Dover_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/White_Cliffs_of_Dover" }
+        ]
+      }
+    },
+    {
+      "id": "crater_lake",
+      "name": "Crater Lake",
+      "coords": [42.95, -122.1],
+      "thumbs": {
+        "ingame": "assets/thumbs/natural_wonders/crater_lake_ingame.png",
+        "irl": "assets/thumbs/natural_wonders/crater_lake_irl.png"
+      },
+      "attrs": {
+        "terrain": "Plains/Tundra",
+        "location": "United States"
+      },
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Crater_Lake_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Crater_Lake" }
+        ]
+      }
+    },
+    {
+      "id": "dead_sea",
+      "name": "Dead Sea",
+      "coords": [31.5, 35.5],
+      "thumbs": {
+        "ingame": "assets/thumbs/natural_wonders/dead_sea_ingame.png",
+        "irl": "assets/thumbs/natural_wonders/dead_sea_irl.png"
+      },
+      "attrs": {
+        "terrain": "Desert/Grassland",
+        "location": "Israel/Palestine/Jordan"
+      },
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Dead_Sea_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Dead_Sea" }
+        ]
+      }
+    },
+    {
+      "id": "delicate_arch",
+      "name": "Delicate Arch",
+      "coords": [38.743517, -109.499341],
+      "thumbs": {
+        "ingame": "assets/thumbs/natural_wonders/delicate_arch_ingame.png",
+        "irl": "assets/thumbs/natural_wonders/delicate_arch_irl.png"
+      },
+      "attrs": {
+        "terrain": "Desert",
+        "location": "United States"
+      },
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Delicate_Arch_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Delicate_Arch" }
+        ]
+      }
+    },
+    {
+      "id": "eye_of_the_sahara",
+      "name": "Eye of the Sahara",
+      "coords": [21.1147, -11.3943],
+      "thumbs": {
+        "ingame": "assets/thumbs/natural_wonders/eye_of_the_sahara_ingame.png",
+        "irl": "assets/thumbs/natural_wonders/eye_of_the_sahara_irl.png"
+      },
+      "attrs": {
+        "terrain": "Desert",
+        "location": "Mauritania"
+      },
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Eye_of_the_Sahara_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Richat_Structure" }
+        ]
+      }
+    },
+    {
+      "id": "eyjafjallajokull",
+      "name": "Eyjafjallajökull",
+      "coords": [63.62, -19.61333],
+      "thumbs": {
+        "ingame": "assets/thumbs/natural_wonders/eyjafjallajokull_ingame.png",
+        "irl": "assets/thumbs/natural_wonders/eyjafjallajokull_irl.png"
+      },
+      "attrs": {
+        "terrain": "Tundra/Snow",
+        "location": "Iceland"
+      },
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Eyjafjallajökull_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Eyjafjallajökull" }
+        ]
+      }
+    },
     {
       "id": "fountain_of_youth",
       "name": "Fountain of Youth",
@@ -59,9 +177,9 @@
         "irl": "assets/thumbs/natural_wonders/fountain_of_youth_irl.png"
       },
       "attrs": {
-		"terrain": "Grassland/Plains/Desert",
-		"location": "???"
-	  },
+        "terrain": "Grassland/Plains/Desert",
+        "location": "Unknown (legendary)"
+      },
       "detail": {
         "text": "",
         "links": [
@@ -69,8 +187,547 @@
           { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Fountain_of_Youth" }
         ]
       }
-    }, 
-
+    },
+    {
+      "id": "galapagos_islands",
+      "name": "Galápagos Islands",
+      "coords": [-0.5, -90.5],
+      "thumbs": {
+        "ingame": "assets/thumbs/natural_wonders/galapagos_islands_ingame.png",
+        "irl": "assets/thumbs/natural_wonders/galapagos_islands_irl.png"
+      },
+      "attrs": {
+        "terrain": "Coast",
+        "location": "Ecuador"
+      },
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Galápagos_Islands_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Galápagos_Islands" }
+        ]
+      }
+    },
+    {
+      "id": "giants_causeway",
+      "name": "Giant's Causeway",
+      "coords": [55.24083, -6.51167],
+      "thumbs": {
+        "ingame": "assets/thumbs/natural_wonders/giants_causeway_ingame.png",
+        "irl": "assets/thumbs/natural_wonders/giants_causeway_irl.png"
+      },
+      "attrs": {
+        "terrain": "Coast/Grassland/Plains",
+        "location": "United Kingdom (Northern Ireland)"
+      },
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Giant's_Causeway_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Giant's_Causeway" }
+        ]
+      }
+    },
+    {
+      "id": "gobustan",
+      "name": "Gobustan",
+      "coords": [40.125, 49.375],
+      "thumbs": {
+        "ingame": "assets/thumbs/natural_wonders/gobustan_ingame.png",
+        "irl": "assets/thumbs/natural_wonders/gobustan_irl.png"
+      },
+      "attrs": {
+        "terrain": "Plains",
+        "location": "Azerbaijan"
+      },
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Gobustan_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Gobustan_National_Park" }
+        ]
+      }
+    },
+    {
+      "id": "great_barrier_reef",
+      "name": "Great Barrier Reef",
+      "coords": [-16.4, 145.8],
+      "thumbs": {
+        "ingame": "assets/thumbs/natural_wonders/great_barrier_reef_ingame.png",
+        "irl": "assets/thumbs/natural_wonders/great_barrier_reef_irl.png"
+      },
+      "attrs": {
+        "terrain": "Coast",
+        "location": "Australia"
+      },
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Great_Barrier_Reef_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Great_Barrier_Reef" }
+        ]
+      }
+    },
+    {
+      "id": "ha_long_bay",
+      "name": "Hạ Long Bay",
+      "coords": [20.9, 107.2],
+      "thumbs": {
+        "ingame": "assets/thumbs/natural_wonders/ha_long_bay_ingame.png",
+        "irl": "assets/thumbs/natural_wonders/ha_long_bay_irl.png"
+      },
+      "attrs": {
+        "terrain": "Coast",
+        "location": "Vietnam"
+      },
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Hạ_Long_Bay_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Hạ_Long_Bay" }
+        ]
+      }
+    },
+    {
+      "id": "ik_kil",
+      "name": "Ik-Kil",
+      "coords": [20.66108, -88.55055],
+      "thumbs": {
+        "ingame": "assets/thumbs/natural_wonders/ik_kil_ingame.png",
+        "irl": "assets/thumbs/natural_wonders/ik_kil_irl.png"
+      },
+      "attrs": {
+        "terrain": "Grassland/Grassland (Hills)/Plains/Plains (Hills)",
+        "location": "Mexico"
+      },
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Ik-Kil_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Ik_Kil" }
+        ]
+      }
+    },
+    {
+      "id": "kakadu",
+      "name": "Kakadu",
+      "coords": [-13.083, 132.6],
+      "thumbs": {
+        "ingame": "assets/thumbs/natural_wonders/kakadu_ingame.png",
+        "irl": "assets/thumbs/natural_wonders/kakadu_irl.png"
+      },
+      "attrs": {
+        "terrain": "Plains",
+        "location": "Australia"
+      },
+      "detail": {
+        "text": "Scenario only: Outback Tycoon.",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Kakadu_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Kakadu_National_Park" }
+        ]
+      }
+    },
+    {
+      "id": "lake_retba",
+      "name": "Lake Retba",
+      "coords": [14.83834, -17.24482],
+      "thumbs": {
+        "ingame": "assets/thumbs/natural_wonders/lake_retba_ingame.png",
+        "irl": "assets/thumbs/natural_wonders/lake_retba_irl.png"
+      },
+      "attrs": {
+        "terrain": "Grassland/Plains",
+        "location": "Senegal"
+      },
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Lake_Retba_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Lake_Retba" }
+        ]
+      }
+    },
+    {
+      "id": "lysefjord",
+      "name": "Lysefjord",
+      "coords": [58.9405, 6.1202],
+      "thumbs": {
+        "ingame": "assets/thumbs/natural_wonders/lysefjord_ingame.png",
+        "irl": "assets/thumbs/natural_wonders/lysefjord_irl.png"
+      },
+      "attrs": {
+        "terrain": "Plains/Tundra",
+        "location": "Norway"
+      },
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Lysefjord_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Lysefjord" }
+        ]
+      }
+    },
+    {
+      "id": "mato_tipila",
+      "name": "Mato Tipila",
+      "coords": [44.59056, -104.71528],
+      "thumbs": {
+        "ingame": "assets/thumbs/natural_wonders/mato_tipila_ingame.png",
+        "irl": "assets/thumbs/natural_wonders/mato_tipila_irl.png"
+      },
+      "attrs": {
+        "terrain": "Grassland/Plains/Desert/Tundra",
+        "location": "United States"
+      },
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Mato_Tipila_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Devils_Tower" }
+        ]
+      }
+    },
+    {
+      "id": "matterhorn",
+      "name": "Matterhorn",
+      "coords": [45.97639, 7.65861],
+      "thumbs": {
+        "ingame": "assets/thumbs/natural_wonders/matterhorn_ingame.png",
+        "irl": "assets/thumbs/natural_wonders/matterhorn_irl.png"
+      },
+      "attrs": {
+        "terrain": "Grassland/Plains",
+        "location": "Switzerland/Italy"
+      },
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Matterhorn_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Matterhorn" }
+        ]
+      }
+    },
+    {
+      "id": "mount_everest",
+      "name": "Mount Everest",
+      "coords": [27.9881, 86.925],
+      "thumbs": {
+        "ingame": "assets/thumbs/natural_wonders/mount_everest_ingame.png",
+        "irl": "assets/thumbs/natural_wonders/mount_everest_irl.png"
+      },
+      "attrs": {
+        "terrain": "Desert/Grassland/Plains/Tundra",
+        "location": "Nepal/China"
+      },
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Mount_Everest_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Mount_Everest" }
+        ]
+      }
+    },
+    {
+      "id": "mount_kilimanjaro",
+      "name": "Mount Kilimanjaro",
+      "coords": [-3.07583, 37.35333],
+      "thumbs": {
+        "ingame": "assets/thumbs/natural_wonders/mount_kilimanjaro_ingame.png",
+        "irl": "assets/thumbs/natural_wonders/mount_kilimanjaro_irl.png"
+      },
+      "attrs": {
+        "terrain": "Desert/Grassland/Plains/Tundra",
+        "location": "Tanzania"
+      },
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Mount_Kilimanjaro_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Mount_Kilimanjaro" }
+        ]
+      }
+    },
+    {
+      "id": "mount_roraima",
+      "name": "Mount Roraima",
+      "coords": [5.14333, -60.7625],
+      "thumbs": {
+        "ingame": "assets/thumbs/natural_wonders/mount_roraima_ingame.png",
+        "irl": "assets/thumbs/natural_wonders/mount_roraima_irl.png"
+      },
+      "attrs": {
+        "terrain": "Grassland/Plains",
+        "location": "Venezuela/Guyana/Brazil"
+      },
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Mount_Roraima_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Mount_Roraima" }
+        ]
+      }
+    },
+    {
+      "id": "mount_vesuvius",
+      "name": "Mount Vesuvius",
+      "coords": [40.82139, 14.42611],
+      "thumbs": {
+        "ingame": "assets/thumbs/natural_wonders/mount_vesuvius_ingame.png",
+        "irl": "assets/thumbs/natural_wonders/mount_vesuvius_irl.png"
+      },
+      "attrs": {
+        "terrain": "Grassland/Plains",
+        "location": "Italy"
+      },
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Mount_Vesuvius_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Mount_Vesuvius" }
+        ]
+      }
+    },
+    {
+      "id": "paititi",
+      "name": "Païtiti",
+      "coords": null,
+      "thumbs": {
+        "ingame": "assets/thumbs/natural_wonders/paititi_ingame.png",
+        "irl": "assets/thumbs/natural_wonders/paititi_irl.png"
+      },
+      "attrs": {
+        "terrain": "Grassland/Plains/Desert",
+        "location": "South America (legendary; location unknown)"
+      },
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Païtiti_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Paititi" }
+        ]
+      }
+    },
+    {
+      "id": "pamukkale",
+      "name": "Pamukkale",
+      "coords": [37.92389, 29.12333],
+      "thumbs": {
+        "ingame": "assets/thumbs/natural_wonders/pamukkale_ingame.png",
+        "irl": "assets/thumbs/natural_wonders/pamukkale_irl.png"
+      },
+      "attrs": {
+        "terrain": "Grassland/Plains/Desert",
+        "location": "Turkey"
+      },
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Pamukkale_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Pamukkale" }
+        ]
+      }
+    },
+    {
+      "id": "pantanal",
+      "name": "Pantanal",
+      "coords": [-17.4, -57.5],
+      "thumbs": {
+        "ingame": "assets/thumbs/natural_wonders/pantanal_ingame.png",
+        "irl": "assets/thumbs/natural_wonders/pantanal_irl.png"
+      },
+      "attrs": {
+        "terrain": "Grassland/Plains",
+        "location": "Brazil/Bolivia/Paraguay"
+      },
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Pantanal_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Pantanal" }
+        ]
+      }
+    },
+    {
+      "id": "pinnacles",
+      "name": "Pinnacles",
+      "coords": [-30.60583, 115.1575],
+      "thumbs": {
+        "ingame": "assets/thumbs/natural_wonders/pinnacles_ingame.png",
+        "irl": "assets/thumbs/natural_wonders/pinnacles_irl.png"
+      },
+      "attrs": {
+        "terrain": "Grassland",
+        "location": "Australia"
+      },
+      "detail": {
+        "text": "Scenario only: Outback Tycoon.",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Pinnacles_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/The_Pinnacles_(Western_Australia)" }
+        ]
+      }
+    },
+    {
+      "id": "piopiotahi",
+      "name": "Piopiotahi",
+      "coords": [-44.64806, 167.90556],
+      "thumbs": {
+        "ingame": "assets/thumbs/natural_wonders/piopiotahi_ingame.png",
+        "irl": "assets/thumbs/natural_wonders/piopiotahi_irl.png"
+      },
+      "attrs": {
+        "terrain": "Grassland/Plains",
+        "location": "New Zealand"
+      },
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Piopiotahi_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Milford_Sound" }
+        ]
+      }
+    },
+    {
+      "id": "sahara_el_beyda",
+      "name": "Sahara el Beyda",
+      "coords": [27.27734, 28.20044],
+      "thumbs": {
+        "ingame": "assets/thumbs/natural_wonders/sahara_el_beyda_ingame.png",
+        "irl": "assets/thumbs/natural_wonders/sahara_el_beyda_irl.png"
+      },
+      "attrs": {
+        "terrain": "Desert",
+        "location": "Egypt"
+      },
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Sahara_el_Beyda_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/White_Desert_National_Park" }
+        ]
+      }
+    },
+    {
+      "id": "torres_del_paine",
+      "name": "Torres del Paine",
+      "coords": [-50.99889, -73.09528],
+      "thumbs": {
+        "ingame": "assets/thumbs/natural_wonders/torres_del_paine_ingame.png",
+        "irl": "assets/thumbs/natural_wonders/torres_del_paine_irl.png"
+      },
+      "attrs": {
+        "terrain": "Grassland/Plains/Tundra",
+        "location": "Chile"
+      },
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Torres_del_Paine_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Cordillera_Paine" }
+        ]
+      }
+    },
+    {
+      "id": "tsingy_de_bemaraha",
+      "name": "Tsingy de Bemaraha",
+      "coords": [-18.658, 44.766],
+      "thumbs": {
+        "ingame": "assets/thumbs/natural_wonders/tsingy_de_bemaraha_ingame.png",
+        "irl": "assets/thumbs/natural_wonders/tsingy_de_bemaraha_irl.png"
+      },
+      "attrs": {
+        "terrain": "Grassland/Plains/Tundra",
+        "location": "Madagascar"
+      },
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Tsingy_de_Bemaraha_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Tsingy_de_Bemaraha_Strict_Nature_Reserve" }
+        ]
+      }
+    },
+    {
+      "id": "ubsunur_hollow",
+      "name": "Ubsunur Hollow",
+      "coords": [50.167, 93.833],
+      "thumbs": {
+        "ingame": "assets/thumbs/natural_wonders/ubsunur_hollow_ingame.png",
+        "irl": "assets/thumbs/natural_wonders/ubsunur_hollow_irl.png"
+      },
+      "attrs": {
+        "terrain": "Tundra",
+        "location": "Mongolia/Russia"
+      },
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Ubsunur_Hollow_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Uvs_Lake_Basin" }
+        ]
+      }
+    },
+    {
+      "id": "uluru",
+      "name": "Uluru",
+      "coords": [-25.345, 131.03611],
+      "thumbs": {
+        "ingame": "assets/thumbs/natural_wonders/uluru_ingame.png",
+        "irl": "assets/thumbs/natural_wonders/uluru_irl.png"
+      },
+      "attrs": {
+        "terrain": "Desert",
+        "location": "Australia"
+      },
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Uluru_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Uluru" }
+        ]
+      }
+    },
+    {
+      "id": "vinland",
+      "name": "Vinland",
+      "coords": [51.59639, -55.53333],
+      "thumbs": {
+        "ingame": "assets/thumbs/natural_wonders/vinland_ingame.png",
+        "irl": "assets/thumbs/natural_wonders/vinland_irl.png"
+      },
+      "attrs": {
+        "terrain": "Ocean",
+        "location": "Canada (representative site)"
+      },
+      "detail": {
+        "text": "Scenario only: Vikings, Traders, and Raiders! Pin marks L'Anse aux Meadows, a confirmed Norse settlement, as a representative location; Vinland's full extent is uncertain.",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Vinland_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Vinland" }
+        ]
+      }
+    },
+    {
+      "id": "yosemite",
+      "name": "Yosemite",
+      "coords": [37.72167, -119.64639],
+      "thumbs": {
+        "ingame": "assets/thumbs/natural_wonders/yosemite_ingame.png",
+        "irl": "assets/thumbs/natural_wonders/yosemite_irl.png"
+      },
+      "attrs": {
+        "terrain": "Plains/Tundra",
+        "location": "United States"
+      },
+      "detail": {
+        "text": "",
+        "links": [
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Yosemite_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Yosemite_Valley" }
+        ]
+      }
+    },
     {
       "id": "zhangye_danxia",
       "name": "Zhangye Danxia",
@@ -80,17 +737,16 @@
         "irl": "assets/thumbs/natural_wonders/zhangye_danxia_irl.png"
       },
       "attrs": {
-		"terrain": "Desert/Grassland/Plains/Tundra/Snow",
-		"location": "China"
-	  },
+        "terrain": "Desert/Grassland/Plains/Tundra/Snow",
+        "location": "China"
+      },
       "detail": {
         "text": "",
         "links": [
-          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Fountain_of_Youth_(Civ6)" },
-          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Fountain_of_Youth" }
+          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Zhangye_Danxia_(Civ6)" },
+          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Zhangye_National_Geopark" }
         ]
       }
     }
   ]
 }
-
