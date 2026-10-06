@@ -15,8 +15,58 @@
   --color-wonders-atomic:      #2BA6A6; /* teal */
   --color-wonders-information: #2E7D32; /* green */
 
-  /* Leaders – by civilization */
-  --color-leaders-american: #2F6F95;      /* muted patriotic blue */
+  /* Leaders — one shared Civilization VI jersey color per civilization. */
+  /* White primaries use the secondary color for visibility. */
+  --color-leaders-american: #012A6C; /* American: primary #012A6C, secondary #F9F9F9 */
+  --color-leaders-arabian: #F7D801; /* Arabian: primary #F7D801, secondary #156C30 */
+  --color-leaders-australian: #156C30; /* Australian: primary #156C30, secondary #F7D801 */
+  --color-leaders-aztec: #7DECE3; /* Aztec: primary #7DECE3, secondary #780001 */
+  --color-leaders-babylonian: #74A3F3; /* Babylonian: primary #74A3F3, secondary #012A6C */
+  --color-leaders-brazilian: #61BF22; /* Brazilian: primary #61BF22, secondary #F7D801 */
+  --color-leaders-byzantine: #370065; /* Byzantine: primary #370065, secondary #EAE19D */
+  --color-leaders-canadian: #CA1415; /* Canadian: primary #F9F9F9, secondary #CA1415; secondary used */
+  --color-leaders-chinese: #156C30; /* Chinese: primary #156C30, secondary #F9F9F9 */
+  --color-leaders-cree: #012A6C; /* Cree: primary #012A6C, secondary #61BF22 */
+  --color-leaders-dutch: #FF8112; /* Dutch: primary #FF8112, secondary #004FCE */
+  --color-leaders-egyptian: #014F51; /* Egyptian: primary #014F51, secondary #EAE19D */
+  --color-leaders-english: #CA1415; /* English: primary #CA1415, secondary #F9F9F9 */
+  --color-leaders-ethiopian: #F7D801; /* Ethiopian: primary #F7D801, secondary #156C30 */
+  --color-leaders-french: #004FCE; /* French: primary #004FCE, secondary #EAE19D */
+  --color-leaders-gallic: #156C30; /* Gallic: primary #156C30, secondary #7DECE3 */
+  --color-leaders-georgian: #FF8112; /* Georgian: primary #F9F9F9, secondary #FF8112; secondary used */
+  --color-leaders-german: #AEAEAE; /* German: primary #AEAEAE, secondary #181818 */
+  --color-leaders-gran-colombian: #012A6C; /* Gran Colombian: primary #012A6C, secondary #F7D801 */
+  --color-leaders-greek: #74A3F3; /* Greek: primary #74A3F3, secondary #F9F9F9 */
+  --color-leaders-hungarian: #156C30; /* Hungarian: primary #156C30, secondary #FF8112 */
+  --color-leaders-incan: #783D02; /* Incan: primary #783D02, secondary #F7D801 */
+  --color-leaders-indian: #370065; /* Indian: primary #370065, secondary #00C09B */
+  --color-leaders-indonesian: #780001; /* Indonesian: primary #780001, secondary #00C09B */
+  --color-leaders-japanese: #780001; /* Japanese: primary #F9F9F9, secondary #780001; secondary used */
+  --color-leaders-khmer: #750073; /* Khmer: primary #750073, secondary #FF8112 */
+  --color-leaders-kongolese: #F7D801; /* Kongolese: primary #F7D801, secondary #CA1415 */
+  --color-leaders-korean: #CA1415; /* Korean: primary #CA1415, secondary #74A3F3 */
+  --color-leaders-macedonian: #AEAEAE; /* Macedonian: primary #AEAEAE, secondary #F7D801 */
+  --color-leaders-malian: #780001; /* Malian: primary #780001, secondary #EAE19D */
+  --color-leaders-mapuche: #004FCE; /* Mapuche: primary #004FCE, secondary #7DECE3 */
+  --color-leaders-mayan: #74A3F3; /* Mayan: primary #74A3F3, secondary #014F51 */
+  --color-leaders-mongolian: #780001; /* Mongolian: primary #780001, secondary #FF8112 */
+  --color-leaders-maori: #CA1415; /* Māori: primary #CA1415, secondary #7DECE3 */
+  --color-leaders-norwegian: #012A6C; /* Norwegian: primary #012A6C, secondary #CA1415 */
+  --color-leaders-nubian: #EAE19D; /* Nubian: primary #EAE19D, secondary #783D02 */
+  --color-leaders-ottoman: #156C30; /* Ottoman: primary #F9F9F9, secondary #156C30; secondary used */
+  --color-leaders-persian: #B780E6; /* Persian: primary #B780E6, secondary #780001 */
+  --color-leaders-phoenician: #6D00CD; /* Phoenician: primary #6D00CD, secondary #74A3F3 */
+  --color-leaders-polish: #780001; /* Polish: primary #780001, secondary #E57574 */
+  --color-leaders-portuguese: #012A6C; /* Portuguese: primary #F9F9F9, secondary #012A6C; secondary used */
+  --color-leaders-roman: #6D00CD; /* Roman: primary #6D00CD, secondary #F7D801 */
+  --color-leaders-russian: #F7D801; /* Russian: primary #F7D801, secondary #181818 */
+  --color-leaders-scottish: #004FCE; /* Scottish: primary #F9F9F9, secondary #004FCE; secondary used */
+  --color-leaders-scythian: #FFB23C; /* Scythian: primary #FFB23C, secondary #780001 */
+  --color-leaders-spanish: #CA1415; /* Spanish: primary #CA1415, secondary #F7D801 */
+  --color-leaders-sumerian: #012A6C; /* Sumerian: primary #012A6C, secondary #FF8112 */
+  --color-leaders-swedish: #74A3F3; /* Swedish: primary #74A3F3, secondary #F7D801 */
+  --color-leaders-vietnamese: #F7D801; /* Vietnamese: primary #F7D801, secondary #750073 */
+  --color-leaders-zulu: #783D02; /* Zulu: primary #783D02, secondary #F9F9F9 */
 
   /* City-States – by type */
 	--color-city_states-scientific: #4C7EDB;  /* blue */

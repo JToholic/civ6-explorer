@@ -21,7 +21,8 @@ const ATTR_DISPLAY = {
   ],
   leaders: [
     { key: "civilization", label: "Civilization" },
-    { key: "birthYear", label: "Birth Year" }
+    { key: "birthYearLabel", label: "Birth Year" },
+    { key: "birthPlace", label: "Birthplace" }
   ],
   city_states: [{ key: "type", label: "Type" }]
 };
@@ -174,12 +175,12 @@ function applySort(items) {
 	  return String(a.name).localeCompare(String(b.name));
 	}
 
-    // undefined last
-    if (av === undefined && bv === undefined) {
+    // Missing values last (including unknown birth years).
+    if (av == null && bv == null) {
       return String(a.name).localeCompare(String(b.name));
     }
-    if (av === undefined) return 1;
-    if (bv === undefined) return -1;
+    if (av == null) return 1;
+    if (bv == null) return -1;
 
     let primary;
     if (typeof av === "number" && typeof bv === "number") {
