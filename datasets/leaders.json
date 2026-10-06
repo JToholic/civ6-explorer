@@ -2,56 +2,2492 @@
   "meta": {
     "type": "leaders",
     "title": "Leaders",
-    "defaultSort": "civilization"
+    "defaultSort": "civilization",
+    "scope": "All regular Civilization VI leaders, including DLC and Leader Pass; scenario-only leaders excluded.",
+    "personas": "One entry per historical person per civilization; alternate personas are combined.",
+    "coordinatePolicy": "Birthplaces only. Coordinates are representative points at the declared pinPrecision, not surveyed birth-house coordinates. Disputed, unknown, unverified or ungeolocated birthplaces have null coords. Reported, probable and traditional pins are explicitly labeled.",
+    "birthYearPolicy": "Negative numbers denote BCE (not astronomical year numbering). Approximate representative years are for sorting only; birthYearLabel preserves uncertainty. Unknown years are null.",
+    "colorPolicy": "One shared color per civilization, based on the default jersey of its original leader (Pericles for Greece). Use the primary color, or its secondary when the primary is white. Colors can repeat across civilizations because the game palette is limited.",
+    "thumbnailPolicy": "Paths follow existing sample naming; this update does not supply new image assets.",
+    "sources": [
+      "https://civilization.fandom.com/wiki/Leaders_(Civ6)",
+      "https://civilization.fandom.com/wiki/Jersey_System_(Civ6)"
+    ],
+    "reviewedOn": "2026-10-06"
   },
   "sortOptions": [
-    { "id": "alpha", "label": "A → Z", "field": "name", "order": "asc" },
-    { "id": "birth", "label": "Birth year", "field": "attrs.birthYear", "order": "asc" },
-    { "id": "civilization", "label": "Civilization", "field": "attrs.civilization", "order": "asc" }
+    {
+      "id": "alpha",
+      "label": "A → Z",
+      "field": "name",
+      "order": "asc"
+    },
+    {
+      "id": "birth",
+      "label": "Birth year",
+      "field": "attrs.birthYear",
+      "order": "asc"
+    },
+    {
+      "id": "civilization",
+      "label": "Civilization",
+      "field": "attrs.civilization",
+      "order": "asc"
+    }
   ],
   "items": [
     {
       "id": "abraham_lincoln",
       "name": "Abraham Lincoln",
-      "coords": null,
-      "theme": { "colorKey": "leaders-american" },
+      "coords": [
+        37.531,
+        -85.735
+      ],
+      "theme": {
+        "colorKey": "leaders-american"
+      },
       "thumbs": {
         "ingame": "assets/thumbs/leaders/abraham_lincoln_ingame.png",
         "irl": "assets/thumbs/leaders/abraham_lincoln_irl.png"
       },
       "attrs": {
         "birthYear": 1809,
-        "civilization": "American"
+        "civilization": "American",
+        "birthYearLabel": "1809",
+        "birthPlace": "Sinking Spring Farm, near Hodgenville, Kentucky, United States",
+        "birthPlaceStatus": "documented",
+        "pinPrecision": "site"
       },
       "detail": {
-        "text": "",
+        "text": "Birthplace: Sinking Spring Farm, near Hodgenville, Kentucky, United States. Born: 1809. Birthplace National Historical Park; the displayed cabin is symbolic, not the original.",
         "links": [
-          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Abraham_Lincoln_(Civ6)" },
-          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Abraham_Lincoln" }
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Abraham_Lincoln_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Abraham_Lincoln"
+          },
+          {
+            "label": "Birthplace source",
+            "url": "https://www.nps.gov/abli/learn/historyculture/lincoln-time-line-and-other-resource-materials.htm"
+          }
         ]
       }
     },
     {
       "id": "teddy_roosevelt",
       "name": "Teddy Roosevelt",
-      "coords": null,
-      "theme": { "colorKey": "leaders-american" },
+      "coords": [
+        40.7386,
+        -73.989
+      ],
+      "theme": {
+        "colorKey": "leaders-american"
+      },
       "thumbs": {
         "ingame": "assets/thumbs/leaders/teddy_roosevelt_ingame.png",
         "irl": "assets/thumbs/leaders/teddy_roosevelt_irl.png"
       },
       "attrs": {
         "birthYear": 1858,
-        "civilization": "American"
+        "civilization": "American",
+        "birthYearLabel": "1858",
+        "birthPlace": "28 East 20th Street, Manhattan, New York City, United States",
+        "birthPlaceStatus": "documented",
+        "pinPrecision": "site"
       },
       "detail": {
-        "text": "",
+        "text": "Birthplace: 28 East 20th Street, Manhattan, New York City, United States. Born: 1858. The birthplace building seen today is a reconstruction on the original site.",
         "links": [
-          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Teddy_Roosevelt_(Civ6)" },
-          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Theodore_Roosevelt" }
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Teddy_Roosevelt_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Theodore_Roosevelt"
+          },
+          {
+            "label": "Birthplace source",
+            "url": "https://www.nps.gov/people/life-of-theodore-roosevelt.htm"
+          }
+        ]
+      }
+    },
+    {
+      "id": "saladin",
+      "name": "Saladin",
+      "coords": [
+        34.6,
+        43.68
+      ],
+      "theme": {
+        "colorKey": "leaders-arabian"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/saladin_ingame.png",
+        "irl": "assets/thumbs/leaders/saladin_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1138,
+        "civilization": "Arabian",
+        "birthYearLabel": "c. 1137–1138",
+        "birthPlace": "Tikrit, Iraq",
+        "birthPlaceStatus": "documented",
+        "pinPrecision": "city"
+      },
+      "detail": {
+        "text": "Birthplace: Tikrit, Iraq. Born: c. 1137–1138. Birth year varies between 1137 and 1138; 1138 is used for sorting. Pin precision: city; coordinates mark a representative point.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Saladin_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Saladin"
+          }
+        ]
+      }
+    },
+    {
+      "id": "john_curtin",
+      "name": "John Curtin",
+      "coords": [
+        -37.42,
+        143.89
+      ],
+      "theme": {
+        "colorKey": "leaders-australian"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/john_curtin_ingame.png",
+        "irl": "assets/thumbs/leaders/john_curtin_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1885,
+        "civilization": "Australian",
+        "birthYearLabel": "1885",
+        "birthPlace": "Creswick, Victoria, Australia",
+        "birthPlaceStatus": "documented",
+        "pinPrecision": "town"
+      },
+      "detail": {
+        "text": "Birthplace: Creswick, Victoria, Australia. Born: 1885. Pin precision: town; coordinates mark a representative point.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/John_Curtin_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/John_Curtin"
+          },
+          {
+            "label": "Birthplace source",
+            "url": "https://adb.anu.edu.au/biography/curtin-john-9885"
+          }
+        ]
+      }
+    },
+    {
+      "id": "montezuma",
+      "name": "Montezuma",
+      "coords": null,
+      "theme": {
+        "colorKey": "leaders-aztec"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/montezuma_ingame.png",
+        "irl": "assets/thumbs/leaders/montezuma_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1398,
+        "civilization": "Aztec",
+        "birthYearLabel": "c. 1398",
+        "birthPlace": "Unverified; often attributed to Tenochtitlan, Mexico",
+        "birthPlaceStatus": "unverified",
+        "pinPrecision": "none"
+      },
+      "detail": {
+        "text": "Birthplace: Unverified; often attributed to Tenochtitlan, Mexico. Born: c. 1398. This is Moctezuma I, not Moctezuma II. A sufficiently supported birthplace was not established in this review; no capital-based pin has been substituted.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Montezuma_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Moctezuma_I"
+          }
+        ]
+      }
+    },
+    {
+      "id": "hammurabi",
+      "name": "Hammurabi",
+      "coords": [
+        32.54,
+        44.42
+      ],
+      "theme": {
+        "colorKey": "leaders-babylonian"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/hammurabi_ingame.png",
+        "irl": "assets/thumbs/leaders/hammurabi_irl.png"
+      },
+      "attrs": {
+        "birthYear": -1810,
+        "civilization": "Babylonian",
+        "birthYearLabel": "c. 1810 BCE",
+        "birthPlace": "Babylon, near Hillah, Iraq",
+        "birthPlaceStatus": "reported",
+        "pinPrecision": "archaeological site"
+      },
+      "detail": {
+        "text": "Reported birthplace: Babylon, near Hillah, Iraq. Born: c. 1810 BCE. The birth year is an estimate in the conventional Middle Chronology. Pin precision: archaeological site; coordinates mark a representative point.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Hammurabi_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Hammurabi"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pedro_ii",
+      "name": "Pedro II",
+      "coords": [
+        -22.905,
+        -43.226
+      ],
+      "theme": {
+        "colorKey": "leaders-brazilian"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/pedro_ii_ingame.png",
+        "irl": "assets/thumbs/leaders/pedro_ii_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1825,
+        "civilization": "Brazilian",
+        "birthYearLabel": "1825",
+        "birthPlace": "Palace of São Cristóvão, Rio de Janeiro, Brazil",
+        "birthPlaceStatus": "documented",
+        "pinPrecision": "site"
+      },
+      "detail": {
+        "text": "Birthplace: Palace of São Cristóvão, Rio de Janeiro, Brazil. Born: 1825.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Pedro_II_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Pedro_II_of_Brazil"
+          }
+        ]
+      }
+    },
+    {
+      "id": "basil_ii",
+      "name": "Basil II",
+      "coords": [
+        41.01,
+        28.98
+      ],
+      "theme": {
+        "colorKey": "leaders-byzantine"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/basil_ii_ingame.png",
+        "irl": "assets/thumbs/leaders/basil_ii_irl.png"
+      },
+      "attrs": {
+        "birthYear": 958,
+        "civilization": "Byzantine",
+        "birthYearLabel": "958",
+        "birthPlace": "Constantinople, now Istanbul, Turkey",
+        "birthPlaceStatus": "reported",
+        "pinPrecision": "city"
+      },
+      "detail": {
+        "text": "Reported birthplace: Constantinople, now Istanbul, Turkey. Born: 958. Pin represents the historic city, not a verified birth room. Pin precision: city; coordinates mark a representative point.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Basil_II_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Basil_II"
+          }
+        ]
+      }
+    },
+    {
+      "id": "theodora",
+      "name": "Theodora",
+      "coords": null,
+      "theme": {
+        "colorKey": "leaders-byzantine"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/theodora_ingame.png",
+        "irl": "assets/thumbs/leaders/theodora_irl.png"
+      },
+      "attrs": {
+        "birthYear": 495,
+        "civilization": "Byzantine",
+        "birthYearLabel": "c. 495",
+        "birthPlace": "Disputed; several locations in the eastern Roman Empire are proposed",
+        "birthPlaceStatus": "disputed",
+        "pinPrecision": "none"
+      },
+      "detail": {
+        "text": "Birthplace: Disputed; several locations in the eastern Roman Empire are proposed. Born: c. 495. Syria, Cyprus, Paphlagonia and Alexandria have been proposed. She grew up in Constantinople, which should not automatically be treated as her birthplace. The date is approximately 490–500.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Theodora_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Theodora_(wife_of_Justinian_I)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "wilfrid_laurier",
+      "name": "Wilfrid Laurier",
+      "coords": [
+        45.85,
+        -73.76
+      ],
+      "theme": {
+        "colorKey": "leaders-canadian"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/wilfrid_laurier_ingame.png",
+        "irl": "assets/thumbs/leaders/wilfrid_laurier_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1841,
+        "civilization": "Canadian",
+        "birthYearLabel": "1841",
+        "birthPlace": "Saint-Lin, now Saint-Lin-Laurentides, Quebec, Canada",
+        "birthPlaceStatus": "documented",
+        "pinPrecision": "town"
+      },
+      "detail": {
+        "text": "Birthplace: Saint-Lin, now Saint-Lin-Laurentides, Quebec, Canada. Born: 1841. Pin precision: town; coordinates mark a representative point.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Wilfrid_Laurier_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Wilfrid_Laurier"
+          }
+        ]
+      }
+    },
+    {
+      "id": "kublai_khan_chinese",
+      "name": "Kublai Khan (Chinese)",
+      "coords": null,
+      "theme": {
+        "colorKey": "leaders-chinese"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/kublai_khan_ingame.png",
+        "irl": "assets/thumbs/leaders/kublai_khan_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1215,
+        "civilization": "Chinese",
+        "birthYearLabel": "1215",
+        "birthPlace": "Mongol Empire; exact birthplace not established",
+        "birthPlaceStatus": "unknown",
+        "pinPrecision": "none"
+      },
+      "detail": {
+        "text": "Birthplace: Mongol Empire; exact birthplace not established. Born: 1215. No reliable local birthplace was established; neither Beijing nor Karakorum is substituted.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Kublai_Khan_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Kublai_Khan"
+          }
+        ]
+      }
+    },
+    {
+      "id": "qin_shi_huang",
+      "name": "Qin Shi Huang",
+      "coords": [
+        36.61,
+        114.49
+      ],
+      "theme": {
+        "colorKey": "leaders-chinese"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/qin_shi_huang_ingame.png",
+        "irl": "assets/thumbs/leaders/qin_shi_huang_irl.png"
+      },
+      "attrs": {
+        "birthYear": -259,
+        "civilization": "Chinese",
+        "birthYearLabel": "259 BCE",
+        "birthPlace": "Handan, Hebei, China",
+        "birthPlaceStatus": "documented",
+        "pinPrecision": "city"
+      },
+      "detail": {
+        "text": "Birthplace: Handan, Hebei, China. Born: 259 BCE. Born in the state of Zhao, not in the Qin capital. Pin precision: city; coordinates mark a representative point.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Qin_Shi_Huang_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Qin_Shi_Huang"
+          }
+        ]
+      }
+    },
+    {
+      "id": "wu_zetian",
+      "name": "Wu Zetian",
+      "coords": null,
+      "theme": {
+        "colorKey": "leaders-chinese"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/wu_zetian_ingame.png",
+        "irl": "assets/thumbs/leaders/wu_zetian_irl.png"
+      },
+      "attrs": {
+        "birthYear": 624,
+        "civilization": "Chinese",
+        "birthYearLabel": "624",
+        "birthPlace": "Disputed: Wenshui, Guangyuan (Lizhou), or Chang'an, China",
+        "birthPlaceStatus": "disputed",
+        "pinPrecision": "none"
+      },
+      "detail": {
+        "text": "Birthplace: Disputed: Wenshui, Guangyuan (Lizhou), or Chang'an, China. Born: 624. The birthplace is disputed in scholarship, so no single candidate is pinned.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Wu_Zetian_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Wu_Zetian"
+          }
+        ]
+      }
+    },
+    {
+      "id": "yongle",
+      "name": "Yongle",
+      "coords": [
+        32.06,
+        118.8
+      ],
+      "theme": {
+        "colorKey": "leaders-chinese"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/yongle_ingame.png",
+        "irl": "assets/thumbs/leaders/yongle_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1360,
+        "civilization": "Chinese",
+        "birthYearLabel": "1360",
+        "birthPlace": "Yingtian, now Nanjing, Jiangsu, China",
+        "birthPlaceStatus": "documented",
+        "pinPrecision": "city"
+      },
+      "detail": {
+        "text": "Birthplace: Yingtian, now Nanjing, Jiangsu, China. Born: 1360. Pin precision: city; coordinates mark a representative point.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Yongle_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Yongle_Emperor"
+          }
+        ]
+      }
+    },
+    {
+      "id": "poundmaker",
+      "name": "Poundmaker",
+      "coords": [
+        52.73,
+        -108.31
+      ],
+      "theme": {
+        "colorKey": "leaders-cree"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/poundmaker_ingame.png",
+        "irl": "assets/thumbs/leaders/poundmaker_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1842,
+        "civilization": "Cree",
+        "birthYearLabel": "c. 1842",
+        "birthPlace": "Near Battleford, Saskatchewan, Canada",
+        "birthPlaceStatus": "approximate",
+        "pinPrecision": "region"
+      },
+      "detail": {
+        "text": "Approximate birthplace: Near Battleford, Saskatchewan, Canada. Born: c. 1842. Pin marks the vicinity of Battleford, not an exact birth site. Pin precision: region; coordinates mark a representative point.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Poundmaker_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Poundmaker"
+          }
+        ]
+      }
+    },
+    {
+      "id": "wilhelmina",
+      "name": "Wilhelmina",
+      "coords": [
+        52.08,
+        -4.306
+      ],
+      "theme": {
+        "colorKey": "leaders-dutch"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/wilhelmina_ingame.png",
+        "irl": "assets/thumbs/leaders/wilhelmina_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1880,
+        "civilization": "Dutch",
+        "birthYearLabel": "1880",
+        "birthPlace": "Noordeinde Palace, The Hague, Netherlands",
+        "birthPlaceStatus": "documented",
+        "pinPrecision": "site"
+      },
+      "detail": {
+        "text": "Birthplace: Noordeinde Palace, The Hague, Netherlands. Born: 1880.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Wilhelmina_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Wilhelmina_of_the_Netherlands"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cleopatra",
+      "name": "Cleopatra",
+      "coords": [
+        31.2,
+        29.92
+      ],
+      "theme": {
+        "colorKey": "leaders-egyptian"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/cleopatra_ingame.png",
+        "irl": "assets/thumbs/leaders/cleopatra_irl.png"
+      },
+      "attrs": {
+        "birthYear": -69,
+        "civilization": "Egyptian",
+        "birthYearLabel": "69 BCE (possibly late 70 BCE)",
+        "birthPlace": "Alexandria, Egypt",
+        "birthPlaceStatus": "documented",
+        "pinPrecision": "city"
+      },
+      "detail": {
+        "text": "Birthplace: Alexandria, Egypt. Born: 69 BCE (possibly late 70 BCE). 69 BCE is used for sorting; some chronologies allow late 70 BCE. Pin precision: city; coordinates mark a representative point.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Cleopatra_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Cleopatra"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ramses_ii",
+      "name": "Ramses II",
+      "coords": null,
+      "theme": {
+        "colorKey": "leaders-egyptian"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/ramses_ii_ingame.png",
+        "irl": "assets/thumbs/leaders/ramses_ii_irl.png"
+      },
+      "attrs": {
+        "birthYear": -1303,
+        "civilization": "Egyptian",
+        "birthYearLabel": "c. 1303 BCE",
+        "birthPlace": "Eastern Nile Delta, Egypt; precise birthplace uncertain",
+        "birthPlaceStatus": "unknown",
+        "pinPrecision": "none"
+      },
+      "detail": {
+        "text": "Birthplace: Eastern Nile Delta, Egypt; precise birthplace uncertain. Born: c. 1303 BCE. Avaris/Qantir is often suggested, but an adequately established birth site was not found. Pi-Ramesses was his later capital, not a substitute birth pin.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Ramses_II_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Ramesses_II"
+          }
+        ]
+      }
+    },
+    {
+      "id": "eleanor_of_aquitaine_english",
+      "name": "Eleanor of Aquitaine (English)",
+      "coords": null,
+      "theme": {
+        "colorKey": "leaders-english"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/eleanor_of_aquitaine_ingame.png",
+        "irl": "assets/thumbs/leaders/eleanor_of_aquitaine_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1124,
+        "civilization": "English",
+        "birthYearLabel": "c. 1124",
+        "birthPlace": "Disputed; Bordeaux, Poitiers, and other locations in western France are proposed",
+        "birthPlaceStatus": "disputed",
+        "pinPrecision": "none"
+      },
+      "detail": {
+        "text": "Birthplace: Disputed; Bordeaux, Poitiers, and other locations in western France are proposed. Born: c. 1124. 1124 is used for sorting; 1122 is also commonly given. Her English and French entries describe the same person and share birthplace information.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Eleanor_of_Aquitaine_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Eleanor_of_Aquitaine"
+          }
+        ]
+      }
+    },
+    {
+      "id": "elizabeth_i",
+      "name": "Elizabeth I",
+      "coords": [
+        51.483,
+        -0.006
+      ],
+      "theme": {
+        "colorKey": "leaders-english"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/elizabeth_i_ingame.png",
+        "irl": "assets/thumbs/leaders/elizabeth_i_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1533,
+        "civilization": "English",
+        "birthYearLabel": "1533",
+        "birthPlace": "Palace of Placentia, Greenwich, London, England",
+        "birthPlaceStatus": "documented",
+        "pinPrecision": "site"
+      },
+      "detail": {
+        "text": "Birthplace: Palace of Placentia, Greenwich, London, England. Born: 1533. The palace no longer survives; pin marks its site at Greenwich.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Elizabeth_I_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Elizabeth_I"
+          }
+        ]
+      }
+    },
+    {
+      "id": "victoria",
+      "name": "Victoria",
+      "coords": [
+        51.505,
+        -0.188
+      ],
+      "theme": {
+        "colorKey": "leaders-english"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/victoria_ingame.png",
+        "irl": "assets/thumbs/leaders/victoria_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1819,
+        "civilization": "English",
+        "birthYearLabel": "1819",
+        "birthPlace": "Kensington Palace, London, England",
+        "birthPlaceStatus": "documented",
+        "pinPrecision": "site"
+      },
+      "detail": {
+        "text": "Birthplace: Kensington Palace, London, England. Born: 1819.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Victoria_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Queen_Victoria"
+          }
+        ]
+      }
+    },
+    {
+      "id": "menelik_ii",
+      "name": "Menelik II",
+      "coords": [
+        9.63,
+        39.43
+      ],
+      "theme": {
+        "colorKey": "leaders-ethiopian"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/menelik_ii_ingame.png",
+        "irl": "assets/thumbs/leaders/menelik_ii_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1844,
+        "civilization": "Ethiopian",
+        "birthYearLabel": "1844",
+        "birthPlace": "Angolalla, Shewa, Ethiopia",
+        "birthPlaceStatus": "documented",
+        "pinPrecision": "locality"
+      },
+      "detail": {
+        "text": "Birthplace: Angolalla, Shewa, Ethiopia. Born: 1844. Pin represents Angolalla; it does not identify an exact birth building. Pin precision: locality; coordinates mark a representative point.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Menelik_II_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Menelik_II"
+          },
+          {
+            "label": "Location source",
+            "url": "https://mapcarta.com/N1150951520"
+          }
+        ]
+      }
+    },
+    {
+      "id": "catherine_de_medici",
+      "name": "Catherine de Medici",
+      "coords": [
+        43.77,
+        11.25
+      ],
+      "theme": {
+        "colorKey": "leaders-french"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/catherine_de_medici_ingame.png",
+        "irl": "assets/thumbs/leaders/catherine_de_medici_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1519,
+        "civilization": "French",
+        "birthYearLabel": "1519",
+        "birthPlace": "Florence, Italy",
+        "birthPlaceStatus": "documented",
+        "pinPrecision": "city"
+      },
+      "detail": {
+        "text": "Birthplace: Florence, Italy. Born: 1519. Born in Florence despite leading France in the game. Pin precision: city; coordinates mark a representative point.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Catherine_de_Medici_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Catherine_de'_Medici"
+          }
+        ]
+      }
+    },
+    {
+      "id": "eleanor_of_aquitaine_french",
+      "name": "Eleanor of Aquitaine (French)",
+      "coords": null,
+      "theme": {
+        "colorKey": "leaders-french"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/eleanor_of_aquitaine_ingame.png",
+        "irl": "assets/thumbs/leaders/eleanor_of_aquitaine_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1124,
+        "civilization": "French",
+        "birthYearLabel": "c. 1124",
+        "birthPlace": "Disputed; Bordeaux, Poitiers, and other locations in western France are proposed",
+        "birthPlaceStatus": "disputed",
+        "pinPrecision": "none"
+      },
+      "detail": {
+        "text": "Birthplace: Disputed; Bordeaux, Poitiers, and other locations in western France are proposed. Born: c. 1124. 1124 is used for sorting; 1122 is also commonly given. Her English and French entries describe the same person and share birthplace information.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Eleanor_of_Aquitaine_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Eleanor_of_Aquitaine"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ambiorix",
+      "name": "Ambiorix",
+      "coords": null,
+      "theme": {
+        "colorKey": "leaders-gallic"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/ambiorix_ingame.png",
+        "irl": "assets/thumbs/leaders/ambiorix_irl.png"
+      },
+      "attrs": {
+        "birthYear": null,
+        "civilization": "Gallic",
+        "birthYearLabel": "Unknown",
+        "birthPlace": "Unknown",
+        "birthPlaceStatus": "unknown",
+        "pinPrecision": "none"
+      },
+      "detail": {
+        "text": "Birthplace: Unknown. Born: Unknown. Neither a birth date nor a local birthplace is securely documented. Tongeren is not used as a substitute.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Ambiorix_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Ambiorix"
+          }
+        ]
+      }
+    },
+    {
+      "id": "tamar",
+      "name": "Tamar",
+      "coords": [
+        41.84,
+        44.72
+      ],
+      "theme": {
+        "colorKey": "leaders-georgian"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/tamar_ingame.png",
+        "irl": "assets/thumbs/leaders/tamar_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1160,
+        "civilization": "Georgian",
+        "birthYearLabel": "c. 1160 or 1166",
+        "birthPlace": "Mtskheta, Georgia (reported)",
+        "birthPlaceStatus": "reported",
+        "pinPrecision": "city"
+      },
+      "detail": {
+        "text": "Reported birthplace: Mtskheta, Georgia (reported). Born: c. 1160 or 1166. Mtskheta is reported in Wikidata from Russian Wikipedia; this is a lower-confidence locality assignment. The birth year is disputed. Pin precision: city; coordinates mark a representative point.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Tamar_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Tamar_of_Georgia"
+          },
+          {
+            "label": "Birthplace source",
+            "url": "https://www.wikidata.org/wiki/Q244007"
+          }
+        ]
+      }
+    },
+    {
+      "id": "frederick_barbarossa",
+      "name": "Frederick Barbarossa",
+      "coords": [
+        48.82,
+        7.79
+      ],
+      "theme": {
+        "colorKey": "leaders-german"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/frederick_barbarossa_ingame.png",
+        "irl": "assets/thumbs/leaders/frederick_barbarossa_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1122,
+        "civilization": "German",
+        "birthYearLabel": "1122",
+        "birthPlace": "Probably Haguenau, Alsace, France",
+        "birthPlaceStatus": "probable",
+        "pinPrecision": "city"
+      },
+      "detail": {
+        "text": "Probable birthplace: Probably Haguenau, Alsace, France. Born: 1122. Haguenau is considered likely, but the birthplace is not certain. Pin precision: city; coordinates mark a representative point.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Frederick_Barbarossa_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Frederick_Barbarossa"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ludwig_ii",
+      "name": "Ludwig II",
+      "coords": [
+        48.158,
+        11.503
+      ],
+      "theme": {
+        "colorKey": "leaders-german"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/ludwig_ii_ingame.png",
+        "irl": "assets/thumbs/leaders/ludwig_ii_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1845,
+        "civilization": "German",
+        "birthYearLabel": "1845",
+        "birthPlace": "Nymphenburg Palace, Munich, Germany",
+        "birthPlaceStatus": "documented",
+        "pinPrecision": "site"
+      },
+      "detail": {
+        "text": "Birthplace: Nymphenburg Palace, Munich, Germany. Born: 1845.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Ludwig_II_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Ludwig_II_of_Bavaria"
+          }
+        ]
+      }
+    },
+    {
+      "id": "simón_bolívar",
+      "name": "Simón Bolívar",
+      "coords": [
+        10.5,
+        -66.91
+      ],
+      "theme": {
+        "colorKey": "leaders-gran-colombian"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/simón_bolívar_ingame.png",
+        "irl": "assets/thumbs/leaders/simón_bolívar_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1783,
+        "civilization": "Gran Colombian",
+        "birthYearLabel": "1783",
+        "birthPlace": "Caracas, Venezuela",
+        "birthPlaceStatus": "documented",
+        "pinPrecision": "city"
+      },
+      "detail": {
+        "text": "Birthplace: Caracas, Venezuela. Born: 1783. Pin precision: city; coordinates mark a representative point.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Simón_Bolívar_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Sim%C3%B3n_Bol%C3%ADvar"
+          }
+        ]
+      }
+    },
+    {
+      "id": "gorgo",
+      "name": "Gorgo",
+      "coords": null,
+      "theme": {
+        "colorKey": "leaders-greek"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/gorgo_ingame.png",
+        "irl": "assets/thumbs/leaders/gorgo_irl.png"
+      },
+      "attrs": {
+        "birthYear": -513,
+        "civilization": "Greek",
+        "birthYearLabel": "c. 518–508 BCE",
+        "birthPlace": "Unverified; associated with Sparta, Greece",
+        "birthPlaceStatus": "unverified",
+        "pinPrecision": "none"
+      },
+      "detail": {
+        "text": "Birthplace: Unverified; associated with Sparta, Greece. Born: c. 518–508 BCE. Spartan royal origins do not by themselves verify a birthplace. The midpoint 513 BCE is used only for sorting.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Gorgo_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Gorgo,_Queen_of_Sparta"
+          },
+          {
+            "label": "Birthplace source",
+            "url": "https://www.worldhistory.org/Gorgo_of_Sparta/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pericles",
+      "name": "Pericles",
+      "coords": [
+        37.98,
+        23.73
+      ],
+      "theme": {
+        "colorKey": "leaders-greek"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/pericles_ingame.png",
+        "irl": "assets/thumbs/leaders/pericles_irl.png"
+      },
+      "attrs": {
+        "birthYear": -495,
+        "civilization": "Greek",
+        "birthYearLabel": "c. 495 BCE",
+        "birthPlace": "Athens, Greece",
+        "birthPlaceStatus": "documented",
+        "pinPrecision": "city"
+      },
+      "detail": {
+        "text": "Birthplace: Athens, Greece. Born: c. 495 BCE. Pin precision: city; coordinates mark a representative point.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Pericles_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Pericles"
+          }
+        ]
+      }
+    },
+    {
+      "id": "matthias_corvinus",
+      "name": "Matthias Corvinus",
+      "coords": [
+        46.77,
+        23.59
+      ],
+      "theme": {
+        "colorKey": "leaders-hungarian"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/matthias_corvinus_ingame.png",
+        "irl": "assets/thumbs/leaders/matthias_corvinus_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1443,
+        "civilization": "Hungarian",
+        "birthYearLabel": "1443",
+        "birthPlace": "Kolozsvár, now Cluj-Napoca, Romania",
+        "birthPlaceStatus": "documented",
+        "pinPrecision": "city"
+      },
+      "detail": {
+        "text": "Birthplace: Kolozsvár, now Cluj-Napoca, Romania. Born: 1443. The city was in the Kingdom of Hungary at his birth. Pin precision: city; coordinates mark a representative point.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Matthias_Corvinus_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Matthias_Corvinus"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pachacuti",
+      "name": "Pachacuti",
+      "coords": [
+        -13.518,
+        -71.977
+      ],
+      "theme": {
+        "colorKey": "leaders-incan"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/pachacuti_ingame.png",
+        "irl": "assets/thumbs/leaders/pachacuti_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1403,
+        "civilization": "Incan",
+        "birthYearLabel": "c. 1403 (chronology disputed)",
+        "birthPlace": "Cusicancha, Cusco, Peru",
+        "birthPlaceStatus": "reported",
+        "pinPrecision": "site"
+      },
+      "detail": {
+        "text": "Reported birthplace: Cusicancha, Cusco, Peru. Born: c. 1403 (chronology disputed). Cusicancha is traditionally identified as his birthplace. Inca chronology is disputed; 1418 is another proposed birth year.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Pachacuti_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Pachacuti"
+          }
+        ]
+      }
+    },
+    {
+      "id": "chandragupta",
+      "name": "Chandragupta",
+      "coords": null,
+      "theme": {
+        "colorKey": "leaders-indian"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/chandragupta_ingame.png",
+        "irl": "assets/thumbs/leaders/chandragupta_irl.png"
+      },
+      "attrs": {
+        "birthYear": -340,
+        "civilization": "Indian",
+        "birthYearLabel": "c. 340 BCE",
+        "birthPlace": "Disputed; early origins are uncertain",
+        "birthPlaceStatus": "disputed",
+        "pinPrecision": "none"
+      },
+      "detail": {
+        "text": "Birthplace: Disputed; early origins are uncertain. Born: c. 340 BCE. Different traditions give incompatible accounts of his ancestry and early life. Pataliputra is not used merely because it was his capital.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Chandragupta_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Chandragupta_Maurya"
+          }
+        ]
+      }
+    },
+    {
+      "id": "gandhi",
+      "name": "Gandhi",
+      "coords": [
+        21.64,
+        69.61
+      ],
+      "theme": {
+        "colorKey": "leaders-indian"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/gandhi_ingame.png",
+        "irl": "assets/thumbs/leaders/gandhi_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1869,
+        "civilization": "Indian",
+        "birthYearLabel": "1869",
+        "birthPlace": "Porbandar, Gujarat, India",
+        "birthPlaceStatus": "documented",
+        "pinPrecision": "city"
+      },
+      "detail": {
+        "text": "Birthplace: Porbandar, Gujarat, India. Born: 1869. Pin precision: city; coordinates mark a representative point.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Gandhi_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Mahatma_Gandhi"
+          }
+        ]
+      }
+    },
+    {
+      "id": "gitarja",
+      "name": "Gitarja",
+      "coords": null,
+      "theme": {
+        "colorKey": "leaders-indonesian"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/gitarja_ingame.png",
+        "irl": "assets/thumbs/leaders/gitarja_irl.png"
+      },
+      "attrs": {
+        "birthYear": null,
+        "civilization": "Indonesian",
+        "birthYearLabel": "Before 1309",
+        "birthPlace": "Unknown; Majapahit, Java, Indonesia",
+        "birthPlaceStatus": "unknown",
+        "pinPrecision": "none"
+      },
+      "detail": {
+        "text": "Birthplace: Unknown; Majapahit, Java, Indonesia. Born: Before 1309. Known historically as Tribhuwana Wijayatunggadewi. The date is only bounded as before 1309; an exact birth year or local birthplace is not established.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Gitarja_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Tribhuwana_Wijayatunggadewi"
+          }
+        ]
+      }
+    },
+    {
+      "id": "hojo_tokimune",
+      "name": "Hojo Tokimune",
+      "coords": [
+        35.31,
+        139.55
+      ],
+      "theme": {
+        "colorKey": "leaders-japanese"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/hojo_tokimune_ingame.png",
+        "irl": "assets/thumbs/leaders/hojo_tokimune_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1251,
+        "civilization": "Japanese",
+        "birthYearLabel": "1251",
+        "birthPlace": "Amanawa, Kamakura, Kanagawa, Japan",
+        "birthPlaceStatus": "reported",
+        "pinPrecision": "locality"
+      },
+      "detail": {
+        "text": "Reported birthplace: Amanawa, Kamakura, Kanagawa, Japan. Born: 1251. Born at the Adachi family's Amanawa residence. Pin represents the Amanawa vicinity, not a surviving house. Pin precision: locality; coordinates mark a representative point.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Hojo_Tokimune_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/H%C5%8Dj%C5%8D_Tokimune"
+          },
+          {
+            "label": "Birthplace source",
+            "url": "https://www.japanesewiki.com/person/Tokimune%20HOJO.html"
+          }
+        ]
+      }
+    },
+    {
+      "id": "tokugawa",
+      "name": "Tokugawa",
+      "coords": [
+        34.956,
+        137.159
+      ],
+      "theme": {
+        "colorKey": "leaders-japanese"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/tokugawa_ingame.png",
+        "irl": "assets/thumbs/leaders/tokugawa_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1543,
+        "civilization": "Japanese",
+        "birthYearLabel": "1543",
+        "birthPlace": "Okazaki Castle, Okazaki, Aichi, Japan",
+        "birthPlaceStatus": "documented",
+        "pinPrecision": "site"
+      },
+      "detail": {
+        "text": "Birthplace: Okazaki Castle, Okazaki, Aichi, Japan. Born: 1543. This is Tokugawa Ieyasu. The Western-calendar birth year is 1543; 1542 occurs in Japanese-calendar descriptions.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Tokugawa_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Tokugawa_Ieyasu"
+          }
+        ]
+      }
+    },
+    {
+      "id": "jayavarman_vii",
+      "name": "Jayavarman VII",
+      "coords": [
+        13.44,
+        103.86
+      ],
+      "theme": {
+        "colorKey": "leaders-khmer"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/jayavarman_vii_ingame.png",
+        "irl": "assets/thumbs/leaders/jayavarman_vii_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1122,
+        "civilization": "Khmer",
+        "birthYearLabel": "c. 1122–1125",
+        "birthPlace": "Angkor, Cambodia",
+        "birthPlaceStatus": "reported",
+        "pinPrecision": "region"
+      },
+      "detail": {
+        "text": "Reported birthplace: Angkor, Cambodia. Born: c. 1122–1125. Pin represents the Angkor area, not an exact birth palace. 1122 is used for sorting. Pin precision: region; coordinates mark a representative point.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Jayavarman_VII_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Jayavarman_VII"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mvemba_a_nzinga",
+      "name": "Mvemba a Nzinga",
+      "coords": [
+        -6.27,
+        14.24
+      ],
+      "theme": {
+        "colorKey": "leaders-kongolese"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/mvemba_a_nzinga_ingame.png",
+        "irl": "assets/thumbs/leaders/mvemba_a_nzinga_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1456,
+        "civilization": "Kongolese",
+        "birthYearLabel": "c. 1456",
+        "birthPlace": "Mbanza Kongo, Angola",
+        "birthPlaceStatus": "reported",
+        "pinPrecision": "city"
+      },
+      "detail": {
+        "text": "Reported birthplace: Mbanza Kongo, Angola. Born: c. 1456. Also known as Afonso I of Kongo. Pin precision: city; coordinates mark a representative point.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Mvemba_a_Nzinga_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Afonso_I_of_Kongo"
+          }
+        ]
+      }
+    },
+    {
+      "id": "nzinga_mbande",
+      "name": "Nzinga Mbande",
+      "coords": null,
+      "theme": {
+        "colorKey": "leaders-kongolese"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/nzinga_mbande_ingame.png",
+        "irl": "assets/thumbs/leaders/nzinga_mbande_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1583,
+        "civilization": "Kongolese",
+        "birthYearLabel": "c. 1583",
+        "birthPlace": "Kabasa, Kingdom of Ndongo, present-day Angola",
+        "birthPlaceStatus": "ungeolocated",
+        "pinPrecision": "none"
+      },
+      "detail": {
+        "text": "Birthplace: Kabasa, Kingdom of Ndongo, present-day Angola. Born: c. 1583. The birthplace is named in biographies, but a sufficiently reliable coordinate for historical Kabasa was not established. Do not substitute Mbanza Kongo or Luanda.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Nzinga_Mbande_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Nzinga_of_Ndongo_and_Matamba"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sejong",
+      "name": "Sejong",
+      "coords": [
+        37.57,
+        126.98
+      ],
+      "theme": {
+        "colorKey": "leaders-korean"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/sejong_ingame.png",
+        "irl": "assets/thumbs/leaders/sejong_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1397,
+        "civilization": "Korean",
+        "birthYearLabel": "1397",
+        "birthPlace": "Hanyang, now Seoul, South Korea",
+        "birthPlaceStatus": "documented",
+        "pinPrecision": "city"
+      },
+      "detail": {
+        "text": "Birthplace: Hanyang, now Seoul, South Korea. Born: 1397. Pin precision: city; coordinates mark a representative point.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Sejong_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Sejong_the_Great"
+          }
+        ]
+      }
+    },
+    {
+      "id": "seondeok",
+      "name": "Seondeok",
+      "coords": null,
+      "theme": {
+        "colorKey": "leaders-korean"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/seondeok_ingame.png",
+        "irl": "assets/thumbs/leaders/seondeok_irl.png"
+      },
+      "attrs": {
+        "birthYear": null,
+        "civilization": "Korean",
+        "birthYearLabel": "Unknown",
+        "birthPlace": "Unverified; Silla, present-day South Korea",
+        "birthPlaceStatus": "unverified",
+        "pinPrecision": "none"
+      },
+      "detail": {
+        "text": "Birthplace: Unverified; Silla, present-day South Korea. Born: Unknown. Her birth date is not securely known. Gyeongju is her royal capital and burial location, but a sourced birthplace was not established in this review.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Seondeok_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Queen_Seondeok_of_Silla"
+          }
+        ]
+      }
+    },
+    {
+      "id": "alexander",
+      "name": "Alexander",
+      "coords": [
+        40.76,
+        22.52
+      ],
+      "theme": {
+        "colorKey": "leaders-macedonian"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/alexander_ingame.png",
+        "irl": "assets/thumbs/leaders/alexander_irl.png"
+      },
+      "attrs": {
+        "birthYear": -356,
+        "civilization": "Macedonian",
+        "birthYearLabel": "356 BCE",
+        "birthPlace": "Pella, Central Macedonia, Greece",
+        "birthPlaceStatus": "documented",
+        "pinPrecision": "archaeological site"
+      },
+      "detail": {
+        "text": "Birthplace: Pella, Central Macedonia, Greece. Born: 356 BCE. Ancient Macedon; the birthplace is in present-day Greece, not North Macedonia. Pin precision: archaeological site; coordinates mark a representative point.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Alexander_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Alexander_the_Great"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mansa_musa",
+      "name": "Mansa Musa",
+      "coords": null,
+      "theme": {
+        "colorKey": "leaders-malian"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/mansa_musa_ingame.png",
+        "irl": "assets/thumbs/leaders/mansa_musa_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1280,
+        "civilization": "Malian",
+        "birthYearLabel": "c. 1280",
+        "birthPlace": "Mali Empire; exact birthplace unknown",
+        "birthPlaceStatus": "unknown",
+        "pinPrecision": "none"
+      },
+      "detail": {
+        "text": "Birthplace: Mali Empire; exact birthplace unknown. Born: c. 1280. Neither Timbuktu nor Niani is substituted for an undocumented birthplace.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Mansa_Musa_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Mansa_Musa"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sundiata_keita",
+      "name": "Sundiata Keita",
+      "coords": null,
+      "theme": {
+        "colorKey": "leaders-malian"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/sundiata_keita_ingame.png",
+        "irl": "assets/thumbs/leaders/sundiata_keita_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1217,
+        "civilization": "Malian",
+        "birthYearLabel": "c. 1217 (chronology disputed)",
+        "birthPlace": "Dakadjalan, present-day Mali (traditional attribution)",
+        "birthPlaceStatus": "ungeolocated",
+        "pinPrecision": "none"
+      },
+      "detail": {
+        "text": "Birthplace: Dakadjalan, present-day Mali (traditional attribution). Born: c. 1217 (chronology disputed). The Sunjata tradition names Dakadjalan; other popular accounts give Niani and different birth years, including c. 1190. A defensible coordinate was not established.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Sundiata_Keita_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Sundiata_Keita"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lautaro",
+      "name": "Lautaro",
+      "coords": [
+        -36.43,
+        -72.67
+      ],
+      "theme": {
+        "colorKey": "leaders-mapuche"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/lautaro_ingame.png",
+        "irl": "assets/thumbs/leaders/lautaro_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1534,
+        "civilization": "Mapuche",
+        "birthYearLabel": "c. 1533–1534",
+        "birthPlace": "Treguaco, Ñuble, Chile",
+        "birthPlaceStatus": "reported",
+        "pinPrecision": "locality"
+      },
+      "detail": {
+        "text": "Reported birthplace: Treguaco, Ñuble, Chile. Born: c. 1533–1534. The birthplace is commonly associated with Treguaco. Birth year varies between 1533 and 1534. Pin precision: locality; coordinates mark a representative point.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Lautaro_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Lautaro"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lady_six_sky",
+      "name": "Lady Six Sky",
+      "coords": [
+        16.446,
+        -90.295
+      ],
+      "theme": {
+        "colorKey": "leaders-mayan"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/lady_six_sky_ingame.png",
+        "irl": "assets/thumbs/leaders/lady_six_sky_irl.png"
+      },
+      "attrs": {
+        "birthYear": null,
+        "civilization": "Mayan",
+        "birthYearLabel": "Unknown",
+        "birthPlace": "Dos Pilas, Petén, Guatemala",
+        "birthPlaceStatus": "documented",
+        "pinPrecision": "archaeological site"
+      },
+      "detail": {
+        "text": "Birthplace: Dos Pilas, Petén, Guatemala. Born: Unknown. Her birth date is unknown. Dos Pilas was her birthplace; Naranjo was where she later ruled. Pin precision: archaeological site; coordinates mark a representative point.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Lady_Six_Sky_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Lady_Six_Sky"
+          }
+        ]
+      }
+    },
+    {
+      "id": "genghis_khan",
+      "name": "Genghis Khan",
+      "coords": null,
+      "theme": {
+        "colorKey": "leaders-mongolian"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/genghis_khan_ingame.png",
+        "irl": "assets/thumbs/leaders/genghis_khan_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1162,
+        "civilization": "Mongolian",
+        "birthYearLabel": "c. 1162",
+        "birthPlace": "Delüün Boldog, Onon River region (location disputed)",
+        "birthPlaceStatus": "disputed",
+        "pinPrecision": "none"
+      },
+      "detail": {
+        "text": "Birthplace: Delüün Boldog, Onon River region (location disputed). Born: c. 1162. The Secret History names Delüün Boldog, but its modern identification is disputed between locations in Mongolia and Russia. No single candidate is pinned.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Genghis_Khan_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Genghis_Khan"
+          }
+        ]
+      }
+    },
+    {
+      "id": "kublai_khan_mongolian",
+      "name": "Kublai Khan (Mongolian)",
+      "coords": null,
+      "theme": {
+        "colorKey": "leaders-mongolian"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/kublai_khan_ingame.png",
+        "irl": "assets/thumbs/leaders/kublai_khan_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1215,
+        "civilization": "Mongolian",
+        "birthYearLabel": "1215",
+        "birthPlace": "Mongol Empire; exact birthplace not established",
+        "birthPlaceStatus": "unknown",
+        "pinPrecision": "none"
+      },
+      "detail": {
+        "text": "Birthplace: Mongol Empire; exact birthplace not established. Born: 1215. No reliable local birthplace was established; neither Beijing nor Karakorum is substituted.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Kublai_Khan_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Kublai_Khan"
+          }
+        ]
+      }
+    },
+    {
+      "id": "kupe",
+      "name": "Kupe",
+      "coords": null,
+      "theme": {
+        "colorKey": "leaders-maori"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/kupe_ingame.png",
+        "irl": "assets/thumbs/leaders/kupe_irl.png"
+      },
+      "attrs": {
+        "birthYear": null,
+        "civilization": "Māori",
+        "birthYearLabel": "Unknown",
+        "birthPlace": "Hawaiki, ancestral Polynesian homeland (traditional)",
+        "birthPlaceStatus": "traditional",
+        "pinPrecision": "none"
+      },
+      "detail": {
+        "text": "Traditional birthplace: Hawaiki, ancestral Polynesian homeland (traditional). Born: Unknown. Hawaiki cannot be assigned one secure modern coordinate. Kupe's chronology varies among traditions; neither a New Zealand landing place nor Raʻiātea is substituted.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Kupe_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Kupe"
+          }
+        ]
+      }
+    },
+    {
+      "id": "harald_hardrada",
+      "name": "Harald Hardrada",
+      "coords": [
+        60.1,
+        10.3
+      ],
+      "theme": {
+        "colorKey": "leaders-norwegian"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/harald_hardrada_ingame.png",
+        "irl": "assets/thumbs/leaders/harald_hardrada_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1015,
+        "civilization": "Norwegian",
+        "birthYearLabel": "c. 1015",
+        "birthPlace": "Ringerike, Norway",
+        "birthPlaceStatus": "approximate",
+        "pinPrecision": "region"
+      },
+      "detail": {
+        "text": "Approximate birthplace: Ringerike, Norway. Born: c. 1015. Pin represents the historical Ringerike region, not a verified birth farm. Pin precision: region; coordinates mark a representative point.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Harald_Hardrada_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Harald_Hardrada"
+          }
+        ]
+      }
+    },
+    {
+      "id": "amanitore",
+      "name": "Amanitore",
+      "coords": null,
+      "theme": {
+        "colorKey": "leaders-nubian"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/amanitore_ingame.png",
+        "irl": "assets/thumbs/leaders/amanitore_irl.png"
+      },
+      "attrs": {
+        "birthYear": null,
+        "civilization": "Nubian",
+        "birthYearLabel": "Unknown",
+        "birthPlace": "Unknown; Kingdom of Kush, present-day Sudan",
+        "birthPlaceStatus": "unknown",
+        "pinPrecision": "none"
+      },
+      "detail": {
+        "text": "Birthplace: Unknown; Kingdom of Kush, present-day Sudan. Born: Unknown. The location of her royal monuments or burial does not establish her birthplace.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Amanitore_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Amanitore"
+          }
+        ]
+      }
+    },
+    {
+      "id": "suleiman",
+      "name": "Suleiman",
+      "coords": [
+        41.0,
+        39.72
+      ],
+      "theme": {
+        "colorKey": "leaders-ottoman"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/suleiman_ingame.png",
+        "irl": "assets/thumbs/leaders/suleiman_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1494,
+        "civilization": "Ottoman",
+        "birthYearLabel": "1494",
+        "birthPlace": "Trabzon, Turkey",
+        "birthPlaceStatus": "documented",
+        "pinPrecision": "city"
+      },
+      "detail": {
+        "text": "Birthplace: Trabzon, Turkey. Born: 1494. Pin precision: city; coordinates mark a representative point.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Suleiman_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Suleiman_the_Magnificent"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cyrus",
+      "name": "Cyrus",
+      "coords": [
+        30.01,
+        52.41
+      ],
+      "theme": {
+        "colorKey": "leaders-persian"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/cyrus_ingame.png",
+        "irl": "assets/thumbs/leaders/cyrus_irl.png"
+      },
+      "attrs": {
+        "birthYear": -600,
+        "civilization": "Persian",
+        "birthYearLabel": "c. 600 BCE",
+        "birthPlace": "Anshan, now Tall-e Malyan, Fars, Iran",
+        "birthPlaceStatus": "reported",
+        "pinPrecision": "archaeological site"
+      },
+      "detail": {
+        "text": "Reported birthplace: Anshan, now Tall-e Malyan, Fars, Iran. Born: c. 600 BCE. Traditional biographical assignment to Anshan; early-life accounts mix history and legend. Pin precision: archaeological site; coordinates mark a representative point.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Cyrus_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Cyrus_the_Great"
+          }
+        ]
+      }
+    },
+    {
+      "id": "nader_shah",
+      "name": "Nader Shah",
+      "coords": [
+        36.63,
+        59.17
+      ],
+      "theme": {
+        "colorKey": "leaders-persian"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/nader_shah_ingame.png",
+        "irl": "assets/thumbs/leaders/nader_shah_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1688,
+        "civilization": "Persian",
+        "birthYearLabel": "1688 or 1698",
+        "birthPlace": "Dastgerd, Razavi Khorasan, Iran",
+        "birthPlaceStatus": "reported",
+        "pinPrecision": "village"
+      },
+      "detail": {
+        "text": "Reported birthplace: Dastgerd, Razavi Khorasan, Iran. Born: 1688 or 1698. Pin uses the village identified as his birthplace; the historical fortress is not individually located. Birth-year traditions differ. Pin precision: village; coordinates mark a representative point.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Nader_Shah_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Nader_Shah"
+          },
+          {
+            "label": "Birthplace source",
+            "url": "https://en.wikipedia.org/wiki/Dastgerd,_Razavi_Khorasan"
+          }
+        ]
+      }
+    },
+    {
+      "id": "dido",
+      "name": "Dido",
+      "coords": [
+        33.27,
+        35.2
+      ],
+      "theme": {
+        "colorKey": "leaders-phoenician"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/dido_ingame.png",
+        "irl": "assets/thumbs/leaders/dido_irl.png"
+      },
+      "attrs": {
+        "birthYear": null,
+        "civilization": "Phoenician",
+        "birthYearLabel": "Unknown (traditionally 9th century BCE)",
+        "birthPlace": "Tyre, Lebanon (traditional)",
+        "birthPlaceStatus": "traditional",
+        "pinPrecision": "city"
+      },
+      "detail": {
+        "text": "Traditional birthplace: Tyre, Lebanon (traditional). Born: Unknown (traditionally 9th century BCE). A legendary founder figure. Tyre is her birthplace in the tradition, not a securely documented historical birth site. Pin precision: city; coordinates mark a representative point.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Dido_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Dido"
+          }
+        ]
+      }
+    },
+    {
+      "id": "jadwiga",
+      "name": "Jadwiga",
+      "coords": [
+        47.5,
+        19.04
+      ],
+      "theme": {
+        "colorKey": "leaders-polish"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/jadwiga_ingame.png",
+        "irl": "assets/thumbs/leaders/jadwiga_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1374,
+        "civilization": "Polish",
+        "birthYearLabel": "1373–1374",
+        "birthPlace": "Buda, now Budapest, Hungary",
+        "birthPlaceStatus": "documented",
+        "pinPrecision": "city"
+      },
+      "detail": {
+        "text": "Birthplace: Buda, now Budapest, Hungary. Born: 1373–1374. Born between October 1373 and February 1374; 1374 is used for sorting. Pin precision: city; coordinates mark a representative point.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Jadwiga_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Jadwiga_of_Poland"
+          }
+        ]
+      }
+    },
+    {
+      "id": "joão_iii",
+      "name": "João III",
+      "coords": [
+        38.714,
+        -9.133
+      ],
+      "theme": {
+        "colorKey": "leaders-portuguese"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/joão_iii_ingame.png",
+        "irl": "assets/thumbs/leaders/joão_iii_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1502,
+        "civilization": "Portuguese",
+        "birthYearLabel": "1502",
+        "birthPlace": "Alcáçova Palace, Lisbon, Portugal",
+        "birthPlaceStatus": "documented",
+        "pinPrecision": "site"
+      },
+      "detail": {
+        "text": "Birthplace: Alcáçova Palace, Lisbon, Portugal. Born: 1502. Pin marks the former palace area within São Jorge Castle.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/João_III_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/John_III_of_Portugal"
+          }
+        ]
+      }
+    },
+    {
+      "id": "julius_caesar",
+      "name": "Julius Caesar",
+      "coords": [
+        41.895,
+        12.49
+      ],
+      "theme": {
+        "colorKey": "leaders-roman"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/julius_caesar_ingame.png",
+        "irl": "assets/thumbs/leaders/julius_caesar_irl.png"
+      },
+      "attrs": {
+        "birthYear": -100,
+        "civilization": "Roman",
+        "birthYearLabel": "100 BCE",
+        "birthPlace": "Suburra, Rome, Italy",
+        "birthPlaceStatus": "documented",
+        "pinPrecision": "district"
+      },
+      "detail": {
+        "text": "Birthplace: Suburra, Rome, Italy. Born: 100 BCE. Pin represents the ancient Suburra district, not a verified birth house. Pin precision: district; coordinates mark a representative point.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Julius_Caesar_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Julius_Caesar"
+          }
+        ]
+      }
+    },
+    {
+      "id": "trajan",
+      "name": "Trajan",
+      "coords": [
+        37.44,
+        -6.05
+      ],
+      "theme": {
+        "colorKey": "leaders-roman"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/trajan_ingame.png",
+        "irl": "assets/thumbs/leaders/trajan_irl.png"
+      },
+      "attrs": {
+        "birthYear": 53,
+        "civilization": "Roman",
+        "birthYearLabel": "53",
+        "birthPlace": "Italica, near Santiponce, Seville, Spain",
+        "birthPlaceStatus": "documented",
+        "pinPrecision": "archaeological site"
+      },
+      "detail": {
+        "text": "Birthplace: Italica, near Santiponce, Seville, Spain. Born: 53. Born in Roman Hispania, not Rome. Pin precision: archaeological site; coordinates mark a representative point.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Trajan_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Trajan"
+          }
+        ]
+      }
+    },
+    {
+      "id": "peter",
+      "name": "Peter",
+      "coords": [
+        55.75,
+        37.62
+      ],
+      "theme": {
+        "colorKey": "leaders-russian"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/peter_ingame.png",
+        "irl": "assets/thumbs/leaders/peter_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1672,
+        "civilization": "Russian",
+        "birthYearLabel": "1672",
+        "birthPlace": "Moscow, Russia",
+        "birthPlaceStatus": "documented",
+        "pinPrecision": "city"
+      },
+      "detail": {
+        "text": "Birthplace: Moscow, Russia. Born: 1672. This is Peter the Great. Pin precision: city; coordinates mark a representative point.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Peter_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Peter_the_Great"
+          }
+        ]
+      }
+    },
+    {
+      "id": "robert_the_bruce",
+      "name": "Robert the Bruce",
+      "coords": [
+        55.326,
+        -4.844
+      ],
+      "theme": {
+        "colorKey": "leaders-scottish"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/robert_the_bruce_ingame.png",
+        "irl": "assets/thumbs/leaders/robert_the_bruce_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1274,
+        "civilization": "Scottish",
+        "birthYearLabel": "1274",
+        "birthPlace": "Probably Turnberry Castle, Ayrshire, Scotland",
+        "birthPlaceStatus": "probable",
+        "pinPrecision": "site"
+      },
+      "detail": {
+        "text": "Probable birthplace: Probably Turnberry Castle, Ayrshire, Scotland. Born: 1274. Turnberry is the usual attribution, but the birthplace is uncertain; Lochmaben is another proposal.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Robert_the_Bruce_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Robert_the_Bruce"
+          }
+        ]
+      }
+    },
+    {
+      "id": "tomyris",
+      "name": "Tomyris",
+      "coords": null,
+      "theme": {
+        "colorKey": "leaders-scythian"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/tomyris_ingame.png",
+        "irl": "assets/thumbs/leaders/tomyris_irl.png"
+      },
+      "attrs": {
+        "birthYear": null,
+        "civilization": "Scythian",
+        "birthYearLabel": "Unknown",
+        "birthPlace": "Unknown; Massagetae territory in Central Asia",
+        "birthPlaceStatus": "unknown",
+        "pinPrecision": "none"
+      },
+      "detail": {
+        "text": "Birthplace: Unknown; Massagetae territory in Central Asia. Born: Unknown. Herodotus records her story, but neither a birth year nor a defensible local birthplace is known.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Tomyris_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Tomyris"
+          }
+        ]
+      }
+    },
+    {
+      "id": "philip_ii",
+      "name": "Philip II",
+      "coords": [
+        41.656,
+        -4.725
+      ],
+      "theme": {
+        "colorKey": "leaders-spanish"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/philip_ii_ingame.png",
+        "irl": "assets/thumbs/leaders/philip_ii_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1527,
+        "civilization": "Spanish",
+        "birthYearLabel": "1527",
+        "birthPlace": "Palacio de Pimentel, Valladolid, Spain",
+        "birthPlaceStatus": "documented",
+        "pinPrecision": "site"
+      },
+      "detail": {
+        "text": "Birthplace: Palacio de Pimentel, Valladolid, Spain. Born: 1527.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Philip_II_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Philip_II_of_Spain"
+          }
+        ]
+      }
+    },
+    {
+      "id": "gilgamesh",
+      "name": "Gilgamesh",
+      "coords": null,
+      "theme": {
+        "colorKey": "leaders-sumerian"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/gilgamesh_ingame.png",
+        "irl": "assets/thumbs/leaders/gilgamesh_irl.png"
+      },
+      "attrs": {
+        "birthYear": null,
+        "civilization": "Sumerian",
+        "birthYearLabel": "Unknown",
+        "birthPlace": "Unknown",
+        "birthPlaceStatus": "unknown",
+        "pinPrecision": "none"
+      },
+      "detail": {
+        "text": "Birthplace: Unknown. Born: Unknown. Legendary or semi-historical king of Uruk. Uruk is not automatically his documented birthplace; proposed reign dates are not birth dates.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Gilgamesh_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Gilgamesh"
+          }
+        ]
+      }
+    },
+    {
+      "id": "kristina",
+      "name": "Kristina",
+      "coords": [
+        59.327,
+        18.072
+      ],
+      "theme": {
+        "colorKey": "leaders-swedish"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/kristina_ingame.png",
+        "irl": "assets/thumbs/leaders/kristina_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1626,
+        "civilization": "Swedish",
+        "birthYearLabel": "1626",
+        "birthPlace": "Tre Kronor Castle, Stockholm, Sweden",
+        "birthPlaceStatus": "documented",
+        "pinPrecision": "site"
+      },
+      "detail": {
+        "text": "Birthplace: Tre Kronor Castle, Stockholm, Sweden. Born: 1626. The former castle stood on the site of today's Stockholm Palace.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Kristina_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Christina,_Queen_of_Sweden"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bà_triệu",
+      "name": "Bà Triệu",
+      "coords": [
+        20.0,
+        105.65
+      ],
+      "theme": {
+        "colorKey": "leaders-vietnamese"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/bà_triệu_ingame.png",
+        "irl": "assets/thumbs/leaders/bà_triệu_irl.png"
+      },
+      "attrs": {
+        "birthYear": null,
+        "civilization": "Vietnamese",
+        "birthYearLabel": "Unknown (traditionally 226)",
+        "birthPlace": "Yên Định area, Thanh Hóa, Vietnam",
+        "birthPlaceStatus": "traditional",
+        "pinPrecision": "region"
+      },
+      "detail": {
+        "text": "Traditional birthplace: Yên Định area, Thanh Hóa, Vietnam. Born: Unknown (traditionally 226). The year 226 is traditional rather than securely documented. Pin represents the reported birth district, not her tomb in Hậu Lộc. Pin precision: region; coordinates mark a representative point.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Bà_Triệu_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Lady_Tri%E1%BB%87u"
+          }
+        ]
+      }
+    },
+    {
+      "id": "shaka",
+      "name": "Shaka",
+      "coords": [
+        -28.59,
+        31.4
+      ],
+      "theme": {
+        "colorKey": "leaders-zulu"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/leaders/shaka_ingame.png",
+        "irl": "assets/thumbs/leaders/shaka_irl.png"
+      },
+      "attrs": {
+        "birthYear": 1787,
+        "civilization": "Zulu",
+        "birthYearLabel": "c. 1787",
+        "birthPlace": "Near Melmoth, KwaZulu-Natal, South Africa",
+        "birthPlaceStatus": "approximate",
+        "pinPrecision": "region"
+      },
+      "detail": {
+        "text": "Approximate birthplace: Near Melmoth, KwaZulu-Natal, South Africa. Born: c. 1787. Pin represents the reported birth area, not an exact birth site. Pin precision: region; coordinates mark a representative point.",
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Shaka_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Shaka"
+          }
         ]
       }
     }
   ]
 }
-
