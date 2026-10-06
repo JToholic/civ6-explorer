@@ -5,13 +5,15 @@
     "defaultSort": "civilization",
     "scope": "All regular Civilization VI leaders, including DLC and Leader Pass; scenario-only leaders excluded.",
     "personas": "One entry per historical person per civilization; alternate personas are combined.",
-    "coordinatePolicy": "Birthplaces only. Coordinates are representative points at the declared pinPrecision, not surveyed birth-house coordinates. Disputed, unknown, unverified or ungeolocated birthplaces have null coords. Reported, probable and traditional pins are explicitly labeled.",
+    "coordinatePolicy": "Pins use the civilization/state's historical capital or principal seat during the leader's rule. If there was no fixed capital, a clearly labeled representative seat/base is used only when defensible; otherwise coords are null.",
+    "capitalNamingPolicy": "Historical names are preserved, followed by the modern name/country when useful (for example, Constantinople, now Istanbul, Turkey). Capital changes during a reign are noted in the capital string.",
     "birthYearPolicy": "Negative numbers denote BCE (not astronomical year numbering). Approximate representative years are for sorting only; birthYearLabel preserves uncertainty. Unknown years are null.",
     "colorPolicy": "One shared color per civilization, based on the default jersey of its original leader (Pericles for Greece). Use the primary color, or its secondary when the primary is white. Colors can repeat across civilizations because the game palette is limited.",
-    "thumbnailPolicy": "Paths follow existing sample naming; this update does not supply new image assets.",
+    "thumbnailPolicy": "Paths follow the existing leader thumbnail naming. Image-source recommendations are provided separately in leader_image_sources.csv.",
     "sources": [
       "https://civilization.fandom.com/wiki/Leaders_(Civ6)",
-      "https://civilization.fandom.com/wiki/Jersey_System_(Civ6)"
+      "https://civilization.fandom.com/wiki/Category:Leader_icons_(Civ6)",
+      "https://en.wikipedia.org/"
     ],
     "reviewedOn": "2026-10-06"
   },
@@ -40,8 +42,8 @@
       "id": "abraham_lincoln",
       "name": "Abraham Lincoln",
       "coords": [
-        37.531,
-        -85.735
+        38.9072,
+        -77.0369
       ],
       "theme": {
         "colorKey": "leaders-american"
@@ -54,12 +56,11 @@
         "birthYear": 1809,
         "civilization": "American",
         "birthYearLabel": "1809",
-        "birthPlace": "Sinking Spring Farm, near Hodgenville, Kentucky, United States",
-        "birthPlaceStatus": "documented",
-        "pinPrecision": "site"
+        "capital": "Washington, D.C., United States",
+        "capitalStatus": "capital",
+        "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: Sinking Spring Farm, near Hodgenville, Kentucky, United States. Born: 1809. Birthplace National Historical Park; the displayed cabin is symbolic, not the original.",
         "links": [
           {
             "label": "Fandom",
@@ -68,10 +69,6 @@
           {
             "label": "Wikipedia",
             "url": "https://en.wikipedia.org/wiki/Abraham_Lincoln"
-          },
-          {
-            "label": "Birthplace source",
-            "url": "https://www.nps.gov/abli/learn/historyculture/lincoln-time-line-and-other-resource-materials.htm"
           }
         ]
       }
@@ -80,8 +77,8 @@
       "id": "teddy_roosevelt",
       "name": "Teddy Roosevelt",
       "coords": [
-        40.7386,
-        -73.989
+        38.9072,
+        -77.0369
       ],
       "theme": {
         "colorKey": "leaders-american"
@@ -94,12 +91,11 @@
         "birthYear": 1858,
         "civilization": "American",
         "birthYearLabel": "1858",
-        "birthPlace": "28 East 20th Street, Manhattan, New York City, United States",
-        "birthPlaceStatus": "documented",
-        "pinPrecision": "site"
+        "capital": "Washington, D.C., United States",
+        "capitalStatus": "capital",
+        "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: 28 East 20th Street, Manhattan, New York City, United States. Born: 1858. The birthplace building seen today is a reconstruction on the original site.",
         "links": [
           {
             "label": "Fandom",
@@ -108,10 +104,6 @@
           {
             "label": "Wikipedia",
             "url": "https://en.wikipedia.org/wiki/Theodore_Roosevelt"
-          },
-          {
-            "label": "Birthplace source",
-            "url": "https://www.nps.gov/people/life-of-theodore-roosevelt.htm"
           }
         ]
       }
@@ -120,8 +112,8 @@
       "id": "saladin",
       "name": "Saladin",
       "coords": [
-        34.6,
-        43.68
+        33.5138,
+        36.2765
       ],
       "theme": {
         "colorKey": "leaders-arabian"
@@ -134,12 +126,11 @@
         "birthYear": 1138,
         "civilization": "Arabian",
         "birthYearLabel": "c. 1137–1138",
-        "birthPlace": "Tikrit, Iraq",
-        "birthPlaceStatus": "documented",
+        "capital": "Damascus, Syria",
+        "capitalStatus": "capital during his sultanate",
         "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: Tikrit, Iraq. Born: c. 1137–1138. Birth year varies between 1137 and 1138; 1138 is used for sorting. Pin precision: city; coordinates mark a representative point.",
         "links": [
           {
             "label": "Fandom",
@@ -156,8 +147,8 @@
       "id": "john_curtin",
       "name": "John Curtin",
       "coords": [
-        -37.42,
-        143.89
+        -35.2809,
+        149.13
       ],
       "theme": {
         "colorKey": "leaders-australian"
@@ -170,12 +161,11 @@
         "birthYear": 1885,
         "civilization": "Australian",
         "birthYearLabel": "1885",
-        "birthPlace": "Creswick, Victoria, Australia",
-        "birthPlaceStatus": "documented",
-        "pinPrecision": "town"
+        "capital": "Canberra, Australia",
+        "capitalStatus": "capital",
+        "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: Creswick, Victoria, Australia. Born: 1885. Pin precision: town; coordinates mark a representative point.",
         "links": [
           {
             "label": "Fandom",
@@ -184,10 +174,6 @@
           {
             "label": "Wikipedia",
             "url": "https://en.wikipedia.org/wiki/John_Curtin"
-          },
-          {
-            "label": "Birthplace source",
-            "url": "https://adb.anu.edu.au/biography/curtin-john-9885"
           }
         ]
       }
@@ -195,7 +181,10 @@
     {
       "id": "montezuma",
       "name": "Montezuma",
-      "coords": null,
+      "coords": [
+        19.4326,
+        -99.1332
+      ],
       "theme": {
         "colorKey": "leaders-aztec"
       },
@@ -207,12 +196,11 @@
         "birthYear": 1398,
         "civilization": "Aztec",
         "birthYearLabel": "c. 1398",
-        "birthPlace": "Unverified; often attributed to Tenochtitlan, Mexico",
-        "birthPlaceStatus": "unverified",
-        "pinPrecision": "none"
+        "capital": "Tenochtitlan, now Mexico City, Mexico",
+        "capitalStatus": "capital",
+        "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: Unverified; often attributed to Tenochtitlan, Mexico. Born: c. 1398. This is Moctezuma I, not Moctezuma II. A sufficiently supported birthplace was not established in this review; no capital-based pin has been substituted.",
         "links": [
           {
             "label": "Fandom",
@@ -229,8 +217,8 @@
       "id": "hammurabi",
       "name": "Hammurabi",
       "coords": [
-        32.54,
-        44.42
+        32.542,
+        44.421
       ],
       "theme": {
         "colorKey": "leaders-babylonian"
@@ -243,12 +231,11 @@
         "birthYear": -1810,
         "civilization": "Babylonian",
         "birthYearLabel": "c. 1810 BCE",
-        "birthPlace": "Babylon, near Hillah, Iraq",
-        "birthPlaceStatus": "reported",
+        "capital": "Babylon, near Hillah, Iraq",
+        "capitalStatus": "capital",
         "pinPrecision": "archaeological site"
       },
       "detail": {
-        "text": "Reported birthplace: Babylon, near Hillah, Iraq. Born: c. 1810 BCE. The birth year is an estimate in the conventional Middle Chronology. Pin precision: archaeological site; coordinates mark a representative point.",
         "links": [
           {
             "label": "Fandom",
@@ -265,8 +252,8 @@
       "id": "pedro_ii",
       "name": "Pedro II",
       "coords": [
-        -22.905,
-        -43.226
+        -22.9068,
+        -43.1729
       ],
       "theme": {
         "colorKey": "leaders-brazilian"
@@ -279,12 +266,11 @@
         "birthYear": 1825,
         "civilization": "Brazilian",
         "birthYearLabel": "1825",
-        "birthPlace": "Palace of São Cristóvão, Rio de Janeiro, Brazil",
-        "birthPlaceStatus": "documented",
-        "pinPrecision": "site"
+        "capital": "Rio de Janeiro, Brazil",
+        "capitalStatus": "capital",
+        "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: Palace of São Cristóvão, Rio de Janeiro, Brazil. Born: 1825.",
         "links": [
           {
             "label": "Fandom",
@@ -301,8 +287,8 @@
       "id": "basil_ii",
       "name": "Basil II",
       "coords": [
-        41.01,
-        28.98
+        41.0082,
+        28.9784
       ],
       "theme": {
         "colorKey": "leaders-byzantine"
@@ -315,12 +301,11 @@
         "birthYear": 958,
         "civilization": "Byzantine",
         "birthYearLabel": "958",
-        "birthPlace": "Constantinople, now Istanbul, Turkey",
-        "birthPlaceStatus": "reported",
+        "capital": "Constantinople, now Istanbul, Turkey",
+        "capitalStatus": "capital",
         "pinPrecision": "city"
       },
       "detail": {
-        "text": "Reported birthplace: Constantinople, now Istanbul, Turkey. Born: 958. Pin represents the historic city, not a verified birth room. Pin precision: city; coordinates mark a representative point.",
         "links": [
           {
             "label": "Fandom",
@@ -336,7 +321,10 @@
     {
       "id": "theodora",
       "name": "Theodora",
-      "coords": null,
+      "coords": [
+        41.0082,
+        28.9784
+      ],
       "theme": {
         "colorKey": "leaders-byzantine"
       },
@@ -348,12 +336,11 @@
         "birthYear": 495,
         "civilization": "Byzantine",
         "birthYearLabel": "c. 495",
-        "birthPlace": "Disputed; several locations in the eastern Roman Empire are proposed",
-        "birthPlaceStatus": "disputed",
-        "pinPrecision": "none"
+        "capital": "Constantinople, now Istanbul, Turkey",
+        "capitalStatus": "capital",
+        "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: Disputed; several locations in the eastern Roman Empire are proposed. Born: c. 495. Syria, Cyprus, Paphlagonia and Alexandria have been proposed. She grew up in Constantinople, which should not automatically be treated as her birthplace. The date is approximately 490–500.",
         "links": [
           {
             "label": "Fandom",
@@ -370,8 +357,8 @@
       "id": "wilfrid_laurier",
       "name": "Wilfrid Laurier",
       "coords": [
-        45.85,
-        -73.76
+        45.4215,
+        -75.6972
       ],
       "theme": {
         "colorKey": "leaders-canadian"
@@ -384,12 +371,11 @@
         "birthYear": 1841,
         "civilization": "Canadian",
         "birthYearLabel": "1841",
-        "birthPlace": "Saint-Lin, now Saint-Lin-Laurentides, Quebec, Canada",
-        "birthPlaceStatus": "documented",
-        "pinPrecision": "town"
+        "capital": "Ottawa, Ontario, Canada",
+        "capitalStatus": "capital",
+        "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: Saint-Lin, now Saint-Lin-Laurentides, Quebec, Canada. Born: 1841. Pin precision: town; coordinates mark a representative point.",
         "links": [
           {
             "label": "Fandom",
@@ -405,7 +391,10 @@
     {
       "id": "kublai_khan_chinese",
       "name": "Kublai Khan (Chinese)",
-      "coords": null,
+      "coords": [
+        39.9042,
+        116.4074
+      ],
       "theme": {
         "colorKey": "leaders-chinese"
       },
@@ -417,12 +406,11 @@
         "birthYear": 1215,
         "civilization": "Chinese",
         "birthYearLabel": "1215",
-        "birthPlace": "Mongol Empire; exact birthplace not established",
-        "birthPlaceStatus": "unknown",
-        "pinPrecision": "none"
+        "capital": "Dadu (Khanbaliq), now Beijing, China (primary capital from 1272; Shangdu was earlier and remained the summer capital)",
+        "capitalStatus": "capital",
+        "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: Mongol Empire; exact birthplace not established. Born: 1215. No reliable local birthplace was established; neither Beijing nor Karakorum is substituted.",
         "links": [
           {
             "label": "Fandom",
@@ -439,8 +427,8 @@
       "id": "qin_shi_huang",
       "name": "Qin Shi Huang",
       "coords": [
-        36.61,
-        114.49
+        34.3296,
+        108.708
       ],
       "theme": {
         "colorKey": "leaders-chinese"
@@ -453,12 +441,11 @@
         "birthYear": -259,
         "civilization": "Chinese",
         "birthYearLabel": "259 BCE",
-        "birthPlace": "Handan, Hebei, China",
-        "birthPlaceStatus": "documented",
+        "capital": "Xianyang, Shaanxi, China",
+        "capitalStatus": "capital",
         "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: Handan, Hebei, China. Born: 259 BCE. Born in the state of Zhao, not in the Qin capital. Pin precision: city; coordinates mark a representative point.",
         "links": [
           {
             "label": "Fandom",
@@ -474,7 +461,10 @@
     {
       "id": "wu_zetian",
       "name": "Wu Zetian",
-      "coords": null,
+      "coords": [
+        34.6197,
+        112.454
+      ],
       "theme": {
         "colorKey": "leaders-chinese"
       },
@@ -486,12 +476,11 @@
         "birthYear": 624,
         "civilization": "Chinese",
         "birthYearLabel": "624",
-        "birthPlace": "Disputed: Wenshui, Guangyuan (Lizhou), or Chang'an, China",
-        "birthPlaceStatus": "disputed",
-        "pinPrecision": "none"
+        "capital": "Luoyang (Shendu), now Luoyang, Henan, China",
+        "capitalStatus": "capital",
+        "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: Disputed: Wenshui, Guangyuan (Lizhou), or Chang'an, China. Born: 624. The birthplace is disputed in scholarship, so no single candidate is pinned.",
         "links": [
           {
             "label": "Fandom",
@@ -508,8 +497,8 @@
       "id": "yongle",
       "name": "Yongle",
       "coords": [
-        32.06,
-        118.8
+        39.9042,
+        116.4074
       ],
       "theme": {
         "colorKey": "leaders-chinese"
@@ -522,12 +511,11 @@
         "birthYear": 1360,
         "civilization": "Chinese",
         "birthYearLabel": "1360",
-        "birthPlace": "Yingtian, now Nanjing, Jiangsu, China",
-        "birthPlaceStatus": "documented",
+        "capital": "Beijing, China (capital from 1421; Nanjing before 1421)",
+        "capitalStatus": "capital",
         "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: Yingtian, now Nanjing, Jiangsu, China. Born: 1360. Pin precision: city; coordinates mark a representative point.",
         "links": [
           {
             "label": "Fandom",
@@ -544,8 +532,8 @@
       "id": "poundmaker",
       "name": "Poundmaker",
       "coords": [
-        52.73,
-        -108.31
+        52.75,
+        -109.02
       ],
       "theme": {
         "colorKey": "leaders-cree"
@@ -558,12 +546,11 @@
         "birthYear": 1842,
         "civilization": "Cree",
         "birthYearLabel": "c. 1842",
-        "birthPlace": "Near Battleford, Saskatchewan, Canada",
-        "birthPlaceStatus": "approximate",
+        "capital": "No fixed capital; Poundmaker's band was based on the Poundmaker Reserve near Cut Knife, Saskatchewan, Canada",
+        "capitalStatus": "principal community, not a formal capital",
         "pinPrecision": "region"
       },
       "detail": {
-        "text": "Approximate birthplace: Near Battleford, Saskatchewan, Canada. Born: c. 1842. Pin marks the vicinity of Battleford, not an exact birth site. Pin precision: region; coordinates mark a representative point.",
         "links": [
           {
             "label": "Fandom",
@@ -580,8 +567,8 @@
       "id": "wilhelmina",
       "name": "Wilhelmina",
       "coords": [
-        52.08,
-        -4.306
+        52.3676,
+        4.9041
       ],
       "theme": {
         "colorKey": "leaders-dutch"
@@ -594,12 +581,11 @@
         "birthYear": 1880,
         "civilization": "Dutch",
         "birthYearLabel": "1880",
-        "birthPlace": "Noordeinde Palace, The Hague, Netherlands",
-        "birthPlaceStatus": "documented",
-        "pinPrecision": "site"
+        "capital": "Amsterdam, Netherlands (constitutional capital; government seated in The Hague)",
+        "capitalStatus": "capital",
+        "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: Noordeinde Palace, The Hague, Netherlands. Born: 1880.",
         "links": [
           {
             "label": "Fandom",
@@ -616,8 +602,8 @@
       "id": "cleopatra",
       "name": "Cleopatra",
       "coords": [
-        31.2,
-        29.92
+        31.2001,
+        29.9187
       ],
       "theme": {
         "colorKey": "leaders-egyptian"
@@ -630,12 +616,11 @@
         "birthYear": -69,
         "civilization": "Egyptian",
         "birthYearLabel": "69 BCE (possibly late 70 BCE)",
-        "birthPlace": "Alexandria, Egypt",
-        "birthPlaceStatus": "documented",
+        "capital": "Alexandria, Egypt",
+        "capitalStatus": "capital",
         "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: Alexandria, Egypt. Born: 69 BCE (possibly late 70 BCE). 69 BCE is used for sorting; some chronologies allow late 70 BCE. Pin precision: city; coordinates mark a representative point.",
         "links": [
           {
             "label": "Fandom",
@@ -651,7 +636,10 @@
     {
       "id": "ramses_ii",
       "name": "Ramses II",
-      "coords": null,
+      "coords": [
+        30.79,
+        31.83
+      ],
       "theme": {
         "colorKey": "leaders-egyptian"
       },
@@ -663,12 +651,11 @@
         "birthYear": -1303,
         "civilization": "Egyptian",
         "birthYearLabel": "c. 1303 BCE",
-        "birthPlace": "Eastern Nile Delta, Egypt; precise birthplace uncertain",
-        "birthPlaceStatus": "unknown",
-        "pinPrecision": "none"
+        "capital": "Pi-Ramesses, near Qantir, Egypt",
+        "capitalStatus": "capital",
+        "pinPrecision": "archaeological site"
       },
       "detail": {
-        "text": "Birthplace: Eastern Nile Delta, Egypt; precise birthplace uncertain. Born: c. 1303 BCE. Avaris/Qantir is often suggested, but an adequately established birth site was not found. Pi-Ramesses was his later capital, not a substitute birth pin.",
         "links": [
           {
             "label": "Fandom",
@@ -684,7 +671,10 @@
     {
       "id": "eleanor_of_aquitaine_english",
       "name": "Eleanor of Aquitaine (English)",
-      "coords": null,
+      "coords": [
+        51.4995,
+        -0.1248
+      ],
       "theme": {
         "colorKey": "leaders-english"
       },
@@ -696,12 +686,11 @@
         "birthYear": 1124,
         "civilization": "English",
         "birthYearLabel": "c. 1124",
-        "birthPlace": "Disputed; Bordeaux, Poitiers, and other locations in western France are proposed",
-        "birthPlaceStatus": "disputed",
-        "pinPrecision": "none"
+        "capital": "Westminster, now part of London, England, United Kingdom",
+        "capitalStatus": "principal administrative/royal center; court was itinerant",
+        "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: Disputed; Bordeaux, Poitiers, and other locations in western France are proposed. Born: c. 1124. 1124 is used for sorting; 1122 is also commonly given. Her English and French entries describe the same person and share birthplace information.",
         "links": [
           {
             "label": "Fandom",
@@ -718,8 +707,8 @@
       "id": "elizabeth_i",
       "name": "Elizabeth I",
       "coords": [
-        51.483,
-        -0.006
+        51.5074,
+        -0.1278
       ],
       "theme": {
         "colorKey": "leaders-english"
@@ -732,12 +721,11 @@
         "birthYear": 1533,
         "civilization": "English",
         "birthYearLabel": "1533",
-        "birthPlace": "Palace of Placentia, Greenwich, London, England",
-        "birthPlaceStatus": "documented",
-        "pinPrecision": "site"
+        "capital": "London, England, United Kingdom",
+        "capitalStatus": "capital",
+        "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: Palace of Placentia, Greenwich, London, England. Born: 1533. The palace no longer survives; pin marks its site at Greenwich.",
         "links": [
           {
             "label": "Fandom",
@@ -754,8 +742,8 @@
       "id": "victoria",
       "name": "Victoria",
       "coords": [
-        51.505,
-        -0.188
+        51.5074,
+        -0.1278
       ],
       "theme": {
         "colorKey": "leaders-english"
@@ -768,12 +756,11 @@
         "birthYear": 1819,
         "civilization": "English",
         "birthYearLabel": "1819",
-        "birthPlace": "Kensington Palace, London, England",
-        "birthPlaceStatus": "documented",
-        "pinPrecision": "site"
+        "capital": "London, England, United Kingdom",
+        "capitalStatus": "capital",
+        "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: Kensington Palace, London, England. Born: 1819.",
         "links": [
           {
             "label": "Fandom",
@@ -790,8 +777,8 @@
       "id": "menelik_ii",
       "name": "Menelik II",
       "coords": [
-        9.63,
-        39.43
+        8.9806,
+        38.7578
       ],
       "theme": {
         "colorKey": "leaders-ethiopian"
@@ -804,12 +791,11 @@
         "birthYear": 1844,
         "civilization": "Ethiopian",
         "birthYearLabel": "1844",
-        "birthPlace": "Angolalla, Shewa, Ethiopia",
-        "birthPlaceStatus": "documented",
-        "pinPrecision": "locality"
+        "capital": "Addis Ababa, Ethiopia",
+        "capitalStatus": "capital",
+        "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: Angolalla, Shewa, Ethiopia. Born: 1844. Pin represents Angolalla; it does not identify an exact birth building. Pin precision: locality; coordinates mark a representative point.",
         "links": [
           {
             "label": "Fandom",
@@ -818,10 +804,6 @@
           {
             "label": "Wikipedia",
             "url": "https://en.wikipedia.org/wiki/Menelik_II"
-          },
-          {
-            "label": "Location source",
-            "url": "https://mapcarta.com/N1150951520"
           }
         ]
       }
@@ -830,8 +812,8 @@
       "id": "catherine_de_medici",
       "name": "Catherine de Medici",
       "coords": [
-        43.77,
-        11.25
+        48.8566,
+        2.3522
       ],
       "theme": {
         "colorKey": "leaders-french"
@@ -844,12 +826,11 @@
         "birthYear": 1519,
         "civilization": "French",
         "birthYearLabel": "1519",
-        "birthPlace": "Florence, Italy",
-        "birthPlaceStatus": "documented",
+        "capital": "Paris, France",
+        "capitalStatus": "capital / principal royal center",
         "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: Florence, Italy. Born: 1519. Born in Florence despite leading France in the game. Pin precision: city; coordinates mark a representative point.",
         "links": [
           {
             "label": "Fandom",
@@ -857,7 +838,7 @@
           },
           {
             "label": "Wikipedia",
-            "url": "https://en.wikipedia.org/wiki/Catherine_de'_Medici"
+            "url": "https://en.wikipedia.org/wiki/Catherine_de%27_Medici"
           }
         ]
       }
@@ -865,7 +846,10 @@
     {
       "id": "eleanor_of_aquitaine_french",
       "name": "Eleanor of Aquitaine (French)",
-      "coords": null,
+      "coords": [
+        48.8566,
+        2.3522
+      ],
       "theme": {
         "colorKey": "leaders-french"
       },
@@ -877,12 +861,11 @@
         "birthYear": 1124,
         "civilization": "French",
         "birthYearLabel": "c. 1124",
-        "birthPlace": "Disputed; Bordeaux, Poitiers, and other locations in western France are proposed",
-        "birthPlaceStatus": "disputed",
-        "pinPrecision": "none"
+        "capital": "Paris, France",
+        "capitalStatus": "principal royal center",
+        "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: Disputed; Bordeaux, Poitiers, and other locations in western France are proposed. Born: c. 1124. 1124 is used for sorting; 1122 is also commonly given. Her English and French entries describe the same person and share birthplace information.",
         "links": [
           {
             "label": "Fandom",
@@ -910,12 +893,11 @@
         "birthYear": null,
         "civilization": "Gallic",
         "birthYearLabel": "Unknown",
-        "birthPlace": "Unknown",
-        "birthPlaceStatus": "unknown",
+        "capital": "Atuatuca, exact location unknown in present-day Belgium",
+        "capitalStatus": "stronghold; no securely located capital",
         "pinPrecision": "none"
       },
       "detail": {
-        "text": "Birthplace: Unknown. Born: Unknown. Neither a birth date nor a local birthplace is securely documented. Tongeren is not used as a substitute.",
         "links": [
           {
             "label": "Fandom",
@@ -932,8 +914,8 @@
       "id": "tamar",
       "name": "Tamar",
       "coords": [
-        41.84,
-        44.72
+        41.7151,
+        44.8271
       ],
       "theme": {
         "colorKey": "leaders-georgian"
@@ -946,12 +928,11 @@
         "birthYear": 1160,
         "civilization": "Georgian",
         "birthYearLabel": "c. 1160 or 1166",
-        "birthPlace": "Mtskheta, Georgia (reported)",
-        "birthPlaceStatus": "reported",
+        "capital": "Tbilisi, Georgia",
+        "capitalStatus": "capital",
         "pinPrecision": "city"
       },
       "detail": {
-        "text": "Reported birthplace: Mtskheta, Georgia (reported). Born: c. 1160 or 1166. Mtskheta is reported in Wikidata from Russian Wikipedia; this is a lower-confidence locality assignment. The birth year is disputed. Pin precision: city; coordinates mark a representative point.",
         "links": [
           {
             "label": "Fandom",
@@ -960,10 +941,6 @@
           {
             "label": "Wikipedia",
             "url": "https://en.wikipedia.org/wiki/Tamar_of_Georgia"
-          },
-          {
-            "label": "Birthplace source",
-            "url": "https://www.wikidata.org/wiki/Q244007"
           }
         ]
       }
@@ -972,8 +949,8 @@
       "id": "frederick_barbarossa",
       "name": "Frederick Barbarossa",
       "coords": [
-        48.82,
-        7.79
+        50.7753,
+        6.0839
       ],
       "theme": {
         "colorKey": "leaders-german"
@@ -986,12 +963,11 @@
         "birthYear": 1122,
         "civilization": "German",
         "birthYearLabel": "1122",
-        "birthPlace": "Probably Haguenau, Alsace, France",
-        "birthPlaceStatus": "probable",
+        "capital": "No fixed capital; Aachen, now Aachen, Germany, was a major imperial and coronation center",
+        "capitalStatus": "representative imperial center; court was itinerant",
         "pinPrecision": "city"
       },
       "detail": {
-        "text": "Probable birthplace: Probably Haguenau, Alsace, France. Born: 1122. Haguenau is considered likely, but the birthplace is not certain. Pin precision: city; coordinates mark a representative point.",
         "links": [
           {
             "label": "Fandom",
@@ -1008,8 +984,8 @@
       "id": "ludwig_ii",
       "name": "Ludwig II",
       "coords": [
-        48.158,
-        11.503
+        48.1351,
+        11.582
       ],
       "theme": {
         "colorKey": "leaders-german"
@@ -1022,12 +998,11 @@
         "birthYear": 1845,
         "civilization": "German",
         "birthYearLabel": "1845",
-        "birthPlace": "Nymphenburg Palace, Munich, Germany",
-        "birthPlaceStatus": "documented",
-        "pinPrecision": "site"
+        "capital": "Munich, Bavaria, Germany",
+        "capitalStatus": "capital",
+        "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: Nymphenburg Palace, Munich, Germany. Born: 1845.",
         "links": [
           {
             "label": "Fandom",
@@ -1044,8 +1019,8 @@
       "id": "simón_bolívar",
       "name": "Simón Bolívar",
       "coords": [
-        10.5,
-        -66.91
+        4.711,
+        -74.0721
       ],
       "theme": {
         "colorKey": "leaders-gran-colombian"
@@ -1058,12 +1033,11 @@
         "birthYear": 1783,
         "civilization": "Gran Colombian",
         "birthYearLabel": "1783",
-        "birthPlace": "Caracas, Venezuela",
-        "birthPlaceStatus": "documented",
+        "capital": "Bogotá, now Bogotá, Colombia",
+        "capitalStatus": "capital",
         "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: Caracas, Venezuela. Born: 1783. Pin precision: city; coordinates mark a representative point.",
         "links": [
           {
             "label": "Fandom",
@@ -1079,7 +1053,10 @@
     {
       "id": "gorgo",
       "name": "Gorgo",
-      "coords": null,
+      "coords": [
+        37.0745,
+        22.4303
+      ],
       "theme": {
         "colorKey": "leaders-greek"
       },
@@ -1091,12 +1068,11 @@
         "birthYear": -513,
         "civilization": "Greek",
         "birthYearLabel": "c. 518–508 BCE",
-        "birthPlace": "Unverified; associated with Sparta, Greece",
-        "birthPlaceStatus": "unverified",
-        "pinPrecision": "none"
+        "capital": "Sparta, now Sparta, Greece",
+        "capitalStatus": "city-state capital; Gorgo was queen consort, not sole ruler",
+        "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: Unverified; associated with Sparta, Greece. Born: c. 518–508 BCE. Spartan royal origins do not by themselves verify a birthplace. The midpoint 513 BCE is used only for sorting.",
         "links": [
           {
             "label": "Fandom",
@@ -1105,10 +1081,6 @@
           {
             "label": "Wikipedia",
             "url": "https://en.wikipedia.org/wiki/Gorgo,_Queen_of_Sparta"
-          },
-          {
-            "label": "Birthplace source",
-            "url": "https://www.worldhistory.org/Gorgo_of_Sparta/"
           }
         ]
       }
@@ -1117,8 +1089,8 @@
       "id": "pericles",
       "name": "Pericles",
       "coords": [
-        37.98,
-        23.73
+        37.9838,
+        23.7275
       ],
       "theme": {
         "colorKey": "leaders-greek"
@@ -1131,12 +1103,11 @@
         "birthYear": -495,
         "civilization": "Greek",
         "birthYearLabel": "c. 495 BCE",
-        "birthPlace": "Athens, Greece",
-        "birthPlaceStatus": "documented",
+        "capital": "Athens, Greece",
+        "capitalStatus": "city-state capital",
         "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: Athens, Greece. Born: c. 495 BCE. Pin precision: city; coordinates mark a representative point.",
         "links": [
           {
             "label": "Fandom",
@@ -1153,8 +1124,8 @@
       "id": "matthias_corvinus",
       "name": "Matthias Corvinus",
       "coords": [
-        46.77,
-        23.59
+        47.4979,
+        19.0402
       ],
       "theme": {
         "colorKey": "leaders-hungarian"
@@ -1167,12 +1138,11 @@
         "birthYear": 1443,
         "civilization": "Hungarian",
         "birthYearLabel": "1443",
-        "birthPlace": "Kolozsvár, now Cluj-Napoca, Romania",
-        "birthPlaceStatus": "documented",
+        "capital": "Buda, now part of Budapest, Hungary",
+        "capitalStatus": "capital",
         "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: Kolozsvár, now Cluj-Napoca, Romania. Born: 1443. The city was in the Kingdom of Hungary at his birth. Pin precision: city; coordinates mark a representative point.",
         "links": [
           {
             "label": "Fandom",
@@ -1189,8 +1159,8 @@
       "id": "pachacuti",
       "name": "Pachacuti",
       "coords": [
-        -13.518,
-        -71.977
+        -13.5319,
+        -71.9675
       ],
       "theme": {
         "colorKey": "leaders-incan"
@@ -1203,12 +1173,11 @@
         "birthYear": 1403,
         "civilization": "Incan",
         "birthYearLabel": "c. 1403 (chronology disputed)",
-        "birthPlace": "Cusicancha, Cusco, Peru",
-        "birthPlaceStatus": "reported",
-        "pinPrecision": "site"
+        "capital": "Cusco, Peru",
+        "capitalStatus": "capital",
+        "pinPrecision": "city"
       },
       "detail": {
-        "text": "Reported birthplace: Cusicancha, Cusco, Peru. Born: c. 1403 (chronology disputed). Cusicancha is traditionally identified as his birthplace. Inca chronology is disputed; 1418 is another proposed birth year.",
         "links": [
           {
             "label": "Fandom",
@@ -1224,7 +1193,10 @@
     {
       "id": "chandragupta",
       "name": "Chandragupta",
-      "coords": null,
+      "coords": [
+        25.5941,
+        85.1376
+      ],
       "theme": {
         "colorKey": "leaders-indian"
       },
@@ -1236,12 +1208,11 @@
         "birthYear": -340,
         "civilization": "Indian",
         "birthYearLabel": "c. 340 BCE",
-        "birthPlace": "Disputed; early origins are uncertain",
-        "birthPlaceStatus": "disputed",
-        "pinPrecision": "none"
+        "capital": "Pataliputra, now Patna, Bihar, India",
+        "capitalStatus": "capital",
+        "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: Disputed; early origins are uncertain. Born: c. 340 BCE. Different traditions give incompatible accounts of his ancestry and early life. Pataliputra is not used merely because it was his capital.",
         "links": [
           {
             "label": "Fandom",
@@ -1258,8 +1229,8 @@
       "id": "gandhi",
       "name": "Gandhi",
       "coords": [
-        21.64,
-        69.61
+        28.6139,
+        77.209
       ],
       "theme": {
         "colorKey": "leaders-indian"
@@ -1272,12 +1243,11 @@
         "birthYear": 1869,
         "civilization": "Indian",
         "birthYearLabel": "1869",
-        "birthPlace": "Porbandar, Gujarat, India",
-        "birthPlaceStatus": "documented",
+        "capital": "New Delhi, India (national capital; Gandhi never held state office)",
+        "capitalStatus": "representative national capital; not a ruler's seat",
         "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: Porbandar, Gujarat, India. Born: 1869. Pin precision: city; coordinates mark a representative point.",
         "links": [
           {
             "label": "Fandom",
@@ -1293,7 +1263,10 @@
     {
       "id": "gitarja",
       "name": "Gitarja",
-      "coords": null,
+      "coords": [
+        -7.55,
+        112.38
+      ],
       "theme": {
         "colorKey": "leaders-indonesian"
       },
@@ -1305,12 +1278,11 @@
         "birthYear": null,
         "civilization": "Indonesian",
         "birthYearLabel": "Before 1309",
-        "birthPlace": "Unknown; Majapahit, Java, Indonesia",
-        "birthPlaceStatus": "unknown",
-        "pinPrecision": "none"
+        "capital": "Majapahit capital at Trowulan, near Mojokerto, East Java, Indonesia",
+        "capitalStatus": "capital",
+        "pinPrecision": "archaeological area"
       },
       "detail": {
-        "text": "Birthplace: Unknown; Majapahit, Java, Indonesia. Born: Before 1309. Known historically as Tribhuwana Wijayatunggadewi. The date is only bounded as before 1309; an exact birth year or local birthplace is not established.",
         "links": [
           {
             "label": "Fandom",
@@ -1327,8 +1299,8 @@
       "id": "hojo_tokimune",
       "name": "Hojo Tokimune",
       "coords": [
-        35.31,
-        139.55
+        35.3192,
+        139.5467
       ],
       "theme": {
         "colorKey": "leaders-japanese"
@@ -1341,12 +1313,11 @@
         "birthYear": 1251,
         "civilization": "Japanese",
         "birthYearLabel": "1251",
-        "birthPlace": "Amanawa, Kamakura, Kanagawa, Japan",
-        "birthPlaceStatus": "reported",
-        "pinPrecision": "locality"
+        "capital": "Kamakura, Kanagawa, Japan",
+        "capitalStatus": "seat of the Kamakura shogunate; imperial capital remained Kyoto",
+        "pinPrecision": "city"
       },
       "detail": {
-        "text": "Reported birthplace: Amanawa, Kamakura, Kanagawa, Japan. Born: 1251. Born at the Adachi family's Amanawa residence. Pin represents the Amanawa vicinity, not a surviving house. Pin precision: locality; coordinates mark a representative point.",
         "links": [
           {
             "label": "Fandom",
@@ -1355,10 +1326,6 @@
           {
             "label": "Wikipedia",
             "url": "https://en.wikipedia.org/wiki/H%C5%8Dj%C5%8D_Tokimune"
-          },
-          {
-            "label": "Birthplace source",
-            "url": "https://www.japanesewiki.com/person/Tokimune%20HOJO.html"
           }
         ]
       }
@@ -1367,8 +1334,8 @@
       "id": "tokugawa",
       "name": "Tokugawa",
       "coords": [
-        34.956,
-        137.159
+        35.6762,
+        139.6503
       ],
       "theme": {
         "colorKey": "leaders-japanese"
@@ -1381,12 +1348,11 @@
         "birthYear": 1543,
         "civilization": "Japanese",
         "birthYearLabel": "1543",
-        "birthPlace": "Okazaki Castle, Okazaki, Aichi, Japan",
-        "birthPlaceStatus": "documented",
-        "pinPrecision": "site"
+        "capital": "Edo, now Tokyo, Japan",
+        "capitalStatus": "seat of the Tokugawa shogunate; imperial capital remained Kyoto",
+        "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: Okazaki Castle, Okazaki, Aichi, Japan. Born: 1543. This is Tokugawa Ieyasu. The Western-calendar birth year is 1543; 1542 occurs in Japanese-calendar descriptions.",
         "links": [
           {
             "label": "Fandom",
@@ -1403,8 +1369,8 @@
       "id": "jayavarman_vii",
       "name": "Jayavarman VII",
       "coords": [
-        13.44,
-        103.86
+        13.441,
+        103.859
       ],
       "theme": {
         "colorKey": "leaders-khmer"
@@ -1417,12 +1383,11 @@
         "birthYear": 1122,
         "civilization": "Khmer",
         "birthYearLabel": "c. 1122–1125",
-        "birthPlace": "Angkor, Cambodia",
-        "birthPlaceStatus": "reported",
-        "pinPrecision": "region"
+        "capital": "Angkor Thom, near Siem Reap, Cambodia",
+        "capitalStatus": "capital",
+        "pinPrecision": "archaeological site"
       },
       "detail": {
-        "text": "Reported birthplace: Angkor, Cambodia. Born: c. 1122–1125. Pin represents the Angkor area, not an exact birth palace. 1122 is used for sorting. Pin precision: region; coordinates mark a representative point.",
         "links": [
           {
             "label": "Fandom",
@@ -1439,8 +1404,8 @@
       "id": "mvemba_a_nzinga",
       "name": "Mvemba a Nzinga",
       "coords": [
-        -6.27,
-        14.24
+        -6.267,
+        14.248
       ],
       "theme": {
         "colorKey": "leaders-kongolese"
@@ -1453,12 +1418,11 @@
         "birthYear": 1456,
         "civilization": "Kongolese",
         "birthYearLabel": "c. 1456",
-        "birthPlace": "Mbanza Kongo, Angola",
-        "birthPlaceStatus": "reported",
+        "capital": "Mbanza Kongo, Angola",
+        "capitalStatus": "capital",
         "pinPrecision": "city"
       },
       "detail": {
-        "text": "Reported birthplace: Mbanza Kongo, Angola. Born: c. 1456. Also known as Afonso I of Kongo. Pin precision: city; coordinates mark a representative point.",
         "links": [
           {
             "label": "Fandom",
@@ -1474,7 +1438,10 @@
     {
       "id": "nzinga_mbande",
       "name": "Nzinga Mbande",
-      "coords": null,
+      "coords": [
+        -8.8053,
+        15.2187
+      ],
       "theme": {
         "colorKey": "leaders-kongolese"
       },
@@ -1486,12 +1453,11 @@
         "birthYear": 1583,
         "civilization": "Kongolese",
         "birthYearLabel": "c. 1583",
-        "birthPlace": "Kabasa, Kingdom of Ndongo, present-day Angola",
-        "birthPlaceStatus": "ungeolocated",
-        "pinPrecision": "none"
+        "capital": "Kabasa, now associated with Caculo Cabaça, Cuanza Norte, Angola",
+        "capitalStatus": "capital of Ndongo at her accession",
+        "pinPrecision": "historical locality"
       },
       "detail": {
-        "text": "Birthplace: Kabasa, Kingdom of Ndongo, present-day Angola. Born: c. 1583. The birthplace is named in biographies, but a sufficiently reliable coordinate for historical Kabasa was not established. Do not substitute Mbanza Kongo or Luanda.",
         "links": [
           {
             "label": "Fandom",
@@ -1508,8 +1474,8 @@
       "id": "sejong",
       "name": "Sejong",
       "coords": [
-        37.57,
-        126.98
+        37.5665,
+        126.978
       ],
       "theme": {
         "colorKey": "leaders-korean"
@@ -1522,12 +1488,11 @@
         "birthYear": 1397,
         "civilization": "Korean",
         "birthYearLabel": "1397",
-        "birthPlace": "Hanyang, now Seoul, South Korea",
-        "birthPlaceStatus": "documented",
+        "capital": "Hanseong (Hanyang), now Seoul, South Korea",
+        "capitalStatus": "capital",
         "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: Hanyang, now Seoul, South Korea. Born: 1397. Pin precision: city; coordinates mark a representative point.",
         "links": [
           {
             "label": "Fandom",
@@ -1543,7 +1508,10 @@
     {
       "id": "seondeok",
       "name": "Seondeok",
-      "coords": null,
+      "coords": [
+        35.8562,
+        129.2247
+      ],
       "theme": {
         "colorKey": "leaders-korean"
       },
@@ -1555,12 +1523,11 @@
         "birthYear": null,
         "civilization": "Korean",
         "birthYearLabel": "Unknown",
-        "birthPlace": "Unverified; Silla, present-day South Korea",
-        "birthPlaceStatus": "unverified",
-        "pinPrecision": "none"
+        "capital": "Seorabeol, now Gyeongju, South Korea",
+        "capitalStatus": "capital",
+        "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: Unverified; Silla, present-day South Korea. Born: Unknown. Her birth date is not securely known. Gyeongju is her royal capital and burial location, but a sourced birthplace was not established in this review.",
         "links": [
           {
             "label": "Fandom",
@@ -1577,8 +1544,8 @@
       "id": "alexander",
       "name": "Alexander",
       "coords": [
-        40.76,
-        22.52
+        40.761,
+        22.519
       ],
       "theme": {
         "colorKey": "leaders-macedonian"
@@ -1591,12 +1558,11 @@
         "birthYear": -356,
         "civilization": "Macedonian",
         "birthYearLabel": "356 BCE",
-        "birthPlace": "Pella, Central Macedonia, Greece",
-        "birthPlaceStatus": "documented",
+        "capital": "Pella, now Pella, Central Macedonia, Greece",
+        "capitalStatus": "capital of Macedon",
         "pinPrecision": "archaeological site"
       },
       "detail": {
-        "text": "Birthplace: Pella, Central Macedonia, Greece. Born: 356 BCE. Ancient Macedon; the birthplace is in present-day Greece, not North Macedonia. Pin precision: archaeological site; coordinates mark a representative point.",
         "links": [
           {
             "label": "Fandom",
@@ -1612,7 +1578,10 @@
     {
       "id": "mansa_musa",
       "name": "Mansa Musa",
-      "coords": null,
+      "coords": [
+        10.85,
+        -8.4
+      ],
       "theme": {
         "colorKey": "leaders-malian"
       },
@@ -1624,12 +1593,11 @@
         "birthYear": 1280,
         "civilization": "Malian",
         "birthYearLabel": "c. 1280",
-        "birthPlace": "Mali Empire; exact birthplace unknown",
-        "birthPlaceStatus": "unknown",
-        "pinPrecision": "none"
+        "capital": "Niani, traditionally identified near present-day Niani, Guinea",
+        "capitalStatus": "traditional capital; location/role debated",
+        "pinPrecision": "locality"
       },
       "detail": {
-        "text": "Birthplace: Mali Empire; exact birthplace unknown. Born: c. 1280. Neither Timbuktu nor Niani is substituted for an undocumented birthplace.",
         "links": [
           {
             "label": "Fandom",
@@ -1645,7 +1613,10 @@
     {
       "id": "sundiata_keita",
       "name": "Sundiata Keita",
-      "coords": null,
+      "coords": [
+        10.85,
+        -8.4
+      ],
       "theme": {
         "colorKey": "leaders-malian"
       },
@@ -1657,12 +1628,11 @@
         "birthYear": 1217,
         "civilization": "Malian",
         "birthYearLabel": "c. 1217 (chronology disputed)",
-        "birthPlace": "Dakadjalan, present-day Mali (traditional attribution)",
-        "birthPlaceStatus": "ungeolocated",
-        "pinPrecision": "none"
+        "capital": "Niani, traditionally identified near present-day Niani, Guinea",
+        "capitalStatus": "traditional capital; location/role debated",
+        "pinPrecision": "locality"
       },
       "detail": {
-        "text": "Birthplace: Dakadjalan, present-day Mali (traditional attribution). Born: c. 1217 (chronology disputed). The Sunjata tradition names Dakadjalan; other popular accounts give Niani and different birth years, including c. 1190. A defensible coordinate was not established.",
         "links": [
           {
             "label": "Fandom",
@@ -1678,10 +1648,7 @@
     {
       "id": "lautaro",
       "name": "Lautaro",
-      "coords": [
-        -36.43,
-        -72.67
-      ],
+      "coords": null,
       "theme": {
         "colorKey": "leaders-mapuche"
       },
@@ -1693,12 +1660,11 @@
         "birthYear": 1534,
         "civilization": "Mapuche",
         "birthYearLabel": "c. 1533–1534",
-        "birthPlace": "Treguaco, Ñuble, Chile",
-        "birthPlaceStatus": "reported",
-        "pinPrecision": "locality"
+        "capital": "No fixed capital; Mapuche political organization was decentralized across south-central Chile",
+        "capitalStatus": "no fixed capital",
+        "pinPrecision": "none"
       },
       "detail": {
-        "text": "Reported birthplace: Treguaco, Ñuble, Chile. Born: c. 1533–1534. The birthplace is commonly associated with Treguaco. Birth year varies between 1533 and 1534. Pin precision: locality; coordinates mark a representative point.",
         "links": [
           {
             "label": "Fandom",
@@ -1715,8 +1681,8 @@
       "id": "lady_six_sky",
       "name": "Lady Six Sky",
       "coords": [
-        16.446,
-        -90.295
+        17.165,
+        -89.14
       ],
       "theme": {
         "colorKey": "leaders-mayan"
@@ -1729,12 +1695,11 @@
         "birthYear": null,
         "civilization": "Mayan",
         "birthYearLabel": "Unknown",
-        "birthPlace": "Dos Pilas, Petén, Guatemala",
-        "birthPlaceStatus": "documented",
+        "capital": "Naranjo, now the Naranjo archaeological site, Petén, Guatemala",
+        "capitalStatus": "capital / royal seat",
         "pinPrecision": "archaeological site"
       },
       "detail": {
-        "text": "Birthplace: Dos Pilas, Petén, Guatemala. Born: Unknown. Her birth date is unknown. Dos Pilas was her birthplace; Naranjo was where she later ruled. Pin precision: archaeological site; coordinates mark a representative point.",
         "links": [
           {
             "label": "Fandom",
@@ -1750,7 +1715,10 @@
     {
       "id": "genghis_khan",
       "name": "Genghis Khan",
-      "coords": null,
+      "coords": [
+        47.1807,
+        109.0597
+      ],
       "theme": {
         "colorKey": "leaders-mongolian"
       },
@@ -1762,12 +1730,11 @@
         "birthYear": 1162,
         "civilization": "Mongolian",
         "birthYearLabel": "c. 1162",
-        "birthPlace": "Delüün Boldog, Onon River region (location disputed)",
-        "birthPlaceStatus": "disputed",
-        "pinPrecision": "none"
+        "capital": "Avarga (Ikh Aurug), now an archaeological site in Khentii Province, Mongolia",
+        "capitalStatus": "first nomadic capital / principal imperial base during Genghis Khan's reign",
+        "pinPrecision": "archaeological site"
       },
       "detail": {
-        "text": "Birthplace: Delüün Boldog, Onon River region (location disputed). Born: c. 1162. The Secret History names Delüün Boldog, but its modern identification is disputed between locations in Mongolia and Russia. No single candidate is pinned.",
         "links": [
           {
             "label": "Fandom",
@@ -1783,7 +1750,10 @@
     {
       "id": "kublai_khan_mongolian",
       "name": "Kublai Khan (Mongolian)",
-      "coords": null,
+      "coords": [
+        39.9042,
+        116.4074
+      ],
       "theme": {
         "colorKey": "leaders-mongolian"
       },
@@ -1795,12 +1765,11 @@
         "birthYear": 1215,
         "civilization": "Mongolian",
         "birthYearLabel": "1215",
-        "birthPlace": "Mongol Empire; exact birthplace not established",
-        "birthPlaceStatus": "unknown",
-        "pinPrecision": "none"
+        "capital": "Dadu (Khanbaliq), now Beijing, China (primary capital from 1272; Shangdu was earlier and remained the summer capital)",
+        "capitalStatus": "capital",
+        "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: Mongol Empire; exact birthplace not established. Born: 1215. No reliable local birthplace was established; neither Beijing nor Karakorum is substituted.",
         "links": [
           {
             "label": "Fandom",
@@ -1828,12 +1797,11 @@
         "birthYear": null,
         "civilization": "Māori",
         "birthYearLabel": "Unknown",
-        "birthPlace": "Hawaiki, ancestral Polynesian homeland (traditional)",
-        "birthPlaceStatus": "traditional",
+        "capital": "No historical capital; Kupe is a legendary navigator and rangatira rather than ruler of a centralized Māori state",
+        "capitalStatus": "no fixed capital",
         "pinPrecision": "none"
       },
       "detail": {
-        "text": "Traditional birthplace: Hawaiki, ancestral Polynesian homeland (traditional). Born: Unknown. Hawaiki cannot be assigned one secure modern coordinate. Kupe's chronology varies among traditions; neither a New Zealand landing place nor Raʻiātea is substituted.",
         "links": [
           {
             "label": "Fandom",
@@ -1850,8 +1818,8 @@
       "id": "harald_hardrada",
       "name": "Harald Hardrada",
       "coords": [
-        60.1,
-        10.3
+        63.4305,
+        10.3951
       ],
       "theme": {
         "colorKey": "leaders-norwegian"
@@ -1864,12 +1832,11 @@
         "birthYear": 1015,
         "civilization": "Norwegian",
         "birthYearLabel": "c. 1015",
-        "birthPlace": "Ringerike, Norway",
-        "birthPlaceStatus": "approximate",
-        "pinPrecision": "region"
+        "capital": "Nidaros, now Trondheim, Norway",
+        "capitalStatus": "royal capital / principal seat",
+        "pinPrecision": "city"
       },
       "detail": {
-        "text": "Approximate birthplace: Ringerike, Norway. Born: c. 1015. Pin represents the historical Ringerike region, not a verified birth farm. Pin precision: region; coordinates mark a representative point.",
         "links": [
           {
             "label": "Fandom",
@@ -1885,7 +1852,10 @@
     {
       "id": "amanitore",
       "name": "Amanitore",
-      "coords": null,
+      "coords": [
+        16.94,
+        33.75
+      ],
       "theme": {
         "colorKey": "leaders-nubian"
       },
@@ -1897,12 +1867,11 @@
         "birthYear": null,
         "civilization": "Nubian",
         "birthYearLabel": "Unknown",
-        "birthPlace": "Unknown; Kingdom of Kush, present-day Sudan",
-        "birthPlaceStatus": "unknown",
-        "pinPrecision": "none"
+        "capital": "Meroë, near Begrawiya, Sudan",
+        "capitalStatus": "capital",
+        "pinPrecision": "archaeological site"
       },
       "detail": {
-        "text": "Birthplace: Unknown; Kingdom of Kush, present-day Sudan. Born: Unknown. The location of her royal monuments or burial does not establish her birthplace.",
         "links": [
           {
             "label": "Fandom",
@@ -1919,8 +1888,8 @@
       "id": "suleiman",
       "name": "Suleiman",
       "coords": [
-        41.0,
-        39.72
+        41.0082,
+        28.9784
       ],
       "theme": {
         "colorKey": "leaders-ottoman"
@@ -1933,12 +1902,11 @@
         "birthYear": 1494,
         "civilization": "Ottoman",
         "birthYearLabel": "1494",
-        "birthPlace": "Trabzon, Turkey",
-        "birthPlaceStatus": "documented",
+        "capital": "Constantinople, now Istanbul, Turkey",
+        "capitalStatus": "capital",
         "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: Trabzon, Turkey. Born: 1494. Pin precision: city; coordinates mark a representative point.",
         "links": [
           {
             "label": "Fandom",
@@ -1955,8 +1923,8 @@
       "id": "cyrus",
       "name": "Cyrus",
       "coords": [
-        30.01,
-        52.41
+        30.2,
+        53.179
       ],
       "theme": {
         "colorKey": "leaders-persian"
@@ -1969,12 +1937,11 @@
         "birthYear": -600,
         "civilization": "Persian",
         "birthYearLabel": "c. 600 BCE",
-        "birthPlace": "Anshan, now Tall-e Malyan, Fars, Iran",
-        "birthPlaceStatus": "reported",
+        "capital": "Pasargadae, near present-day Murghab, Fars, Iran",
+        "capitalStatus": "capital",
         "pinPrecision": "archaeological site"
       },
       "detail": {
-        "text": "Reported birthplace: Anshan, now Tall-e Malyan, Fars, Iran. Born: c. 600 BCE. Traditional biographical assignment to Anshan; early-life accounts mix history and legend. Pin precision: archaeological site; coordinates mark a representative point.",
         "links": [
           {
             "label": "Fandom",
@@ -1991,8 +1958,8 @@
       "id": "nader_shah",
       "name": "Nader Shah",
       "coords": [
-        36.63,
-        59.17
+        36.2605,
+        59.6168
       ],
       "theme": {
         "colorKey": "leaders-persian"
@@ -2005,12 +1972,11 @@
         "birthYear": 1688,
         "civilization": "Persian",
         "birthYearLabel": "1688 or 1698",
-        "birthPlace": "Dastgerd, Razavi Khorasan, Iran",
-        "birthPlaceStatus": "reported",
-        "pinPrecision": "village"
+        "capital": "Mashhad, Iran",
+        "capitalStatus": "capital / principal metropolitan center",
+        "pinPrecision": "city"
       },
       "detail": {
-        "text": "Reported birthplace: Dastgerd, Razavi Khorasan, Iran. Born: 1688 or 1698. Pin uses the village identified as his birthplace; the historical fortress is not individually located. Birth-year traditions differ. Pin precision: village; coordinates mark a representative point.",
         "links": [
           {
             "label": "Fandom",
@@ -2019,10 +1985,6 @@
           {
             "label": "Wikipedia",
             "url": "https://en.wikipedia.org/wiki/Nader_Shah"
-          },
-          {
-            "label": "Birthplace source",
-            "url": "https://en.wikipedia.org/wiki/Dastgerd,_Razavi_Khorasan"
           }
         ]
       }
@@ -2031,8 +1993,8 @@
       "id": "dido",
       "name": "Dido",
       "coords": [
-        33.27,
-        35.2
+        36.8529,
+        10.3233
       ],
       "theme": {
         "colorKey": "leaders-phoenician"
@@ -2045,12 +2007,11 @@
         "birthYear": null,
         "civilization": "Phoenician",
         "birthYearLabel": "Unknown (traditionally 9th century BCE)",
-        "birthPlace": "Tyre, Lebanon (traditional)",
-        "birthPlaceStatus": "traditional",
-        "pinPrecision": "city"
+        "capital": "Carthage, now in the Tunis metropolitan area, Tunisia",
+        "capitalStatus": "capital",
+        "pinPrecision": "archaeological site"
       },
       "detail": {
-        "text": "Traditional birthplace: Tyre, Lebanon (traditional). Born: Unknown (traditionally 9th century BCE). A legendary founder figure. Tyre is her birthplace in the tradition, not a securely documented historical birth site. Pin precision: city; coordinates mark a representative point.",
         "links": [
           {
             "label": "Fandom",
@@ -2067,8 +2028,8 @@
       "id": "jadwiga",
       "name": "Jadwiga",
       "coords": [
-        47.5,
-        19.04
+        50.0647,
+        19.945
       ],
       "theme": {
         "colorKey": "leaders-polish"
@@ -2081,12 +2042,11 @@
         "birthYear": 1374,
         "civilization": "Polish",
         "birthYearLabel": "1373–1374",
-        "birthPlace": "Buda, now Budapest, Hungary",
-        "birthPlaceStatus": "documented",
+        "capital": "Kraków, Poland",
+        "capitalStatus": "capital",
         "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: Buda, now Budapest, Hungary. Born: 1373–1374. Born between October 1373 and February 1374; 1374 is used for sorting. Pin precision: city; coordinates mark a representative point.",
         "links": [
           {
             "label": "Fandom",
@@ -2103,8 +2063,8 @@
       "id": "joão_iii",
       "name": "João III",
       "coords": [
-        38.714,
-        -9.133
+        38.7223,
+        -9.1393
       ],
       "theme": {
         "colorKey": "leaders-portuguese"
@@ -2117,12 +2077,11 @@
         "birthYear": 1502,
         "civilization": "Portuguese",
         "birthYearLabel": "1502",
-        "birthPlace": "Alcáçova Palace, Lisbon, Portugal",
-        "birthPlaceStatus": "documented",
-        "pinPrecision": "site"
+        "capital": "Lisbon, Portugal",
+        "capitalStatus": "capital",
+        "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: Alcáçova Palace, Lisbon, Portugal. Born: 1502. Pin marks the former palace area within São Jorge Castle.",
         "links": [
           {
             "label": "Fandom",
@@ -2139,8 +2098,8 @@
       "id": "julius_caesar",
       "name": "Julius Caesar",
       "coords": [
-        41.895,
-        12.49
+        41.9028,
+        12.4964
       ],
       "theme": {
         "colorKey": "leaders-roman"
@@ -2153,12 +2112,11 @@
         "birthYear": -100,
         "civilization": "Roman",
         "birthYearLabel": "100 BCE",
-        "birthPlace": "Suburra, Rome, Italy",
-        "birthPlaceStatus": "documented",
-        "pinPrecision": "district"
+        "capital": "Rome, Italy",
+        "capitalStatus": "capital",
+        "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: Suburra, Rome, Italy. Born: 100 BCE. Pin represents the ancient Suburra district, not a verified birth house. Pin precision: district; coordinates mark a representative point.",
         "links": [
           {
             "label": "Fandom",
@@ -2175,8 +2133,8 @@
       "id": "trajan",
       "name": "Trajan",
       "coords": [
-        37.44,
-        -6.05
+        41.9028,
+        12.4964
       ],
       "theme": {
         "colorKey": "leaders-roman"
@@ -2189,12 +2147,11 @@
         "birthYear": 53,
         "civilization": "Roman",
         "birthYearLabel": "53",
-        "birthPlace": "Italica, near Santiponce, Seville, Spain",
-        "birthPlaceStatus": "documented",
-        "pinPrecision": "archaeological site"
+        "capital": "Rome, Italy",
+        "capitalStatus": "capital",
+        "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: Italica, near Santiponce, Seville, Spain. Born: 53. Born in Roman Hispania, not Rome. Pin precision: archaeological site; coordinates mark a representative point.",
         "links": [
           {
             "label": "Fandom",
@@ -2211,8 +2168,8 @@
       "id": "peter",
       "name": "Peter",
       "coords": [
-        55.75,
-        37.62
+        59.9311,
+        30.3609
       ],
       "theme": {
         "colorKey": "leaders-russian"
@@ -2225,12 +2182,11 @@
         "birthYear": 1672,
         "civilization": "Russian",
         "birthYearLabel": "1672",
-        "birthPlace": "Moscow, Russia",
-        "birthPlaceStatus": "documented",
+        "capital": "Saint Petersburg, Russia (capital from 1712; Moscow before 1712)",
+        "capitalStatus": "capital",
         "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: Moscow, Russia. Born: 1672. This is Peter the Great. Pin precision: city; coordinates mark a representative point.",
         "links": [
           {
             "label": "Fandom",
@@ -2247,8 +2203,8 @@
       "id": "robert_the_bruce",
       "name": "Robert the Bruce",
       "coords": [
-        55.326,
-        -4.844
+        56.423,
+        -3.435
       ],
       "theme": {
         "colorKey": "leaders-scottish"
@@ -2261,12 +2217,11 @@
         "birthYear": 1274,
         "civilization": "Scottish",
         "birthYearLabel": "1274",
-        "birthPlace": "Probably Turnberry Castle, Ayrshire, Scotland",
-        "birthPlaceStatus": "probable",
-        "pinPrecision": "site"
+        "capital": "Scone, now Old Scone near Perth, Scotland, United Kingdom",
+        "capitalStatus": "representative royal/ceremonial center; court was itinerant",
+        "pinPrecision": "locality"
       },
       "detail": {
-        "text": "Probable birthplace: Probably Turnberry Castle, Ayrshire, Scotland. Born: 1274. Turnberry is the usual attribution, but the birthplace is uncertain; Lochmaben is another proposal.",
         "links": [
           {
             "label": "Fandom",
@@ -2294,12 +2249,11 @@
         "birthYear": null,
         "civilization": "Scythian",
         "birthYearLabel": "Unknown",
-        "birthPlace": "Unknown; Massagetae territory in Central Asia",
-        "birthPlaceStatus": "unknown",
+        "capital": "No fixed capital; the Massagetae were a nomadic confederation east of the Caspian Sea",
+        "capitalStatus": "no fixed capital",
         "pinPrecision": "none"
       },
       "detail": {
-        "text": "Birthplace: Unknown; Massagetae territory in Central Asia. Born: Unknown. Herodotus records her story, but neither a birth year nor a defensible local birthplace is known.",
         "links": [
           {
             "label": "Fandom",
@@ -2316,8 +2270,8 @@
       "id": "philip_ii",
       "name": "Philip II",
       "coords": [
-        41.656,
-        -4.725
+        40.4168,
+        -3.7038
       ],
       "theme": {
         "colorKey": "leaders-spanish"
@@ -2330,12 +2284,11 @@
         "birthYear": 1527,
         "civilization": "Spanish",
         "birthYearLabel": "1527",
-        "birthPlace": "Palacio de Pimentel, Valladolid, Spain",
-        "birthPlaceStatus": "documented",
-        "pinPrecision": "site"
+        "capital": "Madrid, Spain (royal court fixed there from 1561)",
+        "capitalStatus": "capital / permanent royal court",
+        "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: Palacio de Pimentel, Valladolid, Spain. Born: 1527.",
         "links": [
           {
             "label": "Fandom",
@@ -2351,7 +2304,10 @@
     {
       "id": "gilgamesh",
       "name": "Gilgamesh",
-      "coords": null,
+      "coords": [
+        31.3222,
+        45.6361
+      ],
       "theme": {
         "colorKey": "leaders-sumerian"
       },
@@ -2363,12 +2319,11 @@
         "birthYear": null,
         "civilization": "Sumerian",
         "birthYearLabel": "Unknown",
-        "birthPlace": "Unknown",
-        "birthPlaceStatus": "unknown",
-        "pinPrecision": "none"
+        "capital": "Uruk, now Warka archaeological site, Iraq",
+        "capitalStatus": "city-state capital",
+        "pinPrecision": "archaeological site"
       },
       "detail": {
-        "text": "Birthplace: Unknown. Born: Unknown. Legendary or semi-historical king of Uruk. Uruk is not automatically his documented birthplace; proposed reign dates are not birth dates.",
         "links": [
           {
             "label": "Fandom",
@@ -2385,8 +2340,8 @@
       "id": "kristina",
       "name": "Kristina",
       "coords": [
-        59.327,
-        18.072
+        59.3293,
+        18.0686
       ],
       "theme": {
         "colorKey": "leaders-swedish"
@@ -2399,12 +2354,11 @@
         "birthYear": 1626,
         "civilization": "Swedish",
         "birthYearLabel": "1626",
-        "birthPlace": "Tre Kronor Castle, Stockholm, Sweden",
-        "birthPlaceStatus": "documented",
-        "pinPrecision": "site"
+        "capital": "Stockholm, Sweden",
+        "capitalStatus": "capital",
+        "pinPrecision": "city"
       },
       "detail": {
-        "text": "Birthplace: Tre Kronor Castle, Stockholm, Sweden. Born: 1626. The former castle stood on the site of today's Stockholm Palace.",
         "links": [
           {
             "label": "Fandom",
@@ -2421,8 +2375,8 @@
       "id": "bà_triệu",
       "name": "Bà Triệu",
       "coords": [
-        20.0,
-        105.65
+        19.63,
+        105.57
       ],
       "theme": {
         "colorKey": "leaders-vietnamese"
@@ -2435,12 +2389,11 @@
         "birthYear": null,
         "civilization": "Vietnamese",
         "birthYearLabel": "Unknown (traditionally 226)",
-        "birthPlace": "Yên Định area, Thanh Hóa, Vietnam",
-        "birthPlaceStatus": "traditional",
+        "capital": "No state capital; her 248 uprising was based at Núi Nưa, now in Thanh Hóa Province, Vietnam",
+        "capitalStatus": "rebel base, not a formal capital",
         "pinPrecision": "region"
       },
       "detail": {
-        "text": "Traditional birthplace: Yên Định area, Thanh Hóa, Vietnam. Born: Unknown (traditionally 226). The year 226 is traditional rather than securely documented. Pin represents the reported birth district, not her tomb in Hậu Lộc. Pin precision: region; coordinates mark a representative point.",
         "links": [
           {
             "label": "Fandom",
@@ -2457,8 +2410,8 @@
       "id": "shaka",
       "name": "Shaka",
       "coords": [
-        -28.59,
-        31.4
+        -29.338,
+        31.288
       ],
       "theme": {
         "colorKey": "leaders-zulu"
@@ -2471,12 +2424,11 @@
         "birthYear": 1787,
         "civilization": "Zulu",
         "birthYearLabel": "c. 1787",
-        "birthPlace": "Near Melmoth, KwaZulu-Natal, South Africa",
-        "birthPlaceStatus": "approximate",
-        "pinPrecision": "region"
+        "capital": "KwaDukuza, now KwaDukuza, KwaZulu-Natal, South Africa (royal capital from 1825)",
+        "capitalStatus": "royal capital",
+        "pinPrecision": "city"
       },
       "detail": {
-        "text": "Approximate birthplace: Near Melmoth, KwaZulu-Natal, South Africa. Born: c. 1787. Pin represents the reported birth area, not an exact birth site. Pin precision: region; coordinates mark a representative point.",
         "links": [
           {
             "label": "Fandom",

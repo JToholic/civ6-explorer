@@ -11,9 +11,9 @@ const TYPES = [
 // What to show in the right panel attribute grid (by type)
 const ATTR_DISPLAY = {
   wonders: [
-	  { key: "location", label: "Location" },
-	  { key: "era", label: "Era" },
-	  { key: "year", label: "Year" }
+    { key: "location", label: "Location" },
+    { key: "era", label: "Era" },
+    { key: "year", label: "Year" }
   ],
   natural_wonders: [
     { key: "terrain", label: "Terrain" },
@@ -22,9 +22,11 @@ const ATTR_DISPLAY = {
   leaders: [
     { key: "civilization", label: "Civilization" },
     { key: "birthYearLabel", label: "Birth Year" },
-    { key: "birthPlace", label: "Birthplace" }
+    { key: "capital", label: "Capital" }
   ],
-  city_states: [{ key: "type", label: "Type" }]
+  city_states: [
+    { key: "type", label: "Type" }
+  ]
 };
 
 // Subtitle shown under the name in the left list cards
@@ -39,7 +41,7 @@ const CARD_SUBTITLE = {
 const SEARCH_FIELDS = {
   wonders: ["name", "attrs.era", "attrs.location"],
   natural_wonders: ["name", "attrs.terrain", "attrs.location"],
-  leaders: ["name", "attrs.civilization"],
+  leaders: ["name", "attrs.civilization", "attrs.capital"],
   city_states: ["name", "attrs.type"]
 };
 
@@ -62,7 +64,6 @@ const statusEl = document.getElementById("statusText");
 const searchEl = document.getElementById("search");
 const sortEl = document.getElementById("sort");
 const listEl = document.getElementById("cardList");
-
 const detailPanelEl = document.getElementById("detailPanel");
 const detailCloseEl = document.getElementById("detailClose");
 const detailHeaderEl = document.getElementById("detailHeader");
@@ -84,6 +85,7 @@ let selectedItemId = null;
 // ---- Leaflet state ----
 let map = null;
 let markerLayer = null;
+
 // id -> array of 3 markers (lng-360, lng, lng+360)
 const markersById = new Map();
 
@@ -104,16 +106,20 @@ function isValidType(typeId) {
 
 function renderTabs() {
   tabsEl.innerHTML = "";
+
   for (const t of TYPES) {
     const btn = document.createElement("button");
     btn.type = "button";
     btn.className = "tab" + (t.id === activeType ? " is-active" : "");
     btn.textContent = t.label;
+
     btn.addEventListener("click", () => {
       if (t.id === activeType) return;
+
       setTypeInUrl(t.id);
       applyType(t.id);
     });
+
     tabsEl.appendChild(btn);
   }
 }
@@ -122,16 +128,27 @@ function renderTabs() {
 async function loadDataset(typeId) {
   const path = `datasets/${typeId}.json`;
   const res = await fetch(path, { cache: "no-store" });
-  if (!res.ok) throw new Error(`Failed to load ${path} (${res.status})`);
+
+  if (!res.ok) {
+    throw new Error(`Failed to load ${path} (${res.status})`);
+  }
+
   return await res.json();
 }
 
 // ---- Helpers ----
 function getByPath(obj, path) {
   if (!path) return undefined;
+
   return path
     .split(".")
-    .reduce((acc, key) => (acc && acc[key] !== undefined ? acc[key] : undefined), obj);
+    .reduce(
+      (acc, key) =>
+        acc && acc[key] !== undefined
+          ? acc[key]
+          : undefined,
+      obj
+    );
 }
 
 function normalizeString(s) {
@@ -140,15 +157,22 @@ function normalizeString(s) {
 
 function applySearch(items) {
   const q = normalizeString(searchQuery).trim();
+
   if (!q) return items;
 
   const fields = SEARCH_FIELDS[activeType] || ["name"];
+
   return items.filter((it) => {
     for (const field of fields) {
       const v = getByPath(it, field);
+
       if (v === undefined || v === null) continue;
-      if (normalizeString(v).includes(q)) return true;
+
+      if (normalizeString(v).includes(q)) {
+        return true;
+      }
     }
+
     return false;
   });
 }
@@ -159,7 +183,9 @@ function applySort(items) {
 
   // Fallback: pure alpha
   if (!chosen || chosen.id === "alpha") {
-    return [...items].sort((a, b) => String(a.name).localeCompare(String(b.name)));
+    return [...items].sort((a, b) =>
+      String(a.name).localeCompare(String(b.name))
+    );
   }
 
   const order = chosen.order === "desc" ? -1 : 1;
@@ -168,40 +194,61 @@ function applySort(items) {
     const av = getByPath(a, chosen.field);
     const bv = getByPath(b, chosen.field);
 
-	if (chosen.id === "era") {
-	  const ao = ERA_ORDER[normalizeString(av).trim()] ?? 999;
-	  const bo = ERA_ORDER[normalizeString(bv).trim()] ?? 999;
-	  if (ao !== bo) return order * (ao - bo);
-	  return String(a.name).localeCompare(String(b.name));
-	}
+    if (chosen.id === "era") {
+      const ao = ERA_ORDER[normalizeString(av).trim()] ?? 999;
+      const bo = ERA_ORDER[normalizeString(bv).trim()] ?? 999;
+
+      if (ao !== bo) {
+        return order * (ao - bo);
+      }
+
+      return String(a.name).localeCompare(String(b.name));
+    }
 
     // Missing values last (including unknown birth years).
     if (av == null && bv == null) {
       return String(a.name).localeCompare(String(b.name));
     }
+
     if (av == null) return 1;
     if (bv == null) return -1;
 
     let primary;
-    if (typeof av === "number" && typeof bv === "number") {
+
+    if (
+      typeof av === "number" &&
+      typeof bv === "number"
+    ) {
       primary = order * (av - bv);
     } else {
-      primary = order * String(av).localeCompare(String(bv));
+      primary =
+        order *
+        String(av).localeCompare(String(bv));
     }
 
     if (primary !== 0) return primary;
-    return String(a.name).localeCompare(String(b.name)); // tie-break alpha
+
+    // tie-break alpha
+    return String(a.name).localeCompare(String(b.name));
   });
 }
 
 function resolveAccent(item) {
   const key = item?.theme?.colorKey;
-  return key ? `var(--color-${key})` : null;
+
+  return key
+    ? `var(--color-${key})`
+    : null;
 }
 
 function setImgWithFallback(imgEl, src) {
-  const clean = src && String(src).trim() ? src : PLACEHOLDER_THUMB;
+  const clean =
+    src && String(src).trim()
+      ? src
+      : PLACEHOLDER_THUMB;
+
   imgEl.src = clean;
+
   imgEl.onerror = () => {
     imgEl.src = PLACEHOLDER_THUMB;
   };
@@ -219,21 +266,31 @@ function openDetail() {
 function closeDetail() {
   detailPanelEl.classList.add("hidden");
   selectedItemId = null;
+
   if (activeData) {
-	renderList();
-	renderMapPins();
-	renderBottomTray();
+    renderList();
+    renderMapPins();
+    renderBottomTray();
   }
 }
 
 function renderAttrs(item) {
   detailAttrsEl.innerHTML = "";
+
   const cfg = ATTR_DISPLAY[activeType];
+
   if (!cfg || !item?.attrs) return;
 
   for (const { key, label } of cfg) {
     const val = item.attrs[key];
-    if (val === undefined || val === null || val === "") continue;
+
+    if (
+      val === undefined ||
+      val === null ||
+      val === ""
+    ) {
+      continue;
+    }
 
     const k = document.createElement("div");
     k.className = "detailAttrKey";
@@ -252,26 +309,65 @@ function renderDetail(item) {
   if (!item) return;
 
   const accent = resolveAccent(item);
-  detailHeaderEl.style.background = accent ? accent : "";
-  detailHeaderEl.style.color = accent ? "#fff" : "";
 
-  detailTitleEl.textContent = item.name ?? "";
+  detailHeaderEl.style.background =
+    accent ? accent : "";
 
-  setImgWithFallback(detailThumbIngameEl, item?.thumbs?.ingame);
-  setImgWithFallback(detailThumbIrlEl, item?.thumbs?.irl);
+  detailHeaderEl.style.color =
+    accent ? "#fff" : "";
 
-  detailTextEl.textContent = item?.detail?.text ?? "";
+  detailTitleEl.textContent =
+    item.name ?? "";
+
+  setImgWithFallback(
+    detailThumbIngameEl,
+    item?.thumbs?.ingame
+  );
+
+  setImgWithFallback(
+    detailThumbIrlEl,
+    item?.thumbs?.irl
+  );
+
+  // detail.text is optional.
+  // Leaders no longer have one.
+  const detailText = item?.detail?.text;
+
+  if (
+    detailText !== undefined &&
+    detailText !== null &&
+    String(detailText).trim() !== ""
+  ) {
+    detailTextEl.textContent =
+      String(detailText);
+
+    detailTextEl.style.display = "";
+  } else {
+    detailTextEl.textContent = "";
+    detailTextEl.style.display = "none";
+  }
+
   renderAttrs(item);
 
-  const links = Array.isArray(item?.detail?.links) ? item.detail.links : [];
+  const links =
+    Array.isArray(item?.detail?.links)
+      ? item.detail.links
+      : [];
+
   detailLinksEl.innerHTML = "";
+
   for (const l of links) {
     if (!l?.url) continue;
-    const a = document.createElement("a");
+
+    const a =
+      document.createElement("a");
+
     a.href = l.url;
     a.target = "_blank";
     a.rel = "noopener";
-    a.textContent = l.label || l.url;
+    a.textContent =
+      l.label || l.url;
+
     detailLinksEl.appendChild(a);
   }
 
@@ -280,91 +376,181 @@ function renderDetail(item) {
 
 // ---- List rendering ----
 function getVisibleItems() {
-  const itemsRaw = Array.isArray(activeData?.items) ? activeData.items : [];
-  const itemsFiltered = applySearch(itemsRaw);
-  const itemsSorted = applySort(itemsFiltered);
-  return { itemsRaw, itemsFiltered, itemsSorted };
+  const itemsRaw =
+    Array.isArray(activeData?.items)
+      ? activeData.items
+      : [];
+
+  const itemsFiltered =
+    applySearch(itemsRaw);
+
+  const itemsSorted =
+    applySort(itemsFiltered);
+
+  return {
+    itemsRaw,
+    itemsFiltered,
+    itemsSorted
+  };
 }
 
 function renderSortDropdown() {
-  const opts = activeData?.sortOptions || [];
+  const opts =
+    activeData?.sortOptions || [];
+
   sortEl.innerHTML = "";
 
   if (opts.length === 0) {
-    const o = document.createElement("option");
+    const o =
+      document.createElement("option");
+
     o.value = "alpha";
     o.textContent = "A → Z";
+
     sortEl.appendChild(o);
+
     activeSortId = "alpha";
     sortEl.disabled = true;
+
     return;
   }
 
   sortEl.disabled = false;
+
   for (const s of opts) {
-    const o = document.createElement("option");
+    const o =
+      document.createElement("option");
+
     o.value = s.id;
     o.textContent = s.label;
+
     sortEl.appendChild(o);
   }
 
-  const defaultSort = activeData?.meta?.defaultSort;
-  const initial = opts.some((x) => x.id === defaultSort) ? defaultSort : opts[0].id;
+  const defaultSort =
+    activeData?.meta?.defaultSort;
+
+  const initial =
+    opts.some(
+      (x) => x.id === defaultSort
+    )
+      ? defaultSort
+      : opts[0].id;
+
   activeSortId = initial;
   sortEl.value = initial;
 }
 
 function openBestTooltipForId(id) {
-  const ms = markersById.get(id);
-  if (!ms || !ms.length || !map) return;
+  const ms =
+    markersById.get(id);
 
-  const centerLng = map.getCenter().lng;
+  if (
+    !ms ||
+    !ms.length ||
+    !map
+  ) {
+    return;
+  }
+
+  const centerLng =
+    map.getCenter().lng;
+
   let best = ms[0];
   let bestD = Infinity;
 
   for (const m of ms) {
-    const d = Math.abs(m.getLatLng().lng - centerLng);
+    const d =
+      Math.abs(
+        m.getLatLng().lng -
+        centerLng
+      );
+
     if (d < bestD) {
       bestD = d;
       best = m;
     }
   }
+
   best.openTooltip();
 }
 
 function closeAllTooltipsForId(id) {
-  const ms = markersById.get(id);
+  const ms =
+    markersById.get(id);
+
   if (!ms) return;
-  for (const m of ms) m.closeTooltip();
+
+  for (const m of ms) {
+    m.closeTooltip();
+  }
 }
 
 function renderList() {
-  const title = activeData?.meta?.title ?? activeType;
-  const { itemsRaw, itemsSorted } = getVisibleItems();
+  const title =
+    activeData?.meta?.title ??
+    activeType;
 
-  statusEl.textContent = `${title}: showing ${itemsSorted.length}/${itemsRaw.length}`;
+  const {
+    itemsRaw,
+    itemsSorted
+  } = getVisibleItems();
+
+  statusEl.textContent =
+    `${title}: showing ${itemsSorted.length}/${itemsRaw.length}`;
 
   listEl.innerHTML = "";
-  for (const it of itemsSorted) {
-    const li = document.createElement("li");
-	li.dataset.id = it.id;
-    if (it.id === selectedItemId) li.classList.add("is-selected");
 
-    const accent = resolveAccent(it);
-    if (accent) li.style.borderLeft = `10px solid ${accent}`;
+  for (const it of itemsSorted) {
+    const li =
+      document.createElement("li");
+
+    li.dataset.id = it.id;
+
+    if (
+      it.id === selectedItemId
+    ) {
+      li.classList.add(
+        "is-selected"
+      );
+    }
+
+    const accent =
+      resolveAccent(it);
+
+    if (accent) {
+      li.style.borderLeft =
+        `10px solid ${accent}`;
+    }
 
     const thumbSrc =
-      it?.thumbs?.ingame && String(it.thumbs.ingame).trim()
+      it?.thumbs?.ingame &&
+      String(
+        it.thumbs.ingame
+      ).trim()
         ? it.thumbs.ingame
         : PLACEHOLDER_THUMB;
 
-    const subCfg = CARD_SUBTITLE[activeType] || {};
-    const subVal = subCfg.field ? getByPath(it, subCfg.field) ?? "" : "";
+    const subCfg =
+      CARD_SUBTITLE[activeType] ||
+      {};
+
+    const subVal =
+      subCfg.field
+        ? getByPath(
+            it,
+            subCfg.field
+          ) ?? ""
+        : "";
 
     li.innerHTML = `
       <div class="card">
-        <img class="cardThumb" src="${thumbSrc}" alt="${it.name}"
-             onerror="this.src='${PLACEHOLDER_THUMB}'">
+        <img
+          class="cardThumb"
+          src="${thumbSrc}"
+          alt="${it.name}"
+          onerror="this.src='${PLACEHOLDER_THUMB}'"
+        >
         <div>
           <div class="cardTitle">${it.name}</div>
           <div class="cardSub">${subVal}</div>
@@ -372,22 +558,47 @@ function renderList() {
       </div>
     `;
 
-    li.addEventListener("mouseenter", () => openBestTooltipForId(it.id));
-    li.addEventListener("mouseleave", () => closeAllTooltipsForId(it.id));
+    li.addEventListener(
+      "mouseenter",
+      () =>
+        openBestTooltipForId(
+          it.id
+        )
+    );
 
-    li.addEventListener("click", () => {
-      const same = selectedItemId === it.id;
-      if (same && isDetailOpen()) {
-        closeDetail();
-        return;
+    li.addEventListener(
+      "mouseleave",
+      () =>
+        closeAllTooltipsForId(
+          it.id
+        )
+    );
+
+    li.addEventListener(
+      "click",
+      () => {
+        const same =
+          selectedItemId ===
+          it.id;
+
+        if (
+          same &&
+          isDetailOpen()
+        ) {
+          closeDetail();
+          return;
+        }
+
+        selectedItemId =
+          it.id;
+
+        renderList();
+        renderMapPins();
+        renderBottomTray();
+        renderDetail(it);
+        centerSelectedOnMap(it);
       }
-      selectedItemId = it.id;
-      renderList();
-	  renderMapPins();
-	  renderBottomTray();
-      renderDetail(it);
-	  centerSelectedOnMap(it);
-    });
+    );
 
     listEl.appendChild(li);
   }
@@ -397,22 +608,58 @@ function renderList() {
 function initMapOnce() {
   if (map) return;
 
-  map = L.map("map", { worldCopyJump: true, minZoom: 2 }).setView([20, 0], 2);
+  map = L.map(
+    "map",
+    {
+      worldCopyJump: true,
+      minZoom: 2
+    }
+  ).setView(
+    [20, 0],
+    2
+  );
 
-  const MAX_BOUNDS = L.latLngBounds([[-85, -9999], [85, 9999]]);
-  map.setMaxBounds(MAX_BOUNDS);
-  map.on("drag", () => map.panInsideBounds(MAX_BOUNDS, { animate: false }));
+  const MAX_BOUNDS =
+    L.latLngBounds(
+      [
+        [-85, -9999],
+        [85, 9999]
+      ]
+    );
 
-  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    maxZoom: 19,
-    attribution: "© OpenStreetMap"
-  }).addTo(map);
+  map.setMaxBounds(
+    MAX_BOUNDS
+  );
 
-  markerLayer = L.layerGroup().addTo(map);
+  map.on(
+    "drag",
+    () =>
+      map.panInsideBounds(
+        MAX_BOUNDS,
+        {
+          animate: false
+        }
+      )
+  );
+
+  L.tileLayer(
+    "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+    {
+      maxZoom: 19,
+      attribution:
+        "© OpenStreetMap"
+    }
+  ).addTo(map);
+
+  markerLayer =
+    L.layerGroup().addTo(map);
 }
 
 function resolvePinColor(item) {
-  return resolveAccent(item) || "#444";
+  return (
+    resolveAccent(item) ||
+    "#444"
+  );
 }
 
 function renderMapPins() {
@@ -421,115 +668,264 @@ function renderMapPins() {
   markerLayer.clearLayers();
   markersById.clear();
 
-  const { itemsFiltered } = getVisibleItems();
+  const {
+    itemsFiltered
+  } = getVisibleItems();
 
-  for (const it of itemsFiltered) {
-    if (!Array.isArray(it.coords) || it.coords.length !== 2) continue;
+  for (
+    const it of
+    itemsFiltered
+  ) {
+    if (
+      !Array.isArray(
+        it.coords
+      ) ||
+      it.coords.length !== 2
+    ) {
+      continue;
+    }
 
-    const [lat, lng] = it.coords;
-    if (typeof lat !== "number" || typeof lng !== "number") continue;
+    const [lat, lng] =
+      it.coords;
 
-    const color = resolvePinColor(it);
+    if (
+      typeof lat !== "number" ||
+      typeof lng !== "number"
+    ) {
+      continue;
+    }
 
-	const selectedClass = (it.id === selectedItemId) ? " is-selected" : "";
-    const icon = L.divIcon({
-      className: "",
-	  html: `<div class="pinDot${selectedClass}" style="background:${color}"></div>`,
-      iconSize: [14, 14],
-      iconAnchor: [7, 7]
-    });
+    const color =
+      resolvePinColor(it);
+
+    const selectedClass =
+      it.id === selectedItemId
+        ? " is-selected"
+        : "";
+
+    const icon =
+      L.divIcon({
+        className: "",
+        html:
+          `<div class="pinDot${selectedClass}" style="background:${color}"></div>`,
+        iconSize: [14, 14],
+        iconAnchor: [7, 7]
+      });
 
     const ms = [];
-    for (const shift of [-360, 0, 360]) {
-      const m = L.marker([lat, lng + shift], { icon }).addTo(markerLayer);
 
-      m.bindTooltip(it.name, {
-        direction: "top",
-        offset: [0, -10],
-        opacity: 1,
-        className: "pinLabel"
-      });
+    for (
+      const shift of
+      [-360, 0, 360]
+    ) {
+      const m =
+        L.marker(
+          [
+            lat,
+            lng + shift
+          ],
+          { icon }
+        ).addTo(
+          markerLayer
+        );
 
-      m.on("mouseover", () => m.openTooltip());
-      m.on("mouseout", () => m.closeTooltip());
-
-      m.on("click", () => {
-        const same = selectedItemId === it.id;
-        if (same && isDetailOpen()) {
-          closeDetail();
-          return;
+      m.bindTooltip(
+        it.name,
+        {
+          direction: "top",
+          offset: [0, -10],
+          opacity: 1,
+          className:
+            "pinLabel"
         }
-        selectedItemId = it.id;
-        renderList();
-        renderMapPins();
-        renderDetail(it);
-		centerSelectedOnMap(it);
-      });
+      );
+
+      m.on(
+        "mouseover",
+        () =>
+          m.openTooltip()
+      );
+
+      m.on(
+        "mouseout",
+        () =>
+          m.closeTooltip()
+      );
+
+      m.on(
+        "click",
+        () => {
+          const same =
+            selectedItemId ===
+            it.id;
+
+          if (
+            same &&
+            isDetailOpen()
+          ) {
+            closeDetail();
+            return;
+          }
+
+          selectedItemId =
+            it.id;
+
+          renderList();
+          renderMapPins();
+          renderDetail(it);
+          centerSelectedOnMap(it);
+        }
+      );
 
       ms.push(m);
     }
 
-    markersById.set(it.id, ms);
+    markersById.set(
+      it.id,
+      ms
+    );
   }
 }
 
-function centerSelectedOnMap(item) {
-  if (!map || !item || !Array.isArray(item.coords) || item.coords.length !== 2) return;
-  const [lat, lng] = item.coords;
-  map.panTo([lat, lng+90], { animate: true });
+function centerSelectedOnMap(
+  item
+) {
+  if (
+    !map ||
+    !item ||
+    !Array.isArray(
+      item.coords
+    ) ||
+    item.coords.length !== 2
+  ) {
+    return;
+  }
+
+  const [lat, lng] =
+    item.coords;
+
+  map.panTo(
+    [
+      lat,
+      lng + 90
+    ],
+    {
+      animate: true
+    }
+  );
 }
 
 // ---- Bottom tray ----
 function renderBottomTray() {
   if (!trayPinsEl) return;
-  trayPinsEl.innerHTML = "";
+
+  trayPinsEl.innerHTML =
+    "";
 
   if (!activeData) return;
 
-  const { itemsSorted } = getVisibleItems();
-  const noCoordItems = itemsSorted.filter(
-    it => !Array.isArray(it.coords) || it.coords.length !== 2
-  );
+  const {
+    itemsSorted
+  } = getVisibleItems();
 
-  for (const it of noCoordItems) {
-    const btn = document.createElement("button");
+  const noCoordItems =
+    itemsSorted.filter(
+      (it) =>
+        !Array.isArray(
+          it.coords
+        ) ||
+        it.coords.length !== 2
+    );
+
+  for (
+    const it of
+    noCoordItems
+  ) {
+    const btn =
+      document.createElement(
+        "button"
+      );
+
     btn.type = "button";
-    btn.className = "trayPin";
+    btn.className =
+      "trayPin";
+
     btn.title = it.name;
 
-    if (it.id === selectedItemId) btn.classList.add("is-selected");
+    if (
+      it.id ===
+      selectedItemId
+    ) {
+      btn.classList.add(
+        "is-selected"
+      );
+    }
 
-    const accent = resolveAccent(it);
-    if (accent) btn.style.background = accent;
+    const accent =
+      resolveAccent(it);
 
-    const img = document.createElement("img");
+    if (accent) {
+      btn.style.background =
+        accent;
+    }
+
+    const img =
+      document.createElement(
+        "img"
+      );
+
     img.alt = it.name;
-    img.src = (it?.thumbs?.ingame && String(it.thumbs.ingame).trim()) ? it.thumbs.ingame : PLACEHOLDER_THUMB;
-    img.onerror = () => { img.src = PLACEHOLDER_THUMB; };
+
+    img.src =
+      it?.thumbs?.ingame &&
+      String(
+        it.thumbs.ingame
+      ).trim()
+        ? it.thumbs.ingame
+        : PLACEHOLDER_THUMB;
+
+    img.onerror = () => {
+      img.src =
+        PLACEHOLDER_THUMB;
+    };
 
     btn.appendChild(img);
 
-    btn.addEventListener("click", () => {
-      const same = (selectedItemId === it.id);
+    btn.addEventListener(
+      "click",
+      () => {
+        const same =
+          selectedItemId ===
+          it.id;
 
-      if (same && isDetailOpen()) {
-        closeDetail(); // your closeDetail clears selection + re-renders
-        return;
+        if (
+          same &&
+          isDetailOpen()
+        ) {
+          closeDetail();
+          return;
+        }
+
+        selectedItemId =
+          it.id;
+
+        renderList();
+        renderMapPins();
+        renderBottomTray();
+        renderDetail(it);
       }
+    );
 
-      selectedItemId = it.id;
-      renderList();
-      renderMapPins();
-      renderBottomTray();
-      renderDetail(it);
-    });
-
-    trayPinsEl.appendChild(btn);
+    trayPinsEl.appendChild(
+      btn
+    );
   }
 }
 
 // ---- Main flow ----
-async function applyType(typeId) {
+async function applyType(
+  typeId
+) {
   closeDetail();
 
   activeType = typeId;
@@ -540,56 +936,109 @@ async function applyType(typeId) {
   searchQuery = "";
   searchEl.value = "";
 
-  statusEl.textContent = "Loading…";
+  statusEl.textContent =
+    "Loading…";
+
   listEl.innerHTML = "";
   sortEl.innerHTML = "";
 
   try {
-    activeData = await loadDataset(typeId);
+    activeData =
+      await loadDataset(
+        typeId
+      );
+
     renderSortDropdown();
     renderList();
     renderMapPins();
-	renderBottomTray();
+    renderBottomTray();
   } catch (err) {
-    statusEl.textContent = `Error: ${err.message}`;
+    statusEl.textContent =
+      `Error: ${err.message}`;
+
     console.error(err);
   }
 }
 
 function init() {
-  searchEl.addEventListener("input", (e) => {
-    searchQuery = e.target.value;
-    renderList();
-    renderMapPins();
-	renderBottomTray();
-  });
+  searchEl.addEventListener(
+    "input",
+    (e) => {
+      searchQuery =
+        e.target.value;
 
-  sortEl.addEventListener("change", (e) => {
-    activeSortId = e.target.value;
-    renderList();
-    renderMapPins();
-	renderBottomTray();
-  });
+      renderList();
+      renderMapPins();
+      renderBottomTray();
+    }
+  );
 
-  detailCloseEl.addEventListener("click", closeDetail);
+  sortEl.addEventListener(
+    "change",
+    (e) => {
+      activeSortId =
+        e.target.value;
 
-  const urlType = getTypeFromUrl();
-  const defaultType = TYPES[0].id;
-  const initialType = isValidType(urlType) ? urlType : defaultType;
+      renderList();
+      renderMapPins();
+      renderBottomTray();
+    }
+  );
 
-  if (urlType !== initialType) {
-    const url = new URL(window.location.href);
-    url.searchParams.set("type", initialType);
-    history.replaceState({ type: initialType }, "", url);
+  detailCloseEl.addEventListener(
+    "click",
+    closeDetail
+  );
+
+  const urlType =
+    getTypeFromUrl();
+
+  const defaultType =
+    TYPES[0].id;
+
+  const initialType =
+    isValidType(urlType)
+      ? urlType
+      : defaultType;
+
+  if (
+    urlType !==
+    initialType
+  ) {
+    const url =
+      new URL(
+        window.location.href
+      );
+
+    url.searchParams.set(
+      "type",
+      initialType
+    );
+
+    history.replaceState(
+      {
+        type: initialType
+      },
+      "",
+      url
+    );
   }
 
   applyType(initialType);
 
-  window.addEventListener("popstate", () => {
-    const t = getTypeFromUrl();
-    applyType(isValidType(t) ? t : TYPES[0].id);
-  });
+  window.addEventListener(
+    "popstate",
+    () => {
+      const t =
+        getTypeFromUrl();
+
+      applyType(
+        isValidType(t)
+          ? t
+          : TYPES[0].id
+      );
+    }
+  );
 }
 
 init();
-
