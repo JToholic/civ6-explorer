@@ -787,32 +787,50 @@ function renderMapPins() {
   }
 }
 
-function centerSelectedOnMap(
-  item
-) {
+function centerSelectedOnMap(item) {
   if (
     !map ||
     !item ||
-    !Array.isArray(
-      item.coords
-    ) ||
+    !Array.isArray(item.coords) ||
     item.coords.length !== 2
   ) {
     return;
   }
 
-  const [lat, lng] =
-    item.coords;
+  const [lat, lng] = item.coords;
 
-  map.panTo(
-    [
-      lat,
-      lng + 90
-    ],
-    {
-      animate: true
-    }
+  // Use the wrapped copy of the longitude closest to the current view.
+  const currentLng = map.getCenter().lng;
+  const wrappedLng =
+    lng + 360 * Math.round((currentLng - lng) / 360);
+
+  // Offset the pin left to account for the open right-hand detail panel.
+  // This is measured in screen pixels, so it works at every zoom level.
+  const panelWidth = isDetailOpen()
+    ? detailPanelEl.getBoundingClientRect().width
+    : 0;
+
+  const offsetX = panelWidth / 2;
+
+  const zoom = map.getZoom();
+
+  const pinPoint = map.project(
+    [lat, wrappedLng],
+    zoom
   );
+
+  const centerPoint = pinPoint.add(
+    [offsetX, 0]
+  );
+
+  const targetCenter = map.unproject(
+    centerPoint,
+    zoom
+  );
+
+  map.panTo(targetCenter, {
+    animate: true
+  });
 }
 
 // ---- Bottom tray ----
