@@ -46,14 +46,14 @@ const SEARCH_FIELDS = {
 };
 
 const ERA_ORDER = {
-  "ancient": 1,
-  "classical": 2,
-  "medieval": 3,
-  "renaissance": 4,
-  "industrial": 5,
-  "modern": 6,
-  "atomic": 7,
-  "information": 8
+  ancient: 1,
+  classical: 2,
+  medieval: 3,
+  renaissance: 4,
+  industrial: 5,
+  modern: 6,
+  atomic: 7,
+  information: 8
 };
 
 const PLACEHOLDER_THUMB = "assets/thumbs/placeholder.png";
@@ -64,6 +64,7 @@ const statusEl = document.getElementById("statusText");
 const searchEl = document.getElementById("search");
 const sortEl = document.getElementById("sort");
 const listEl = document.getElementById("cardList");
+
 const detailPanelEl = document.getElementById("detailPanel");
 const detailCloseEl = document.getElementById("detailClose");
 const detailHeaderEl = document.getElementById("detailHeader");
@@ -73,6 +74,7 @@ const detailThumbIrlEl = document.getElementById("detailThumbIrl");
 const detailTextEl = document.getElementById("detailText");
 const detailLinksEl = document.getElementById("detailLinks");
 const detailAttrsEl = document.getElementById("detailAttrs");
+
 const trayPinsEl = document.querySelector("#bottomTray .trayPins");
 
 // ---- App state ----
@@ -86,7 +88,8 @@ let selectedItemId = null;
 let map = null;
 let markerLayer = null;
 
-// id -> array of 3 markers (lng-360, lng, lng+360)
+// id -> three marker copies:
+// left world, central world, right world
 const markersById = new Map();
 
 // ---- URL / Tabs ----
@@ -127,7 +130,10 @@ function renderTabs() {
 // ---- Data loading ----
 async function loadDataset(typeId) {
   const path = `datasets/${typeId}.json`;
-  const res = await fetch(path, { cache: "no-store" });
+
+  const res = await fetch(path, {
+    cache: "no-store"
+  });
 
   if (!res.ok) {
     throw new Error(`Failed to load ${path} (${res.status})`);
@@ -179,9 +185,11 @@ function applySearch(items) {
 
 function applySort(items) {
   const sortOptions = activeData?.sortOptions || [];
-  const chosen = sortOptions.find((s) => s.id === activeSortId);
 
-  // Fallback: pure alpha
+  const chosen = sortOptions.find(
+    (s) => s.id === activeSortId
+  );
+
   if (!chosen || chosen.id === "alpha") {
     return [...items].sort((a, b) =>
       String(a.name).localeCompare(String(b.name))
@@ -195,8 +203,11 @@ function applySort(items) {
     const bv = getByPath(b, chosen.field);
 
     if (chosen.id === "era") {
-      const ao = ERA_ORDER[normalizeString(av).trim()] ?? 999;
-      const bo = ERA_ORDER[normalizeString(bv).trim()] ?? 999;
+      const ao =
+        ERA_ORDER[normalizeString(av).trim()] ?? 999;
+
+      const bo =
+        ERA_ORDER[normalizeString(bv).trim()] ?? 999;
 
       if (ao !== bo) {
         return order * (ao - bo);
@@ -205,7 +216,7 @@ function applySort(items) {
       return String(a.name).localeCompare(String(b.name));
     }
 
-    // Missing values last (including unknown birth years).
+    // Missing values last
     if (av == null && bv == null) {
       return String(a.name).localeCompare(String(b.name));
     }
@@ -228,7 +239,6 @@ function applySort(items) {
 
     if (primary !== 0) return primary;
 
-    // tie-break alpha
     return String(a.name).localeCompare(String(b.name));
   });
 }
@@ -330,7 +340,6 @@ function renderDetail(item) {
   );
 
   // detail.text is optional.
-  // Leaders no longer have one.
   const detailText = item?.detail?.text;
 
   if (
@@ -338,9 +347,7 @@ function renderDetail(item) {
     detailText !== null &&
     String(detailText).trim() !== ""
   ) {
-    detailTextEl.textContent =
-      String(detailText);
-
+    detailTextEl.textContent = String(detailText);
     detailTextEl.style.display = "";
   } else {
     detailTextEl.textContent = "";
@@ -359,8 +366,7 @@ function renderDetail(item) {
   for (const l of links) {
     if (!l?.url) continue;
 
-    const a =
-      document.createElement("a");
+    const a = document.createElement("a");
 
     a.href = l.url;
     a.target = "_blank";
@@ -441,6 +447,7 @@ function renderSortDropdown() {
   sortEl.value = initial;
 }
 
+// For hover only, open the copy nearest the current view.
 function openBestTooltipForId(id) {
   const ms =
     markersById.get(id);
@@ -596,6 +603,9 @@ function renderList() {
         renderMapPins();
         renderBottomTray();
         renderDetail(it);
+
+        // Always move to the canonical pin
+        // in the CENTRAL world.
         centerSelectedOnMap(it);
       }
     );
@@ -604,48 +614,54 @@ function renderList() {
   }
 }
 
-// ---- Leaflet map + stable wrapped pins ----
+// ---- Leaflet map ----
+//
+// The map contains exactly three horizontal copies:
+//
+//   LEFT WORLD       CENTRAL WORLD       RIGHT WORLD
+//   -540..-180       -180..180           180..540
+//
+// Every pin also gets exactly three copies:
+// lng - 360, lng, lng + 360.
+//
+// Manual scrolling can move among the three worlds,
+// but selecting any item always returns to the
+// canonical pin in the CENTRAL world.
+
 function initMapOnce() {
   if (map) return;
+
+  const THREE_WORLD_BOUNDS =
+    L.latLngBounds(
+      [-85, -540],
+      [85, 540]
+    );
 
   map = L.map(
     "map",
     {
-      worldCopyJump: true,
-      minZoom: 2
+      worldCopyJump: false,
+      minZoom: 2,
+
+      // Hard limit to exactly three horizontal worlds.
+      maxBounds: THREE_WORLD_BOUNDS,
+      maxBoundsViscosity: 1.0
     }
   ).setView(
     [20, 0],
     2
   );
 
-  const MAX_BOUNDS =
-    L.latLngBounds(
-      [
-        [-85, -9999],
-        [85, 9999]
-      ]
-    );
-
-  map.setMaxBounds(
-    MAX_BOUNDS
-  );
-
-  map.on(
-    "drag",
-    () =>
-      map.panInsideBounds(
-        MAX_BOUNDS,
-        {
-          animate: false
-        }
-      )
-  );
-
   L.tileLayer(
     "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
     {
       maxZoom: 19,
+
+      // Keep normal longitude wrapping,
+      // but maxBounds prevents scrolling
+      // beyond our three copies.
+      noWrap: false,
+
       attribution:
         "© OpenStreetMap"
     }
@@ -714,6 +730,8 @@ function renderMapPins() {
 
     const ms = [];
 
+    // Exactly three copies:
+    // left, central, right.
     for (
       const shift of
       [-360, 0, 360]
@@ -772,7 +790,11 @@ function renderMapPins() {
 
           renderList();
           renderMapPins();
+          renderBottomTray();
           renderDetail(it);
+
+          // Even if the user clicked the left/right
+          // copy, move to the CENTRAL copy.
           centerSelectedOnMap(it);
         }
       );
@@ -787,6 +809,11 @@ function renderMapPins() {
   }
 }
 
+// Always center on the canonical CENTRAL-world copy.
+//
+// The dataset longitude itself is always the
+// middle copy. We deliberately do NOT choose
+// the wrapped longitude nearest the current view.
 function centerSelectedOnMap(item) {
   if (
     !map ||
@@ -797,40 +824,52 @@ function centerSelectedOnMap(item) {
     return;
   }
 
-  const [lat, lng] = item.coords;
+  const [lat, lng] =
+    item.coords;
 
-  // Use the wrapped copy of the longitude closest to the current view.
-  const currentLng = map.getCenter().lng;
-  const wrappedLng =
-    lng + 360 * Math.round((currentLng - lng) / 360);
+  const zoom =
+    map.getZoom();
 
-  // Offset the pin left to account for the open right-hand detail panel.
-  // This is measured in screen pixels, so it works at every zoom level.
-  const panelWidth = isDetailOpen()
-    ? detailPanelEl.getBoundingClientRect().width
-    : 0;
+  // Account for the right detail panel.
+  //
+  // We want the selected pin centered in the
+  // portion of the map that is still visible.
+  const panelWidth =
+    isDetailOpen()
+      ? detailPanelEl
+          .getBoundingClientRect()
+          .width
+      : 0;
 
-  const offsetX = panelWidth / 2;
+  const offsetX =
+    panelWidth / 2;
 
-  const zoom = map.getZoom();
+  // IMPORTANT:
+  // use lng directly, not lng ± 360.
+  // This guarantees the CENTRAL map copy.
+  const pinPoint =
+    map.project(
+      [lat, lng],
+      zoom
+    );
 
-  const pinPoint = map.project(
-    [lat, wrappedLng],
-    zoom
+  const targetCenterPoint =
+    pinPoint.add(
+      [offsetX, 0]
+    );
+
+  const targetCenter =
+    map.unproject(
+      targetCenterPoint,
+      zoom
+    );
+
+  map.panTo(
+    targetCenter,
+    {
+      animate: true
+    }
   );
-
-  const centerPoint = pinPoint.add(
-    [offsetX, 0]
-  );
-
-  const targetCenter = map.unproject(
-    centerPoint,
-    zoom
-  );
-
-  map.panTo(targetCenter, {
-    animate: true
-  });
 }
 
 // ---- Bottom tray ----
@@ -931,6 +970,13 @@ function renderBottomTray() {
         renderMapPins();
         renderBottomTray();
         renderDetail(it);
+
+        if (
+          Array.isArray(it.coords) &&
+          it.coords.length === 2
+        ) {
+          centerSelectedOnMap(it);
+        }
       }
     );
 
