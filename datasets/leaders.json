@@ -6,7 +6,7 @@
     "scope": "All regular Civilization VI leaders, including DLC and Leader Pass; scenario-only leaders excluded.",
     "personas": "One entry per historical person per civilization; alternate personas are combined.",
     "coordinatePolicy": "Pins use the civilization/state's historical capital or principal seat during the leader's rule. Where no fixed or securely known capital existed, a concise representative ruling/operating region is used so every leader can be pinned; such pins are explicitly labeled approximate/representative.",
-    "capitalNamingPolicy": "Capital strings use the historical city name. If the modern city name differs, it is shown as '(now <modern city>[, <modern country>])'. The modern country is omitted when it is effectively the same country represented by attrs.civilization. Leaders without a defensible fixed capital are labeled explicitly.",
+    "capitalNamingPolicy": "Capital labels use one of three concise forms: '<old city> (now <new city>)', '<city> (now in <modern country>)', or '<old city> (now <new city>, <modern country>)'. The modern country is shown only when it differs from the civilization represented by attrs.civilization. Uncertain/non-fixed capitals use a brief representative location, with uncertainty kept in capitalStatus.",
     "birthYearPolicy": "Negative numbers denote BCE (not astronomical year numbering). Exact dates are used when known. For unknown births, birthYearLabel gives a conservative range/chronological estimate and birthYear stores a representative midpoint or best-fit year solely for sorting; it should not be read as an exact birth year.",
     "colorPolicy": "One shared color per civilization, based on the default jersey of its original leader (Pericles for Greece). Use the primary color, or its secondary when the primary is white. Colors can repeat across civilizations because the game palette is limited.",
     "thumbnailPolicy": "Paths follow the existing leader thumbnail naming. Image-source recommendations are provided separately in leader_image_sources.csv.",
@@ -126,7 +126,7 @@
         "birthYear": 1138,
         "civilization": "Arabian",
         "birthYearLabel": "c. 1137–1138",
-        "capital": "Damascus, Syria",
+        "capital": "Damascus (now in Syria)",
         "capitalStatus": "capital during his sultanate",
         "pinPrecision": "city"
       },
@@ -231,7 +231,7 @@
         "birthYear": -1810,
         "civilization": "Babylonian",
         "birthYearLabel": "c. 1810 BCE",
-        "capital": "Babylon (near Hillah, Iraq)",
+        "capital": "Babylon (now in Iraq)",
         "capitalStatus": "capital",
         "pinPrecision": "archaeological site"
       },
@@ -546,8 +546,8 @@
         "birthYear": 1842,
         "civilization": "Cree",
         "birthYearLabel": "c. 1842",
-        "capital": "Poundmaker Reserve, Canada",
-        "capitalStatus": "representative community; no formal capital",
+        "capital": "Poundmaker Reserve (now in Canada)",
+        "capitalStatus": "no formal capital; representative pin",
         "pinPrecision": "region"
       },
       "detail": {
@@ -651,7 +651,7 @@
         "birthYear": -1303,
         "civilization": "Egyptian",
         "birthYearLabel": "c. 1303 BCE",
-        "capital": "Pi-Ramesses (near Qantir)",
+        "capital": "Pi-Ramesses",
         "capitalStatus": "capital",
         "pinPrecision": "archaeological site"
       },
@@ -686,7 +686,7 @@
         "birthYear": 1124,
         "civilization": "English",
         "birthYearLabel": "c. 1124",
-        "capital": "Westminster (now part of London, United Kingdom)",
+        "capital": "Westminster (now in United Kingdom)",
         "capitalStatus": "principal administrative/royal center; court was itinerant",
         "pinPrecision": "city"
       },
@@ -721,7 +721,7 @@
         "birthYear": 1533,
         "civilization": "English",
         "birthYearLabel": "1533",
-        "capital": "London, United Kingdom",
+        "capital": "London (now in United Kingdom)",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -756,7 +756,7 @@
         "birthYear": 1819,
         "civilization": "English",
         "birthYearLabel": "1819",
-        "capital": "London, United Kingdom",
+        "capital": "London (now in United Kingdom)",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -896,8 +896,8 @@
         "birthYear": -85,
         "civilization": "Gallic",
         "birthYearLabel": "c. 100–70 BCE (estimated)",
-        "capital": "Eburones territory (eastern Belgium)",
-        "capitalStatus": "no known capital; representative region",
+        "capital": "Atuatuca (now in Belgium)",
+        "capitalStatus": "location uncertain; representative pin",
         "pinPrecision": "region"
       },
       "detail": {
@@ -1036,7 +1036,7 @@
         "birthYear": 1783,
         "civilization": "Gran Colombian",
         "birthYearLabel": "1783",
-        "capital": "Bogotá, Colombia",
+        "capital": "Bogotá (now in Colombia)",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -1141,7 +1141,7 @@
         "birthYear": 1443,
         "civilization": "Hungarian",
         "birthYearLabel": "1443",
-        "capital": "Buda (now part of Budapest)",
+        "capital": "Buda (now Budapest)",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -1176,7 +1176,7 @@
         "birthYear": 1403,
         "civilization": "Incan",
         "birthYearLabel": "c. 1403 (chronology disputed)",
-        "capital": "Cusco, Peru",
+        "capital": "Cusco (now in Peru)",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -1386,7 +1386,7 @@
         "birthYear": 1122,
         "civilization": "Khmer",
         "birthYearLabel": "c. 1122–1125",
-        "capital": "Angkor Thom, Cambodia",
+        "capital": "Angkor Thom (now in Cambodia)",
         "capitalStatus": "capital",
         "pinPrecision": "archaeological site"
       },
@@ -1421,7 +1421,7 @@
         "birthYear": 1456,
         "civilization": "Kongolese",
         "birthYearLabel": "c. 1456",
-        "capital": "Mbanza Kongo, Angola",
+        "capital": "Mbanza Kongo (now in Angola)",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -1456,7 +1456,7 @@
         "birthYear": 1583,
         "civilization": "Kongolese",
         "birthYearLabel": "c. 1583",
-        "capital": "Kabasa (near Caculo Cabaça, Angola)",
+        "capital": "Kabasa (now in Angola)",
         "capitalStatus": "capital of Ndongo at her accession",
         "pinPrecision": "historical locality"
       },
@@ -1561,7 +1561,7 @@
         "birthYear": -356,
         "civilization": "Macedonian",
         "birthYearLabel": "356 BCE",
-        "capital": "Pella, Greece",
+        "capital": "Pella (now in Greece)",
         "capitalStatus": "capital of Macedon",
         "pinPrecision": "archaeological site"
       },
@@ -1596,7 +1596,7 @@
         "birthYear": 1280,
         "civilization": "Malian",
         "birthYearLabel": "c. 1280",
-        "capital": "Niani, Guinea",
+        "capital": "Niani (now in Guinea)",
         "capitalStatus": "traditional capital; location/role debated",
         "pinPrecision": "locality"
       },
@@ -1631,7 +1631,7 @@
         "birthYear": 1217,
         "civilization": "Malian",
         "birthYearLabel": "c. 1217 (chronology disputed)",
-        "capital": "Niani, Guinea",
+        "capital": "Niani (now in Guinea)",
         "capitalStatus": "traditional capital; location/role debated",
         "pinPrecision": "locality"
       },
@@ -1666,8 +1666,8 @@
         "birthYear": 1534,
         "civilization": "Mapuche",
         "birthYearLabel": "c. 1533–1534",
-        "capital": "Arauco region, Chile",
-        "capitalStatus": "no fixed capital; representative region",
+        "capital": "Arauco (now in Chile)",
+        "capitalStatus": "no fixed capital; representative pin",
         "pinPrecision": "region"
       },
       "detail": {
@@ -1701,7 +1701,7 @@
         "birthYear": 658,
         "civilization": "Mayan",
         "birthYearLabel": "c. 650–665 (estimated)",
-        "capital": "Naranjo (now Naranjo archaeological site, Guatemala)",
+        "capital": "Naranjo (now in Guatemala)",
         "capitalStatus": "capital / royal seat",
         "pinPrecision": "archaeological site"
       },
@@ -1806,8 +1806,8 @@
         "birthYear": 1350,
         "civilization": "Māori",
         "birthYearLabel": "c. 1300–1400 (traditional accounts)",
-        "capital": "Hokianga, New Zealand",
-        "capitalStatus": "traditional association; no historical capital",
+        "capital": "Hokianga (now in New Zealand)",
+        "capitalStatus": "traditional association; representative pin",
         "pinPrecision": "region"
       },
       "detail": {
@@ -1876,7 +1876,7 @@
         "birthYear": -5,
         "civilization": "Nubian",
         "birthYearLabel": "c. 20 BCE–10 CE (estimated)",
-        "capital": "Meroë (near Begrawiya, Sudan)",
+        "capital": "Meroë (now in Sudan)",
         "capitalStatus": "capital",
         "pinPrecision": "archaeological site"
       },
@@ -1946,7 +1946,7 @@
         "birthYear": -600,
         "civilization": "Persian",
         "birthYearLabel": "c. 600 BCE",
-        "capital": "Pasargadae (near Murghab, Iran)",
+        "capital": "Pasargadae (now in Iran)",
         "capitalStatus": "capital",
         "pinPrecision": "archaeological site"
       },
@@ -1981,7 +1981,7 @@
         "birthYear": 1688,
         "civilization": "Persian",
         "birthYearLabel": "1688 or 1698",
-        "capital": "Mashhad, Iran",
+        "capital": "Mashhad (now in Iran)",
         "capitalStatus": "capital / principal metropolitan center",
         "pinPrecision": "city"
       },
@@ -2016,7 +2016,7 @@
         "birthYear": -850,
         "civilization": "Phoenician",
         "birthYearLabel": "c. 860–840 BCE (estimated from traditional chronology)",
-        "capital": "Carthage, Tunisia",
+        "capital": "Carthage (now in Tunisia)",
         "capitalStatus": "capital",
         "pinPrecision": "archaeological site"
       },
@@ -2121,7 +2121,7 @@
         "birthYear": -100,
         "civilization": "Roman",
         "birthYearLabel": "100 BCE",
-        "capital": "Rome, Italy",
+        "capital": "Rome (now in Italy)",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -2156,7 +2156,7 @@
         "birthYear": 53,
         "civilization": "Roman",
         "birthYearLabel": "53",
-        "capital": "Rome, Italy",
+        "capital": "Rome (now in Italy)",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -2226,7 +2226,7 @@
         "birthYear": 1274,
         "civilization": "Scottish",
         "birthYearLabel": "1274",
-        "capital": "Scone (now Old Scone near Perth, United Kingdom)",
+        "capital": "Scone (now in United Kingdom)",
         "capitalStatus": "representative royal/ceremonial center; court was itinerant",
         "pinPrecision": "locality"
       },
@@ -2261,8 +2261,8 @@
         "birthYear": -575,
         "civilization": "Scythian",
         "birthYearLabel": "c. 590–560 BCE (estimated)",
-        "capital": "Massagetae territory (Kyzylkum/Aral region)",
-        "capitalStatus": "no known capital; representative region",
+        "capital": "Massagetae territory (now in Kazakhstan)",
+        "capitalStatus": "no known capital; representative pin",
         "pinPrecision": "region"
       },
       "detail": {
@@ -2402,7 +2402,7 @@
         "civilization": "Vietnamese",
         "birthYearLabel": "c. 225–226 (traditional)",
         "capital": "Núi Nưa",
-        "capitalStatus": "rebel base; no formal capital",
+        "capitalStatus": "rebel base; representative pin",
         "pinPrecision": "region"
       },
       "detail": {
@@ -2436,7 +2436,7 @@
         "birthYear": 1787,
         "civilization": "Zulu",
         "birthYearLabel": "c. 1787",
-        "capital": "KwaDukuza, South Africa",
+        "capital": "KwaDukuza (now in South Africa)",
         "capitalStatus": "royal capital",
         "pinPrecision": "city"
       },
