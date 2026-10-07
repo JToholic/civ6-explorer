@@ -686,7 +686,7 @@
         "birthYear": 1124,
         "civilization": "English",
         "birthYearLabel": "c. 1124",
-        "capital": "Westminster (now in United Kingdom)",
+        "capital": "Westminster",
         "capitalStatus": "principal administrative/royal center; court was itinerant",
         "pinPrecision": "city"
       },
@@ -721,7 +721,7 @@
         "birthYear": 1533,
         "civilization": "English",
         "birthYearLabel": "1533",
-        "capital": "London (now in United Kingdom)",
+        "capital": "London",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -756,7 +756,7 @@
         "birthYear": 1819,
         "civilization": "English",
         "birthYearLabel": "1819",
-        "capital": "London (now in United Kingdom)",
+        "capital": "London",
         "capitalStatus": "capital",
         "pinPrecision": "city"
       },
@@ -2226,7 +2226,7 @@
         "birthYear": 1274,
         "civilization": "Scottish",
         "birthYearLabel": "1274",
-        "capital": "Scone (now in United Kingdom)",
+        "capital": "Scone",
         "capitalStatus": "representative royal/ceremonial center; court was itinerant",
         "pinPrecision": "locality"
       },
