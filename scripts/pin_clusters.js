@@ -26,8 +26,8 @@
     return L.divIcon({
       className: "pinClusterIcon",
       html: `<div class="pinCluster${hasSelection ? " is-selected" : ""}">${cluster.getChildCount()}</div>`,
-      iconSize: [30, 30],
-      iconAnchor: [15, 15]
+      iconSize: [20, 20],
+      iconAnchor: [10, 10]
     });
   }
 
@@ -81,7 +81,7 @@
     cluster.unbindTooltip();
     cluster.bindTooltip(makeClusterTooltip(cluster), {
       direction: "top",
-      offset: [0, -17],
+      offset: [0, -10],
       opacity: 1,
       className: "pinClusterLabel"
     });
