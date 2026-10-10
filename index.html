@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <html lang="en">
 <head>
@@ -14,6 +16,14 @@
   <link rel="stylesheet" href="styles/panels.css" />
 </head>
 
+<a
+  id="buildVersion"
+  href="https://github.com/JToholic/civ6-explorer/commit/{{ site.github.build_revision }}"
+  target="_blank"
+  title="Deployed Git commit"
+>
+  {{ site.github.build_revision | slice: 0, 7 }}
+</a>
 <body>
   <!-- Top tabs (never covered by right overlay) -->
   <header id="topbar">
