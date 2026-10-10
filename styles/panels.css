@@ -115,7 +115,12 @@
 }
 
 .detailHeader{ padding:14px 14px 10px; border-bottom:1px solid var(--border); }
-.detailTitle{ font-weight:600; }
+.detailTitle {
+  font-weight: 600;
+  color: #fff;
+  -webkit-text-stroke: 1px #000;
+  paint-order: stroke fill;
+}
 
 .detailBody{ padding:18px; display:flex; flex-direction:column; gap:12px; }
 .thumbRow{
