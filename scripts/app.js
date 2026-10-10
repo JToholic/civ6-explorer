@@ -379,6 +379,23 @@ function renderDetail(item) {
   }
 
   openDetail();
+
+  // Center the selected item in the left panel.
+  const selectedCard = listEl.querySelector("li.is-selected");
+
+  if (selectedCard) {
+    const listRect = listEl.getBoundingClientRect();
+    const cardRect = selectedCard.getBoundingClientRect();
+
+    const target = listEl.scrollTop
+      + (cardRect.top + cardRect.height / 2)
+      - (listRect.top + listRect.height / 2);
+
+    listEl.scrollTo({
+      top: target,
+      behavior: "smooth"
+    });
+  }
 }
 
 // ---- List rendering ----
