@@ -36,7 +36,7 @@
         44.44
       ],
       "theme": {
-        "colorKey": "city-state-militaristic"
+        "colorKey": "color-city-state-militaristic"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/akkad_ingame.png",
@@ -67,7 +67,7 @@
         52.4086
       ],
       "theme": {
-        "colorKey": "city-state-scientific"
+        "colorKey": "color-city-state-scientific"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/anshan_ingame.png",
@@ -98,7 +98,7 @@
         47.5079
       ],
       "theme": {
-        "colorKey": "city-state-cultural"
+        "colorKey": "color-city-state-cultural"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/antananarivo_ingame.png",
@@ -128,7 +128,7 @@
         -6.6528
       ],
       "theme": {
-        "colorKey": "city-state-religious"
+        "colorKey": "color-city-state-religious"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/armagh_ingame.png",
@@ -158,7 +158,7 @@
         174.7633
       ],
       "theme": {
-        "colorKey": "city-state-industrial"
+        "colorKey": "color-city-state-industrial"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/auckland_ingame.png",
@@ -188,7 +188,7 @@
         100.5689
       ],
       "theme": {
-        "colorKey": "city-state-cultural"
+        "colorKey": "color-city-state-cultural"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/ayutthaya_ingame.png",
@@ -218,7 +218,7 @@
         114.9398
       ],
       "theme": {
-        "colorKey": "city-state-trade"
+        "colorKey": "color-city-state-trade"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/bandar_brunei_ingame.png",
@@ -249,7 +249,7 @@
         11.3426
       ],
       "theme": {
-        "colorKey": "city-state-scientific"
+        "colorKey": "color-city-state-scientific"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/bologna_ingame.png",
@@ -279,7 +279,7 @@
         4.3517
       ],
       "theme": {
-        "colorKey": "city-state-industrial"
+        "colorKey": "color-city-state-industrial"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/brussels_ingame.png",
@@ -309,7 +309,7 @@
         -58.3816
       ],
       "theme": {
-        "colorKey": "city-state-industrial"
+        "colorKey": "color-city-state-industrial"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/buenos_aires_ingame.png",
@@ -339,7 +339,7 @@
         -66.781
       ],
       "theme": {
-        "colorKey": "city-state-cultural"
+        "colorKey": "color-city-state-cultural"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/caguana_ingame.png",
@@ -370,7 +370,7 @@
         -90.0622
       ],
       "theme": {
-        "colorKey": "city-state-trade"
+        "colorKey": "color-city-state-trade"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/cahokia_ingame.png",
@@ -401,7 +401,7 @@
         -3.1791
       ],
       "theme": {
-        "colorKey": "city-state-industrial"
+        "colorKey": "color-city-state-industrial"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/cardiff_ingame.png",
@@ -431,7 +431,7 @@
         -12.3683
       ],
       "theme": {
-        "colorKey": "city-state-religious"
+        "colorKey": "color-city-state-religious"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/chinguetti_ingame.png",
@@ -461,7 +461,7 @@
         -4.9834
       ],
       "theme": {
-        "colorKey": "city-state-scientific"
+        "colorKey": "color-city-state-scientific"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/fez_ingame.png",
@@ -491,7 +491,7 @@
         6.1432
       ],
       "theme": {
-        "colorKey": "city-state-scientific"
+        "colorKey": "color-city-state-scientific"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/geneva_ingame.png",
@@ -521,7 +521,7 @@
         -3.5986
       ],
       "theme": {
-        "colorKey": "city-state-militaristic"
+        "colorKey": "color-city-state-militaristic"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/granada_ingame.png",
@@ -551,7 +551,7 @@
         34.6152
       ],
       "theme": {
-        "colorKey": "city-state-scientific"
+        "colorKey": "color-city-state-scientific"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/hattusa_ingame.png",
@@ -582,7 +582,7 @@
         114.1694
       ],
       "theme": {
-        "colorKey": "city-state-industrial"
+        "colorKey": "color-city-state-industrial"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/hong_kong_ingame.png",
@@ -612,7 +612,7 @@
         74.6667
       ],
       "theme": {
-        "colorKey": "city-state-trade"
+        "colorKey": "color-city-state-trade"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/hunza_ingame.png",
@@ -643,7 +643,7 @@
         35.2137
       ],
       "theme": {
-        "colorKey": "city-state-religious"
+        "colorKey": "color-city-state-religious"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/jerusalem_ingame.png",
@@ -673,7 +673,7 @@
         28.0473
       ],
       "theme": {
-        "colorKey": "city-state-industrial"
+        "colorKey": "color-city-state-industrial"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/johannesburg_ingame.png",
@@ -703,7 +703,7 @@
         69.2075
       ],
       "theme": {
-        "colorKey": "city-state-militaristic"
+        "colorKey": "color-city-state-militaristic"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/kabul_ingame.png",
@@ -733,7 +733,7 @@
         80.6337
       ],
       "theme": {
-        "colorKey": "city-state-religious"
+        "colorKey": "color-city-state-religious"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/kandy_ingame.png",
@@ -763,7 +763,7 @@
         -1.6244
       ],
       "theme": {
-        "colorKey": "city-state-cultural"
+        "colorKey": "color-city-state-cultural"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/kumasi_ingame.png",
@@ -793,7 +793,7 @@
         -94.0423
       ],
       "theme": {
-        "colorKey": "city-state-religious"
+        "colorKey": "color-city-state-religious"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/la_venta_ingame.png",
@@ -824,7 +824,7 @@
         74.3436
       ],
       "theme": {
-        "colorKey": "city-state-militaristic"
+        "colorKey": "color-city-state-militaristic"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/lahore_ingame.png",
@@ -854,7 +854,7 @@
         -99.1332
       ],
       "theme": {
-        "colorKey": "city-state-industrial"
+        "colorKey": "color-city-state-industrial"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/mexico_city_ingame.png",
@@ -884,7 +884,7 @@
         -96.3594
       ],
       "theme": {
-        "colorKey": "city-state-scientific"
+        "colorKey": "color-city-state-scientific"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/mitla_ingame.png",
@@ -915,7 +915,7 @@
         45.3182
       ],
       "theme": {
-        "colorKey": "city-state-trade"
+        "colorKey": "color-city-state-trade"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/mogadishu_ingame.png",
@@ -945,7 +945,7 @@
         68.1357
       ],
       "theme": {
-        "colorKey": "city-state-cultural"
+        "colorKey": "color-city-state-cultural"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/mohenjo_daro_ingame.png",
@@ -976,7 +976,7 @@
         58.3829
       ],
       "theme": {
-        "colorKey": "city-state-trade"
+        "colorKey": "color-city-state-trade"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/muscat_ingame.png",
@@ -1006,7 +1006,7 @@
         85.4438
       ],
       "theme": {
-        "colorKey": "city-state-scientific"
+        "colorKey": "color-city-state-scientific"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/nalanda_ingame.png",
@@ -1037,7 +1037,7 @@
         158.335
       ],
       "theme": {
-        "colorKey": "city-state-cultural"
+        "colorKey": "color-city-state-cultural"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/nan_madol_ingame.png",
@@ -1068,7 +1068,7 @@
         -74.943
       ],
       "theme": {
-        "colorKey": "city-state-religious"
+        "colorKey": "color-city-state-religious"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/nazca_ingame.png",
@@ -1099,7 +1099,7 @@
         12.3667
       ],
       "theme": {
-        "colorKey": "city-state-militaristic"
+        "colorKey": "color-city-state-militaristic"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/ngazargamu_ingame.png",
@@ -1130,7 +1130,7 @@
         26.8074
       ],
       "theme": {
-        "colorKey": "city-state-militaristic"
+        "colorKey": "color-city-state-militaristic"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/preslav_ingame.png",
@@ -1161,7 +1161,7 @@
         -109.3667
       ],
       "theme": {
-        "colorKey": "city-state-cultural"
+        "colorKey": "color-city-state-cultural"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/rapa_nui_ingame.png",
@@ -1192,7 +1192,7 @@
         66.9597
       ],
       "theme": {
-        "colorKey": "city-state-trade"
+        "colorKey": "color-city-state-trade"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/samarkand_ingame.png",
@@ -1222,7 +1222,7 @@
         103.8198
       ],
       "theme": {
-        "colorKey": "city-state-industrial"
+        "colorKey": "color-city-state-industrial"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/singapore_ingame.png",
@@ -1252,7 +1252,7 @@
         7.25
       ],
       "theme": {
-        "colorKey": "city-state-scientific"
+        "colorKey": "color-city-state-scientific"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/taruga_ingame.png",
@@ -1283,7 +1283,7 @@
         14.5141
       ],
       "theme": {
-        "colorKey": "city-state-militaristic"
+        "colorKey": "color-city-state-militaristic"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/valletta_ingame.png",
@@ -1313,7 +1313,7 @@
         12.4534
       ],
       "theme": {
-        "colorKey": "city-state-religious"
+        "colorKey": "color-city-state-religious"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/vatican_city_ingame.png",
@@ -1343,7 +1343,7 @@
         12.3155
       ],
       "theme": {
-        "colorKey": "city-state-trade"
+        "colorKey": "color-city-state-trade"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/venice_ingame.png",
@@ -1373,7 +1373,7 @@
         25.2797
       ],
       "theme": {
-        "colorKey": "city-state-cultural"
+        "colorKey": "color-city-state-cultural"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/vilnius_ingame.png",
@@ -1403,7 +1403,7 @@
         14.6145
       ],
       "theme": {
-        "colorKey": "city-state-militaristic"
+        "colorKey": "color-city-state-militaristic"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/wolin_ingame.png",
@@ -1433,7 +1433,7 @@
         44.4991
       ],
       "theme": {
-        "colorKey": "city-state-religious"
+        "colorKey": "color-city-state-religious"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/yerevan_ingame.png",
@@ -1463,7 +1463,7 @@
         39.1921
       ],
       "theme": {
-        "colorKey": "city-state-trade"
+        "colorKey": "color-city-state-trade"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/zanzibar_ingame.png",
