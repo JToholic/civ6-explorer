@@ -25,7 +25,7 @@ const ATTR_DISPLAY = {
     { key: "capital", label: "Capital" }
   ],
   city_states: [
-    { key: "type", label: "Type" }
+    { key: "type", label: "Type" },
     { key: "Country", label: "Country" }
   ]
 };
