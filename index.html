@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="styles/theme.css?v={{ site.github.build_revision }}" />
   <link rel="stylesheet" href="styles/layout.css?v={{ site.github.build_revision }}" />
   <link rel="stylesheet" href="styles/panels.css?v={{ site.github.build_revision }}" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="styles/pin_clusters.css?v={{ site.github.build_revision }}" />
 
   <style>
     /* Keep the deployed commit link inside the tab bar, small and subdued. */
@@ -87,6 +89,8 @@
   </div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
   <script src="scripts/app.js?v={{ site.github.build_revision }}"></script>
+  <script src="scripts/pin_clusters.js?v={{ site.github.build_revision }}"></script>
 </body>
 </html>

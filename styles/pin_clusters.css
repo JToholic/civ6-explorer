@@ -1,0 +1,40 @@
+/* styles/pin_clusters.css: subtle, neutral markers for overlapping pins. */
+.pinClusterIcon {
+  background: transparent;
+  border: 0;
+}
+
+.pinCluster {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: #344054;
+  color: #fff;
+  font: 600 12px/1 system-ui, sans-serif;
+  box-shadow: 0 2px 9px rgba(0, 0, 0, .30);
+}
+
+.pinCluster.is-selected {
+  outline: 3px solid rgba(0, 0, 0, .35);
+  outline-offset: 2px;
+}
+
+.leaflet-tooltip.pinClusterLabel {
+  background: rgba(255, 255, 255, .98);
+  border: 1px solid #d5d9df;
+  color: #20242c;
+  border-radius: 9px;
+  padding: 8px 11px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .14);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.pinClusterTooltipContent { line-height: 1.5; }
+.pinClusterTooltipCount { font-size: 11px; color: #667085; margin-bottom: 3px; }
+.pinClusterTooltipName { font-size: 12px; }
+.pinClusterTooltipMore { margin-top: 4px; font-size: 11px; color: #667085; }
