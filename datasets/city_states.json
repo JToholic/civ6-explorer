@@ -11,7 +11,8 @@
       "https://civilization.fandom.com/wiki/Category:City-state_icons_(Civ6)",
       "https://en.wikipedia.org/"
     ],
-    "reviewedOn": "2026-10-10"
+    "reviewedOn": "2026-10-10",
+    "countryPolicy": "Modern country or political jurisdiction; contested status noted where applicable."
   },
   "sortOptions": [
     {
@@ -36,14 +37,15 @@
         44.44
       ],
       "theme": {
-        "colorKey": "color-city-state-militaristic"
+        "colorKey": "city-state-militaristic"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/akkad_ingame.png",
         "irl": "assets/thumbs/city_states/akkad_irl.png"
       },
       "attrs": {
-        "type": "Militaristic"
+        "type": "Militaristic",
+        "country": "Iraq"
       },
       "detail": {
         "links": [
@@ -67,14 +69,15 @@
         52.4086
       ],
       "theme": {
-        "colorKey": "color-city-state-scientific"
+        "colorKey": "city-state-scientific"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/anshan_ingame.png",
         "irl": "assets/thumbs/city_states/anshan_irl.png"
       },
       "attrs": {
-        "type": "Scientific"
+        "type": "Scientific",
+        "country": "Iran"
       },
       "detail": {
         "links": [
@@ -98,14 +101,15 @@
         47.5079
       ],
       "theme": {
-        "colorKey": "color-city-state-cultural"
+        "colorKey": "city-state-cultural"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/antananarivo_ingame.png",
         "irl": "assets/thumbs/city_states/antananarivo_irl.png"
       },
       "attrs": {
-        "type": "Cultural"
+        "type": "Cultural",
+        "country": "Madagascar"
       },
       "detail": {
         "links": [
@@ -128,14 +132,15 @@
         -6.6528
       ],
       "theme": {
-        "colorKey": "color-city-state-religious"
+        "colorKey": "city-state-religious"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/armagh_ingame.png",
         "irl": "assets/thumbs/city_states/armagh_irl.png"
       },
       "attrs": {
-        "type": "Religious"
+        "type": "Religious",
+        "country": "United Kingdom"
       },
       "detail": {
         "links": [
@@ -158,14 +163,15 @@
         174.7633
       ],
       "theme": {
-        "colorKey": "color-city-state-industrial"
+        "colorKey": "city-state-industrial"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/auckland_ingame.png",
         "irl": "assets/thumbs/city_states/auckland_irl.png"
       },
       "attrs": {
-        "type": "Industrial"
+        "type": "Industrial",
+        "country": "New Zealand"
       },
       "detail": {
         "links": [
@@ -188,14 +194,15 @@
         100.5689
       ],
       "theme": {
-        "colorKey": "color-city-state-cultural"
+        "colorKey": "city-state-cultural"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/ayutthaya_ingame.png",
         "irl": "assets/thumbs/city_states/ayutthaya_irl.png"
       },
       "attrs": {
-        "type": "Cultural"
+        "type": "Cultural",
+        "country": "Thailand"
       },
       "detail": {
         "links": [
@@ -218,14 +225,15 @@
         114.9398
       ],
       "theme": {
-        "colorKey": "color-city-state-trade"
+        "colorKey": "city-state-trade"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/bandar_brunei_ingame.png",
         "irl": "assets/thumbs/city_states/bandar_brunei_irl.png"
       },
       "attrs": {
-        "type": "Trade"
+        "type": "Trade",
+        "country": "Brunei"
       },
       "detail": {
         "links": [
@@ -249,14 +257,15 @@
         11.3426
       ],
       "theme": {
-        "colorKey": "color-city-state-scientific"
+        "colorKey": "city-state-scientific"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/bologna_ingame.png",
         "irl": "assets/thumbs/city_states/bologna_irl.png"
       },
       "attrs": {
-        "type": "Scientific"
+        "type": "Scientific",
+        "country": "Italy"
       },
       "detail": {
         "links": [
@@ -279,14 +288,15 @@
         4.3517
       ],
       "theme": {
-        "colorKey": "color-city-state-industrial"
+        "colorKey": "city-state-industrial"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/brussels_ingame.png",
         "irl": "assets/thumbs/city_states/brussels_irl.png"
       },
       "attrs": {
-        "type": "Industrial"
+        "type": "Industrial",
+        "country": "Belgium"
       },
       "detail": {
         "links": [
@@ -309,14 +319,15 @@
         -58.3816
       ],
       "theme": {
-        "colorKey": "color-city-state-industrial"
+        "colorKey": "city-state-industrial"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/buenos_aires_ingame.png",
         "irl": "assets/thumbs/city_states/buenos_aires_irl.png"
       },
       "attrs": {
-        "type": "Industrial"
+        "type": "Industrial",
+        "country": "Argentina"
       },
       "detail": {
         "links": [
@@ -339,14 +350,15 @@
         -66.781
       ],
       "theme": {
-        "colorKey": "color-city-state-cultural"
+        "colorKey": "city-state-cultural"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/caguana_ingame.png",
         "irl": "assets/thumbs/city_states/caguana_irl.png"
       },
       "attrs": {
-        "type": "Cultural"
+        "type": "Cultural",
+        "country": "United States (Puerto Rico)"
       },
       "detail": {
         "links": [
@@ -370,14 +382,15 @@
         -90.0622
       ],
       "theme": {
-        "colorKey": "color-city-state-trade"
+        "colorKey": "city-state-trade"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/cahokia_ingame.png",
         "irl": "assets/thumbs/city_states/cahokia_irl.png"
       },
       "attrs": {
-        "type": "Trade"
+        "type": "Trade",
+        "country": "United States"
       },
       "detail": {
         "links": [
@@ -401,14 +414,15 @@
         -3.1791
       ],
       "theme": {
-        "colorKey": "color-city-state-industrial"
+        "colorKey": "city-state-industrial"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/cardiff_ingame.png",
         "irl": "assets/thumbs/city_states/cardiff_irl.png"
       },
       "attrs": {
-        "type": "Industrial"
+        "type": "Industrial",
+        "country": "United Kingdom"
       },
       "detail": {
         "links": [
@@ -431,14 +445,15 @@
         -12.3683
       ],
       "theme": {
-        "colorKey": "color-city-state-religious"
+        "colorKey": "city-state-religious"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/chinguetti_ingame.png",
         "irl": "assets/thumbs/city_states/chinguetti_irl.png"
       },
       "attrs": {
-        "type": "Religious"
+        "type": "Religious",
+        "country": "Mauritania"
       },
       "detail": {
         "links": [
@@ -461,14 +476,15 @@
         -4.9834
       ],
       "theme": {
-        "colorKey": "color-city-state-scientific"
+        "colorKey": "city-state-scientific"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/fez_ingame.png",
         "irl": "assets/thumbs/city_states/fez_irl.png"
       },
       "attrs": {
-        "type": "Scientific"
+        "type": "Scientific",
+        "country": "Morocco"
       },
       "detail": {
         "links": [
@@ -491,14 +507,15 @@
         6.1432
       ],
       "theme": {
-        "colorKey": "color-city-state-scientific"
+        "colorKey": "city-state-scientific"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/geneva_ingame.png",
         "irl": "assets/thumbs/city_states/geneva_irl.png"
       },
       "attrs": {
-        "type": "Scientific"
+        "type": "Scientific",
+        "country": "Switzerland"
       },
       "detail": {
         "links": [
@@ -521,14 +538,15 @@
         -3.5986
       ],
       "theme": {
-        "colorKey": "color-city-state-militaristic"
+        "colorKey": "city-state-militaristic"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/granada_ingame.png",
         "irl": "assets/thumbs/city_states/granada_irl.png"
       },
       "attrs": {
-        "type": "Militaristic"
+        "type": "Militaristic",
+        "country": "Spain"
       },
       "detail": {
         "links": [
@@ -551,14 +569,15 @@
         34.6152
       ],
       "theme": {
-        "colorKey": "color-city-state-scientific"
+        "colorKey": "city-state-scientific"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/hattusa_ingame.png",
         "irl": "assets/thumbs/city_states/hattusa_irl.png"
       },
       "attrs": {
-        "type": "Scientific"
+        "type": "Scientific",
+        "country": "Turkey"
       },
       "detail": {
         "links": [
@@ -582,14 +601,15 @@
         114.1694
       ],
       "theme": {
-        "colorKey": "color-city-state-industrial"
+        "colorKey": "city-state-industrial"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/hong_kong_ingame.png",
         "irl": "assets/thumbs/city_states/hong_kong_irl.png"
       },
       "attrs": {
-        "type": "Industrial"
+        "type": "Industrial",
+        "country": "China"
       },
       "detail": {
         "links": [
@@ -612,14 +632,15 @@
         74.6667
       ],
       "theme": {
-        "colorKey": "color-city-state-trade"
+        "colorKey": "city-state-trade"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/hunza_ingame.png",
         "irl": "assets/thumbs/city_states/hunza_irl.png"
       },
       "attrs": {
-        "type": "Trade"
+        "type": "Trade",
+        "country": "Pakistan"
       },
       "detail": {
         "links": [
@@ -643,14 +664,15 @@
         35.2137
       ],
       "theme": {
-        "colorKey": "color-city-state-religious"
+        "colorKey": "city-state-religious"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/jerusalem_ingame.png",
         "irl": "assets/thumbs/city_states/jerusalem_irl.png"
       },
       "attrs": {
-        "type": "Religious"
+        "type": "Religious",
+        "country": "Israel / Palestine (disputed)"
       },
       "detail": {
         "links": [
@@ -673,14 +695,15 @@
         28.0473
       ],
       "theme": {
-        "colorKey": "color-city-state-industrial"
+        "colorKey": "city-state-industrial"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/johannesburg_ingame.png",
         "irl": "assets/thumbs/city_states/johannesburg_irl.png"
       },
       "attrs": {
-        "type": "Industrial"
+        "type": "Industrial",
+        "country": "South Africa"
       },
       "detail": {
         "links": [
@@ -703,14 +726,15 @@
         69.2075
       ],
       "theme": {
-        "colorKey": "color-city-state-militaristic"
+        "colorKey": "city-state-militaristic"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/kabul_ingame.png",
         "irl": "assets/thumbs/city_states/kabul_irl.png"
       },
       "attrs": {
-        "type": "Militaristic"
+        "type": "Militaristic",
+        "country": "Afghanistan"
       },
       "detail": {
         "links": [
@@ -733,14 +757,15 @@
         80.6337
       ],
       "theme": {
-        "colorKey": "color-city-state-religious"
+        "colorKey": "city-state-religious"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/kandy_ingame.png",
         "irl": "assets/thumbs/city_states/kandy_irl.png"
       },
       "attrs": {
-        "type": "Religious"
+        "type": "Religious",
+        "country": "Sri Lanka"
       },
       "detail": {
         "links": [
@@ -763,14 +788,15 @@
         -1.6244
       ],
       "theme": {
-        "colorKey": "color-city-state-cultural"
+        "colorKey": "city-state-cultural"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/kumasi_ingame.png",
         "irl": "assets/thumbs/city_states/kumasi_irl.png"
       },
       "attrs": {
-        "type": "Cultural"
+        "type": "Cultural",
+        "country": "Ghana"
       },
       "detail": {
         "links": [
@@ -793,14 +819,15 @@
         -94.0423
       ],
       "theme": {
-        "colorKey": "color-city-state-religious"
+        "colorKey": "city-state-religious"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/la_venta_ingame.png",
         "irl": "assets/thumbs/city_states/la_venta_irl.png"
       },
       "attrs": {
-        "type": "Religious"
+        "type": "Religious",
+        "country": "Mexico"
       },
       "detail": {
         "links": [
@@ -824,14 +851,15 @@
         74.3436
       ],
       "theme": {
-        "colorKey": "color-city-state-militaristic"
+        "colorKey": "city-state-militaristic"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/lahore_ingame.png",
         "irl": "assets/thumbs/city_states/lahore_irl.png"
       },
       "attrs": {
-        "type": "Militaristic"
+        "type": "Militaristic",
+        "country": "Pakistan"
       },
       "detail": {
         "links": [
@@ -854,14 +882,15 @@
         -99.1332
       ],
       "theme": {
-        "colorKey": "color-city-state-industrial"
+        "colorKey": "city-state-industrial"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/mexico_city_ingame.png",
         "irl": "assets/thumbs/city_states/mexico_city_irl.png"
       },
       "attrs": {
-        "type": "Industrial"
+        "type": "Industrial",
+        "country": "Mexico"
       },
       "detail": {
         "links": [
@@ -884,14 +913,15 @@
         -96.3594
       ],
       "theme": {
-        "colorKey": "color-city-state-scientific"
+        "colorKey": "city-state-scientific"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/mitla_ingame.png",
         "irl": "assets/thumbs/city_states/mitla_irl.png"
       },
       "attrs": {
-        "type": "Scientific"
+        "type": "Scientific",
+        "country": "Mexico"
       },
       "detail": {
         "links": [
@@ -915,14 +945,15 @@
         45.3182
       ],
       "theme": {
-        "colorKey": "color-city-state-trade"
+        "colorKey": "city-state-trade"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/mogadishu_ingame.png",
         "irl": "assets/thumbs/city_states/mogadishu_irl.png"
       },
       "attrs": {
-        "type": "Trade"
+        "type": "Trade",
+        "country": "Somalia"
       },
       "detail": {
         "links": [
@@ -945,14 +976,15 @@
         68.1357
       ],
       "theme": {
-        "colorKey": "color-city-state-cultural"
+        "colorKey": "city-state-cultural"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/mohenjo_daro_ingame.png",
         "irl": "assets/thumbs/city_states/mohenjo_daro_irl.png"
       },
       "attrs": {
-        "type": "Cultural"
+        "type": "Cultural",
+        "country": "Pakistan"
       },
       "detail": {
         "links": [
@@ -976,14 +1008,15 @@
         58.3829
       ],
       "theme": {
-        "colorKey": "color-city-state-trade"
+        "colorKey": "city-state-trade"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/muscat_ingame.png",
         "irl": "assets/thumbs/city_states/muscat_irl.png"
       },
       "attrs": {
-        "type": "Trade"
+        "type": "Trade",
+        "country": "Oman"
       },
       "detail": {
         "links": [
@@ -1006,14 +1039,15 @@
         85.4438
       ],
       "theme": {
-        "colorKey": "color-city-state-scientific"
+        "colorKey": "city-state-scientific"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/nalanda_ingame.png",
         "irl": "assets/thumbs/city_states/nalanda_irl.png"
       },
       "attrs": {
-        "type": "Scientific"
+        "type": "Scientific",
+        "country": "India"
       },
       "detail": {
         "links": [
@@ -1037,14 +1071,15 @@
         158.335
       ],
       "theme": {
-        "colorKey": "color-city-state-cultural"
+        "colorKey": "city-state-cultural"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/nan_madol_ingame.png",
         "irl": "assets/thumbs/city_states/nan_madol_irl.png"
       },
       "attrs": {
-        "type": "Cultural"
+        "type": "Cultural",
+        "country": "Federated States of Micronesia"
       },
       "detail": {
         "links": [
@@ -1068,14 +1103,15 @@
         -74.943
       ],
       "theme": {
-        "colorKey": "color-city-state-religious"
+        "colorKey": "city-state-religious"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/nazca_ingame.png",
         "irl": "assets/thumbs/city_states/nazca_irl.png"
       },
       "attrs": {
-        "type": "Religious"
+        "type": "Religious",
+        "country": "Peru"
       },
       "detail": {
         "links": [
@@ -1099,14 +1135,15 @@
         12.3667
       ],
       "theme": {
-        "colorKey": "color-city-state-militaristic"
+        "colorKey": "city-state-militaristic"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/ngazargamu_ingame.png",
         "irl": "assets/thumbs/city_states/ngazargamu_irl.png"
       },
       "attrs": {
-        "type": "Militaristic"
+        "type": "Militaristic",
+        "country": "Nigeria"
       },
       "detail": {
         "links": [
@@ -1130,14 +1167,15 @@
         26.8074
       ],
       "theme": {
-        "colorKey": "color-city-state-militaristic"
+        "colorKey": "city-state-militaristic"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/preslav_ingame.png",
         "irl": "assets/thumbs/city_states/preslav_irl.png"
       },
       "attrs": {
-        "type": "Militaristic"
+        "type": "Militaristic",
+        "country": "Bulgaria"
       },
       "detail": {
         "links": [
@@ -1161,14 +1199,15 @@
         -109.3667
       ],
       "theme": {
-        "colorKey": "color-city-state-cultural"
+        "colorKey": "city-state-cultural"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/rapa_nui_ingame.png",
         "irl": "assets/thumbs/city_states/rapa_nui_irl.png"
       },
       "attrs": {
-        "type": "Cultural"
+        "type": "Cultural",
+        "country": "Chile"
       },
       "detail": {
         "links": [
@@ -1192,14 +1231,15 @@
         66.9597
       ],
       "theme": {
-        "colorKey": "color-city-state-trade"
+        "colorKey": "city-state-trade"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/samarkand_ingame.png",
         "irl": "assets/thumbs/city_states/samarkand_irl.png"
       },
       "attrs": {
-        "type": "Trade"
+        "type": "Trade",
+        "country": "Uzbekistan"
       },
       "detail": {
         "links": [
@@ -1222,14 +1262,15 @@
         103.8198
       ],
       "theme": {
-        "colorKey": "color-city-state-industrial"
+        "colorKey": "city-state-industrial"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/singapore_ingame.png",
         "irl": "assets/thumbs/city_states/singapore_irl.png"
       },
       "attrs": {
-        "type": "Industrial"
+        "type": "Industrial",
+        "country": "Singapore"
       },
       "detail": {
         "links": [
@@ -1252,14 +1293,15 @@
         7.25
       ],
       "theme": {
-        "colorKey": "color-city-state-scientific"
+        "colorKey": "city-state-scientific"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/taruga_ingame.png",
         "irl": "assets/thumbs/city_states/taruga_irl.png"
       },
       "attrs": {
-        "type": "Scientific"
+        "type": "Scientific",
+        "country": "Nigeria"
       },
       "detail": {
         "links": [
@@ -1283,14 +1325,15 @@
         14.5141
       ],
       "theme": {
-        "colorKey": "color-city-state-militaristic"
+        "colorKey": "city-state-militaristic"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/valletta_ingame.png",
         "irl": "assets/thumbs/city_states/valletta_irl.png"
       },
       "attrs": {
-        "type": "Militaristic"
+        "type": "Militaristic",
+        "country": "Malta"
       },
       "detail": {
         "links": [
@@ -1313,14 +1356,15 @@
         12.4534
       ],
       "theme": {
-        "colorKey": "color-city-state-religious"
+        "colorKey": "city-state-religious"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/vatican_city_ingame.png",
         "irl": "assets/thumbs/city_states/vatican_city_irl.png"
       },
       "attrs": {
-        "type": "Religious"
+        "type": "Religious",
+        "country": "Vatican City"
       },
       "detail": {
         "links": [
@@ -1343,14 +1387,15 @@
         12.3155
       ],
       "theme": {
-        "colorKey": "color-city-state-trade"
+        "colorKey": "city-state-trade"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/venice_ingame.png",
         "irl": "assets/thumbs/city_states/venice_irl.png"
       },
       "attrs": {
-        "type": "Trade"
+        "type": "Trade",
+        "country": "Italy"
       },
       "detail": {
         "links": [
@@ -1373,14 +1418,15 @@
         25.2797
       ],
       "theme": {
-        "colorKey": "color-city-state-cultural"
+        "colorKey": "city-state-cultural"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/vilnius_ingame.png",
         "irl": "assets/thumbs/city_states/vilnius_irl.png"
       },
       "attrs": {
-        "type": "Cultural"
+        "type": "Cultural",
+        "country": "Lithuania"
       },
       "detail": {
         "links": [
@@ -1403,14 +1449,15 @@
         14.6145
       ],
       "theme": {
-        "colorKey": "color-city-state-militaristic"
+        "colorKey": "city-state-militaristic"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/wolin_ingame.png",
         "irl": "assets/thumbs/city_states/wolin_irl.png"
       },
       "attrs": {
-        "type": "Militaristic"
+        "type": "Militaristic",
+        "country": "Poland"
       },
       "detail": {
         "links": [
@@ -1433,14 +1480,15 @@
         44.4991
       ],
       "theme": {
-        "colorKey": "color-city-state-religious"
+        "colorKey": "city-state-religious"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/yerevan_ingame.png",
         "irl": "assets/thumbs/city_states/yerevan_irl.png"
       },
       "attrs": {
-        "type": "Religious"
+        "type": "Religious",
+        "country": "Armenia"
       },
       "detail": {
         "links": [
@@ -1463,14 +1511,15 @@
         39.1921
       ],
       "theme": {
-        "colorKey": "color-city-state-trade"
+        "colorKey": "city-state-trade"
       },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/zanzibar_ingame.png",
         "irl": "assets/thumbs/city_states/zanzibar_irl.png"
       },
       "attrs": {
-        "type": "Trade"
+        "type": "Trade",
+        "country": "Tanzania"
       },
       "detail": {
         "links": [

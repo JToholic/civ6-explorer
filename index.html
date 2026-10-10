@@ -7,27 +7,36 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Civ6 Explorer</title>
 
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-  />
-  <link rel="stylesheet" href="styles/theme.css" />
-  <link rel="stylesheet" href="styles/layout.css" />
-  <link rel="stylesheet" href="styles/panels.css" />
-</head>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="styles/theme.css?v={{ site.github.build_revision }}" />
+  <link rel="stylesheet" href="styles/layout.css?v={{ site.github.build_revision }}" />
+  <link rel="stylesheet" href="styles/panels.css?v={{ site.github.build_revision }}" />
 
-<a
-  id="buildVersion"
-  href="https://github.com/JToholic/civ6-explorer/commit/{{ site.github.build_revision }}"
-  target="_blank"
-  title="Deployed Git commit"
->
-  {{ site.github.build_revision | slice: 0, 7 }}
-</a>
+  <style>
+    /* Keep the deployed commit link inside the tab bar, small and subdued. */
+    #topbar { position: relative; padding-right: 96px; }
+    #buildVersion {
+      position: absolute;
+      top: 50%; right: 12px;
+      transform: translateY(-50%);
+      font: 11px/1 ui-monospace, SFMono-Regular, Consolas, monospace;
+      color: #888; opacity: .65; text-decoration: none;
+      white-space: nowrap;
+    }
+    #buildVersion:hover { color: #555; opacity: 1; text-decoration: underline; }
+  </style>
+</head>
 <body>
   <!-- Top tabs (never covered by right overlay) -->
   <header id="topbar">
     <nav id="tabs" aria-label="Types"></nav>
+    <a id="buildVersion"
+       href="https://github.com/JToholic/civ6-explorer/commit/{{ site.github.build_revision }}"
+       target="_blank" rel="noopener"
+       aria-label="Deployed Git commit {{ site.github.build_revision }}"
+       title="Deployed Git commit">
+      {{ site.github.build_revision | slice: 0, 7 }}
+    </a>
   </header>
 
   <!-- Bordered main area: left + map + bottom tray all touch -->
@@ -50,32 +59,25 @@
     <section id="mapArea" aria-label="World map area">
       <div id="map">
         <!-- map injected by JS later -->
-		<div class="mapPlaceholder" id="statusText">Loading…</div>
+        <div class="mapPlaceholder" id="statusText">Loading…</div>
       </div>
-
-      <!-- Right overlay detail panel (covers map only) -->
       <aside id="detailPanel" class="hidden" aria-label="Details panel">
         <button id="detailClose" type="button" aria-label="Close details">✕</button>
-
-		<div class="detailHeader" id="detailHeader">
-		  <div class="detailTitle" id="detailTitle">Select an item</div>
-		</div>
-
-		<div class="detailBody">
-		  <div class="thumbRow">
-			<img id="detailThumbIngame" class="detailImg" alt="In-game thumbnail">
-			<img id="detailThumbIrl" class="detailImg" alt="Real-world thumbnail">
-		  </div>
-
-		  <div class="detailText" id="detailText"></div>
-		  <div class="detailAttrs" id="detailAttrs"></div>
-		  <div class="detailLinks" id="detailLinks"></div>
-		</div>
-
+        <div class="detailHeader" id="detailHeader">
+          <div class="detailTitle" id="detailTitle">Select an item</div>
+        </div>
+        <div class="detailBody">
+          <div class="thumbRow">
+            <img id="detailThumbIngame" class="detailImg" alt="In-game thumbnail">
+            <img id="detailThumbIrl" class="detailImg" alt="Real-world thumbnail">
+          </div>
+          <div class="detailText" id="detailText"></div>
+          <div class="detailAttrs" id="detailAttrs"></div>
+          <div class="detailLinks" id="detailLinks"></div>
+        </div>
       </aside>
     </section>
 
-    <!-- Bottom pin tray (pins with no coords) -->
     <section id="bottomTray" aria-label="Pins without coordinates">
       <div class="trayTitle">Pins without coordinates</div>
       <div id="trayPins" class="trayPins">
@@ -83,9 +85,8 @@
       </div>
     </section>
   </div>
-  
+
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="scripts/app.js"></script>
+  <script src="scripts/app.js?v={{ site.github.build_revision }}"></script>
 </body>
 </html>
-
