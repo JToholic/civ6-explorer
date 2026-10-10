@@ -74,6 +74,14 @@
 	--color-city_states-militaristic:#B24A3C; /* red (future) */
 	--color-city_states-cultural:   #8E6BBE;  /* purple (future) */
 	--color-city_states-industrial: #6F6F6F;  /* gray (future) */
+  /* City-States – banner colors used by datasets/city_states.json */
+  --color-city-state-cultural: #9B59C5; /* Cultural */
+  --color-city-state-industrial: #D77831; /* Industrial */
+  --color-city-state-militaristic: #C63B3B; /* Militaristic */
+  --color-city-state-religious: #ECECEC; /* Religious */
+  --color-city-state-scientific: #3F78C5; /* Scientific */
+  --color-city-state-trade: #E0BC36; /* Trade */
+
 }
 
 *{ box-sizing:border-box; }

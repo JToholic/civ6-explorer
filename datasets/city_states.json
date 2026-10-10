@@ -2,18 +2,497 @@
   "meta": {
     "type": "city_states",
     "title": "City-States",
-    "defaultSort": "type"
+    "defaultSort": "alpha",
+    "scope": "48 regular Civilization VI city-states with all expansions and New Frontier Pass; obsolete/replaced and scenario-only entries excluded.",
+    "coordinatePolicy": "Point at modern city/archaeological site; representative approximate location when exact historic location unknown.",
+    "thumbnailPolicy": "Fandom city-state icon/banner plus Wikipedia article image, downloaded separately using included script.",
+    "sources": [
+      "https://civilization.fandom.com/wiki/List_of_city-states_in_Civ6",
+      "https://civilization.fandom.com/wiki/Category:City-state_icons_(Civ6)",
+      "https://en.wikipedia.org/"
+    ],
+    "reviewedOn": "2026-10-10"
   },
   "sortOptions": [
-    { "id": "alpha", "label": "A → Z", "field": "name", "order": "asc" },
-    { "id": "type", "label": "Type", "field": "attrs.type", "order": "asc" }
+    {
+      "id": "alpha",
+      "label": "A → Z",
+      "field": "name",
+      "order": "asc"
+    },
+    {
+      "id": "type",
+      "label": "Type",
+      "field": "attrs.type",
+      "order": "asc"
+    }
   ],
   "items": [
     {
+      "id": "akkad",
+      "name": "Akkad",
+      "coords": [
+        33.31,
+        44.44
+      ],
+      "theme": {
+        "colorKey": "city-state-militaristic"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/akkad_ingame.png",
+        "irl": "assets/thumbs/city_states/akkad_irl.png"
+      },
+      "attrs": {
+        "type": "Militaristic"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Akkad_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Akkad_(city)"
+          }
+        ]
+      },
+      "geoNote": "Approximate central Mesopotamia near Baghdad; exact site unknown"
+    },
+    {
+      "id": "anshan",
+      "name": "Anshan",
+      "coords": [
+        30.0114,
+        52.4086
+      ],
+      "theme": {
+        "colorKey": "city-state-scientific"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/anshan_ingame.png",
+        "irl": "assets/thumbs/city_states/anshan_irl.png"
+      },
+      "attrs": {
+        "type": "Scientific"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Anshan_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Anshan_(Persia)"
+          }
+        ]
+      },
+      "geoNote": "Tall-e Malyan archaeological site"
+    },
+    {
+      "id": "antananarivo",
+      "name": "Antananarivo",
+      "coords": [
+        -18.8792,
+        47.5079
+      ],
+      "theme": {
+        "colorKey": "city-state-cultural"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/antananarivo_ingame.png",
+        "irl": "assets/thumbs/city_states/antananarivo_irl.png"
+      },
+      "attrs": {
+        "type": "Cultural"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Antananarivo_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Antananarivo"
+          }
+        ]
+      }
+    },
+    {
+      "id": "armagh",
+      "name": "Armagh",
+      "coords": [
+        54.3499,
+        -6.6528
+      ],
+      "theme": {
+        "colorKey": "city-state-religious"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/armagh_ingame.png",
+        "irl": "assets/thumbs/city_states/armagh_irl.png"
+      },
+      "attrs": {
+        "type": "Religious"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Armagh_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Armagh"
+          }
+        ]
+      }
+    },
+    {
+      "id": "auckland",
+      "name": "Auckland",
+      "coords": [
+        -36.8485,
+        174.7633
+      ],
+      "theme": {
+        "colorKey": "city-state-industrial"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/auckland_ingame.png",
+        "irl": "assets/thumbs/city_states/auckland_irl.png"
+      },
+      "attrs": {
+        "type": "Industrial"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Auckland_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Auckland"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ayutthaya",
+      "name": "Ayutthaya",
+      "coords": [
+        14.354,
+        100.5689
+      ],
+      "theme": {
+        "colorKey": "city-state-cultural"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/ayutthaya_ingame.png",
+        "irl": "assets/thumbs/city_states/ayutthaya_irl.png"
+      },
+      "attrs": {
+        "type": "Cultural"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Ayutthaya_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Ayutthaya_(city)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bandar_brunei",
+      "name": "Bandar Brunei",
+      "coords": [
+        4.9031,
+        114.9398
+      ],
+      "theme": {
+        "colorKey": "city-state-trade"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/bandar_brunei_ingame.png",
+        "irl": "assets/thumbs/city_states/bandar_brunei_irl.png"
+      },
+      "attrs": {
+        "type": "Trade"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Bandar_Brunei_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Bandar_Seri_Begawan"
+          }
+        ]
+      },
+      "geoNote": "Now Bandar Seri Begawan"
+    },
+    {
+      "id": "bologna",
+      "name": "Bologna",
+      "coords": [
+        44.4949,
+        11.3426
+      ],
+      "theme": {
+        "colorKey": "city-state-scientific"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/bologna_ingame.png",
+        "irl": "assets/thumbs/city_states/bologna_irl.png"
+      },
+      "attrs": {
+        "type": "Scientific"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Bologna_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Bologna"
+          }
+        ]
+      }
+    },
+    {
+      "id": "brussels",
+      "name": "Brussels",
+      "coords": [
+        50.8503,
+        4.3517
+      ],
+      "theme": {
+        "colorKey": "city-state-industrial"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/brussels_ingame.png",
+        "irl": "assets/thumbs/city_states/brussels_irl.png"
+      },
+      "attrs": {
+        "type": "Industrial"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Brussels_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Brussels"
+          }
+        ]
+      }
+    },
+    {
+      "id": "buenos_aires",
+      "name": "Buenos Aires",
+      "coords": [
+        -34.6037,
+        -58.3816
+      ],
+      "theme": {
+        "colorKey": "city-state-industrial"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/buenos_aires_ingame.png",
+        "irl": "assets/thumbs/city_states/buenos_aires_irl.png"
+      },
+      "attrs": {
+        "type": "Industrial"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Buenos_Aires_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Buenos_Aires"
+          }
+        ]
+      }
+    },
+    {
+      "id": "caguana",
+      "name": "Caguana",
+      "coords": [
+        18.2949,
+        -66.781
+      ],
+      "theme": {
+        "colorKey": "city-state-cultural"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/caguana_ingame.png",
+        "irl": "assets/thumbs/city_states/caguana_irl.png"
+      },
+      "attrs": {
+        "type": "Cultural"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Caguana_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Caguana_Ceremonial_Ball_Courts_Site"
+          }
+        ]
+      },
+      "geoNote": "Caguana ceremonial center, near Utuado, Puerto Rico"
+    },
+    {
+      "id": "cahokia",
+      "name": "Cahokia",
+      "coords": [
+        38.6551,
+        -90.0622
+      ],
+      "theme": {
+        "colorKey": "city-state-trade"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/cahokia_ingame.png",
+        "irl": "assets/thumbs/city_states/cahokia_irl.png"
+      },
+      "attrs": {
+        "type": "Trade"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Cahokia_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Cahokia_Mounds"
+          }
+        ]
+      },
+      "geoNote": "Historic mound complex near Collinsville, Illinois"
+    },
+    {
+      "id": "cardiff",
+      "name": "Cardiff",
+      "coords": [
+        51.4816,
+        -3.1791
+      ],
+      "theme": {
+        "colorKey": "city-state-industrial"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/cardiff_ingame.png",
+        "irl": "assets/thumbs/city_states/cardiff_irl.png"
+      },
+      "attrs": {
+        "type": "Industrial"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Cardiff_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Cardiff"
+          }
+        ]
+      }
+    },
+    {
+      "id": "chinguetti",
+      "name": "Chinguetti",
+      "coords": [
+        20.4625,
+        -12.3683
+      ],
+      "theme": {
+        "colorKey": "city-state-religious"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/chinguetti_ingame.png",
+        "irl": "assets/thumbs/city_states/chinguetti_irl.png"
+      },
+      "attrs": {
+        "type": "Religious"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Chinguetti_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Chinguetti"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fez",
+      "name": "Fez",
+      "coords": [
+        34.064,
+        -4.9834
+      ],
+      "theme": {
+        "colorKey": "city-state-scientific"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/fez_ingame.png",
+        "irl": "assets/thumbs/city_states/fez_irl.png"
+      },
+      "attrs": {
+        "type": "Scientific"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Fez_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Fez,_Morocco"
+          }
+        ]
+      }
+    },
+    {
       "id": "geneva",
       "name": "Geneva",
-      "coords": [46.2044, 6.1432],
-      "theme": { "colorKey": "city_states-scientific" },
+      "coords": [
+        46.2044,
+        6.1432
+      ],
+      "theme": {
+        "colorKey": "city-state-scientific"
+      },
       "thumbs": {
         "ingame": "assets/thumbs/city_states/geneva_ingame.png",
         "irl": "assets/thumbs/city_states/geneva_irl.png"
@@ -22,33 +501,990 @@
         "type": "Scientific"
       },
       "detail": {
-        "text": "",
         "links": [
-          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Geneva_(Civ6)" },
-          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Geneva" }
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Geneva_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Geneva"
+          }
         ]
       }
     },
     {
-      "id": "jakarta",
-      "name": "Jakarta",
-      "coords": [-6.2088, 106.8456],
-      "theme": { "colorKey": "city_states-trade" },
+      "id": "granada",
+      "name": "Granada",
+      "coords": [
+        37.1773,
+        -3.5986
+      ],
+      "theme": {
+        "colorKey": "city-state-militaristic"
+      },
       "thumbs": {
-        "ingame": "assets/thumbs/city_states/geneva_ingame.png",
-        "irl": "assets/thumbs/city_states/geneva_irl.png"
+        "ingame": "assets/thumbs/city_states/granada_ingame.png",
+        "irl": "assets/thumbs/city_states/granada_irl.png"
+      },
+      "attrs": {
+        "type": "Militaristic"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Granada_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Granada"
+          }
+        ]
+      }
+    },
+    {
+      "id": "hattusa",
+      "name": "Hattusa",
+      "coords": [
+        40.0196,
+        34.6152
+      ],
+      "theme": {
+        "colorKey": "city-state-scientific"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/hattusa_ingame.png",
+        "irl": "assets/thumbs/city_states/hattusa_irl.png"
+      },
+      "attrs": {
+        "type": "Scientific"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Hattusa_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Hattusa"
+          }
+        ]
+      },
+      "geoNote": "Hittite ruins near Boğazkale"
+    },
+    {
+      "id": "hong_kong",
+      "name": "Hong Kong",
+      "coords": [
+        22.3193,
+        114.1694
+      ],
+      "theme": {
+        "colorKey": "city-state-industrial"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/hong_kong_ingame.png",
+        "irl": "assets/thumbs/city_states/hong_kong_irl.png"
+      },
+      "attrs": {
+        "type": "Industrial"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Hong_Kong_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Hong_Kong"
+          }
+        ]
+      }
+    },
+    {
+      "id": "hunza",
+      "name": "Hunza",
+      "coords": [
+        36.3167,
+        74.6667
+      ],
+      "theme": {
+        "colorKey": "city-state-trade"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/hunza_ingame.png",
+        "irl": "assets/thumbs/city_states/hunza_irl.png"
       },
       "attrs": {
         "type": "Trade"
       },
       "detail": {
-        "text": "",
         "links": [
-          { "label": "Fandom", "url": "https://civilization.fandom.com/wiki/Jakarta_(Civ6)" },
-          { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Jakarta" }
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Hunza_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Hunza_Valley"
+          }
+        ]
+      },
+      "geoNote": "Karimabad; representative center of historic Hunza"
+    },
+    {
+      "id": "jerusalem",
+      "name": "Jerusalem",
+      "coords": [
+        31.7683,
+        35.2137
+      ],
+      "theme": {
+        "colorKey": "city-state-religious"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/jerusalem_ingame.png",
+        "irl": "assets/thumbs/city_states/jerusalem_irl.png"
+      },
+      "attrs": {
+        "type": "Religious"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Jerusalem_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Jerusalem"
+          }
         ]
       }
+    },
+    {
+      "id": "johannesburg",
+      "name": "Johannesburg",
+      "coords": [
+        -26.2041,
+        28.0473
+      ],
+      "theme": {
+        "colorKey": "city-state-industrial"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/johannesburg_ingame.png",
+        "irl": "assets/thumbs/city_states/johannesburg_irl.png"
+      },
+      "attrs": {
+        "type": "Industrial"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Johannesburg_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Johannesburg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "kabul",
+      "name": "Kabul",
+      "coords": [
+        34.5553,
+        69.2075
+      ],
+      "theme": {
+        "colorKey": "city-state-militaristic"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/kabul_ingame.png",
+        "irl": "assets/thumbs/city_states/kabul_irl.png"
+      },
+      "attrs": {
+        "type": "Militaristic"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Kabul_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Kabul"
+          }
+        ]
+      }
+    },
+    {
+      "id": "kandy",
+      "name": "Kandy",
+      "coords": [
+        7.2906,
+        80.6337
+      ],
+      "theme": {
+        "colorKey": "city-state-religious"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/kandy_ingame.png",
+        "irl": "assets/thumbs/city_states/kandy_irl.png"
+      },
+      "attrs": {
+        "type": "Religious"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Kandy_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Kandy"
+          }
+        ]
+      }
+    },
+    {
+      "id": "kumasi",
+      "name": "Kumasi",
+      "coords": [
+        6.6885,
+        -1.6244
+      ],
+      "theme": {
+        "colorKey": "city-state-cultural"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/kumasi_ingame.png",
+        "irl": "assets/thumbs/city_states/kumasi_irl.png"
+      },
+      "attrs": {
+        "type": "Cultural"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Kumasi_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Kumasi"
+          }
+        ]
+      }
+    },
+    {
+      "id": "la_venta",
+      "name": "La Venta",
+      "coords": [
+        18.1676,
+        -94.0423
+      ],
+      "theme": {
+        "colorKey": "city-state-religious"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/la_venta_ingame.png",
+        "irl": "assets/thumbs/city_states/la_venta_irl.png"
+      },
+      "attrs": {
+        "type": "Religious"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/La_Venta_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/La_Venta"
+          }
+        ]
+      },
+      "geoNote": "Olmec archaeological site"
+    },
+    {
+      "id": "lahore",
+      "name": "Lahore",
+      "coords": [
+        31.5497,
+        74.3436
+      ],
+      "theme": {
+        "colorKey": "city-state-militaristic"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/lahore_ingame.png",
+        "irl": "assets/thumbs/city_states/lahore_irl.png"
+      },
+      "attrs": {
+        "type": "Militaristic"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Lahore_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Lahore"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mexico_city",
+      "name": "Mexico City",
+      "coords": [
+        19.4326,
+        -99.1332
+      ],
+      "theme": {
+        "colorKey": "city-state-industrial"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/mexico_city_ingame.png",
+        "irl": "assets/thumbs/city_states/mexico_city_irl.png"
+      },
+      "attrs": {
+        "type": "Industrial"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Mexico_City_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Mexico_City"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mitla",
+      "name": "Mitla",
+      "coords": [
+        16.9281,
+        -96.3594
+      ],
+      "theme": {
+        "colorKey": "city-state-scientific"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/mitla_ingame.png",
+        "irl": "assets/thumbs/city_states/mitla_irl.png"
+      },
+      "attrs": {
+        "type": "Scientific"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Mitla_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Mitla"
+          }
+        ]
+      },
+      "geoNote": "Zapotec archaeological site"
+    },
+    {
+      "id": "mogadishu",
+      "name": "Mogadishu",
+      "coords": [
+        2.0469,
+        45.3182
+      ],
+      "theme": {
+        "colorKey": "city-state-trade"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/mogadishu_ingame.png",
+        "irl": "assets/thumbs/city_states/mogadishu_irl.png"
+      },
+      "attrs": {
+        "type": "Trade"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Mogadishu_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Mogadishu"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mohenjo_daro",
+      "name": "Mohenjo-Daro",
+      "coords": [
+        27.3242,
+        68.1357
+      ],
+      "theme": {
+        "colorKey": "city-state-cultural"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/mohenjo_daro_ingame.png",
+        "irl": "assets/thumbs/city_states/mohenjo_daro_irl.png"
+      },
+      "attrs": {
+        "type": "Cultural"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Mohenjo-Daro_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Mohenjo-daro"
+          }
+        ]
+      },
+      "geoNote": "Archaeological site"
+    },
+    {
+      "id": "muscat",
+      "name": "Muscat",
+      "coords": [
+        23.588,
+        58.3829
+      ],
+      "theme": {
+        "colorKey": "city-state-trade"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/muscat_ingame.png",
+        "irl": "assets/thumbs/city_states/muscat_irl.png"
+      },
+      "attrs": {
+        "type": "Trade"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Muscat_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Muscat"
+          }
+        ]
+      }
+    },
+    {
+      "id": "nalanda",
+      "name": "Nalanda",
+      "coords": [
+        25.1361,
+        85.4438
+      ],
+      "theme": {
+        "colorKey": "city-state-scientific"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/nalanda_ingame.png",
+        "irl": "assets/thumbs/city_states/nalanda_irl.png"
+      },
+      "attrs": {
+        "type": "Scientific"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Nalanda_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Nalanda_mahavihara"
+          }
+        ]
+      },
+      "geoNote": "Historic monastic university"
+    },
+    {
+      "id": "nan_madol",
+      "name": "Nan Madol",
+      "coords": [
+        6.8449,
+        158.335
+      ],
+      "theme": {
+        "colorKey": "city-state-cultural"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/nan_madol_ingame.png",
+        "irl": "assets/thumbs/city_states/nan_madol_irl.png"
+      },
+      "attrs": {
+        "type": "Cultural"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Nan_Madol_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Nan_Madol"
+          }
+        ]
+      },
+      "geoNote": "Archaeological complex on Temwen Island"
+    },
+    {
+      "id": "nazca",
+      "name": "Nazca",
+      "coords": [
+        -14.828,
+        -74.943
+      ],
+      "theme": {
+        "colorKey": "city-state-religious"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/nazca_ingame.png",
+        "irl": "assets/thumbs/city_states/nazca_irl.png"
+      },
+      "attrs": {
+        "type": "Religious"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Nazca_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Nazca_Lines"
+          }
+        ]
+      },
+      "geoNote": "Nazca Lines area rather than modern Nazca city"
+    },
+    {
+      "id": "ngazargamu",
+      "name": "Ngazargamu",
+      "coords": [
+        13.0833,
+        12.3667
+      ],
+      "theme": {
+        "colorKey": "city-state-militaristic"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/ngazargamu_ingame.png",
+        "irl": "assets/thumbs/city_states/ngazargamu_irl.png"
+      },
+      "attrs": {
+        "type": "Militaristic"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Ngazargamu_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Ngazargamu"
+          }
+        ]
+      },
+      "geoNote": "Ruins in Yobe State, Nigeria"
+    },
+    {
+      "id": "preslav",
+      "name": "Preslav",
+      "coords": [
+        43.1628,
+        26.8074
+      ],
+      "theme": {
+        "colorKey": "city-state-militaristic"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/preslav_ingame.png",
+        "irl": "assets/thumbs/city_states/preslav_irl.png"
+      },
+      "attrs": {
+        "type": "Militaristic"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Preslav_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Preslav"
+          }
+        ]
+      },
+      "geoNote": "Historic Veliki Preslav"
+    },
+    {
+      "id": "rapa_nui",
+      "name": "Rapa Nui",
+      "coords": [
+        -27.1167,
+        -109.3667
+      ],
+      "theme": {
+        "colorKey": "city-state-cultural"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/rapa_nui_ingame.png",
+        "irl": "assets/thumbs/city_states/rapa_nui_irl.png"
+      },
+      "attrs": {
+        "type": "Cultural"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Rapa_Nui_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Easter_Island"
+          }
+        ]
+      },
+      "geoNote": "Representative island location, not a single historical city"
+    },
+    {
+      "id": "samarkand",
+      "name": "Samarkand",
+      "coords": [
+        39.6542,
+        66.9597
+      ],
+      "theme": {
+        "colorKey": "city-state-trade"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/samarkand_ingame.png",
+        "irl": "assets/thumbs/city_states/samarkand_irl.png"
+      },
+      "attrs": {
+        "type": "Trade"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Samarkand_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Samarkand"
+          }
+        ]
+      }
+    },
+    {
+      "id": "singapore",
+      "name": "Singapore",
+      "coords": [
+        1.3521,
+        103.8198
+      ],
+      "theme": {
+        "colorKey": "city-state-industrial"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/singapore_ingame.png",
+        "irl": "assets/thumbs/city_states/singapore_irl.png"
+      },
+      "attrs": {
+        "type": "Industrial"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Singapore_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Singapore"
+          }
+        ]
+      }
+    },
+    {
+      "id": "taruga",
+      "name": "Taruga",
+      "coords": [
+        8.4167,
+        7.25
+      ],
+      "theme": {
+        "colorKey": "city-state-scientific"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/taruga_ingame.png",
+        "irl": "assets/thumbs/city_states/taruga_irl.png"
+      },
+      "attrs": {
+        "type": "Scientific"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Taruga_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Taruga"
+          }
+        ]
+      },
+      "geoNote": "Approximate Taruga archaeological area in central Nigeria"
+    },
+    {
+      "id": "valletta",
+      "name": "Valletta",
+      "coords": [
+        35.8992,
+        14.5141
+      ],
+      "theme": {
+        "colorKey": "city-state-militaristic"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/valletta_ingame.png",
+        "irl": "assets/thumbs/city_states/valletta_irl.png"
+      },
+      "attrs": {
+        "type": "Militaristic"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Valletta_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Valletta"
+          }
+        ]
+      }
+    },
+    {
+      "id": "vatican_city",
+      "name": "Vatican City",
+      "coords": [
+        41.9029,
+        12.4534
+      ],
+      "theme": {
+        "colorKey": "city-state-religious"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/vatican_city_ingame.png",
+        "irl": "assets/thumbs/city_states/vatican_city_irl.png"
+      },
+      "attrs": {
+        "type": "Religious"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Vatican_City_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Vatican_City"
+          }
+        ]
+      }
+    },
+    {
+      "id": "venice",
+      "name": "Venice",
+      "coords": [
+        45.4408,
+        12.3155
+      ],
+      "theme": {
+        "colorKey": "city-state-trade"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/venice_ingame.png",
+        "irl": "assets/thumbs/city_states/venice_irl.png"
+      },
+      "attrs": {
+        "type": "Trade"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Venice_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Venice"
+          }
+        ]
+      }
+    },
+    {
+      "id": "vilnius",
+      "name": "Vilnius",
+      "coords": [
+        54.6872,
+        25.2797
+      ],
+      "theme": {
+        "colorKey": "city-state-cultural"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/vilnius_ingame.png",
+        "irl": "assets/thumbs/city_states/vilnius_irl.png"
+      },
+      "attrs": {
+        "type": "Cultural"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Vilnius_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Vilnius"
+          }
+        ]
+      }
+    },
+    {
+      "id": "wolin",
+      "name": "Wolin",
+      "coords": [
+        53.8414,
+        14.6145
+      ],
+      "theme": {
+        "colorKey": "city-state-militaristic"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/wolin_ingame.png",
+        "irl": "assets/thumbs/city_states/wolin_irl.png"
+      },
+      "attrs": {
+        "type": "Militaristic"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Wolin_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Wolin_(town)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "yerevan",
+      "name": "Yerevan",
+      "coords": [
+        40.1792,
+        44.4991
+      ],
+      "theme": {
+        "colorKey": "city-state-religious"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/yerevan_ingame.png",
+        "irl": "assets/thumbs/city_states/yerevan_irl.png"
+      },
+      "attrs": {
+        "type": "Religious"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Yerevan_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Yerevan"
+          }
+        ]
+      }
+    },
+    {
+      "id": "zanzibar",
+      "name": "Zanzibar",
+      "coords": [
+        -6.1622,
+        39.1921
+      ],
+      "theme": {
+        "colorKey": "city-state-trade"
+      },
+      "thumbs": {
+        "ingame": "assets/thumbs/city_states/zanzibar_ingame.png",
+        "irl": "assets/thumbs/city_states/zanzibar_irl.png"
+      },
+      "attrs": {
+        "type": "Trade"
+      },
+      "detail": {
+        "links": [
+          {
+            "label": "Fandom",
+            "url": "https://civilization.fandom.com/wiki/Zanzibar_(Civ6)"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Stone_Town"
+          }
+        ]
+      },
+      "geoNote": "Stone Town, Zanzibar City"
     }
   ]
 }
-
