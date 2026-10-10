@@ -118,7 +118,7 @@
 .detailTitle {
   font-weight: 600;
   color: #fff;
-  -webkit-text-stroke: 3.0px #000;
+  -webkit-text-stroke: 2.5px #000;
   paint-order: stroke fill;
 }
 
