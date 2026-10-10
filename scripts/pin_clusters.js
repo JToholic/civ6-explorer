@@ -13,7 +13,7 @@
   }
 
   const WORLD_SHIFTS = [-360, 0, 360];
-  const CLUSTER_RADIUS_PX = 22;
+  const CLUSTER_RADIUS_PX = 10;
   const MAX_TOOLTIP_NAMES = 10;
 
   // Re-created on every map render, like the existing markerLayer.
