@@ -1,0 +1,36 @@
+/* Great Works UI additions: no image files required. */
+.greatWorkMapMode[hidden] { display: none !important; }
+.greatWorkMapMode {
+  position:absolute; z-index:900;
+  top:12px; left:60px;
+  display:flex; gap:3px; padding:4px;
+  border:1px solid #d7d7d7; border-radius:11px;
+  background:rgba(255,255,255,.96);
+  box-shadow:0 3px 12px rgba(0,0,0,.12);
+}
+.greatWorkMapMode button {
+  border:0; background:transparent; color:#333;
+  border-radius:7px; padding:7px 11px;
+  font:inherit; font-size:13px; cursor:pointer;
+}
+.greatWorkMapMode button.is-active {
+  background:#39495e; color:#fff;
+}
+.greatWorkMapMode button:focus-visible {
+  outline:2px solid #276cbd; outline-offset:2px;
+}
+.is-great-works .detailBody .thumbRow { display:none; }
+.is-great-works .greatWorkCardWords { min-width:0; }
+.is-great-works .greatWorkTrayPin {
+  display:flex; align-items:center; justify-content:center;
+}
+.is-great-works .greatWorkTrayGlyph {
+  font-size:21px; color:#fff; font-weight:600; line-height:1;
+  text-shadow:0 1px 2px rgba(0,0,0,.4);
+}
+.is-great-works #bottomTray .trayTitle { font-size:12px; }
+.is-great-works .detailAttrVal a { color:#1664a0; text-decoration:underline; }
+@media (max-width: 720px) {
+  .greatWorkMapMode { top:52px; left:10px; }
+  .greatWorkMapMode button { padding:5px 8px; font-size:12px; }
+}
