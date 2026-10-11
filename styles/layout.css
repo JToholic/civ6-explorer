@@ -34,3 +34,20 @@
   background:var(--panel);
 }
 
+/* Collapse the tray whenever its pin list is empty.
+   Comments and whitespace do not affect :empty. */
+#mainGrid:has(#trayPins:empty) {
+  grid-template-rows: minmax(0, 1fr);
+}
+
+#mainGrid:has(#trayPins:empty) #leftPanel {
+  grid-row: 1;
+}
+
+#mainGrid:has(#trayPins:empty) #bottomTray {
+  display: none;
+}
+
+#mainGrid:has(#trayPins:empty) #mapArea {
+  border-bottom: 0;
+}

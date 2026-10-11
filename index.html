@@ -92,5 +92,14 @@
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
   <script src="scripts/app.js?v={{ site.github.build_revision }}"></script>
   <script src="scripts/pin_clusters.js?v={{ site.github.build_revision }}"></script>
+  <!-- Keep Leaflet tiles aligned when the bottom tray opens/closes. -->
+  <script>
+    const mapResizeObserver = new ResizeObserver(() => {
+      if (typeof map !== "undefined" && map) {
+        requestAnimationFrame(() => map.invalidateSize({ pan: false }));
+      }
+    });
+    mapResizeObserver.observe(document.getElementById("map"));
+  </script>
 </body>
 </html>
