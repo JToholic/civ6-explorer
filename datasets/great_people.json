@@ -17,7 +17,8 @@
       "https://civilization.fandom.com/wiki/Great_Musician_(Civ6)",
       "https://steamcommunity.com/sharedfiles/filedetails/?id=3047016980"
     ],
-    "reviewedOn": "2026-10-11"
+    "reviewedOn": "2026-10-11",
+    "ageAtDeathPolicy": "Age shown with death year when both birth and death years are available. Computed from recorded calendar years (subtracting the missing year zero when crossing BCE/CE); the exact age may differ by one year because day/month are not supplied. A few established leaders use known biographical ages. Existing approximate and disputed date labels produce approximate ages. Unknown ages are omitted."
   },
   "sortOptions": [
     {
@@ -79,7 +80,7 @@
         "birthYearLabel": "480 BCE",
         "birthPlace": "Halicarnassus (now Bodrum, Turkey)",
         "deathYear": -450,
-        "deathYearLabel": "450 BCE"
+        "deathYearLabel": "450 BCE (aged 30)"
       },
       "detail": {
         "links": [
@@ -152,7 +153,7 @@
         "birthYearLabel": "524 BCE",
         "birthPlace": "Athens, Greece",
         "deathYear": -459,
-        "deathYearLabel": "459 BCE"
+        "deathYearLabel": "459 BCE (aged 65)"
       },
       "detail": {
         "links": [
@@ -262,7 +263,7 @@
         "birthYearLabel": "c. 970",
         "birthPlace": "Iceland (exact location unknown)",
         "deathYear": 1020,
-        "deathYearLabel": "c. 1020"
+        "deathYearLabel": "c. 1020 (aged c. 50)"
       },
       "detail": {
         "links": [
@@ -299,7 +300,7 @@
         "birthYearLabel": "c. 971",
         "birthPlace": "Tamil Nadu, India (exact birthplace uncertain)",
         "deathYear": 1044,
-        "deathYearLabel": "1044"
+        "deathYearLabel": "1044 (aged c. 73)"
       },
       "detail": {
         "links": [
@@ -336,7 +337,7 @@
         "birthYearLabel": "1371",
         "birthPlace": "Kunyang (now in Yunnan, China)",
         "deathYear": 1433,
-        "deathYearLabel": "1433"
+        "deathYearLabel": "1433 (aged 62)"
       },
       "detail": {
         "links": [
@@ -372,7 +373,7 @@
         "birthYearLabel": "c. 1540",
         "birthPlace": "Tavistock, England, United Kingdom",
         "deathYear": 1596,
-        "deathYearLabel": "1596"
+        "deathYearLabel": "1596 (aged c. 56)"
       },
       "detail": {
         "links": [
@@ -408,7 +409,7 @@
         "birthYearLabel": "1505",
         "birthPlace": "Granada, Spain",
         "deathYear": 1588,
-        "deathYearLabel": "1588"
+        "deathYearLabel": "1588 (aged 83)"
       },
       "detail": {
         "links": [
@@ -444,7 +445,7 @@
         "birthYearLabel": "1545",
         "birthPlace": "Hanseong (now Seoul, South Korea)",
         "deathYear": 1598,
-        "deathYearLabel": "1598"
+        "deathYearLabel": "1598 (aged 53)"
       },
       "detail": {
         "links": [
@@ -480,7 +481,7 @@
         "birthYearLabel": "c. 1480",
         "birthPlace": "Sabrosa, Portugal (disputed)",
         "deathYear": 1521,
-        "deathYearLabel": "1521"
+        "deathYearLabel": "1521 (aged c. 41)"
       },
       "detail": {
         "links": [
@@ -517,7 +518,7 @@
         "birthYearLabel": "1775",
         "birthPlace": "Guangdong, China (exact birthplace uncertain)",
         "deathYear": 1844,
-        "deathYearLabel": "1844"
+        "deathYearLabel": "1844 (aged 69)"
       },
       "detail": {
         "links": [
@@ -554,7 +555,7 @@
         "birthYearLabel": "1758",
         "birthPlace": "Burnham Thorpe, England, United Kingdom",
         "deathYear": 1805,
-        "deathYearLabel": "1805"
+        "deathYearLabel": "1805 (aged 47)"
       },
       "detail": {
         "links": [
@@ -590,7 +591,7 @@
         "birthYearLabel": "1771",
         "birthPlace": "Constantinople (now Istanbul, Turkey)",
         "deathYear": 1825,
-        "deathYearLabel": "1825"
+        "deathYearLabel": "1825 (aged 54)"
       },
       "detail": {
         "links": [
@@ -626,7 +627,7 @@
         "birthYearLabel": "1794",
         "birthPlace": "South Kingstown, Rhode Island, United States",
         "deathYear": 1858,
-        "deathYearLabel": "1858"
+        "deathYearLabel": "1858 (aged 64)"
       },
       "detail": {
         "links": [
@@ -662,7 +663,7 @@
         "birthYearLabel": "1863",
         "birthPlace": "Weilheim in Oberbayern, Germany",
         "deathYear": 1932,
-        "deathYearLabel": "1932"
+        "deathYearLabel": "1932 (aged 69)"
       },
       "detail": {
         "links": [
@@ -698,7 +699,7 @@
         "birthYearLabel": "1807",
         "birthPlace": "Rio Grande, Brazil",
         "deathYear": 1897,
-        "deathYearLabel": "1897"
+        "deathYearLabel": "1897 (aged 90)"
       },
       "detail": {
         "links": [
@@ -734,7 +735,7 @@
         "birthYearLabel": "1848",
         "birthPlace": "Kagoshima, Japan",
         "deathYear": 1934,
-        "deathYearLabel": "1934"
+        "deathYearLabel": "1934 (aged 86)"
       },
       "detail": {
         "links": [
@@ -770,7 +771,7 @@
         "birthYearLabel": "1885",
         "birthPlace": "Fredericksburg, Texas, United States",
         "deathYear": 1966,
-        "deathYearLabel": "1966"
+        "deathYearLabel": "1966 (aged 81)"
       },
       "detail": {
         "links": [
@@ -806,7 +807,7 @@
         "birthYearLabel": "1906",
         "birthPlace": "New York City, United States",
         "deathYear": 1992,
-        "deathYearLabel": "1992"
+        "deathYearLabel": "1992 (aged 86)"
       },
       "detail": {
         "links": [
@@ -842,7 +843,7 @@
         "birthYearLabel": "1910",
         "birthPlace": "Kamianets-Podilskyi (now in Ukraine)",
         "deathYear": 1988,
-        "deathYearLabel": "1988"
+        "deathYearLabel": "1988 (aged 78)"
       },
       "detail": {
         "links": [
@@ -878,7 +879,7 @@
         "birthYearLabel": "1938",
         "birthPlace": "Sri Lanka (exact birthplace unconfirmed)",
         "deathYear": 1992,
-        "deathYearLabel": "1992"
+        "deathYearLabel": "1992 (aged 54)"
       },
       "detail": {
         "links": [
@@ -914,7 +915,7 @@
         "birthYearLabel": "c. 1360",
         "birthPlace": "Muscovy (now Russia), exact birthplace unknown",
         "deathYear": 1430,
-        "deathYearLabel": "c. 1430",
+        "deathYearLabel": "c. 1430 (aged c. 70)",
         "greatWorks": [
           "Annunciation",
           "Saviour in Glory",
@@ -956,7 +957,7 @@
         "birthYearLabel": "1475",
         "birthPlace": "Caprese (now Caprese Michelangelo, Italy)",
         "deathYear": 1564,
-        "deathYearLabel": "1564",
+        "deathYearLabel": "1564 (aged 89)",
         "greatWorks": [
           "Sistine Chapel Ceiling",
           "Pietà",
@@ -997,7 +998,7 @@
         "birthYearLabel": "c. 1386",
         "birthPlace": "Florence, Italy",
         "deathYear": 1466,
-        "deathYearLabel": "1466",
+        "deathYearLabel": "1466 (aged c. 80)",
         "greatWorks": [
           "Saint Mark",
           "Equestrian Statue of Gattamelata",
@@ -1038,7 +1039,7 @@
         "birthYearLabel": "c. 1450",
         "birthPlace": "’s-Hertogenbosch, Netherlands",
         "deathYear": 1516,
-        "deathYearLabel": "1516",
+        "deathYearLabel": "1516 (aged c. 66)",
         "greatWorks": [
           "The Garden of Earthly Delights",
           "The Last Judgement",
@@ -1079,7 +1080,7 @@
         "birthYearLabel": "c. 1450",
         "birthPlace": "Herat (now in Afghanistan)",
         "deathYear": 1535,
-        "deathYearLabel": "c. 1535",
+        "deathYearLabel": "c. 1535 (aged c. 85)",
         "greatWorks": [
           "Battleground of Timur and Egyptian King",
           "Yusef and Zuleykha",
@@ -1120,7 +1121,7 @@
         "birthYearLabel": "1606",
         "birthPlace": "Leiden, Netherlands",
         "deathYear": 1669,
-        "deathYearLabel": "1669",
+        "deathYearLabel": "1669 (aged 63)",
         "greatWorks": [
           "Andries de Graeff",
           "Agatha Bas",
@@ -1161,7 +1162,7 @@
         "birthYearLabel": "1541",
         "birthPlace": "Fodele or Candia (now Heraklion, Greece; disputed)",
         "deathYear": 1614,
-        "deathYearLabel": "1614",
+        "deathYearLabel": "1614 (aged 73)",
         "greatWorks": [
           "Adoration of the Magi",
           "The Assumption of the Virgin",
@@ -1203,7 +1204,7 @@
         "birthYearLabel": "c. 1494",
         "birthPlace": "Taicang, China",
         "deathYear": 1552,
-        "deathYearLabel": "c. 1552",
+        "deathYearLabel": "c. 1552 (aged c. 58)",
         "greatWorks": [
           "Spring Morning in the Han Palace",
           "Fishermen in Reclusion Among the Lotus Stream",
@@ -1244,7 +1245,7 @@
         "birthYearLabel": "c. 1488",
         "birthPlace": "Pieve di Cadore, Italy",
         "deathYear": 1576,
-        "deathYearLabel": "1576",
+        "deathYearLabel": "1576 (aged c. 88)",
         "greatWorks": [
           "Assunta",
           "Salome with the Head of John the Baptist",
@@ -1285,7 +1286,7 @@
         "birthYearLabel": "1539",
         "birthPlace": "Nanao, Japan",
         "deathYear": 1610,
-        "deathYearLabel": "1610",
+        "deathYearLabel": "1610 (aged 71)",
         "greatWorks": [
           "Pine Trees",
           "Maple Tree",
@@ -1326,7 +1327,7 @@
         "birthYearLabel": "1843",
         "birthPlace": "Korea (exact birthplace uncertain)",
         "deathYear": 1897,
-        "deathYearLabel": "c. 1897",
+        "deathYearLabel": "c. 1897 (aged c. 54)",
         "greatWorks": [
           "Samin munnyeondo",
           "Rooster",
@@ -1368,7 +1369,7 @@
         "birthYearLabel": "c. 1532",
         "birthPlace": "Cremona, Italy",
         "deathYear": 1625,
-        "deathYearLabel": "1625",
+        "deathYearLabel": "1625 (aged c. 93)",
         "greatWorks": [
           "Three Sisters Playing Chess",
           "Phillip II of Spain",
@@ -1409,7 +1410,7 @@
         "birthYearLabel": "1741",
         "birthPlace": "Chur, Switzerland",
         "deathYear": 1807,
-        "deathYearLabel": "1807",
+        "deathYearLabel": "1807 (aged 66)",
         "greatWorks": [
           "Anna Maria Jenkins and Thomas Jenkins",
           "Portrait of Johann Joachim Winckelmann",
@@ -1450,7 +1451,7 @@
         "birthYearLabel": "1760",
         "birthPlace": "Edo (now Tokyo, Japan)",
         "deathYear": 1849,
-        "deathYearLabel": "1849",
+        "deathYearLabel": "1849 (aged 89)",
         "greatWorks": [
           "The Great Wave Off Kanagawa",
           "Lake Suwa in Shinano Province",
@@ -1491,7 +1492,7 @@
         "birthYearLabel": "c. 1844",
         "birthPlace": "Upstate New York, United States (disputed)",
         "deathYear": 1907,
-        "deathYearLabel": "1907",
+        "deathYearLabel": "1907 (aged c. 63)",
         "greatWorks": [
           "The Death of Cleopatra",
           "Marriage of Hiawatha and Minnehaha",
@@ -1533,7 +1534,7 @@
         "birthYearLabel": "1840",
         "birthPlace": "Paris, France",
         "deathYear": 1926,
-        "deathYearLabel": "1926",
+        "deathYearLabel": "1926 (aged 86)",
         "greatWorks": [
           "Water Lilies",
           "Impression, Sunrise",
@@ -1574,7 +1575,7 @@
         "birthYearLabel": "1748",
         "birthPlace": "Paris, France",
         "deathYear": 1821,
-        "deathYearLabel": "1821",
+        "deathYearLabel": "1821 (aged 73)",
         "greatWorks": [
           "Portrait of Pierre-Étienne Falconet",
           "Portrait of Catherine II",
@@ -1615,7 +1616,7 @@
         "birthYearLabel": "1853",
         "birthPlace": "Zundert, Netherlands",
         "deathYear": 1890,
-        "deathYearLabel": "1890",
+        "deathYearLabel": "1890 (aged 37)",
         "greatWorks": [
           "Starry Night",
           "Café Terrace at Night",
@@ -1656,7 +1657,7 @@
         "birthYearLabel": "1913",
         "birthPlace": "Budapest, Hungary",
         "deathYear": 1941,
-        "deathYearLabel": "1941",
+        "deathYearLabel": "1941 (aged 28)",
         "greatWorks": [
           "Three Girls",
           "Bride's Toilet",
@@ -1697,7 +1698,7 @@
         "birthYearLabel": "1796",
         "birthPlace": "Oryol Governorate (now Russia)",
         "deathYear": 1837,
-        "deathYearLabel": "1837",
+        "deathYearLabel": "1837 (aged 41)",
         "greatWorks": [
           "Mikhail Kutuzov",
           "Alexander Column",
@@ -1738,7 +1739,7 @@
         "birthYearLabel": "1862",
         "birthPlace": "Baumgarten (now Vienna, Austria)",
         "deathYear": 1918,
-        "deathYearLabel": "1918",
+        "deathYearLabel": "1918 (aged 56)",
         "greatWorks": [
           "The Kiss",
           "Avenue in the Park of Schloss Kammer",
@@ -1779,7 +1780,7 @@
         "birthYearLabel": "1844",
         "birthPlace": "Allegheny City (now Pittsburgh, United States)",
         "deathYear": 1926,
-        "deathYearLabel": "1926",
+        "deathYearLabel": "1926 (aged 82)",
         "greatWorks": [
           "Lydia Leaning on Her Arms",
           "The Child's Bath",
@@ -1820,7 +1821,7 @@
         "birthYearLabel": "1866",
         "birthPlace": "Moscow, Russia",
         "deathYear": 1944,
-        "deathYearLabel": "1944",
+        "deathYearLabel": "1944 (aged 78)",
         "greatWorks": [
           "Composition 8",
           "Blue Rider",
@@ -1861,7 +1862,7 @@
         "birthYearLabel": "c. 990",
         "birthPlace": "China (exact birthplace unknown)",
         "deathYear": 1051,
-        "deathYearLabel": "c. 1051"
+        "deathYearLabel": "c. 1051 (aged c. 61)"
       },
       "detail": {
         "links": [
@@ -1898,7 +1899,7 @@
         "birthYearLabel": "c. 442",
         "birthPlace": "Miletus (now in Turkey)",
         "deathYear": 537,
-        "deathYearLabel": "c. 537"
+        "deathYearLabel": "c. 537 (aged c. 95)"
       },
       "detail": {
         "links": [
@@ -1934,7 +1935,7 @@
         "birthYearLabel": "c. 1230",
         "birthPlace": "Savoy (now in France/Italy), exact birthplace unknown",
         "deathYear": 1309,
-        "deathYearLabel": "c. 1309"
+        "deathYearLabel": "c. 1309 (aged c. 79)"
       },
       "detail": {
         "links": [
@@ -1971,7 +1972,7 @@
         "birthYearLabel": "c. 2700 BCE",
         "birthPlace": "Ancient Egypt, exact birthplace unknown",
         "deathYear": -2600,
-        "deathYearLabel": "c. 2600 BCE"
+        "deathYearLabel": "c. 2600 BCE (aged c. 100)"
       },
       "detail": {
         "links": [
@@ -2008,7 +2009,7 @@
         "birthYearLabel": "1377",
         "birthPlace": "Florence, Italy",
         "deathYear": 1446,
-        "deathYearLabel": "1446"
+        "deathYearLabel": "1446 (aged 69)"
       },
       "detail": {
         "links": [
@@ -2044,7 +2045,7 @@
         "birthYearLabel": "1452",
         "birthPlace": "Anchiano (near Vinci), Italy",
         "deathYear": 1519,
-        "deathYearLabel": "1519"
+        "deathYearLabel": "1519 (aged 67)"
       },
       "detail": {
         "links": [
@@ -2080,7 +2081,7 @@
         "birthYearLabel": "c. 1489",
         "birthPlace": "Ağırnas (now in Turkey)",
         "deathYear": 1588,
-        "deathYearLabel": "1588"
+        "deathYearLabel": "1588 (aged c. 99)"
       },
       "detail": {
         "links": [
@@ -2116,7 +2117,7 @@
         "birthYearLabel": "1815",
         "birthPlace": "London, England, United Kingdom",
         "deathYear": 1852,
-        "deathYearLabel": "1852"
+        "deathYearLabel": "1852 (aged 37)"
       },
       "detail": {
         "links": [
@@ -2152,7 +2153,7 @@
         "birthYearLabel": "1832",
         "birthPlace": "Dijon, France",
         "deathYear": 1923,
-        "deathYearLabel": "1923"
+        "deathYearLabel": "1923 (aged 91)"
       },
       "detail": {
         "links": [
@@ -2188,7 +2189,7 @@
         "birthYearLabel": "1736",
         "birthPlace": "Greenock, Scotland, United Kingdom",
         "deathYear": 1819,
-        "deathYearLabel": "1819"
+        "deathYearLabel": "1819 (aged 83)"
       },
       "detail": {
         "links": [
@@ -2224,7 +2225,7 @@
         "birthYearLabel": "1592",
         "birthPlace": "Lahore (now in Pakistan)",
         "deathYear": 1666,
-        "deathYearLabel": "1666"
+        "deathYearLabel": "1666 (aged 74)"
       },
       "detail": {
         "links": [
@@ -2260,7 +2261,7 @@
         "birthYearLabel": "1898",
         "birthPlace": "Kuortane, Finland",
         "deathYear": 1976,
-        "deathYearLabel": "1976"
+        "deathYearLabel": "1976 (aged 78)"
       },
       "detail": {
         "links": [
@@ -2296,7 +2297,7 @@
         "birthYearLabel": "1856",
         "birthPlace": "Smiljan (now in Croatia)",
         "deathYear": 1943,
-        "deathYearLabel": "1943"
+        "deathYearLabel": "1943 (aged 87)"
       },
       "detail": {
         "links": [
@@ -2332,7 +2333,7 @@
         "birthYearLabel": "1882",
         "birthPlace": "Worcester, Massachusetts, United States",
         "deathYear": 1945,
-        "deathYearLabel": "1945"
+        "deathYearLabel": "1945 (aged 63)"
       },
       "detail": {
         "links": [
@@ -2368,7 +2369,7 @@
         "birthYearLabel": "1907",
         "birthPlace": "Zhytomyr (now in Ukraine)",
         "deathYear": 1966,
-        "deathYearLabel": "1966"
+        "deathYearLabel": "1966 (aged 59)"
       },
       "detail": {
         "links": [
@@ -2404,7 +2405,7 @@
         "birthYearLabel": "1911",
         "birthPlace": "Surrey, England, United Kingdom",
         "deathYear": 1996,
-        "deathYearLabel": "1996"
+        "deathYearLabel": "1996 (aged 85)"
       },
       "detail": {
         "links": [
@@ -2440,7 +2441,7 @@
         "birthYearLabel": "1806",
         "birthPlace": "Mühlhausen (now Mühlhausen/Thüringen, Germany)",
         "deathYear": 1869,
-        "deathYearLabel": "1869"
+        "deathYearLabel": "1869 (aged 63)"
       },
       "detail": {
         "links": [
@@ -2476,7 +2477,7 @@
         "birthYearLabel": "1803",
         "birthPlace": "Milton Bryan, England, United Kingdom",
         "deathYear": 1865,
-        "deathYearLabel": "1865"
+        "deathYearLabel": "1865 (aged 62)"
       },
       "detail": {
         "links": [
@@ -2512,7 +2513,7 @@
         "birthYearLabel": "1930",
         "birthPlace": "Secunderabad, India",
         "deathYear": 2015,
-        "deathYearLabel": "2015"
+        "deathYearLabel": "2015 (aged 85)"
       },
       "detail": {
         "links": [
@@ -2548,7 +2549,7 @@
         "birthYearLabel": "1912",
         "birthPlace": "Wirsitz (now Wyrzysk, Poland)",
         "deathYear": 1977,
-        "deathYearLabel": "1977"
+        "deathYearLabel": "1977 (aged 65)"
       },
       "detail": {
         "links": [
@@ -2584,7 +2585,7 @@
         "birthYearLabel": "1913",
         "birthPlace": "Osaka, Japan",
         "deathYear": 2005,
-        "deathYearLabel": "2005"
+        "deathYearLabel": "2005 (aged 92)"
       },
       "detail": {
         "links": [
@@ -2656,7 +2657,7 @@
         "birthYearLabel": "247 BCE",
         "birthPlace": "Carthage (now in Tunisia)",
         "deathYear": -183,
-        "deathYearLabel": "183 BCE"
+        "deathYearLabel": "183 BCE (aged 64)"
       },
       "detail": {
         "links": [
@@ -2692,7 +2693,7 @@
         "birthYearLabel": "c. 544 BCE",
         "birthPlace": "Qi or Wu (now China; disputed)",
         "deathYear": -496,
-        "deathYearLabel": "c. 496 BCE",
+        "deathYearLabel": "c. 496 BCE (aged c. 48)",
         "greatWorks": [
           "The Art of War"
         ]
@@ -2732,7 +2733,7 @@
         "birthYearLabel": "c. 12",
         "birthPlace": "Giao Chỉ (now northern Vietnam), exact birthplace disputed",
         "deathYear": 43,
-        "deathYearLabel": "43"
+        "deathYearLabel": "43 (aged c. 31)"
       },
       "detail": {
         "links": [
@@ -2769,7 +2770,7 @@
         "birthYearLabel": "c. 870",
         "birthPlace": "Wessex (now England, United Kingdom), exact birthplace unknown",
         "deathYear": 918,
-        "deathYearLabel": "918"
+        "deathYearLabel": "918 (aged c. 48)"
       },
       "detail": {
         "links": [
@@ -2806,7 +2807,7 @@
         "birthYearLabel": "c. 1043",
         "birthPlace": "Vivar (now Vivar del Cid, Spain)",
         "deathYear": 1099,
-        "deathYearLabel": "1099"
+        "deathYearLabel": "1099 (aged c. 56)"
       },
       "detail": {
         "links": [
@@ -2842,7 +2843,7 @@
         "birthYearLabel": "c. 1162",
         "birthPlace": "Delüün Boldog (now Mongolia; site disputed)",
         "deathYear": 1227,
-        "deathYearLabel": "1227"
+        "deathYearLabel": "1227 (aged c. 65)"
       },
       "detail": {
         "links": [
@@ -2879,7 +2880,7 @@
         "birthYearLabel": "1336",
         "birthPlace": "Kesh (now Shahrisabz, Uzbekistan)",
         "deathYear": 1405,
-        "deathYearLabel": "1405"
+        "deathYearLabel": "1405 (aged 69)"
       },
       "detail": {
         "links": [
@@ -2915,7 +2916,7 @@
         "birthYearLabel": "c. 1583",
         "birthPlace": "Kingdom of Ndongo (now Angola), exact birthplace unknown",
         "deathYear": 1663,
-        "deathYearLabel": "1663"
+        "deathYearLabel": "1663 (aged c. 80)"
       },
       "detail": {
         "links": [
@@ -2952,7 +2953,7 @@
         "birthYearLabel": "c. 1533",
         "birthPlace": "Zazzau (now Zaria, Nigeria), traditional accounts",
         "deathYear": 1610,
-        "deathYearLabel": "c. 1610"
+        "deathYearLabel": "c. 1610 (aged c. 77)"
       },
       "detail": {
         "links": [
@@ -2989,7 +2990,7 @@
         "birthYearLabel": "1594",
         "birthPlace": "Stockholm, Sweden",
         "deathYear": 1632,
-        "deathYearLabel": "1632"
+        "deathYearLabel": "1632 (aged 38)"
       },
       "detail": {
         "links": [
@@ -3025,7 +3026,7 @@
         "birthYearLabel": "c. 1412",
         "birthPlace": "Domrémy (now Domrémy-la-Pucelle, France)",
         "deathYear": 1431,
-        "deathYearLabel": "1431"
+        "deathYearLabel": "1431 (aged c. 19)"
       },
       "detail": {
         "links": [
@@ -3098,7 +3099,7 @@
         "birthYearLabel": "1783",
         "birthPlace": "Caracas, Venezuela",
         "deathYear": 1830,
-        "deathYearLabel": "1830"
+        "deathYearLabel": "1830 (aged 47)"
       },
       "detail": {
         "links": [
@@ -3134,7 +3135,7 @@
         "birthYearLabel": "1778",
         "birthPlace": "Yapeyú, Argentina",
         "deathYear": 1850,
-        "deathYearLabel": "1850"
+        "deathYearLabel": "1850 (aged 72)"
       },
       "detail": {
         "links": [
@@ -3170,7 +3171,7 @@
         "birthYearLabel": "1769",
         "birthPlace": "Ajaccio, Corsica, France",
         "deathYear": 1821,
-        "deathYearLabel": "1821"
+        "deathYearLabel": "1821 (aged 52)"
       },
       "detail": {
         "links": [
@@ -3206,7 +3207,7 @@
         "birthYearLabel": "1828",
         "birthPlace": "Varanasi, India",
         "deathYear": 1858,
-        "deathYearLabel": "1858"
+        "deathYearLabel": "1858 (aged 30)"
       },
       "detail": {
         "links": [
@@ -3242,7 +3243,7 @@
         "birthYearLabel": "1742",
         "birthPlace": "Surimana, Peru",
         "deathYear": 1781,
-        "deathYearLabel": "1781"
+        "deathYearLabel": "1781 (aged 39)"
       },
       "detail": {
         "links": [
@@ -3278,7 +3279,7 @@
         "birthYearLabel": "1865",
         "birthPlace": "Melbourne, Australia",
         "deathYear": 1931,
-        "deathYearLabel": "1931"
+        "deathYearLabel": "1931 (aged 66)"
       },
       "detail": {
         "links": [
@@ -3314,7 +3315,7 @@
         "birthYearLabel": "1912",
         "birthPlace": "Moscow, Russia",
         "deathYear": 1943,
-        "deathYearLabel": "1943"
+        "deathYearLabel": "1943 (aged 31)"
       },
       "detail": {
         "links": [
@@ -3350,7 +3351,7 @@
         "birthYearLabel": "c. 1830",
         "birthPlace": "Manyambaladugu (now Guinea), location approximate",
         "deathYear": 1900,
-        "deathYearLabel": "1900"
+        "deathYearLabel": "1900 (aged c. 70)"
       },
       "detail": {
         "links": [
@@ -3387,7 +3388,7 @@
         "birthYearLabel": "1890",
         "birthPlace": "Denison, Texas, United States",
         "deathYear": 1969,
-        "deathYearLabel": "1969"
+        "deathYearLabel": "1969 (aged 79)"
       },
       "detail": {
         "links": [
@@ -3423,7 +3424,7 @@
         "birthYearLabel": "1896",
         "birthPlace": "Strelkovka (now in Russia)",
         "deathYear": 1974,
-        "deathYearLabel": "1974"
+        "deathYearLabel": "1974 (aged 78)"
       },
       "detail": {
         "links": [
@@ -3459,7 +3460,7 @@
         "birthYearLabel": "1880",
         "birthPlace": "Little Rock, Arkansas, United States",
         "deathYear": 1964,
-        "deathYearLabel": "1964"
+        "deathYearLabel": "1964 (aged 84)"
       },
       "detail": {
         "links": [
@@ -3495,7 +3496,7 @@
         "birthYearLabel": "1916",
         "birthPlace": "Bodas Karangjati (now in Indonesia)",
         "deathYear": 1950,
-        "deathYearLabel": "1950"
+        "deathYearLabel": "1950 (aged 34)"
       },
       "detail": {
         "links": [
@@ -3531,7 +3532,7 @@
         "birthYearLabel": "1953",
         "birthPlace": "Bazarak, Panjshir, Afghanistan",
         "deathYear": 2001,
-        "deathYearLabel": "2001"
+        "deathYearLabel": "2001 (aged 48)"
       },
       "detail": {
         "links": [
@@ -3567,7 +3568,7 @@
         "birthYearLabel": "1940",
         "birthPlace": "Sri Lanka, exact birthplace unconfirmed",
         "deathYear": 1992,
-        "deathYearLabel": "1992"
+        "deathYearLabel": "1992 (aged 52)"
       },
       "detail": {
         "links": [
@@ -3640,7 +3641,7 @@
         "birthYearLabel": "115 BCE",
         "birthPlace": "Rome (now in Italy)",
         "deathYear": -53,
-        "deathYearLabel": "53 BCE"
+        "deathYearLabel": "53 BCE (aged 62)"
       },
       "detail": {
         "links": [
@@ -3676,7 +3677,7 @@
         "birthYearLabel": "c. 164 BCE",
         "birthPlace": "Chenggu (now in China)",
         "deathYear": -114,
-        "deathYearLabel": "114 BCE"
+        "deathYearLabel": "114 BCE (aged c. 50)"
       },
       "detail": {
         "links": [
@@ -3712,7 +3713,7 @@
         "birthYearLabel": "c. 752",
         "birthPlace": "Athens, Greece",
         "deathYear": 803,
-        "deathYearLabel": "803"
+        "deathYearLabel": "803 (aged c. 51)"
       },
       "detail": {
         "links": [
@@ -3785,7 +3786,7 @@
         "birthYearLabel": "1254",
         "birthPlace": "Venice, Italy",
         "deathYear": 1324,
-        "deathYearLabel": "1324"
+        "deathYearLabel": "1324 (aged 70)"
       },
       "detail": {
         "links": [
@@ -3857,7 +3858,7 @@
         "birthYearLabel": "c. 1266",
         "birthPlace": "Wenzhou, China",
         "deathYear": 1346,
-        "deathYearLabel": "c. 1346"
+        "deathYearLabel": "c. 1346 (aged c. 80)"
       },
       "detail": {
         "links": [
@@ -3893,7 +3894,7 @@
         "birthYearLabel": "1360",
         "birthPlace": "Florence, Italy",
         "deathYear": 1429,
-        "deathYearLabel": "1429"
+        "deathYearLabel": "1429 (aged 69)"
       },
       "detail": {
         "links": [
@@ -3929,7 +3930,7 @@
         "birthYearLabel": "1459",
         "birthPlace": "Augsburg, Germany",
         "deathYear": 1525,
-        "deathYearLabel": "1525"
+        "deathYearLabel": "1525 (aged 66)"
       },
       "detail": {
         "links": [
@@ -4002,7 +4003,7 @@
         "birthYearLabel": "1723",
         "birthPlace": "Kirkcaldy, Scotland, United Kingdom",
         "deathYear": 1790,
-        "deathYearLabel": "1790"
+        "deathYearLabel": "1790 (aged 67)"
       },
       "detail": {
         "links": [
@@ -4038,7 +4039,7 @@
         "birthYearLabel": "1763",
         "birthPlace": "Walldorf, Germany",
         "deathYear": 1848,
-        "deathYearLabel": "1848"
+        "deathYearLabel": "1848 (aged 85)"
       },
       "detail": {
         "links": [
@@ -4074,7 +4075,7 @@
         "birthYearLabel": "1739",
         "birthPlace": "England, United Kingdom (exact birthplace unclear)",
         "deathYear": 1769,
-        "deathYearLabel": "1769"
+        "deathYearLabel": "1769 (aged 30)"
       },
       "detail": {
         "links": [
@@ -4110,7 +4111,7 @@
         "birthYearLabel": "1781",
         "birthPlace": "At sea near Port Morant, Jamaica",
         "deathYear": 1826,
-        "deathYearLabel": "1826"
+        "deathYearLabel": "1826 (aged 45)"
       },
       "detail": {
         "links": [
@@ -4146,7 +4147,7 @@
         "birthYearLabel": "1839",
         "birthPlace": "Richford, New York, United States",
         "deathYear": 1937,
-        "deathYearLabel": "1937"
+        "deathYearLabel": "1937 (aged 98)"
       },
       "detail": {
         "links": [
@@ -4182,7 +4183,7 @@
         "birthYearLabel": "1867",
         "birthPlace": "Delta, Louisiana, United States",
         "deathYear": 1919,
-        "deathYearLabel": "1919"
+        "deathYearLabel": "1919 (aged 52)"
       },
       "detail": {
         "links": [
@@ -4218,7 +4219,7 @@
         "birthYearLabel": "1738",
         "birthPlace": "Groton, Connecticut, United States",
         "deathYear": 1816,
-        "deathYearLabel": "1816"
+        "deathYearLabel": "1816 (aged 78)"
       },
       "detail": {
         "links": [
@@ -4254,7 +4255,7 @@
         "birthYearLabel": "1872",
         "birthPlace": "Kraków (now in Poland)",
         "deathYear": 1965,
-        "deathYearLabel": "1965"
+        "deathYearLabel": "1965 (aged 93)"
       },
       "detail": {
         "links": [
@@ -4290,7 +4291,7 @@
         "birthYearLabel": "1829",
         "birthPlace": "Buttenheim, Germany",
         "deathYear": 1902,
-        "deathYearLabel": "1902"
+        "deathYearLabel": "1902 (aged 73)"
       },
       "detail": {
         "links": [
@@ -4326,7 +4327,7 @@
         "birthYearLabel": "1873",
         "birthPlace": "Dresden, Germany",
         "deathYear": 1950,
-        "deathYearLabel": "1950"
+        "deathYearLabel": "1950 (aged 77)"
       },
       "detail": {
         "links": [
@@ -4362,7 +4363,7 @@
         "birthYearLabel": "1908",
         "birthPlace": "Queens, New York City, United States",
         "deathYear": 2004,
-        "deathYearLabel": "2004"
+        "deathYearLabel": "2004 (aged 96)"
       },
       "detail": {
         "links": [
@@ -4398,7 +4399,7 @@
         "birthYearLabel": "1839",
         "birthPlace": "Navsari, India",
         "deathYear": 1904,
-        "deathYearLabel": "1904"
+        "deathYearLabel": "1904 (aged 65)"
       },
       "detail": {
         "links": [
@@ -4434,7 +4435,7 @@
         "birthYearLabel": "1908",
         "birthPlace": "Nikkō, Japan",
         "deathYear": 1997,
-        "deathYearLabel": "1997"
+        "deathYearLabel": "1997 (aged 89)"
       },
       "detail": {
         "links": [
@@ -4470,7 +4471,7 @@
         "birthYearLabel": "1770",
         "birthPlace": "Bonn, Germany",
         "deathYear": 1827,
-        "deathYearLabel": "1827",
+        "deathYearLabel": "1827 (aged 57)",
         "greatWorks": [
           "Ode to Joy (Symphony No. 9)",
           "Symphony No. 3 (Eroica), Movement 1"
@@ -4510,7 +4511,7 @@
         "birthYearLabel": "1685",
         "birthPlace": "Eisenach, Germany",
         "deathYear": 1750,
-        "deathYearLabel": "1750",
+        "deathYearLabel": "1750 (aged 65)",
         "greatWorks": [
           "Little Fugue in G minor",
           "Cello Suite No. 1"
@@ -4550,7 +4551,7 @@
         "birthYearLabel": "1614",
         "birthPlace": "Fukuyama, Japan (attribution uncertain)",
         "deathYear": 1685,
-        "deathYearLabel": "1685",
+        "deathYearLabel": "1685 (aged 71)",
         "greatWorks": [
           "Rokudan no Shirabe",
           "Hachidan no Shirabe"
@@ -4591,7 +4592,7 @@
         "birthYearLabel": "1678",
         "birthPlace": "Venice, Italy",
         "deathYear": 1741,
-        "deathYearLabel": "1741",
+        "deathYearLabel": "1741 (aged 63)",
         "greatWorks": [
           "Four Seasons: Winter",
           "La Notte Concerto"
@@ -4631,7 +4632,7 @@
         "birthYearLabel": "1756",
         "birthPlace": "Salzburg, Austria",
         "deathYear": 1791,
-        "deathYearLabel": "1791",
+        "deathYearLabel": "1791 (aged 35)",
         "greatWorks": [
           "Eine Kleine Nachtmusik",
           "Symphony No. 40, Movement 1"
@@ -4671,7 +4672,7 @@
         "birthYearLabel": "1673",
         "birthPlace": "Silișteni (now Dimitrie Cantemir, Romania)",
         "deathYear": 1723,
-        "deathYearLabel": "1723",
+        "deathYearLabel": "1723 (aged 50)",
         "greatWorks": [
           "Pesrev Adjem Yegiahi",
           "Prince of Moldavia",
@@ -4712,7 +4713,7 @@
         "birthYearLabel": "1811",
         "birthPlace": "Raiding (now in Austria)",
         "deathYear": 1886,
-        "deathYearLabel": "1886",
+        "deathYearLabel": "1886 (aged 75)",
         "greatWorks": [
           "Transcendental Étude No. 9",
           "The Dance in the Village Inn"
@@ -4752,7 +4753,7 @@
         "birthYearLabel": "1840",
         "birthPlace": "Votkinsk, Russia",
         "deathYear": 1893,
-        "deathYearLabel": "1893",
+        "deathYearLabel": "1893 (aged 53)",
         "greatWorks": [
           "1812 Overture",
           "Dance of the Little Swans"
@@ -4792,7 +4793,7 @@
         "birthYearLabel": "1836",
         "birthPlace": "Campinas, Brazil",
         "deathYear": 1896,
-        "deathYearLabel": "1896",
+        "deathYearLabel": "1896 (aged 60)",
         "greatWorks": [
           "Fosca - Mvt. 1 (Abertura)",
           "Alvorada"
@@ -4832,7 +4833,7 @@
         "birthYearLabel": "1895",
         "birthPlace": "Jiangyin, China",
         "deathYear": 1932,
-        "deathYearLabel": "1932",
+        "deathYearLabel": "1932 (aged 37)",
         "greatWorks": [
           "Liang Xiao",
           "Kong Shan Niao Yu"
@@ -4872,7 +4873,7 @@
         "birthYearLabel": "1810",
         "birthPlace": "Żelazowa Wola, Poland",
         "deathYear": 1849,
-        "deathYearLabel": "1849",
+        "deathYearLabel": "1849 (aged 39)",
         "greatWorks": [
           "Nocturne in E-flat Major",
           "Grande Valse Brillante, Op. 18"
@@ -4912,7 +4913,7 @@
         "birthYearLabel": "c. 1868",
         "birthPlace": "Texas, United States (exact birthplace disputed)",
         "deathYear": 1917,
-        "deathYearLabel": "1917",
+        "deathYearLabel": "1917 (aged c. 49)",
         "greatWorks": [
           "The Entertainer",
           "Maple Leaf Rag",
@@ -4954,7 +4955,7 @@
         "birthYearLabel": "1868",
         "birthPlace": "Santa Cruz de Galeana (now Juventino Rosas, Mexico)",
         "deathYear": 1894,
-        "deathYearLabel": "1894",
+        "deathYearLabel": "1894 (aged 26)",
         "greatWorks": [
           "Sobre las Olas",
           "Vals Carmen"
@@ -4994,7 +4995,7 @@
         "birthYearLabel": "1841",
         "birthPlace": "Nelahozeves (now in Czechia)",
         "deathYear": 1904,
-        "deathYearLabel": "1904",
+        "deathYearLabel": "1904 (aged 63)",
         "greatWorks": [
           "New World Symphony",
           "Serenade No. 22"
@@ -5034,7 +5035,7 @@
         "birthYearLabel": "1838",
         "birthPlace": "Honolulu, Hawaii, United States",
         "deathYear": 1917,
-        "deathYearLabel": "1917",
+        "deathYearLabel": "1917 (aged 79)",
         "greatWorks": [
           "Liliʻuokalani's Prayer",
           "Sanoe"
@@ -5074,7 +5075,7 @@
         "birthYearLabel": "1819",
         "birthPlace": "Leipzig, Germany",
         "deathYear": 1896,
-        "deathYearLabel": "1896",
+        "deathYearLabel": "1896 (aged 77)",
         "greatWorks": [
           "Prelude and Fugue Op. 16 No. 3",
           "Toccatina in A minor"
@@ -5114,7 +5115,7 @@
         "birthYearLabel": "1877",
         "birthPlace": "Monastyrok (now in Ukraine)",
         "deathYear": 1921,
-        "deathYearLabel": "1921",
+        "deathYearLabel": "1921 (aged 44)",
         "greatWorks": [
           "Carol of the Bells",
           "Prelude for Choir"
@@ -5154,7 +5155,7 @@
         "birthYearLabel": "1873",
         "birthPlace": "Azamgarh, India",
         "deathYear": 1930,
-        "deathYearLabel": "1930",
+        "deathYearLabel": "1930 (aged 57)",
         "greatWorks": [
           "Raga Kharnaj Jogiya",
           "Raga Bhairavi"
@@ -5194,7 +5195,7 @@
         "birthYearLabel": "c. 551 BCE",
         "birthPlace": "Zou (now Qufu, China)",
         "deathYear": -479,
-        "deathYearLabel": "479 BCE"
+        "deathYearLabel": "479 BCE (aged c. 72)"
       },
       "detail": {
         "links": [
@@ -5230,7 +5231,7 @@
         "birthYearLabel": "c. 5 BCE",
         "birthPlace": "Judea (now Israel/Palestine), birthplace disputed",
         "deathYear": 30,
-        "deathYearLabel": "c. 30"
+        "deathYearLabel": "c. 30 (aged c. 34)"
       },
       "detail": {
         "links": [
@@ -5301,7 +5302,7 @@
         "birthYearLabel": "c. 480 BCE",
         "birthPlace": "Lumbini (now Nepal), traditional",
         "deathYear": -400,
-        "deathYearLabel": "c. 400 BCE"
+        "deathYearLabel": "c. 400 BCE (aged c. 80)"
       },
       "detail": {
         "links": [
@@ -5409,7 +5410,7 @@
         "birthYearLabel": "c. 700",
         "birthPlace": "Kalady (now in Kerala, India), traditional",
         "deathYear": 750,
-        "deathYearLabel": "c. 750"
+        "deathYearLabel": "c. 750 (aged c. 50)"
       },
       "detail": {
         "links": [
@@ -5483,7 +5484,7 @@
         "birthYearLabel": "c. 130",
         "birthPlace": "Smyrna (now İzmir, Turkey), traditionally believed",
         "deathYear": 202,
-        "deathYearLabel": "c. 202"
+        "deathYearLabel": "c. 202 (aged c. 72)"
       },
       "detail": {
         "links": [
@@ -5556,7 +5557,7 @@
         "birthYearLabel": "c. 617",
         "birthPlace": "Gyama Valley (now in Tibet, China), traditional",
         "deathYear": 649,
-        "deathYearLabel": "649"
+        "deathYearLabel": "649 (aged c. 32)"
       },
       "detail": {
         "links": [
@@ -5627,7 +5628,7 @@
         "birthYearLabel": "1238",
         "birthPlace": "Pajaka (near Udupi, India)",
         "deathYear": 1317,
-        "deathYearLabel": "1317"
+        "deathYearLabel": "1317 (aged 79)"
       },
       "detail": {
         "links": [
@@ -5663,7 +5664,7 @@
         "birthYearLabel": "1483",
         "birthPlace": "Eisleben, Germany",
         "deathYear": 1546,
-        "deathYearLabel": "1546"
+        "deathYearLabel": "1546 (aged 63)"
       },
       "detail": {
         "links": [
@@ -5699,7 +5700,7 @@
         "birthYearLabel": "1225",
         "birthPlace": "Roccasecca, Italy",
         "deathYear": 1274,
-        "deathYearLabel": "1274"
+        "deathYearLabel": "1274 (aged 49)"
       },
       "detail": {
         "links": [
@@ -5735,7 +5736,7 @@
         "birthYearLabel": "c. 1181",
         "birthPlace": "Assisi, Italy",
         "deathYear": 1226,
-        "deathYearLabel": "1226"
+        "deathYearLabel": "1226 (aged c. 45)"
       },
       "detail": {
         "links": [
@@ -5771,7 +5772,7 @@
         "birthYearLabel": "78",
         "birthPlace": "Nanyang, China",
         "deathYear": 139,
-        "deathYearLabel": "139"
+        "deathYearLabel": "139 (aged 61)"
       },
       "detail": {
         "links": [
@@ -5807,7 +5808,7 @@
         "birthYearLabel": "476",
         "birthPlace": "Kusumapura (now Patna, India), disputed",
         "deathYear": 550,
-        "deathYearLabel": "550"
+        "deathYearLabel": "550 (aged 74)"
       },
       "detail": {
         "links": [
@@ -5880,7 +5881,7 @@
         "birthYearLabel": "c. 350",
         "birthPlace": "Alexandria (now in Egypt)",
         "deathYear": 415,
-        "deathYearLabel": "415"
+        "deathYearLabel": "415 (aged c. 65)"
       },
       "detail": {
         "links": [
@@ -5916,7 +5917,7 @@
         "birthYearLabel": "936",
         "birthPlace": "Madinat al-Zahra (now near Córdoba, Spain)",
         "deathYear": 1013,
-        "deathYearLabel": "1013"
+        "deathYearLabel": "1013 (aged 77)"
       },
       "detail": {
         "links": [
@@ -5952,7 +5953,7 @@
         "birthYearLabel": "1098",
         "birthPlace": "Bermersheim vor der Höhe, Germany",
         "deathYear": 1179,
-        "deathYearLabel": "1179"
+        "deathYearLabel": "1179 (aged 81)"
       },
       "detail": {
         "links": [
@@ -5988,7 +5989,7 @@
         "birthYearLabel": "1048",
         "birthPlace": "Nishapur (now in Iran)",
         "deathYear": 1131,
-        "deathYearLabel": "1131"
+        "deathYearLabel": "1131 (aged 83)"
       },
       "detail": {
         "links": [
@@ -6024,7 +6025,7 @@
         "birthYearLabel": "1332",
         "birthPlace": "Tunis, Tunisia",
         "deathYear": 1406,
-        "deathYearLabel": "1406"
+        "deathYearLabel": "1406 (aged 74)"
       },
       "detail": {
         "links": [
@@ -6060,7 +6061,7 @@
         "birthYearLabel": "1706",
         "birthPlace": "Paris, France",
         "deathYear": 1749,
-        "deathYearLabel": "1749"
+        "deathYearLabel": "1749 (aged 43)"
       },
       "detail": {
         "links": [
@@ -6096,7 +6097,7 @@
         "birthYearLabel": "1564",
         "birthPlace": "Pisa, Italy",
         "deathYear": 1642,
-        "deathYearLabel": "1642"
+        "deathYearLabel": "1642 (aged 78)"
       },
       "detail": {
         "links": [
@@ -6132,7 +6133,7 @@
         "birthYearLabel": "1643",
         "birthPlace": "Woolsthorpe-by-Colsterworth, England, United Kingdom",
         "deathYear": 1727,
-        "deathYearLabel": "1727"
+        "deathYearLabel": "1727 (aged 84)"
       },
       "detail": {
         "links": [
@@ -6168,7 +6169,7 @@
         "birthYearLabel": "1809",
         "birthPlace": "Shrewsbury, England, United Kingdom",
         "deathYear": 1882,
-        "deathYearLabel": "1882"
+        "deathYearLabel": "1882 (aged 73)"
       },
       "detail": {
         "links": [
@@ -6204,7 +6205,7 @@
         "birthYearLabel": "1834",
         "birthPlace": "Tobolsk, Russia",
         "deathYear": 1907,
-        "deathYearLabel": "1907"
+        "deathYearLabel": "1907 (aged 73)"
       },
       "detail": {
         "links": [
@@ -6240,7 +6241,7 @@
         "birthYearLabel": "1811",
         "birthPlace": "Glasgow, Scotland, United Kingdom",
         "deathYear": 1883,
-        "deathYearLabel": "1883"
+        "deathYearLabel": "1883 (aged 72)"
       },
       "detail": {
         "links": [
@@ -6276,7 +6277,7 @@
         "birthYearLabel": "1912",
         "birthPlace": "Maida Vale, London, England, United Kingdom",
         "deathYear": 1954,
-        "deathYearLabel": "1954"
+        "deathYearLabel": "1954 (aged 42)"
       },
       "detail": {
         "links": [
@@ -6312,7 +6313,7 @@
         "birthYearLabel": "1879",
         "birthPlace": "Ulm, Germany",
         "deathYear": 1955,
-        "deathYearLabel": "1955"
+        "deathYearLabel": "1955 (aged 76)"
       },
       "detail": {
         "links": [
@@ -6348,7 +6349,7 @@
         "birthYearLabel": "1833",
         "birthPlace": "Stockholm, Sweden",
         "deathYear": 1896,
-        "deathYearLabel": "1896"
+        "deathYearLabel": "1896 (aged 63)"
       },
       "detail": {
         "links": [
@@ -6384,7 +6385,7 @@
         "birthYearLabel": "1887",
         "birthPlace": "Vienna, Austria",
         "deathYear": 1961,
-        "deathYearLabel": "1961"
+        "deathYearLabel": "1961 (aged 74)"
       },
       "detail": {
         "links": [
@@ -6420,7 +6421,7 @@
         "birthYearLabel": "1897",
         "birthPlace": "Tellicherry (now Thalassery, India)",
         "deathYear": 1984,
-        "deathYearLabel": "1984"
+        "deathYearLabel": "1984 (aged 87)"
       },
       "detail": {
         "links": [
@@ -6456,7 +6457,7 @@
         "birthYearLabel": "1913",
         "birthPlace": "London, England, United Kingdom",
         "deathYear": 1996,
-        "deathYearLabel": "1996"
+        "deathYearLabel": "1996 (aged 83)"
       },
       "detail": {
         "links": [
@@ -6492,7 +6493,7 @@
         "birthYearLabel": "1901",
         "birthPlace": "Philadelphia, Pennsylvania, United States",
         "deathYear": 1978,
-        "deathYearLabel": "1978"
+        "deathYearLabel": "1978 (aged 77)"
       },
       "detail": {
         "links": [
@@ -6528,7 +6529,7 @@
         "birthYearLabel": "1934",
         "birthPlace": "Brooklyn, New York City, United States",
         "deathYear": 1996,
-        "deathYearLabel": "1996"
+        "deathYearLabel": "1996 (aged 62)"
       },
       "detail": {
         "links": [
@@ -6564,7 +6565,7 @@
         "birthYearLabel": "1923",
         "birthPlace": "New Kensington, Pennsylvania, United States",
         "deathYear": 2014,
-        "deathYearLabel": "2014"
+        "deathYearLabel": "2014 (aged 91)"
       },
       "detail": {
         "links": [
@@ -6600,7 +6601,7 @@
         "birthYearLabel": "1926",
         "birthPlace": "Jhang (now in Pakistan)",
         "deathYear": 1996,
-        "deathYearLabel": "1996"
+        "deathYearLabel": "1996 (aged 70)"
       },
       "detail": {
         "links": [
@@ -6715,7 +6716,7 @@
         "birthYearLabel": "c. 340 BCE",
         "birthPlace": "Chu (now Hubei, China), approximate region",
         "deathYear": -278,
-        "deathYearLabel": "278 BCE",
+        "deathYearLabel": "278 BCE (aged c. 62)",
         "greatWorks": [
           "Chu Ci",
           "Lament for Ying"
@@ -6756,7 +6757,7 @@
         "birthYearLabel": "43 BCE",
         "birthPlace": "Sulmo (now Sulmona, Italy)",
         "deathYear": 17,
-        "deathYearLabel": "17",
+        "deathYearLabel": "17 (aged 59)",
         "greatWorks": [
           "Metamorphoses",
           "Heroides"
@@ -6834,7 +6835,7 @@
         "birthYearLabel": "c. 1340",
         "birthPlace": "London, England, United Kingdom",
         "deathYear": 1400,
-        "deathYearLabel": "1400",
+        "deathYearLabel": "1400 (aged c. 60)",
         "greatWorks": [
           "The Canterbury Tales",
           "Troilus and Criseyde"
@@ -6874,7 +6875,7 @@
         "birthYearLabel": "701",
         "birthPlace": "Suyab (now in Kyrgyzstan), traditional/disputed",
         "deathYear": 762,
-        "deathYearLabel": "762",
+        "deathYearLabel": "762 (aged 61)",
         "greatWorks": [
           "Drinking Alone by Moonlight",
           "In the Mountains on a Summer Day"
@@ -6915,7 +6916,7 @@
         "birthYearLabel": "c. 973",
         "birthPlace": "Heian-kyō (now Kyoto, Japan)",
         "deathYear": 1014,
-        "deathYearLabel": "c. 1014",
+        "deathYearLabel": "c. 1014 (aged c. 41)",
         "greatWorks": [
           "The Diary of Lady Murasaki",
           "The Tale of Genji"
@@ -6955,7 +6956,7 @@
         "birthYearLabel": "1207",
         "birthPlace": "Balkh (now Afghanistan), disputed",
         "deathYear": 1273,
-        "deathYearLabel": "1273",
+        "deathYearLabel": "1273 (aged 66)",
         "greatWorks": [
           "Divani Shamsi Tabriz",
           "Masnavi"
@@ -6996,7 +6997,7 @@
         "birthYearLabel": "1547",
         "birthPlace": "Alcalá de Henares, Spain",
         "deathYear": 1616,
-        "deathYearLabel": "1616",
+        "deathYearLabel": "1616 (aged 69)",
         "greatWorks": [
           "Don Quixote",
           "Novelas Ejemplares"
@@ -7036,7 +7037,7 @@
         "birthYearLabel": "1564",
         "birthPlace": "Stratford-upon-Avon, England, United Kingdom",
         "deathYear": 1616,
-        "deathYearLabel": "1616",
+        "deathYearLabel": "1616 (aged 52)",
         "greatWorks": [
           "Romeo and Juliet",
           "Hamlet"
@@ -7076,7 +7077,7 @@
         "birthYearLabel": "1469",
         "birthPlace": "Florence, Italy",
         "deathYear": 1527,
-        "deathYearLabel": "1527",
+        "deathYearLabel": "1527 (aged 58)",
         "greatWorks": [
           "Discourses on Livy",
           "The Prince"
@@ -7116,7 +7117,7 @@
         "birthYearLabel": "1623",
         "birthPlace": "Colchester, England, United Kingdom",
         "deathYear": 1673,
-        "deathYearLabel": "1673",
+        "deathYearLabel": "1673 (aged 50)",
         "greatWorks": [
           "The Blazing World",
           "Observations upon Experimental Philosophy"
@@ -7156,7 +7157,7 @@
         "birthYearLabel": "c. 1650",
         "birthPlace": "Barneville-la-Bertran, France",
         "deathYear": 1705,
-        "deathYearLabel": "1705",
+        "deathYearLabel": "1705 (aged c. 55)",
         "greatWorks": [
           "Fair Goldilocks",
           "The Dolphin"
@@ -7196,7 +7197,7 @@
         "birthYearLabel": "1775",
         "birthPlace": "Steventon, England, United Kingdom",
         "deathYear": 1817,
-        "deathYearLabel": "1817",
+        "deathYearLabel": "1817 (aged 42)",
         "greatWorks": [
           "Pride and Prejudice",
           "Sense and Sensibility"
@@ -7236,7 +7237,7 @@
         "birthYearLabel": "1809",
         "birthPlace": "Boston, Massachusetts, United States",
         "deathYear": 1849,
-        "deathYearLabel": "1849",
+        "deathYearLabel": "1849 (aged 40)",
         "greatWorks": [
           "The Tell-Tale Heart",
           "The Raven"
@@ -7276,7 +7277,7 @@
         "birthYearLabel": "1799",
         "birthPlace": "Moscow, Russia",
         "deathYear": 1837,
-        "deathYearLabel": "1837",
+        "deathYearLabel": "1837 (aged 38)",
         "greatWorks": [
           "Eugene Onegin",
           "Boris Godunov"
@@ -7316,7 +7317,7 @@
         "birthYearLabel": "1749",
         "birthPlace": "Frankfurt am Main, Germany",
         "deathYear": 1832,
-        "deathYearLabel": "1832",
+        "deathYearLabel": "1832 (aged 83)",
         "greatWorks": [
           "Faust",
           "The Sorrows of Young Werther"
@@ -7356,7 +7357,7 @@
         "birthYearLabel": "1797",
         "birthPlace": "London, England, United Kingdom",
         "deathYear": 1851,
-        "deathYearLabel": "1851",
+        "deathYearLabel": "1851 (aged 54)",
         "greatWorks": [
           "Frankenstein",
           "The Last Man"
@@ -7396,7 +7397,7 @@
         "birthYearLabel": "1882",
         "birthPlace": "Dublin, Ireland",
         "deathYear": 1941,
-        "deathYearLabel": "1941",
+        "deathYearLabel": "1941 (aged 59)",
         "greatWorks": [
           "Ulysses",
           "Dubliners"
@@ -7436,7 +7437,7 @@
         "birthYearLabel": "1830",
         "birthPlace": "Amherst, Massachusetts, United States",
         "deathYear": 1886,
-        "deathYearLabel": "1886",
+        "deathYearLabel": "1886 (aged 56)",
         "greatWorks": [
           "A Bird Came Down the Walk",
           "Success is Counted Sweetest"
@@ -7476,7 +7477,7 @@
         "birthYearLabel": "1828",
         "birthPlace": "Yasnaya Polyana, Russia",
         "deathYear": 1910,
-        "deathYearLabel": "1910",
+        "deathYearLabel": "1910 (aged 82)",
         "greatWorks": [
           "War and Peace",
           "Anna Karenina"
@@ -7516,7 +7517,7 @@
         "birthYearLabel": "1835",
         "birthPlace": "Florida, Missouri, United States",
         "deathYear": 1910,
-        "deathYearLabel": "1910",
+        "deathYearLabel": "1910 (aged 75)",
         "greatWorks": [
           "The Adventures of Huckleberry Finn",
           "The Adventures of Tom Sawyer"
@@ -7556,7 +7557,7 @@
         "birthYearLabel": "1866",
         "birthPlace": "London, England, United Kingdom",
         "deathYear": 1943,
-        "deathYearLabel": "1943",
+        "deathYearLabel": "1943 (aged 77)",
         "greatWorks": [
           "The Tale of Peter Rabbit",
           "The Tailor of Gloucester"
@@ -7596,7 +7597,7 @@
         "birthYearLabel": "1896",
         "birthPlace": "Saint Paul, Minnesota, United States",
         "deathYear": 1940,
-        "deathYearLabel": "1940",
+        "deathYearLabel": "1940 (aged 44)",
         "greatWorks": [
           "This Side of Paradise",
           "The Beautiful and the Damned"
@@ -7636,7 +7637,7 @@
         "birthYearLabel": "1861",
         "birthPlace": "Calcutta (now Kolkata, India)",
         "deathYear": 1941,
-        "deathYearLabel": "1941",
+        "deathYearLabel": "1941 (aged 80)",
         "greatWorks": [
           "The Home and the World",
           "The Gardener"
@@ -7676,7 +7677,7 @@
         "birthYearLabel": "1866",
         "birthPlace": "Bromley, England, United Kingdom",
         "deathYear": 1946,
-        "deathYearLabel": "1946",
+        "deathYearLabel": "1946 (aged 80)",
         "greatWorks": [
           "The War of the Worlds",
           "The Time Machine"
@@ -7716,7 +7717,7 @@
         "birthYearLabel": "1890",
         "birthPlace": "Malé Svatoňovice (now in Czechia)",
         "deathYear": 1938,
-        "deathYearLabel": "1938",
+        "deathYearLabel": "1938 (aged 48)",
         "greatWorks": [
           "Rossum's Universal Robots (R.U.R.)",
           "War with the Newts"
@@ -7756,7 +7757,7 @@
         "birthYearLabel": "1889",
         "birthPlace": "Vicuña, Chile",
         "deathYear": 1957,
-        "deathYearLabel": "1957",
+        "deathYearLabel": "1957 (aged 68)",
         "greatWorks": [
           "Lecturas para mujeres",
           "Sonetos de la Muerte"
@@ -7796,7 +7797,7 @@
         "birthYearLabel": "1790",
         "birthPlace": "Curpa, Venezuela",
         "deathYear": 1873,
-        "deathYearLabel": "1873"
+        "deathYearLabel": "1873 (aged 83)"
       },
       "detail": {
         "links": [
@@ -7833,7 +7834,7 @@
         "birthYearLabel": "1786",
         "birthPlace": "Edinburgh, Scotland, United Kingdom",
         "deathYear": 1845,
-        "deathYearLabel": "1845"
+        "deathYearLabel": "1845 (aged 59)"
       },
       "detail": {
         "links": [
@@ -7870,7 +7871,7 @@
         "birthYearLabel": "1765",
         "birthPlace": "Santafé de Bogotá (now Bogotá, Colombia)",
         "deathYear": 1823,
-        "deathYearLabel": "1823"
+        "deathYearLabel": "1823 (aged 58)"
       },
       "detail": {
         "links": [
@@ -7907,7 +7908,7 @@
         "birthYearLabel": "1775",
         "birthPlace": "Caracas, Venezuela",
         "deathYear": 1815,
-        "deathYearLabel": "1815"
+        "deathYearLabel": "1815 (aged 40)"
       },
       "detail": {
         "links": [
@@ -7944,7 +7945,7 @@
         "birthYearLabel": "1788",
         "birthPlace": "Maracaibo, Venezuela",
         "deathYear": 1845,
-        "deathYearLabel": "1845"
+        "deathYearLabel": "1845 (aged 57)"
       },
       "detail": {
         "links": [
@@ -7981,7 +7982,7 @@
         "birthYearLabel": "1788",
         "birthPlace": "Valle del Espíritu Santo, Venezuela",
         "deathYear": 1854,
-        "deathYearLabel": "1854"
+        "deathYearLabel": "1854 (aged 66)"
       },
       "detail": {
         "links": [
@@ -8018,7 +8019,7 @@
         "birthYearLabel": "1774",
         "birthPlace": "Willemstad, Curaçao",
         "deathYear": 1817,
-        "deathYearLabel": "1817"
+        "deathYearLabel": "1817 (aged 43)"
       },
       "detail": {
         "links": [
@@ -8055,7 +8056,7 @@
         "birthYearLabel": "1782",
         "birthPlace": "Caracas, Venezuela",
         "deathYear": 1851,
-        "deathYearLabel": "1851"
+        "deathYearLabel": "1851 (aged 69)"
       },
       "detail": {
         "links": [
@@ -8092,7 +8093,7 @@
         "birthYearLabel": "1792",
         "birthPlace": "Villa del Rosario, Colombia",
         "deathYear": 1840,
-        "deathYearLabel": "1840"
+        "deathYearLabel": "1840 (aged 48)"
       },
       "detail": {
         "links": [
@@ -8129,7 +8130,7 @@
         "birthYearLabel": "1795",
         "birthPlace": "Cumaná, Venezuela",
         "deathYear": 1830,
-        "deathYearLabel": "1830"
+        "deathYearLabel": "1830 (aged 35)"
       },
       "detail": {
         "links": [

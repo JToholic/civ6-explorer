@@ -69,6 +69,27 @@ const ERA_ORDER = {
   information: 8
 };
 
+// Emoji counterparts to the ten Civ VI Great Person type icons.
+// Display-only: sorting, searching and JSON types remain plain text.
+const GREAT_PERSON_TYPE_ICONS = Object.freeze({
+  "Great Admiral": "⚓",
+  "Great Artist": "🎨",
+  "Great Engineer": "⚙️",
+  "Great General": "⚔️",
+  "Great Merchant": "🪙",
+  "Great Musician": "🎵",
+  "Great Prophet": "✨",
+  "Great Scientist": "🧪",
+  "Great Writer": "✒️",
+  "Comandante General": "🎖️"
+});
+
+function withGreatPersonIcon(type) {
+  const label = String(type ?? "");
+  const emoji = GREAT_PERSON_TYPE_ICONS[label];
+  return emoji ? `${emoji} ${label}` : label;
+}
+
 const PLACEHOLDER_THUMB = "assets/thumbs/placeholder.png";
 
 // ---- DOM ----
@@ -301,7 +322,9 @@ function renderAttrs(item) {
     // Render Great Works as separate lines, while retaining the normal scalar fields.
     v.textContent = Array.isArray(val)
       ? val.map(work => `• ${work}`).join("\n")
-      : String(val);
+      : (activeType === "great_people" && key === "type")
+        ? withGreatPersonIcon(val)
+        : String(val);
     if (Array.isArray(val)) v.style.whiteSpace = "pre-line";
 
     detailAttrsEl.appendChild(k);
@@ -561,6 +584,10 @@ function renderList() {
           ) ?? ""
         : "";
 
+    const shownSubVal = activeType === "great_people"
+      ? withGreatPersonIcon(subVal)
+      : subVal;
+
     li.innerHTML = `
       <div class="card">
         <img
@@ -571,7 +598,7 @@ function renderList() {
         >
         <div>
           <div class="cardTitle">${it.name}</div>
-          <div class="cardSub">${subVal}</div>
+          <div class="cardSub">${shownSubVal}</div>
         </div>
       </div>
     `;

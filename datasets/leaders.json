@@ -16,7 +16,8 @@
       "https://en.wikipedia.org/"
     ],
     "reviewedOn": "2026-10-11",
-    "deathYearPolicy": "Numeric deathYear is chronological (negative BCE); null for uncertain/unknown. deathYearLabel preserves approximation and uncertainty. Unknown dates sort last."
+    "deathYearPolicy": "Numeric deathYear is chronological (negative BCE); null for uncertain/unknown. deathYearLabel preserves approximation and uncertainty. Unknown dates sort last.",
+    "ageAtDeathPolicy": "Age shown with death year when both birth and death years are available. Computed from recorded calendar years (subtracting the missing year zero when crossing BCE/CE); the exact age may differ by one year because day/month are not supplied. A few established leaders use known biographical ages. Existing approximate and disputed date labels produce approximate ages. Unknown ages are omitted."
   },
   "sortOptions": [
     {
@@ -67,7 +68,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "city",
         "deathYear": 1865,
-        "deathYearLabel": "1865"
+        "deathYearLabel": "1865 (aged 56)"
       },
       "detail": {
         "links": [
@@ -104,7 +105,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "city",
         "deathYear": 1919,
-        "deathYearLabel": "1919"
+        "deathYearLabel": "1919 (aged 60)"
       },
       "detail": {
         "links": [
@@ -141,7 +142,7 @@
         "capitalStatus": "capital during his sultanate",
         "pinPrecision": "city",
         "deathYear": 1193,
-        "deathYearLabel": "1193"
+        "deathYearLabel": "1193 (aged c. 55)"
       },
       "detail": {
         "links": [
@@ -178,7 +179,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "city",
         "deathYear": 1945,
-        "deathYearLabel": "1945"
+        "deathYearLabel": "1945 (aged 60)"
       },
       "detail": {
         "links": [
@@ -215,7 +216,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "city",
         "deathYear": 1469,
-        "deathYearLabel": "1469"
+        "deathYearLabel": "1469 (aged c. 71)"
       },
       "detail": {
         "links": [
@@ -252,7 +253,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "archaeological site",
         "deathYear": -1750,
-        "deathYearLabel": "c. 1750 BCE"
+        "deathYearLabel": "c. 1750 BCE (aged c. 60)"
       },
       "detail": {
         "links": [
@@ -289,7 +290,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "city",
         "deathYear": 1891,
-        "deathYearLabel": "1891"
+        "deathYearLabel": "1891 (aged 66)"
       },
       "detail": {
         "links": [
@@ -326,7 +327,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "city",
         "deathYear": 1025,
-        "deathYearLabel": "1025"
+        "deathYearLabel": "1025 (aged 67)"
       },
       "detail": {
         "links": [
@@ -363,7 +364,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "city",
         "deathYear": 548,
-        "deathYearLabel": "548"
+        "deathYearLabel": "548 (aged c. 53)"
       },
       "detail": {
         "links": [
@@ -400,7 +401,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "city",
         "deathYear": 1919,
-        "deathYearLabel": "1919"
+        "deathYearLabel": "1919 (aged 77)"
       },
       "detail": {
         "links": [
@@ -437,7 +438,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "city",
         "deathYear": 1294,
-        "deathYearLabel": "1294"
+        "deathYearLabel": "1294 (aged 79)"
       },
       "detail": {
         "links": [
@@ -474,7 +475,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "city",
         "deathYear": -210,
-        "deathYearLabel": "210 BCE"
+        "deathYearLabel": "210 BCE (aged 49)"
       },
       "detail": {
         "links": [
@@ -511,7 +512,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "city",
         "deathYear": 705,
-        "deathYearLabel": "705"
+        "deathYearLabel": "705 (aged 81)"
       },
       "detail": {
         "links": [
@@ -548,7 +549,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "city",
         "deathYear": 1424,
-        "deathYearLabel": "1424"
+        "deathYearLabel": "1424 (aged 64)"
       },
       "detail": {
         "links": [
@@ -585,7 +586,7 @@
         "capitalStatus": "no formal capital; representative pin",
         "pinPrecision": "region",
         "deathYear": 1886,
-        "deathYearLabel": "1886"
+        "deathYearLabel": "1886 (aged c. 44)"
       },
       "detail": {
         "links": [
@@ -622,7 +623,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "city",
         "deathYear": 1962,
-        "deathYearLabel": "1962"
+        "deathYearLabel": "1962 (aged 82)"
       },
       "detail": {
         "links": [
@@ -659,7 +660,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "city",
         "deathYear": -30,
-        "deathYearLabel": "30 BCE"
+        "deathYearLabel": "30 BCE (aged 39)"
       },
       "detail": {
         "links": [
@@ -696,7 +697,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "archaeological site",
         "deathYear": -1213,
-        "deathYearLabel": "1213 BCE"
+        "deathYearLabel": "1213 BCE (aged c. 90)"
       },
       "detail": {
         "links": [
@@ -733,7 +734,7 @@
         "capitalStatus": "principal administrative/royal center; court was itinerant",
         "pinPrecision": "city",
         "deathYear": 1204,
-        "deathYearLabel": "1204"
+        "deathYearLabel": "1204 (aged c. 80)"
       },
       "detail": {
         "links": [
@@ -770,7 +771,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "city",
         "deathYear": 1603,
-        "deathYearLabel": "1603"
+        "deathYearLabel": "1603 (aged 69)"
       },
       "detail": {
         "links": [
@@ -807,7 +808,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "city",
         "deathYear": 1901,
-        "deathYearLabel": "1901"
+        "deathYearLabel": "1901 (aged 81)"
       },
       "detail": {
         "links": [
@@ -844,7 +845,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "city",
         "deathYear": 1913,
-        "deathYearLabel": "1913"
+        "deathYearLabel": "1913 (aged 69)"
       },
       "detail": {
         "links": [
@@ -881,7 +882,7 @@
         "capitalStatus": "capital / principal royal center",
         "pinPrecision": "city",
         "deathYear": 1589,
-        "deathYearLabel": "1589"
+        "deathYearLabel": "1589 (aged 69)"
       },
       "detail": {
         "links": [
@@ -918,7 +919,7 @@
         "capitalStatus": "principal royal center",
         "pinPrecision": "city",
         "deathYear": 1204,
-        "deathYearLabel": "1204"
+        "deathYearLabel": "1204 (aged c. 80)"
       },
       "detail": {
         "links": [
@@ -992,7 +993,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "city",
         "deathYear": 1213,
-        "deathYearLabel": "1213"
+        "deathYearLabel": "1213 (aged c. 53)"
       },
       "detail": {
         "links": [
@@ -1029,7 +1030,7 @@
         "capitalStatus": "representative imperial center; no fixed capital",
         "pinPrecision": "city",
         "deathYear": 1190,
-        "deathYearLabel": "1190"
+        "deathYearLabel": "1190 (aged 68)"
       },
       "detail": {
         "links": [
@@ -1066,7 +1067,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "city",
         "deathYear": 1886,
-        "deathYearLabel": "1886"
+        "deathYearLabel": "1886 (aged 40)"
       },
       "detail": {
         "links": [
@@ -1103,7 +1104,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "city",
         "deathYear": 1830,
-        "deathYearLabel": "1830"
+        "deathYearLabel": "1830 (aged 47)"
       },
       "detail": {
         "links": [
@@ -1177,7 +1178,7 @@
         "capitalStatus": "city-state capital",
         "pinPrecision": "city",
         "deathYear": -429,
-        "deathYearLabel": "429 BCE"
+        "deathYearLabel": "429 BCE (aged c. 66)"
       },
       "detail": {
         "links": [
@@ -1214,7 +1215,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "city",
         "deathYear": 1490,
-        "deathYearLabel": "1490"
+        "deathYearLabel": "1490 (aged 47)"
       },
       "detail": {
         "links": [
@@ -1251,7 +1252,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "city",
         "deathYear": 1471,
-        "deathYearLabel": "c. 1471"
+        "deathYearLabel": "c. 1471 (aged c. 68)"
       },
       "detail": {
         "links": [
@@ -1288,7 +1289,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "city",
         "deathYear": -297,
-        "deathYearLabel": "c. 297 BCE"
+        "deathYearLabel": "c. 297 BCE (aged c. 43)"
       },
       "detail": {
         "links": [
@@ -1325,7 +1326,7 @@
         "capitalStatus": "representative national capital; not a ruler's seat",
         "pinPrecision": "city",
         "deathYear": 1948,
-        "deathYearLabel": "1948"
+        "deathYearLabel": "1948 (aged 78)"
       },
       "detail": {
         "links": [
@@ -1362,7 +1363,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "archaeological area",
         "deathYear": 1372,
-        "deathYearLabel": "c. 1372"
+        "deathYearLabel": "c. 1372 (aged c. 72)"
       },
       "detail": {
         "links": [
@@ -1399,7 +1400,7 @@
         "capitalStatus": "seat of the Kamakura shogunate; imperial capital remained Kyoto",
         "pinPrecision": "city",
         "deathYear": 1284,
-        "deathYearLabel": "1284"
+        "deathYearLabel": "1284 (aged 33)"
       },
       "detail": {
         "links": [
@@ -1436,7 +1437,7 @@
         "capitalStatus": "seat of the Tokugawa shogunate; imperial capital remained Kyoto",
         "pinPrecision": "city",
         "deathYear": 1616,
-        "deathYearLabel": "1616"
+        "deathYearLabel": "1616 (aged 73)"
       },
       "detail": {
         "links": [
@@ -1473,7 +1474,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "archaeological site",
         "deathYear": 1218,
-        "deathYearLabel": "c. 1218"
+        "deathYearLabel": "c. 1218 (aged c. 96)"
       },
       "detail": {
         "links": [
@@ -1510,7 +1511,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "city",
         "deathYear": 1542,
-        "deathYearLabel": "1542"
+        "deathYearLabel": "1542 (aged c. 86)"
       },
       "detail": {
         "links": [
@@ -1547,7 +1548,7 @@
         "capitalStatus": "capital of Ndongo at her accession",
         "pinPrecision": "historical locality",
         "deathYear": 1663,
-        "deathYearLabel": "1663"
+        "deathYearLabel": "1663 (aged c. 80)"
       },
       "detail": {
         "links": [
@@ -1584,7 +1585,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "city",
         "deathYear": 1450,
-        "deathYearLabel": "1450"
+        "deathYearLabel": "1450 (aged 52)"
       },
       "detail": {
         "links": [
@@ -1621,7 +1622,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "city",
         "deathYear": 647,
-        "deathYearLabel": "647"
+        "deathYearLabel": "647 (aged c. 47)"
       },
       "detail": {
         "links": [
@@ -1658,7 +1659,7 @@
         "capitalStatus": "capital of Macedon",
         "pinPrecision": "archaeological site",
         "deathYear": -323,
-        "deathYearLabel": "323 BCE"
+        "deathYearLabel": "323 BCE (aged 32)"
       },
       "detail": {
         "links": [
@@ -1695,7 +1696,7 @@
         "capitalStatus": "traditional capital; location/role debated",
         "pinPrecision": "locality",
         "deathYear": 1337,
-        "deathYearLabel": "c. 1337"
+        "deathYearLabel": "c. 1337 (aged c. 57)"
       },
       "detail": {
         "links": [
@@ -1732,7 +1733,7 @@
         "capitalStatus": "traditional capital; location/role debated",
         "pinPrecision": "locality",
         "deathYear": 1255,
-        "deathYearLabel": "c. 1255"
+        "deathYearLabel": "c. 1255 (aged c. 38)"
       },
       "detail": {
         "links": [
@@ -1769,7 +1770,7 @@
         "capitalStatus": "no fixed capital; representative pin",
         "pinPrecision": "region",
         "deathYear": 1557,
-        "deathYearLabel": "1557"
+        "deathYearLabel": "1557 (aged c. 23)"
       },
       "detail": {
         "links": [
@@ -1843,7 +1844,7 @@
         "capitalStatus": "first nomadic capital / principal imperial base during Genghis Khan's reign",
         "pinPrecision": "archaeological site",
         "deathYear": 1227,
-        "deathYearLabel": "1227"
+        "deathYearLabel": "1227 (aged c. 65)"
       },
       "detail": {
         "links": [
@@ -1880,7 +1881,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "city",
         "deathYear": 1294,
-        "deathYearLabel": "1294"
+        "deathYearLabel": "1294 (aged 79)"
       },
       "detail": {
         "links": [
@@ -1954,7 +1955,7 @@
         "capitalStatus": "royal capital / principal seat",
         "pinPrecision": "city",
         "deathYear": 1066,
-        "deathYearLabel": "1066"
+        "deathYearLabel": "1066 (aged c. 51)"
       },
       "detail": {
         "links": [
@@ -1991,7 +1992,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "archaeological site",
         "deathYear": 50,
-        "deathYearLabel": "c. 50"
+        "deathYearLabel": "c. 50 (aged c. 54)"
       },
       "detail": {
         "links": [
@@ -2028,7 +2029,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "city",
         "deathYear": 1566,
-        "deathYearLabel": "1566"
+        "deathYearLabel": "1566 (aged 72)"
       },
       "detail": {
         "links": [
@@ -2065,7 +2066,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "archaeological site",
         "deathYear": -530,
-        "deathYearLabel": "c. 530 BCE"
+        "deathYearLabel": "c. 530 BCE (aged c. 70)"
       },
       "detail": {
         "links": [
@@ -2102,7 +2103,7 @@
         "capitalStatus": "capital / principal metropolitan center",
         "pinPrecision": "city",
         "deathYear": 1747,
-        "deathYearLabel": "1747"
+        "deathYearLabel": "1747 (aged 59)"
       },
       "detail": {
         "links": [
@@ -2176,7 +2177,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "city",
         "deathYear": 1399,
-        "deathYearLabel": "1399"
+        "deathYearLabel": "1399 (aged c. 25)"
       },
       "detail": {
         "links": [
@@ -2213,7 +2214,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "city",
         "deathYear": 1557,
-        "deathYearLabel": "1557"
+        "deathYearLabel": "1557 (aged 55)"
       },
       "detail": {
         "links": [
@@ -2250,7 +2251,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "city",
         "deathYear": -44,
-        "deathYearLabel": "44 BCE"
+        "deathYearLabel": "44 BCE (aged 55)"
       },
       "detail": {
         "links": [
@@ -2287,7 +2288,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "city",
         "deathYear": 117,
-        "deathYearLabel": "117"
+        "deathYearLabel": "117 (aged 63)"
       },
       "detail": {
         "links": [
@@ -2324,7 +2325,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "city",
         "deathYear": 1725,
-        "deathYearLabel": "1725"
+        "deathYearLabel": "1725 (aged 52)"
       },
       "detail": {
         "links": [
@@ -2361,7 +2362,7 @@
         "capitalStatus": "representative royal/ceremonial center; court was itinerant",
         "pinPrecision": "locality",
         "deathYear": 1329,
-        "deathYearLabel": "1329"
+        "deathYearLabel": "1329 (aged 55)"
       },
       "detail": {
         "links": [
@@ -2435,7 +2436,7 @@
         "capitalStatus": "capital / permanent royal court",
         "pinPrecision": "city",
         "deathYear": 1598,
-        "deathYearLabel": "1598"
+        "deathYearLabel": "1598 (aged 71)"
       },
       "detail": {
         "links": [
@@ -2509,7 +2510,7 @@
         "capitalStatus": "capital",
         "pinPrecision": "city",
         "deathYear": 1689,
-        "deathYearLabel": "1689"
+        "deathYearLabel": "1689 (aged 62)"
       },
       "detail": {
         "links": [
@@ -2546,7 +2547,7 @@
         "capitalStatus": "rebel base; representative pin",
         "pinPrecision": "region",
         "deathYear": 248,
-        "deathYearLabel": "248"
+        "deathYearLabel": "248 (aged c. 22)"
       },
       "detail": {
         "links": [
@@ -2583,7 +2584,7 @@
         "capitalStatus": "royal capital",
         "pinPrecision": "city",
         "deathYear": 1828,
-        "deathYearLabel": "1828"
+        "deathYearLabel": "1828 (aged c. 41)"
       },
       "detail": {
         "links": [
