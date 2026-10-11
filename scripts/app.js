@@ -5,7 +5,8 @@ const TYPES = [
   { id: "wonders", label: "Wonders" },
   { id: "natural_wonders", label: "Natural Wonders" },
   { id: "leaders", label: "Leaders" },
-  { id: "city_states", label: "City-States" }
+  { id: "city_states", label: "City-States" },
+  { id: "great_people", label: "Great People" }
 ];
 
 // What to show in the right panel attribute grid (by type)
@@ -22,11 +23,20 @@ const ATTR_DISPLAY = {
   leaders: [
     { key: "civilization", label: "Civilization" },
     { key: "birthYearLabel", label: "Birth Year" },
+    { key: "deathYearLabel", label: "Death Year" },
     { key: "capital", label: "Capital" }
   ],
   city_states: [
     { key: "type", label: "Type" },
     { key: "country", label: "Country" }
+  ],
+  great_people: [
+    { key: "era", label: "Era" },
+    { key: "type", label: "Type" },
+    { key: "birthYearLabel", label: "Birth Year" },
+    { key: "birthPlace", label: "Birthplace" },
+    { key: "deathYearLabel", label: "Death Year" },
+    { key: "greatWorks", label: "Great Works" }
   ]
 };
 
@@ -35,7 +45,8 @@ const CARD_SUBTITLE = {
   wonders: { field: "attrs.location" },
   natural_wonders: { field: "attrs.location" },
   leaders: { field: "attrs.civilization" },
-  city_states: { field: "attrs.type" }
+  city_states: { field: "attrs.type" },
+  great_people: { field: "attrs.type" }
 };
 
 // Search fields (by type)
@@ -43,7 +54,8 @@ const SEARCH_FIELDS = {
   wonders: ["name", "attrs.era", "attrs.location"],
   natural_wonders: ["name", "attrs.terrain", "attrs.location"],
   leaders: ["name", "attrs.civilization", "attrs.capital"],
-  city_states: ["name", "attrs.type"]
+  city_states: ["name", "attrs.type", "attrs.country"],
+  great_people: ["name", "attrs.era", "attrs.type", "attrs.birthPlace", "attrs.greatWorks"]
 };
 
 const ERA_ORDER = {
@@ -184,62 +196,39 @@ function applySearch(items) {
   });
 }
 
+// Compare one field; numeric years stay numeric, and missing data goes last.
+// Any sorting option can declare a `then` array for secondary/tertiary sorts.
+function compareSortField(a, b, criterion) {
+  const av = getByPath(a, criterion.field);
+  const bv = getByPath(b, criterion.field);
+  const aMissing = av === undefined || av === null || av === "";
+  const bMissing = bv === undefined || bv === null || bv === "";
+  if (aMissing || bMissing) return aMissing === bMissing ? 0 : aMissing ? 1 : -1;
+
+  const order = criterion.order === "desc" ? -1 : 1;
+  if (criterion.field === "attrs.era") {
+    const ao = ERA_ORDER[normalizeString(av).trim()] ?? 999;
+    const bo = ERA_ORDER[normalizeString(bv).trim()] ?? 999;
+    return order * (ao - bo);
+  }
+  if (typeof av === "number" && typeof bv === "number") {
+    return order * (av - bv);
+  }
+  return order * String(av).localeCompare(String(bv));
+}
+
 function applySort(items) {
-  const sortOptions = activeData?.sortOptions || [];
-
-  const chosen = sortOptions.find(
-    (s) => s.id === activeSortId
-  );
-
+  const chosen = (activeData?.sortOptions || []).find(s => s.id === activeSortId);
   if (!chosen || chosen.id === "alpha") {
-    return [...items].sort((a, b) =>
-      String(a.name).localeCompare(String(b.name))
-    );
+    return [...items].sort((a, b) => String(a.name).localeCompare(String(b.name)));
   }
 
-  const order = chosen.order === "desc" ? -1 : 1;
-
+  const criteria = [chosen, ...(Array.isArray(chosen.then) ? chosen.then : [])];
   return [...items].sort((a, b) => {
-    const av = getByPath(a, chosen.field);
-    const bv = getByPath(b, chosen.field);
-
-    if (chosen.id === "era") {
-      const ao =
-        ERA_ORDER[normalizeString(av).trim()] ?? 999;
-
-      const bo =
-        ERA_ORDER[normalizeString(bv).trim()] ?? 999;
-
-      if (ao !== bo) {
-        return order * (ao - bo);
-      }
-
-      return String(a.name).localeCompare(String(b.name));
+    for (const c of criteria) {
+      const result = compareSortField(a, b, c);
+      if (result !== 0) return result;
     }
-
-    // Missing values last
-    if (av == null && bv == null) {
-      return String(a.name).localeCompare(String(b.name));
-    }
-
-    if (av == null) return 1;
-    if (bv == null) return -1;
-
-    let primary;
-
-    if (
-      typeof av === "number" &&
-      typeof bv === "number"
-    ) {
-      primary = order * (av - bv);
-    } else {
-      primary =
-        order *
-        String(av).localeCompare(String(bv));
-    }
-
-    if (primary !== 0) return primary;
-
     return String(a.name).localeCompare(String(b.name));
   });
 }
@@ -309,7 +298,11 @@ function renderAttrs(item) {
 
     const v = document.createElement("div");
     v.className = "detailAttrVal";
-    v.textContent = String(val);
+    // Render Great Works as separate lines, while retaining the normal scalar fields.
+    v.textContent = Array.isArray(val)
+      ? val.map(work => `• ${work}`).join("\n")
+      : String(val);
+    if (Array.isArray(val)) v.style.whiteSpace = "pre-line";
 
     detailAttrsEl.appendChild(k);
     detailAttrsEl.appendChild(v);

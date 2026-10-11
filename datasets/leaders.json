@@ -15,7 +15,8 @@
       "https://civilization.fandom.com/wiki/Category:Leader_icons_(Civ6)",
       "https://en.wikipedia.org/"
     ],
-    "reviewedOn": "2026-10-06"
+    "reviewedOn": "2026-10-11",
+    "deathYearPolicy": "Numeric deathYear is chronological (negative BCE); null for uncertain/unknown. deathYearLabel preserves approximation and uncertainty. Unknown dates sort last."
   },
   "sortOptions": [
     {
@@ -28,6 +29,12 @@
       "id": "birth",
       "label": "Birth year",
       "field": "attrs.birthYear",
+      "order": "asc"
+    },
+    {
+      "id": "death",
+      "label": "Death year",
+      "field": "attrs.deathYear",
       "order": "asc"
     },
     {
@@ -58,7 +65,9 @@
         "birthYearLabel": "1809",
         "capital": "Washington, D.C.",
         "capitalStatus": "capital",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 1865,
+        "deathYearLabel": "1865"
       },
       "detail": {
         "links": [
@@ -93,7 +102,9 @@
         "birthYearLabel": "1858",
         "capital": "Washington, D.C.",
         "capitalStatus": "capital",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 1919,
+        "deathYearLabel": "1919"
       },
       "detail": {
         "links": [
@@ -128,7 +139,9 @@
         "birthYearLabel": "c. 1137–1138",
         "capital": "Damascus (now in Syria)",
         "capitalStatus": "capital during his sultanate",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 1193,
+        "deathYearLabel": "1193"
       },
       "detail": {
         "links": [
@@ -163,7 +176,9 @@
         "birthYearLabel": "1885",
         "capital": "Canberra",
         "capitalStatus": "capital",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 1945,
+        "deathYearLabel": "1945"
       },
       "detail": {
         "links": [
@@ -198,7 +213,9 @@
         "birthYearLabel": "c. 1398",
         "capital": "Tenochtitlan (now Mexico City, Mexico)",
         "capitalStatus": "capital",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 1469,
+        "deathYearLabel": "1469"
       },
       "detail": {
         "links": [
@@ -233,7 +250,9 @@
         "birthYearLabel": "c. 1810 BCE",
         "capital": "Babylon (now in Iraq)",
         "capitalStatus": "capital",
-        "pinPrecision": "archaeological site"
+        "pinPrecision": "archaeological site",
+        "deathYear": -1750,
+        "deathYearLabel": "c. 1750 BCE"
       },
       "detail": {
         "links": [
@@ -268,7 +287,9 @@
         "birthYearLabel": "1825",
         "capital": "Rio de Janeiro",
         "capitalStatus": "capital",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 1891,
+        "deathYearLabel": "1891"
       },
       "detail": {
         "links": [
@@ -303,7 +324,9 @@
         "birthYearLabel": "958",
         "capital": "Constantinople (now Istanbul, Turkey)",
         "capitalStatus": "capital",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 1025,
+        "deathYearLabel": "1025"
       },
       "detail": {
         "links": [
@@ -338,7 +361,9 @@
         "birthYearLabel": "c. 495",
         "capital": "Constantinople (now Istanbul, Turkey)",
         "capitalStatus": "capital",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 548,
+        "deathYearLabel": "548"
       },
       "detail": {
         "links": [
@@ -373,7 +398,9 @@
         "birthYearLabel": "1841",
         "capital": "Ottawa",
         "capitalStatus": "capital",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 1919,
+        "deathYearLabel": "1919"
       },
       "detail": {
         "links": [
@@ -408,7 +435,9 @@
         "birthYearLabel": "1215",
         "capital": "Dadu/Khanbaliq (now Beijing)",
         "capitalStatus": "capital",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 1294,
+        "deathYearLabel": "1294"
       },
       "detail": {
         "links": [
@@ -443,7 +472,9 @@
         "birthYearLabel": "259 BCE",
         "capital": "Xianyang",
         "capitalStatus": "capital",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": -210,
+        "deathYearLabel": "210 BCE"
       },
       "detail": {
         "links": [
@@ -478,7 +509,9 @@
         "birthYearLabel": "624",
         "capital": "Shendu (now Luoyang)",
         "capitalStatus": "capital",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 705,
+        "deathYearLabel": "705"
       },
       "detail": {
         "links": [
@@ -513,7 +546,9 @@
         "birthYearLabel": "1360",
         "capital": "Beijing",
         "capitalStatus": "capital",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 1424,
+        "deathYearLabel": "1424"
       },
       "detail": {
         "links": [
@@ -548,7 +583,9 @@
         "birthYearLabel": "c. 1842",
         "capital": "Poundmaker Reserve (now in Canada)",
         "capitalStatus": "no formal capital; representative pin",
-        "pinPrecision": "region"
+        "pinPrecision": "region",
+        "deathYear": 1886,
+        "deathYearLabel": "1886"
       },
       "detail": {
         "links": [
@@ -583,7 +620,9 @@
         "birthYearLabel": "1880",
         "capital": "Amsterdam",
         "capitalStatus": "capital",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 1962,
+        "deathYearLabel": "1962"
       },
       "detail": {
         "links": [
@@ -618,7 +657,9 @@
         "birthYearLabel": "69 BCE (possibly late 70 BCE)",
         "capital": "Alexandria",
         "capitalStatus": "capital",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": -30,
+        "deathYearLabel": "30 BCE"
       },
       "detail": {
         "links": [
@@ -653,7 +694,9 @@
         "birthYearLabel": "c. 1303 BCE",
         "capital": "Pi-Ramesses",
         "capitalStatus": "capital",
-        "pinPrecision": "archaeological site"
+        "pinPrecision": "archaeological site",
+        "deathYear": -1213,
+        "deathYearLabel": "1213 BCE"
       },
       "detail": {
         "links": [
@@ -688,7 +731,9 @@
         "birthYearLabel": "c. 1124",
         "capital": "Westminster",
         "capitalStatus": "principal administrative/royal center; court was itinerant",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 1204,
+        "deathYearLabel": "1204"
       },
       "detail": {
         "links": [
@@ -723,7 +768,9 @@
         "birthYearLabel": "1533",
         "capital": "London",
         "capitalStatus": "capital",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 1603,
+        "deathYearLabel": "1603"
       },
       "detail": {
         "links": [
@@ -758,7 +805,9 @@
         "birthYearLabel": "1819",
         "capital": "London",
         "capitalStatus": "capital",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 1901,
+        "deathYearLabel": "1901"
       },
       "detail": {
         "links": [
@@ -793,7 +842,9 @@
         "birthYearLabel": "1844",
         "capital": "Addis Ababa",
         "capitalStatus": "capital",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 1913,
+        "deathYearLabel": "1913"
       },
       "detail": {
         "links": [
@@ -828,7 +879,9 @@
         "birthYearLabel": "1519",
         "capital": "Paris",
         "capitalStatus": "capital / principal royal center",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 1589,
+        "deathYearLabel": "1589"
       },
       "detail": {
         "links": [
@@ -863,7 +916,9 @@
         "birthYearLabel": "c. 1124",
         "capital": "Paris",
         "capitalStatus": "principal royal center",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 1204,
+        "deathYearLabel": "1204"
       },
       "detail": {
         "links": [
@@ -898,7 +953,9 @@
         "birthYearLabel": "c. 100–70 BCE (estimated)",
         "capital": "Atuatuca (now in Belgium)",
         "capitalStatus": "location uncertain; representative pin",
-        "pinPrecision": "region"
+        "pinPrecision": "region",
+        "deathYear": null,
+        "deathYearLabel": "Unknown  (after 54 BCE)"
       },
       "detail": {
         "links": [
@@ -933,7 +990,9 @@
         "birthYearLabel": "c. 1160 or 1166",
         "capital": "Tbilisi",
         "capitalStatus": "capital",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 1213,
+        "deathYearLabel": "1213"
       },
       "detail": {
         "links": [
@@ -968,7 +1027,9 @@
         "birthYearLabel": "1122",
         "capital": "Aachen",
         "capitalStatus": "representative imperial center; no fixed capital",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 1190,
+        "deathYearLabel": "1190"
       },
       "detail": {
         "links": [
@@ -1003,7 +1064,9 @@
         "birthYearLabel": "1845",
         "capital": "Munich",
         "capitalStatus": "capital",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 1886,
+        "deathYearLabel": "1886"
       },
       "detail": {
         "links": [
@@ -1038,7 +1101,9 @@
         "birthYearLabel": "1783",
         "capital": "Bogotá (now in Colombia)",
         "capitalStatus": "capital",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 1830,
+        "deathYearLabel": "1830"
       },
       "detail": {
         "links": [
@@ -1073,7 +1138,9 @@
         "birthYearLabel": "c. 518–508 BCE",
         "capital": "Sparta",
         "capitalStatus": "city-state capital; Gorgo was queen consort, not sole ruler",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": null,
+        "deathYearLabel": "Unknown"
       },
       "detail": {
         "links": [
@@ -1108,7 +1175,9 @@
         "birthYearLabel": "c. 495 BCE",
         "capital": "Athens",
         "capitalStatus": "city-state capital",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": -429,
+        "deathYearLabel": "429 BCE"
       },
       "detail": {
         "links": [
@@ -1143,7 +1212,9 @@
         "birthYearLabel": "1443",
         "capital": "Buda (now Budapest)",
         "capitalStatus": "capital",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 1490,
+        "deathYearLabel": "1490"
       },
       "detail": {
         "links": [
@@ -1178,7 +1249,9 @@
         "birthYearLabel": "c. 1403 (chronology disputed)",
         "capital": "Cusco (now in Peru)",
         "capitalStatus": "capital",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 1471,
+        "deathYearLabel": "c. 1471"
       },
       "detail": {
         "links": [
@@ -1213,7 +1286,9 @@
         "birthYearLabel": "c. 340 BCE",
         "capital": "Pataliputra (now Patna)",
         "capitalStatus": "capital",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": -297,
+        "deathYearLabel": "c. 297 BCE"
       },
       "detail": {
         "links": [
@@ -1248,7 +1323,9 @@
         "birthYearLabel": "1869",
         "capital": "New Delhi",
         "capitalStatus": "representative national capital; not a ruler's seat",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 1948,
+        "deathYearLabel": "1948"
       },
       "detail": {
         "links": [
@@ -1283,7 +1360,9 @@
         "birthYearLabel": "c. 1290–1308 (estimated)",
         "capital": "Trowulan",
         "capitalStatus": "capital",
-        "pinPrecision": "archaeological area"
+        "pinPrecision": "archaeological area",
+        "deathYear": 1372,
+        "deathYearLabel": "c. 1372"
       },
       "detail": {
         "links": [
@@ -1318,7 +1397,9 @@
         "birthYearLabel": "1251",
         "capital": "Kamakura",
         "capitalStatus": "seat of the Kamakura shogunate; imperial capital remained Kyoto",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 1284,
+        "deathYearLabel": "1284"
       },
       "detail": {
         "links": [
@@ -1353,7 +1434,9 @@
         "birthYearLabel": "1543",
         "capital": "Edo (now Tokyo)",
         "capitalStatus": "seat of the Tokugawa shogunate; imperial capital remained Kyoto",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 1616,
+        "deathYearLabel": "1616"
       },
       "detail": {
         "links": [
@@ -1388,7 +1471,9 @@
         "birthYearLabel": "c. 1122–1125",
         "capital": "Angkor Thom (now in Cambodia)",
         "capitalStatus": "capital",
-        "pinPrecision": "archaeological site"
+        "pinPrecision": "archaeological site",
+        "deathYear": 1218,
+        "deathYearLabel": "c. 1218"
       },
       "detail": {
         "links": [
@@ -1423,7 +1508,9 @@
         "birthYearLabel": "c. 1456",
         "capital": "Mbanza Kongo (now in Angola)",
         "capitalStatus": "capital",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 1542,
+        "deathYearLabel": "1542"
       },
       "detail": {
         "links": [
@@ -1458,7 +1545,9 @@
         "birthYearLabel": "c. 1583",
         "capital": "Kabasa (now in Angola)",
         "capitalStatus": "capital of Ndongo at her accession",
-        "pinPrecision": "historical locality"
+        "pinPrecision": "historical locality",
+        "deathYear": 1663,
+        "deathYearLabel": "1663"
       },
       "detail": {
         "links": [
@@ -1493,7 +1582,9 @@
         "birthYearLabel": "1397",
         "capital": "Hanseong/Hanyang (now Seoul, South Korea)",
         "capitalStatus": "capital",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 1450,
+        "deathYearLabel": "1450"
       },
       "detail": {
         "links": [
@@ -1528,7 +1619,9 @@
         "birthYearLabel": "c. 590–610 (estimated)",
         "capital": "Seorabeol (now Gyeongju, South Korea)",
         "capitalStatus": "capital",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 647,
+        "deathYearLabel": "647"
       },
       "detail": {
         "links": [
@@ -1563,7 +1656,9 @@
         "birthYearLabel": "356 BCE",
         "capital": "Pella (now in Greece)",
         "capitalStatus": "capital of Macedon",
-        "pinPrecision": "archaeological site"
+        "pinPrecision": "archaeological site",
+        "deathYear": -323,
+        "deathYearLabel": "323 BCE"
       },
       "detail": {
         "links": [
@@ -1598,7 +1693,9 @@
         "birthYearLabel": "c. 1280",
         "capital": "Niani (now in Guinea)",
         "capitalStatus": "traditional capital; location/role debated",
-        "pinPrecision": "locality"
+        "pinPrecision": "locality",
+        "deathYear": 1337,
+        "deathYearLabel": "c. 1337"
       },
       "detail": {
         "links": [
@@ -1633,7 +1730,9 @@
         "birthYearLabel": "c. 1217 (chronology disputed)",
         "capital": "Niani (now in Guinea)",
         "capitalStatus": "traditional capital; location/role debated",
-        "pinPrecision": "locality"
+        "pinPrecision": "locality",
+        "deathYear": 1255,
+        "deathYearLabel": "c. 1255"
       },
       "detail": {
         "links": [
@@ -1668,7 +1767,9 @@
         "birthYearLabel": "c. 1533–1534",
         "capital": "Arauco (now in Chile)",
         "capitalStatus": "no fixed capital; representative pin",
-        "pinPrecision": "region"
+        "pinPrecision": "region",
+        "deathYear": 1557,
+        "deathYearLabel": "1557"
       },
       "detail": {
         "links": [
@@ -1703,7 +1804,9 @@
         "birthYearLabel": "c. 650–665 (estimated)",
         "capital": "Naranjo (now in Guatemala)",
         "capitalStatus": "capital / royal seat",
-        "pinPrecision": "archaeological site"
+        "pinPrecision": "archaeological site",
+        "deathYear": null,
+        "deathYearLabel": "Unknown  (after 741)"
       },
       "detail": {
         "links": [
@@ -1738,7 +1841,9 @@
         "birthYearLabel": "c. 1162",
         "capital": "Avarga/Ikh Aurug",
         "capitalStatus": "first nomadic capital / principal imperial base during Genghis Khan's reign",
-        "pinPrecision": "archaeological site"
+        "pinPrecision": "archaeological site",
+        "deathYear": 1227,
+        "deathYearLabel": "1227"
       },
       "detail": {
         "links": [
@@ -1773,7 +1878,9 @@
         "birthYearLabel": "1215",
         "capital": "Dadu/Khanbaliq (now Beijing, China)",
         "capitalStatus": "capital",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 1294,
+        "deathYearLabel": "1294"
       },
       "detail": {
         "links": [
@@ -1808,7 +1915,9 @@
         "birthYearLabel": "c. 1300–1400 (traditional accounts)",
         "capital": "Hokianga (now in New Zealand)",
         "capitalStatus": "traditional association; representative pin",
-        "pinPrecision": "region"
+        "pinPrecision": "region",
+        "deathYear": null,
+        "deathYearLabel": "Unknown"
       },
       "detail": {
         "links": [
@@ -1843,7 +1952,9 @@
         "birthYearLabel": "c. 1015",
         "capital": "Nidaros (now Trondheim)",
         "capitalStatus": "royal capital / principal seat",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 1066,
+        "deathYearLabel": "1066"
       },
       "detail": {
         "links": [
@@ -1878,7 +1989,9 @@
         "birthYearLabel": "c. 20 BCE–10 CE (estimated)",
         "capital": "Meroë (now in Sudan)",
         "capitalStatus": "capital",
-        "pinPrecision": "archaeological site"
+        "pinPrecision": "archaeological site",
+        "deathYear": 50,
+        "deathYearLabel": "c. 50"
       },
       "detail": {
         "links": [
@@ -1913,7 +2026,9 @@
         "birthYearLabel": "1494",
         "capital": "Constantinople (now Istanbul, Turkey)",
         "capitalStatus": "capital",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 1566,
+        "deathYearLabel": "1566"
       },
       "detail": {
         "links": [
@@ -1948,7 +2063,9 @@
         "birthYearLabel": "c. 600 BCE",
         "capital": "Pasargadae (now in Iran)",
         "capitalStatus": "capital",
-        "pinPrecision": "archaeological site"
+        "pinPrecision": "archaeological site",
+        "deathYear": -530,
+        "deathYearLabel": "c. 530 BCE"
       },
       "detail": {
         "links": [
@@ -1983,7 +2100,9 @@
         "birthYearLabel": "1688 or 1698",
         "capital": "Mashhad (now in Iran)",
         "capitalStatus": "capital / principal metropolitan center",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 1747,
+        "deathYearLabel": "1747"
       },
       "detail": {
         "links": [
@@ -2018,7 +2137,9 @@
         "birthYearLabel": "c. 860–840 BCE (estimated from traditional chronology)",
         "capital": "Carthage (now in Tunisia)",
         "capitalStatus": "capital",
-        "pinPrecision": "archaeological site"
+        "pinPrecision": "archaeological site",
+        "deathYear": null,
+        "deathYearLabel": "Unknown  (legendary chronology)"
       },
       "detail": {
         "links": [
@@ -2053,7 +2174,9 @@
         "birthYearLabel": "1373–1374",
         "capital": "Kraków",
         "capitalStatus": "capital",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 1399,
+        "deathYearLabel": "1399"
       },
       "detail": {
         "links": [
@@ -2088,7 +2211,9 @@
         "birthYearLabel": "1502",
         "capital": "Lisbon",
         "capitalStatus": "capital",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 1557,
+        "deathYearLabel": "1557"
       },
       "detail": {
         "links": [
@@ -2123,7 +2248,9 @@
         "birthYearLabel": "100 BCE",
         "capital": "Rome (now in Italy)",
         "capitalStatus": "capital",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": -44,
+        "deathYearLabel": "44 BCE"
       },
       "detail": {
         "links": [
@@ -2158,7 +2285,9 @@
         "birthYearLabel": "53",
         "capital": "Rome (now in Italy)",
         "capitalStatus": "capital",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 117,
+        "deathYearLabel": "117"
       },
       "detail": {
         "links": [
@@ -2193,7 +2322,9 @@
         "birthYearLabel": "1672",
         "capital": "Saint Petersburg",
         "capitalStatus": "capital",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 1725,
+        "deathYearLabel": "1725"
       },
       "detail": {
         "links": [
@@ -2228,7 +2359,9 @@
         "birthYearLabel": "1274",
         "capital": "Scone",
         "capitalStatus": "representative royal/ceremonial center; court was itinerant",
-        "pinPrecision": "locality"
+        "pinPrecision": "locality",
+        "deathYear": 1329,
+        "deathYearLabel": "1329"
       },
       "detail": {
         "links": [
@@ -2247,8 +2380,8 @@
       "id": "tomyris",
       "name": "Tomyris",
       "coords": [
-        43.0,
-        63.0
+        43,
+        63
       ],
       "theme": {
         "colorKey": "leaders-scythian"
@@ -2263,7 +2396,9 @@
         "birthYearLabel": "c. 590–560 BCE (estimated)",
         "capital": "Massagetae territory (now in Kazakhstan)",
         "capitalStatus": "no known capital; representative pin",
-        "pinPrecision": "region"
+        "pinPrecision": "region",
+        "deathYear": null,
+        "deathYearLabel": "Unknown"
       },
       "detail": {
         "links": [
@@ -2298,7 +2433,9 @@
         "birthYearLabel": "1527",
         "capital": "Madrid",
         "capitalStatus": "capital / permanent royal court",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 1598,
+        "deathYearLabel": "1598"
       },
       "detail": {
         "links": [
@@ -2333,7 +2470,9 @@
         "birthYearLabel": "c. 2800–2500 BCE (historical placement)",
         "capital": "Uruk (now Warka, Iraq)",
         "capitalStatus": "city-state capital",
-        "pinPrecision": "archaeological site"
+        "pinPrecision": "archaeological site",
+        "deathYear": null,
+        "deathYearLabel": "Unknown  (legendary chronology)"
       },
       "detail": {
         "links": [
@@ -2368,7 +2507,9 @@
         "birthYearLabel": "1626",
         "capital": "Stockholm",
         "capitalStatus": "capital",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 1689,
+        "deathYearLabel": "1689"
       },
       "detail": {
         "links": [
@@ -2403,7 +2544,9 @@
         "birthYearLabel": "c. 225–226 (traditional)",
         "capital": "Núi Nưa",
         "capitalStatus": "rebel base; representative pin",
-        "pinPrecision": "region"
+        "pinPrecision": "region",
+        "deathYear": 248,
+        "deathYearLabel": "248"
       },
       "detail": {
         "links": [
@@ -2438,7 +2581,9 @@
         "birthYearLabel": "c. 1787",
         "capital": "KwaDukuza (now in South Africa)",
         "capitalStatus": "royal capital",
-        "pinPrecision": "city"
+        "pinPrecision": "city",
+        "deathYear": 1828,
+        "deathYearLabel": "1828"
       },
       "detail": {
         "links": [
