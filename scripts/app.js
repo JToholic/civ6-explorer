@@ -6,8 +6,7 @@ const TYPES = [
   { id: "natural_wonders", label: "Natural Wonders" },
   { id: "leaders", label: "Leaders" },
   { id: "city_states", label: "City-States" },
-  { id: "great_people", label: "Great People" },
-  { id: "great_works", label: "Great Works" }
+  { id: "great_people", label: "Great People" }
 ];
 
 // What to show in the right panel attribute grid (by type)
@@ -38,15 +37,6 @@ const ATTR_DISPLAY = {
     { key: "birthPlace", label: "Birthplace" },
     { key: "deathYearLabel", label: "Death Year" },
     { key: "greatWorks", label: "Great Works" }
-  ],
-  great_works: [
-    { key: "creator", label: "Creator" },
-    { key: "era", label: "Era" },
-    { key: "type", label: "Type" },
-    { key: "createdYearLabel", label: "Created year" },
-    { key: "creationLocation", label: "Creation location" },
-    { key: "currentLocation", label: "Current location" },
-    { key: "currentStatus", label: "Status" }
   ]
 };
 
@@ -56,8 +46,7 @@ const CARD_SUBTITLE = {
   natural_wonders: { field: "attrs.location" },
   leaders: { field: "attrs.civilization" },
   city_states: { field: "attrs.type" },
-  great_people: { field: "attrs.type" },
-  great_works: { field: "attrs.type" }
+  great_people: { field: "attrs.type" }
 };
 
 // Search fields (by type)
@@ -66,8 +55,7 @@ const SEARCH_FIELDS = {
   natural_wonders: ["name", "attrs.terrain", "attrs.location"],
   leaders: ["name", "attrs.civilization", "attrs.capital"],
   city_states: ["name", "attrs.type", "attrs.country"],
-  great_people: ["name", "attrs.era", "attrs.type", "attrs.birthPlace", "attrs.greatWorks"],
-  great_works: ["name", "attrs.creator", "attrs.era", "attrs.type", "attrs.creationLocation", "attrs.currentLocation", "attrs.createdYearLabel"]
+  great_people: ["name", "attrs.era", "attrs.type", "attrs.birthPlace", "attrs.greatWorks"]
 };
 
 const ERA_ORDER = {
@@ -122,8 +110,6 @@ const detailLinksEl = document.getElementById("detailLinks");
 const detailAttrsEl = document.getElementById("detailAttrs");
 
 const trayPinsEl = document.querySelector("#bottomTray .trayPins");
-const greatWorkMapModeEl = document.getElementById("greatWorkMapMode");
-let greatWorkMapMode = "creation";
 
 // ---- App state ----
 let activeType = null;
@@ -145,11 +131,9 @@ function getTypeFromUrl() {
   return new URLSearchParams(window.location.search).get("type");
 }
 
-function setTypeInUrl(typeId, itemId = null) {
+function setTypeInUrl(typeId) {
   const url = new URL(window.location.href);
   url.searchParams.set("type", typeId);
-  if (itemId) url.searchParams.set("item", itemId);
-  else url.searchParams.delete("item");
   history.pushState({ type: typeId }, "", url);
 }
 
@@ -190,40 +174,6 @@ async function loadDataset(typeId) {
   }
 
   return await res.json();
-}
-
-// ---- Great Works location mode ----
-// Keep independent locations in the JSON; `coords` is the active Leaflet view.
-// Existing pin clustering and selection continue to read the usual item.coords.
-function applyGreatWorksCoords() {
-  if (activeType !== "great_works" || !activeData?.items) return;
-  const key = greatWorkMapMode === "current" ? "currentCoords" : "creationCoords";
-  for (const item of activeData.items) {
-    const pair = item[key];
-    item.coords = Array.isArray(pair) && pair.length === 2 &&
-      pair.every(n => typeof n === "number" && Number.isFinite(n))
-      ? [...pair]
-      : null;
-  }
-}
-
-function setGreatWorkMapMode(nextMode) {
-  if (activeType !== "great_works") return;
-  greatWorkMapMode = nextMode === "current" ? "current" : "creation";
-  if (greatWorkMapModeEl) {
-    greatWorkMapModeEl.querySelectorAll("button[data-mode]").forEach(button => {
-      const active = button.dataset.mode === greatWorkMapMode;
-      button.classList.toggle("is-active", active);
-      button.setAttribute("aria-pressed", String(active));
-    });
-  }
-  applyGreatWorksCoords();
-  renderMapPins();
-  renderBottomTray();
-  if (selectedItemId) {
-    const item = activeData.items.find(it => it.id === selectedItemId);
-    if (item?.coords) centerSelectedOnMap(item);
-  }
 }
 
 // ---- Helpers ----
@@ -377,20 +327,6 @@ function renderAttrs(item) {
         : String(val);
     if (Array.isArray(val)) v.style.whiteSpace = "pre-line";
 
-    if (activeType === "great_works" && key === "creator" && item.attrs.creatorId) {
-      v.textContent = "";
-      const link = document.createElement("a");
-      link.href = `?type=great_people&item=${encodeURIComponent(item.attrs.creatorId)}`;
-      link.textContent = String(val);
-      link.title = "Open this creator in Great People";
-      link.addEventListener("click", event => {
-        event.preventDefault();
-        setTypeInUrl("great_people", item.attrs.creatorId);
-        applyType("great_people", item.attrs.creatorId);
-      });
-      v.appendChild(link);
-    }
-
     detailAttrsEl.appendChild(k);
     detailAttrsEl.appendChild(v);
   }
@@ -410,10 +346,15 @@ function renderDetail(item) {
   detailTitleEl.textContent =
     item.name ?? "";
 
-  if (activeType !== "great_works") {
-    setImgWithFallback(detailThumbIngameEl, item?.thumbs?.ingame);
-    setImgWithFallback(detailThumbIrlEl, item?.thumbs?.irl);
-  }
+  setImgWithFallback(
+    detailThumbIngameEl,
+    item?.thumbs?.ingame
+  );
+
+  setImgWithFallback(
+    detailThumbIrlEl,
+    item?.thumbs?.irl
+  );
 
   // detail.text is optional.
   const detailText = item?.detail?.text;
@@ -647,32 +588,20 @@ function renderList() {
       ? withGreatPersonIcon(subVal)
       : subVal;
 
-    if (activeType === "great_works") {
-      const card = document.createElement("div");
-      card.className = "card";
-      const words = document.createElement("div");
-      words.className = "greatWorkCardWords";
-      const heading = document.createElement("div");
-      heading.className = "cardTitle";
-      heading.textContent = it.name;
-      const subtitle = document.createElement("div");
-      subtitle.className = "cardSub";
-      subtitle.textContent = String(shownSubVal);
-      words.append(heading, subtitle);
-      card.appendChild(words);
-      li.appendChild(card);
-    } else {
-      li.innerHTML = `
-        <div class="card">
-          <img class="cardThumb" src="${thumbSrc}"
-               alt="${it.name}" onerror="this.src='${PLACEHOLDER_THUMB}'">
-          <div>
-            <div class="cardTitle">${it.name}</div>
-            <div class="cardSub">${shownSubVal}</div>
-          </div>
+    li.innerHTML = `
+      <div class="card">
+        <img
+          class="cardThumb"
+          src="${thumbSrc}"
+          alt="${it.name}"
+          onerror="this.src='${PLACEHOLDER_THUMB}'"
+        >
+        <div>
+          <div class="cardTitle">${it.name}</div>
+          <div class="cardSub">${shownSubVal}</div>
         </div>
-      `;
-    }
+      </div>
+    `;
 
     li.addEventListener(
       "mouseenter",
@@ -1003,13 +932,6 @@ function renderBottomTray() {
         it.coords.length !== 2
     );
 
-  const trayTitle = document.querySelector("#bottomTray .trayTitle");
-  if (trayTitle) {
-    trayTitle.textContent = activeType === "great_works"
-      ? `Without ${greatWorkMapMode === "creation" ? "creation" : "current location"} coordinates (${noCoordItems.length})`
-      : "Pins without coordinates";
-  }
-
   for (
     const it of
     noCoordItems
@@ -1062,17 +984,7 @@ function renderBottomTray() {
         PLACEHOLDER_THUMB;
     };
 
-    if (activeType === "great_works") {
-      btn.classList.add("greatWorkTrayPin");
-      const glyph = document.createElement("span");
-      glyph.className = "greatWorkTrayGlyph";
-      glyph.textContent = it.attrs?.type === "Relic" ? "✧" :
-        it.attrs?.type === "Writing" ? "✎" :
-        it.attrs?.type === "Music" ? "♫" : "◆";
-      btn.appendChild(glyph);
-    } else {
-      btn.appendChild(img);
-    }
+    btn.appendChild(img);
 
     btn.addEventListener(
       "click",
@@ -1113,20 +1025,12 @@ function renderBottomTray() {
 }
 
 // ---- Main flow ----
-async function applyType(typeId, focusItemId = null) {
+async function applyType(
+  typeId
+) {
   closeDetail();
 
   activeType = typeId;
-  greatWorkMapMode = "creation";
-  document.body.classList.toggle("is-great-works", typeId === "great_works");
-  if (greatWorkMapModeEl) {
-    greatWorkMapModeEl.hidden = typeId !== "great_works";
-    greatWorkMapModeEl.querySelectorAll("button[data-mode]").forEach(button => {
-      const active = button.dataset.mode === "creation";
-      button.classList.toggle("is-active", active);
-      button.setAttribute("aria-pressed", String(active));
-    });
-  }
   renderTabs();
 
   selectedItemId = null;
@@ -1141,24 +1045,15 @@ async function applyType(typeId, focusItemId = null) {
   sortEl.innerHTML = "";
 
   try {
-    activeData = await loadDataset(typeId);
-    applyGreatWorksCoords();
+    activeData =
+      await loadDataset(
+        typeId
+      );
 
     renderSortDropdown();
     renderList();
     renderMapPins();
     renderBottomTray();
-    if (focusItemId) {
-      const item = activeData.items?.find(it => it.id === focusItemId);
-      if (item) {
-        selectedItemId = item.id;
-        renderList();
-        renderMapPins();
-        renderBottomTray();
-        renderDetail(item);
-        centerSelectedOnMap(item);
-      }
-    }
   } catch (err) {
     statusEl.textContent =
       `Error: ${err.message}`;
@@ -1168,12 +1063,6 @@ async function applyType(typeId, focusItemId = null) {
 }
 
 function init() {
-  if (greatWorkMapModeEl) {
-    greatWorkMapModeEl.addEventListener("click", event => {
-      const button = event.target.closest("button[data-mode]");
-      if (button) setGreatWorkMapMode(button.dataset.mode);
-    });
-  }
   searchEl.addEventListener(
     "input",
     (e) => {
@@ -1237,7 +1126,7 @@ function init() {
     );
   }
 
-  applyType(initialType, new URLSearchParams(window.location.search).get("item"));
+  applyType(initialType);
 
   window.addEventListener(
     "popstate",
@@ -1246,8 +1135,9 @@ function init() {
         getTypeFromUrl();
 
       applyType(
-        isValidType(t) ? t : TYPES[0].id,
-        new URLSearchParams(window.location.search).get("item")
+        isValidType(t)
+          ? t
+          : TYPES[0].id
       );
     }
   );

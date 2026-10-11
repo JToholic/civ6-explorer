@@ -13,7 +13,6 @@
   <link rel="stylesheet" href="styles/panels.css?v={{ site.github.build_revision }}" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
   <link rel="stylesheet" href="styles/pin_clusters.css?v={{ site.github.build_revision }}" />
-  <link rel="stylesheet" href="styles/great_works.css?v={{ site.github.build_revision }}" />
 
   <style>
     /* Keep the deployed commit link inside the tab bar, small and subdued. */
@@ -60,11 +59,6 @@
     </aside>
 
     <section id="mapArea" aria-label="World map area">
-      <div id="greatWorkMapMode" class="greatWorkMapMode" role="group"
-           aria-label="Great Works map location" hidden>
-        <button type="button" class="is-active" data-mode="creation" aria-pressed="true">Creation</button>
-        <button type="button" data-mode="current" aria-pressed="false">Current location</button>
-      </div>
       <div id="map">
         <!-- map injected by JS later -->
         <div class="mapPlaceholder" id="statusText">Loading…</div>
