@@ -628,8 +628,8 @@
       "id": "hunza",
       "name": "Hunza",
       "coords": [
-        36.3167,
-        74.6667
+        5.533333,
+        -73.366667
       ],
       "theme": {
         "colorKey": "city-state-trade"
@@ -640,7 +640,7 @@
       },
       "attrs": {
         "type": "Trade",
-        "country": "Pakistan"
+        "country": "now Tunja, Colombia"
       },
       "detail": {
         "links": [
@@ -650,11 +650,10 @@
           },
           {
             "label": "Wikipedia",
-            "url": "https://en.wikipedia.org/wiki/Hunza_Valley"
+            "url": "https://en.wikipedia.org/wiki/Tunja"
           }
         ]
-      },
-      "geoNote": "Karimabad; representative center of historic Hunza"
+      }
     },
     {
       "id": "jerusalem",
